@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace RabtBil_Musteri_Kayit_v2
 {
-    public partial class Form1 : Form
+    public partial class FrmGirisYap : Form
     {
-        public Form1()
+        public FrmGirisYap()
         {
             InitializeComponent();
+        }
+
+        private void BttnCikisYap_Click(object sender, EventArgs e)
+        {
+            FrmHesapAc _frmHesapAc = new FrmHesapAc();
+            _frmHesapAc.Show();
+            Close();
         }
     }
 }
