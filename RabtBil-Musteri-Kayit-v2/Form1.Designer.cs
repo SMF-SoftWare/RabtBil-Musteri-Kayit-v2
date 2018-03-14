@@ -34,7 +34,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(77, 92);
+            this.button1.Location = new System.Drawing.Point(12, 7);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(269, 47);
             this.button1.TabIndex = 0;
@@ -43,7 +43,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(77, 167);
+            this.button2.Location = new System.Drawing.Point(12, 82);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(269, 47);
             this.button2.TabIndex = 1;
@@ -52,13 +52,13 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 361);
+            this.ClientSize = new System.Drawing.Size(289, 131);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
