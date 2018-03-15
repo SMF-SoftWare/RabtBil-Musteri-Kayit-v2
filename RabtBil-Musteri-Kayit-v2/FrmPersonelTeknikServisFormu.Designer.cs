@@ -37,6 +37,9 @@
             this.txtAksesuarlar = new System.Windows.Forms.TextBox();
             this.grpboxMusteriBilgileri = new System.Windows.Forms.GroupBox();
             this.grpboxUrunBilgileri = new System.Windows.Forms.GroupBox();
+            this.lblUrunKodlari = new System.Windows.Forms.Label();
+            this.chckboxTeslimEdildi = new System.Windows.Forms.CheckBox();
+            this.BttnQrKodu = new System.Windows.Forms.Button();
             this.txtUcret = new System.Windows.Forms.TextBox();
             this.lblUcret = new System.Windows.Forms.Label();
             this.pctrboxQrKodu = new System.Windows.Forms.PictureBox();
@@ -60,11 +63,6 @@
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.mnStrip = new System.Windows.Forms.MenuStrip();
             this.denemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tlStrip = new System.Windows.Forms.ToolStrip();
-            this.TlStripLblAciklama = new System.Windows.Forms.ToolStripLabel();
-            this.PcTrBoxProfilResim = new System.Windows.Forms.PictureBox();
-            this.btnCikisYap = new System.Windows.Forms.Button();
-            this.LblHosgeldin = new System.Windows.Forms.Label();
             this.yeniKayıtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kaydetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.temizleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,10 +77,12 @@
             this.lisansAnahtarıToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hakkındaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.çıkışYapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlStrip = new System.Windows.Forms.ToolStrip();
+            this.TlStripLblAciklama = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.BttnQrKodu = new System.Windows.Forms.Button();
-            this.chckboxTeslimEdildi = new System.Windows.Forms.CheckBox();
-            this.lblUrunKodlari = new System.Windows.Forms.Label();
+            this.PcTrBoxProfilResim = new System.Windows.Forms.PictureBox();
+            this.btnCikisYap = new System.Windows.Forms.Button();
+            this.LblHosgeldin = new System.Windows.Forms.Label();
             this.grpboxMusteriBilgileri.SuspendLayout();
             this.grpboxUrunBilgileri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctrboxQrKodu)).BeginInit();
@@ -194,6 +194,37 @@
             this.grpboxUrunBilgileri.TabIndex = 24;
             this.grpboxUrunBilgileri.TabStop = false;
             this.grpboxUrunBilgileri.Text = "Ürün Bilgileri";
+            // 
+            // lblUrunKodlari
+            // 
+            this.lblUrunKodlari.AutoSize = true;
+            this.lblUrunKodlari.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUrunKodlari.Location = new System.Drawing.Point(37, 61);
+            this.lblUrunKodlari.Name = "lblUrunKodlari";
+            this.lblUrunKodlari.Size = new System.Drawing.Size(79, 15);
+            this.lblUrunKodlari.TabIndex = 38;
+            this.lblUrunKodlari.Text = "Ürün Kodları:";
+            // 
+            // chckboxTeslimEdildi
+            // 
+            this.chckboxTeslimEdildi.AutoSize = true;
+            this.chckboxTeslimEdildi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.chckboxTeslimEdildi.Location = new System.Drawing.Point(15, 333);
+            this.chckboxTeslimEdildi.Name = "chckboxTeslimEdildi";
+            this.chckboxTeslimEdildi.Size = new System.Drawing.Size(97, 19);
+            this.chckboxTeslimEdildi.TabIndex = 37;
+            this.chckboxTeslimEdildi.Text = "Teslim Edildi";
+            this.chckboxTeslimEdildi.UseVisualStyleBackColor = true;
+            this.chckboxTeslimEdildi.CheckedChanged += new System.EventHandler(this.chckboxTeslimEdildi_CheckedChanged);
+            // 
+            // BttnQrKodu
+            // 
+            this.BttnQrKodu.Location = new System.Drawing.Point(25, 250);
+            this.BttnQrKodu.Name = "BttnQrKodu";
+            this.BttnQrKodu.Size = new System.Drawing.Size(89, 49);
+            this.BttnQrKodu.TabIndex = 36;
+            this.BttnQrKodu.Text = "Qr Kodu Oluştur";
+            this.BttnQrKodu.UseVisualStyleBackColor = true;
             // 
             // txtUcret
             // 
@@ -411,53 +442,6 @@
             this.denemeToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.denemeToolStripMenuItem.Text = "Araçlar";
             // 
-            // tlStrip
-            // 
-            this.tlStrip.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tlStrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.tlStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TlStripLblAciklama,
-            this.toolStripLabel1});
-            this.tlStrip.Location = new System.Drawing.Point(0, 396);
-            this.tlStrip.Name = "tlStrip";
-            this.tlStrip.Size = new System.Drawing.Size(869, 25);
-            this.tlStrip.TabIndex = 32;
-            this.tlStrip.Text = "toolStrip1";
-            // 
-            // TlStripLblAciklama
-            // 
-            this.TlStripLblAciklama.Name = "TlStripLblAciklama";
-            this.TlStripLblAciklama.Size = new System.Drawing.Size(57, 22);
-            this.TlStripLblAciklama.Text = "Açıklama";
-            // 
-            // PcTrBoxProfilResim
-            // 
-            this.PcTrBoxProfilResim.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PcTrBoxProfilResim.Location = new System.Drawing.Point(716, 33);
-            this.PcTrBoxProfilResim.Name = "PcTrBoxProfilResim";
-            this.PcTrBoxProfilResim.Size = new System.Drawing.Size(78, 70);
-            this.PcTrBoxProfilResim.TabIndex = 33;
-            this.PcTrBoxProfilResim.TabStop = false;
-            // 
-            // btnCikisYap
-            // 
-            this.btnCikisYap.Location = new System.Drawing.Point(727, 329);
-            this.btnCikisYap.Name = "btnCikisYap";
-            this.btnCikisYap.Size = new System.Drawing.Size(117, 34);
-            this.btnCikisYap.TabIndex = 34;
-            this.btnCikisYap.Text = "Çıkış Yap";
-            this.btnCikisYap.UseVisualStyleBackColor = true;
-            // 
-            // LblHosgeldin
-            // 
-            this.LblHosgeldin.AutoSize = true;
-            this.LblHosgeldin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblHosgeldin.Location = new System.Drawing.Point(713, 106);
-            this.LblHosgeldin.Name = "LblHosgeldin";
-            this.LblHosgeldin.Size = new System.Drawing.Size(135, 15);
-            this.LblHosgeldin.TabIndex = 35;
-            this.LblHosgeldin.Text = "Hoş Geldiniz Selim Bey";
-            // 
             // yeniKayıtToolStripMenuItem
             // 
             this.yeniKayıtToolStripMenuItem.Name = "yeniKayıtToolStripMenuItem";
@@ -503,25 +487,25 @@
             this.türkçeToolStripMenuItem,
             this.inglizceToolStripMenuItem});
             this.dilToolStripMenuItem.Name = "dilToolStripMenuItem";
-            this.dilToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.dilToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
             this.dilToolStripMenuItem.Text = "Dil";
             // 
             // türkçeToolStripMenuItem
             // 
             this.türkçeToolStripMenuItem.Name = "türkçeToolStripMenuItem";
-            this.türkçeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.türkçeToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.türkçeToolStripMenuItem.Text = "Türkçe";
             // 
             // inglizceToolStripMenuItem
             // 
             this.inglizceToolStripMenuItem.Name = "inglizceToolStripMenuItem";
-            this.inglizceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.inglizceToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.inglizceToolStripMenuItem.Text = "İngilizce";
             // 
             // temaToolStripMenuItem
             // 
             this.temaToolStripMenuItem.Name = "temaToolStripMenuItem";
-            this.temaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.temaToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
             this.temaToolStripMenuItem.Text = "Tema";
             // 
             // yardımToolStripMenuItem
@@ -551,6 +535,25 @@
             this.çıkışYapToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.çıkışYapToolStripMenuItem.Text = "Çıkış Yap";
             // 
+            // tlStrip
+            // 
+            this.tlStrip.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tlStrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.tlStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TlStripLblAciklama,
+            this.toolStripLabel1});
+            this.tlStrip.Location = new System.Drawing.Point(0, 396);
+            this.tlStrip.Name = "tlStrip";
+            this.tlStrip.Size = new System.Drawing.Size(869, 25);
+            this.tlStrip.TabIndex = 32;
+            this.tlStrip.Text = "toolStrip1";
+            // 
+            // TlStripLblAciklama
+            // 
+            this.TlStripLblAciklama.Name = "TlStripLblAciklama";
+            this.TlStripLblAciklama.Size = new System.Drawing.Size(57, 22);
+            this.TlStripLblAciklama.Text = "Açıklama";
+            // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
@@ -558,36 +561,34 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(63, 22);
             this.toolStripLabel1.Text = "Tarih Saat";
             // 
-            // BttnQrKodu
+            // PcTrBoxProfilResim
             // 
-            this.BttnQrKodu.Location = new System.Drawing.Point(25, 250);
-            this.BttnQrKodu.Name = "BttnQrKodu";
-            this.BttnQrKodu.Size = new System.Drawing.Size(89, 49);
-            this.BttnQrKodu.TabIndex = 36;
-            this.BttnQrKodu.Text = "Qr Kodu Oluştur";
-            this.BttnQrKodu.UseVisualStyleBackColor = true;
+            this.PcTrBoxProfilResim.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PcTrBoxProfilResim.Location = new System.Drawing.Point(740, 35);
+            this.PcTrBoxProfilResim.Name = "PcTrBoxProfilResim";
+            this.PcTrBoxProfilResim.Size = new System.Drawing.Size(78, 70);
+            this.PcTrBoxProfilResim.TabIndex = 33;
+            this.PcTrBoxProfilResim.TabStop = false;
             // 
-            // chckboxTeslimEdildi
+            // btnCikisYap
             // 
-            this.chckboxTeslimEdildi.AutoSize = true;
-            this.chckboxTeslimEdildi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.chckboxTeslimEdildi.Location = new System.Drawing.Point(15, 333);
-            this.chckboxTeslimEdildi.Name = "chckboxTeslimEdildi";
-            this.chckboxTeslimEdildi.Size = new System.Drawing.Size(97, 19);
-            this.chckboxTeslimEdildi.TabIndex = 37;
-            this.chckboxTeslimEdildi.Text = "Teslim Edildi";
-            this.chckboxTeslimEdildi.UseVisualStyleBackColor = true;
-            this.chckboxTeslimEdildi.CheckedChanged += new System.EventHandler(this.chckboxTeslimEdildi_CheckedChanged);
+            this.btnCikisYap.Location = new System.Drawing.Point(727, 329);
+            this.btnCikisYap.Name = "btnCikisYap";
+            this.btnCikisYap.Size = new System.Drawing.Size(117, 34);
+            this.btnCikisYap.TabIndex = 34;
+            this.btnCikisYap.Text = "Çıkış Yap";
+            this.btnCikisYap.UseVisualStyleBackColor = true;
+            this.btnCikisYap.Click += new System.EventHandler(this.btnCikisYap_Click);
             // 
-            // lblUrunKodlari
+            // LblHosgeldin
             // 
-            this.lblUrunKodlari.AutoSize = true;
-            this.lblUrunKodlari.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblUrunKodlari.Location = new System.Drawing.Point(37, 61);
-            this.lblUrunKodlari.Name = "lblUrunKodlari";
-            this.lblUrunKodlari.Size = new System.Drawing.Size(79, 15);
-            this.lblUrunKodlari.TabIndex = 38;
-            this.lblUrunKodlari.Text = "Ürün Kodları:";
+            this.LblHosgeldin.AutoSize = true;
+            this.LblHosgeldin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LblHosgeldin.Location = new System.Drawing.Point(713, 106);
+            this.LblHosgeldin.Name = "LblHosgeldin";
+            this.LblHosgeldin.Size = new System.Drawing.Size(135, 15);
+            this.LblHosgeldin.TabIndex = 35;
+            this.LblHosgeldin.Text = "Hoş Geldiniz Selim Bey";
             // 
             // FrmPersonelTeknikServisFormu
             // 

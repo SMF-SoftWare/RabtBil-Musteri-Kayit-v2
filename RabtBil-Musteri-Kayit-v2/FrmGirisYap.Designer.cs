@@ -35,7 +35,6 @@
             this.lblSifre = new System.Windows.Forms.Label();
             this.linkLblSifremiUnuttum = new System.Windows.Forms.LinkLabel();
             this.lblGirisBicimi = new System.Windows.Forms.Label();
-            this.BttnCikisYap = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblKullaniciAdi
@@ -85,7 +84,7 @@
             // linkLblSifremiUnuttum
             // 
             this.linkLblSifremiUnuttum.AutoSize = true;
-            this.linkLblSifremiUnuttum.Location = new System.Drawing.Point(149, 284);
+            this.linkLblSifremiUnuttum.Location = new System.Drawing.Point(149, 232);
             this.linkLblSifremiUnuttum.Name = "linkLblSifremiUnuttum";
             this.linkLblSifremiUnuttum.Size = new System.Drawing.Size(122, 18);
             this.linkLblSifremiUnuttum.TabIndex = 5;
@@ -102,22 +101,11 @@
             this.lblGirisBicimi.TabIndex = 6;
             this.lblGirisBicimi.Text = "Yönetici Giriş";
             // 
-            // BttnCikisYap
-            // 
-            this.BttnCikisYap.Location = new System.Drawing.Point(24, 235);
-            this.BttnCikisYap.Name = "BttnCikisYap";
-            this.BttnCikisYap.Size = new System.Drawing.Size(247, 40);
-            this.BttnCikisYap.TabIndex = 7;
-            this.BttnCikisYap.Text = "Çıkış Yap";
-            this.BttnCikisYap.UseVisualStyleBackColor = true;
-            this.BttnCikisYap.Click += new System.EventHandler(this.BttnCikisYap_Click);
-            // 
             // FrmGirisYap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(297, 313);
-            this.Controls.Add(this.BttnCikisYap);
+            this.ClientSize = new System.Drawing.Size(297, 272);
             this.Controls.Add(this.lblGirisBicimi);
             this.Controls.Add(this.linkLblSifremiUnuttum);
             this.Controls.Add(this.txtSifre);
@@ -144,6 +132,5 @@
         public System.Windows.Forms.Label lblSifre;
         public System.Windows.Forms.LinkLabel linkLblSifremiUnuttum;
         public System.Windows.Forms.Label lblGirisBicimi;
-        public System.Windows.Forms.Button BttnCikisYap;
     }
 }

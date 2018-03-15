@@ -28,5 +28,11 @@ namespace RabtBil_Musteri_Kayit_v2
             SMF.FrmKayitlariGoster.Show();
             Hide();
         }
+
+        private void btnCikisYap_Click(object sender, EventArgs e)
+        {
+            SMF.FrmGirisYap.Show();
+            base.Close();
+        }
     }
 }

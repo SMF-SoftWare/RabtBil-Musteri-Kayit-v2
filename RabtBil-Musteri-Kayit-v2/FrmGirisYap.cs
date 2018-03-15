@@ -47,21 +47,20 @@ namespace RabtBil_Musteri_Kayit_v2
                         {
                             case (int)SMF.Rol.Admin:
                                 SMF.Yetki = (int)SMF.Rol.Admin;
-                                MessageBox.Show("SMF.Rol.Admin");
                                 break;
 
                             case (int)SMF.Rol.Yonetici:
                                 SMF.Yetki = (int)SMF.Rol.Yonetici;
-                                MessageBox.Show("SMF.Rol.Yonetici");
                                 break;
 
                             case (int)SMF.Rol.Kullanici:
                             default:
                                 SMF.Yetki = (int)SMF.Rol.Kullanici;
-                                MessageBox.Show("SMF.Rol.Kullanici");
                                 break;
                         }
                     }
+                    SMF.FrmPersonelTeknikServisFormu.Show();
+                    Hide();
                 }
                 else
                 {
