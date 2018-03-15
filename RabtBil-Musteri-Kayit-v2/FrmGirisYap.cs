@@ -19,7 +19,7 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void BttnGirisYap_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(TxtKullaniciAdi.Text) || String.IsNullOrWhiteSpace(TxtSifre.Text))
+            if (String.IsNullOrWhiteSpace(txtKullaniciAdi.Text) || String.IsNullOrWhiteSpace(txtSifre.Text))
             {
                 MessageBox.Show("Kullanıcı adı veya Şifre boş!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -28,8 +28,8 @@ namespace RabtBil_Musteri_Kayit_v2
             {
                 SMF.Baglanti.Open();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM Kullanicilar WHERE KullaniciAdi=@KullaniciAdi AND Sifre=@Sifre", SMF.Baglanti);
-                cmd.Parameters.AddWithValue("@KullaniciAdi", TxtKullaniciAdi.Text);
-                cmd.Parameters.AddWithValue("@Sifre", TxtSifre.Text);
+                cmd.Parameters.AddWithValue("@KullaniciAdi", txtKullaniciAdi.Text);
+                cmd.Parameters.AddWithValue("@Sifre", txtSifre.Text);
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
@@ -37,8 +37,8 @@ namespace RabtBil_Musteri_Kayit_v2
                 if (dt.Rows.Count == 1)
                 {
                     cmd = new SqlCommand("SELECT Rol FROM Kullanicilar WHERE KullaniciAdi=@KullaniciAdi AND Sifre=@Sifre", SMF.Baglanti);
-                    cmd.Parameters.AddWithValue("@KullaniciAdi", TxtKullaniciAdi.Text);
-                    cmd.Parameters.AddWithValue("@Sifre", TxtSifre.Text);
+                    cmd.Parameters.AddWithValue("@KullaniciAdi", txtKullaniciAdi.Text);
+                    cmd.Parameters.AddWithValue("@Sifre", txtSifre.Text);
                     SqlDataReader dr = cmd.ExecuteReader();
 
                     while (dr.Read())

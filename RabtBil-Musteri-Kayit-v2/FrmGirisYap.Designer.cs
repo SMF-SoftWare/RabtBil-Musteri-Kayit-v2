@@ -28,79 +28,79 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LblKullaniciAdi = new System.Windows.Forms.Label();
-            this.TxtKullaniciAdi = new System.Windows.Forms.TextBox();
-            this.BttnGirisYap = new System.Windows.Forms.Button();
-            this.TxtSifre = new System.Windows.Forms.TextBox();
-            this.LblSifre = new System.Windows.Forms.Label();
-            this.LinkLblSifremiUnuttum = new System.Windows.Forms.LinkLabel();
-            this.LblGirisBicimi = new System.Windows.Forms.Label();
+            this.lblKullaniciAdi = new System.Windows.Forms.Label();
+            this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
+            this.btnGirisYap = new System.Windows.Forms.Button();
+            this.txtSifre = new System.Windows.Forms.TextBox();
+            this.lblSifre = new System.Windows.Forms.Label();
+            this.linkLblSifremiUnuttum = new System.Windows.Forms.LinkLabel();
+            this.lblGirisBicimi = new System.Windows.Forms.Label();
             this.BttnCikisYap = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // LblKullaniciAdi
+            // lblKullaniciAdi
             // 
-            this.LblKullaniciAdi.AutoSize = true;
-            this.LblKullaniciAdi.Location = new System.Drawing.Point(21, 78);
-            this.LblKullaniciAdi.Name = "LblKullaniciAdi";
-            this.LblKullaniciAdi.Size = new System.Drawing.Size(118, 24);
-            this.LblKullaniciAdi.TabIndex = 0;
-            this.LblKullaniciAdi.Text = "Kullanıcı Adı:";
+            this.lblKullaniciAdi.AutoSize = true;
+            this.lblKullaniciAdi.Location = new System.Drawing.Point(21, 78);
+            this.lblKullaniciAdi.Name = "lblKullaniciAdi";
+            this.lblKullaniciAdi.Size = new System.Drawing.Size(90, 18);
+            this.lblKullaniciAdi.TabIndex = 0;
+            this.lblKullaniciAdi.Text = "Kullanıcı Adı:";
             // 
-            // TxtKullaniciAdi
+            // txtKullaniciAdi
             // 
-            this.TxtKullaniciAdi.Location = new System.Drawing.Point(24, 99);
-            this.TxtKullaniciAdi.MaxLength = 20;
-            this.TxtKullaniciAdi.Name = "TxtKullaniciAdi";
-            this.TxtKullaniciAdi.Size = new System.Drawing.Size(247, 29);
-            this.TxtKullaniciAdi.TabIndex = 1;
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(24, 99);
+            this.txtKullaniciAdi.MaxLength = 20;
+            this.txtKullaniciAdi.Name = "txtKullaniciAdi";
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(247, 24);
+            this.txtKullaniciAdi.TabIndex = 1;
             // 
-            // BttnGirisYap
+            // btnGirisYap
             // 
-            this.BttnGirisYap.Location = new System.Drawing.Point(24, 189);
-            this.BttnGirisYap.Name = "BttnGirisYap";
-            this.BttnGirisYap.Size = new System.Drawing.Size(247, 40);
-            this.BttnGirisYap.TabIndex = 2;
-            this.BttnGirisYap.Text = "Giriş Yap";
-            this.BttnGirisYap.UseVisualStyleBackColor = true;
-            this.BttnGirisYap.Click += new System.EventHandler(this.BttnGirisYap_Click);
+            this.btnGirisYap.Location = new System.Drawing.Point(24, 189);
+            this.btnGirisYap.Name = "btnGirisYap";
+            this.btnGirisYap.Size = new System.Drawing.Size(247, 40);
+            this.btnGirisYap.TabIndex = 2;
+            this.btnGirisYap.Text = "Giriş Yap";
+            this.btnGirisYap.UseVisualStyleBackColor = true;
+            this.btnGirisYap.Click += new System.EventHandler(this.BttnGirisYap_Click);
             // 
-            // TxtSifre
+            // txtSifre
             // 
-            this.TxtSifre.Location = new System.Drawing.Point(24, 159);
-            this.TxtSifre.MaxLength = 20;
-            this.TxtSifre.Name = "TxtSifre";
-            this.TxtSifre.Size = new System.Drawing.Size(247, 29);
-            this.TxtSifre.TabIndex = 4;
+            this.txtSifre.Location = new System.Drawing.Point(24, 159);
+            this.txtSifre.MaxLength = 20;
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.Size = new System.Drawing.Size(247, 24);
+            this.txtSifre.TabIndex = 4;
             // 
-            // LblSifre
+            // lblSifre
             // 
-            this.LblSifre.AutoSize = true;
-            this.LblSifre.Location = new System.Drawing.Point(21, 138);
-            this.LblSifre.Name = "LblSifre";
-            this.LblSifre.Size = new System.Drawing.Size(52, 24);
-            this.LblSifre.TabIndex = 3;
-            this.LblSifre.Text = "Şifre:";
+            this.lblSifre.AutoSize = true;
+            this.lblSifre.Location = new System.Drawing.Point(21, 138);
+            this.lblSifre.Name = "lblSifre";
+            this.lblSifre.Size = new System.Drawing.Size(42, 18);
+            this.lblSifre.TabIndex = 3;
+            this.lblSifre.Text = "Şifre:";
             // 
-            // LinkLblSifremiUnuttum
+            // linkLblSifremiUnuttum
             // 
-            this.LinkLblSifremiUnuttum.AutoSize = true;
-            this.LinkLblSifremiUnuttum.Location = new System.Drawing.Point(149, 284);
-            this.LinkLblSifremiUnuttum.Name = "LinkLblSifremiUnuttum";
-            this.LinkLblSifremiUnuttum.Size = new System.Drawing.Size(152, 24);
-            this.LinkLblSifremiUnuttum.TabIndex = 5;
-            this.LinkLblSifremiUnuttum.TabStop = true;
-            this.LinkLblSifremiUnuttum.Text = "Şifremi Unuttum?";
+            this.linkLblSifremiUnuttum.AutoSize = true;
+            this.linkLblSifremiUnuttum.Location = new System.Drawing.Point(149, 284);
+            this.linkLblSifremiUnuttum.Name = "linkLblSifremiUnuttum";
+            this.linkLblSifremiUnuttum.Size = new System.Drawing.Size(122, 18);
+            this.linkLblSifremiUnuttum.TabIndex = 5;
+            this.linkLblSifremiUnuttum.TabStop = true;
+            this.linkLblSifremiUnuttum.Text = "Şifremi Unuttum?";
             // 
-            // LblGirisBicimi
+            // lblGirisBicimi
             // 
-            this.LblGirisBicimi.AutoSize = true;
-            this.LblGirisBicimi.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblGirisBicimi.Location = new System.Drawing.Point(59, 24);
-            this.LblGirisBicimi.Name = "LblGirisBicimi";
-            this.LblGirisBicimi.Size = new System.Drawing.Size(217, 39);
-            this.LblGirisBicimi.TabIndex = 6;
-            this.LblGirisBicimi.Text = "Yönetici Giriş";
+            this.lblGirisBicimi.AutoSize = true;
+            this.lblGirisBicimi.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblGirisBicimi.Location = new System.Drawing.Point(59, 24);
+            this.lblGirisBicimi.Name = "lblGirisBicimi";
+            this.lblGirisBicimi.Size = new System.Drawing.Size(174, 31);
+            this.lblGirisBicimi.TabIndex = 6;
+            this.lblGirisBicimi.Text = "Yönetici Giriş";
             // 
             // BttnCikisYap
             // 
@@ -114,17 +114,17 @@
             // 
             // FrmGirisYap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(297, 313);
             this.Controls.Add(this.BttnCikisYap);
-            this.Controls.Add(this.LblGirisBicimi);
-            this.Controls.Add(this.LinkLblSifremiUnuttum);
-            this.Controls.Add(this.TxtSifre);
-            this.Controls.Add(this.LblSifre);
-            this.Controls.Add(this.BttnGirisYap);
-            this.Controls.Add(this.TxtKullaniciAdi);
-            this.Controls.Add(this.LblKullaniciAdi);
+            this.Controls.Add(this.lblGirisBicimi);
+            this.Controls.Add(this.linkLblSifremiUnuttum);
+            this.Controls.Add(this.txtSifre);
+            this.Controls.Add(this.lblSifre);
+            this.Controls.Add(this.btnGirisYap);
+            this.Controls.Add(this.txtKullaniciAdi);
+            this.Controls.Add(this.lblKullaniciAdi);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmGirisYap";
@@ -137,13 +137,13 @@
 
         #endregion
 
-        public System.Windows.Forms.Label LblKullaniciAdi;
-        public System.Windows.Forms.TextBox TxtKullaniciAdi;
-        public System.Windows.Forms.Button BttnGirisYap;
-        public System.Windows.Forms.TextBox TxtSifre;
-        public System.Windows.Forms.Label LblSifre;
-        public System.Windows.Forms.LinkLabel LinkLblSifremiUnuttum;
-        public System.Windows.Forms.Label LblGirisBicimi;
+        public System.Windows.Forms.Label lblKullaniciAdi;
+        public System.Windows.Forms.TextBox txtKullaniciAdi;
+        public System.Windows.Forms.Button btnGirisYap;
+        public System.Windows.Forms.TextBox txtSifre;
+        public System.Windows.Forms.Label lblSifre;
+        public System.Windows.Forms.LinkLabel linkLblSifremiUnuttum;
+        public System.Windows.Forms.Label lblGirisBicimi;
         public System.Windows.Forms.Button BttnCikisYap;
     }
 }
