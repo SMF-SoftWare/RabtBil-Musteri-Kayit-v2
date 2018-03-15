@@ -17,14 +17,17 @@ namespace RabtBil_Musteri_Kayit_v2
             InitializeComponent();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void chckboxTeslimEdildi_CheckedChanged(object sender, EventArgs e)
         {
-
+            FrmUrunTeslim frmUrunTeslim = new FrmUrunTeslim();
+            frmUrunTeslim.ShowDialog();
         }
 
-        private void GrpBoxAksesuarlar_Enter(object sender, EventArgs e)
+        private void btnKayitlariGoster_Click(object sender, EventArgs e)
         {
-
+            FrmKayitlariGoster frmKayitlariGoster = new FrmKayitlariGoster();
+            frmKayitlariGoster.Show();
+            Hide();
         }
     }
 }

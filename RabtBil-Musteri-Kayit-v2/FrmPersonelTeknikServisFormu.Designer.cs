@@ -28,42 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LblMusteriAdi = new System.Windows.Forms.Label();
-            this.TxtMusteriAdi = new System.Windows.Forms.TextBox();
-            this.TxtFormNo = new System.Windows.Forms.TextBox();
-            this.LblFormNo = new System.Windows.Forms.Label();
-            this.LblTelefon = new System.Windows.Forms.Label();
-            this.MskdTxtTelefon = new System.Windows.Forms.MaskedTextBox();
-            this.TxtAksesuarlar = new System.Windows.Forms.TextBox();
-            this.GrpBoxMusteriBilgileri = new System.Windows.Forms.GroupBox();
-            this.GrpBoxUrunBilgileri = new System.Windows.Forms.GroupBox();
-            this.TxtUcret = new System.Windows.Forms.TextBox();
-            this.LblUcret = new System.Windows.Forms.Label();
-            this.PcTrBoxQrKodu = new System.Windows.Forms.PictureBox();
-            this.LblQrKodu = new System.Windows.Forms.Label();
-            this.TxtTakipNumarası = new System.Windows.Forms.TextBox();
-            this.LblTakipNumarası = new System.Windows.Forms.Label();
-            this.TxtUrunDurumu = new System.Windows.Forms.TextBox();
-            this.LblUrunDurumu = new System.Windows.Forms.Label();
-            this.TxtArizaninTanimi = new System.Windows.Forms.TextBox();
-            this.LblArizaninTanimi = new System.Windows.Forms.Label();
-            this.TxtUrunKodlari = new System.Windows.Forms.TextBox();
-            this.TxtUrunModeli = new System.Windows.Forms.TextBox();
-            this.LblUrunModeli = new System.Windows.Forms.Label();
-            this.GrpBoxAksesuarlar = new System.Windows.Forms.GroupBox();
-            this.GrpBoxEkBilgiler = new System.Windows.Forms.GroupBox();
-            this.TxtEkBilgiler = new System.Windows.Forms.TextBox();
-            this.BttnYeniKayit = new System.Windows.Forms.Button();
-            this.BttnKaydet = new System.Windows.Forms.Button();
-            this.BttnTemizle = new System.Windows.Forms.Button();
-            this.BttnKayitlariGoster = new System.Windows.Forms.Button();
-            this.BttnGuncelle = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.lblMusteriAdi = new System.Windows.Forms.Label();
+            this.txtMusteriAdi = new System.Windows.Forms.TextBox();
+            this.txtFormNo = new System.Windows.Forms.TextBox();
+            this.lblFormNo = new System.Windows.Forms.Label();
+            this.lblTelefon = new System.Windows.Forms.Label();
+            this.mskdtxtTelefon = new System.Windows.Forms.MaskedTextBox();
+            this.txtAksesuarlar = new System.Windows.Forms.TextBox();
+            this.grpboxMusteriBilgileri = new System.Windows.Forms.GroupBox();
+            this.grpboxUrunBilgileri = new System.Windows.Forms.GroupBox();
+            this.txtUcret = new System.Windows.Forms.TextBox();
+            this.lblUcret = new System.Windows.Forms.Label();
+            this.pctrboxQrKodu = new System.Windows.Forms.PictureBox();
+            this.lblQrKodu = new System.Windows.Forms.Label();
+            this.txtTakipNumarası = new System.Windows.Forms.TextBox();
+            this.lblTakipNumarası = new System.Windows.Forms.Label();
+            this.txtUrunDurumu = new System.Windows.Forms.TextBox();
+            this.lblUrunDurumu = new System.Windows.Forms.Label();
+            this.txtArizaninTanimi = new System.Windows.Forms.TextBox();
+            this.lblArizaninTanimi = new System.Windows.Forms.Label();
+            this.txtUrunKodlari = new System.Windows.Forms.TextBox();
+            this.txtUrunModeli = new System.Windows.Forms.TextBox();
+            this.lblUrunModeli = new System.Windows.Forms.Label();
+            this.grpboxAksesuarlar = new System.Windows.Forms.GroupBox();
+            this.grpboxEkBilgiler = new System.Windows.Forms.GroupBox();
+            this.txtEkBilgiler = new System.Windows.Forms.TextBox();
+            this.btnYeniKayit = new System.Windows.Forms.Button();
+            this.btnKaydet = new System.Windows.Forms.Button();
+            this.btnTemizle = new System.Windows.Forms.Button();
+            this.btnKayitlariGoster = new System.Windows.Forms.Button();
+            this.btnGuncelle = new System.Windows.Forms.Button();
+            this.mnStrip = new System.Windows.Forms.MenuStrip();
             this.denemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tlStrip = new System.Windows.Forms.ToolStrip();
             this.TlStripLblAciklama = new System.Windows.Forms.ToolStripLabel();
             this.PcTrBoxProfilResim = new System.Windows.Forms.PictureBox();
-            this.BttnCikisYap = new System.Windows.Forms.Button();
+            this.btnCikisYap = new System.Windows.Forms.Button();
             this.LblHosgeldin = new System.Windows.Forms.Label();
             this.yeniKayıtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kaydetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,317 +81,323 @@
             this.çıkışYapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.BttnQrKodu = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.LblUrunKodlari = new System.Windows.Forms.Label();
-            this.GrpBoxMusteriBilgileri.SuspendLayout();
-            this.GrpBoxUrunBilgileri.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxQrKodu)).BeginInit();
-            this.GrpBoxAksesuarlar.SuspendLayout();
-            this.GrpBoxEkBilgiler.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
+            this.chckboxTeslimEdildi = new System.Windows.Forms.CheckBox();
+            this.lblUrunKodlari = new System.Windows.Forms.Label();
+            this.grpboxMusteriBilgileri.SuspendLayout();
+            this.grpboxUrunBilgileri.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrboxQrKodu)).BeginInit();
+            this.grpboxAksesuarlar.SuspendLayout();
+            this.grpboxEkBilgiler.SuspendLayout();
+            this.mnStrip.SuspendLayout();
+            this.tlStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxProfilResim)).BeginInit();
             this.SuspendLayout();
             // 
-            // LblMusteriAdi
+            // lblMusteriAdi
             // 
-            this.LblMusteriAdi.AutoSize = true;
-            this.LblMusteriAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblMusteriAdi.Location = new System.Drawing.Point(21, 27);
-            this.LblMusteriAdi.Name = "LblMusteriAdi";
-            this.LblMusteriAdi.Size = new System.Drawing.Size(71, 15);
-            this.LblMusteriAdi.TabIndex = 0;
-            this.LblMusteriAdi.Text = "Müşteri Adı:";
+            this.lblMusteriAdi.AutoSize = true;
+            this.lblMusteriAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMusteriAdi.Location = new System.Drawing.Point(20, 28);
+            this.lblMusteriAdi.Name = "lblMusteriAdi";
+            this.lblMusteriAdi.Size = new System.Drawing.Size(71, 15);
+            this.lblMusteriAdi.TabIndex = 0;
+            this.lblMusteriAdi.Text = "Müşteri Adı:";
             // 
-            // TxtMusteriAdi
+            // txtMusteriAdi
             // 
-            this.TxtMusteriAdi.Location = new System.Drawing.Point(109, 24);
-            this.TxtMusteriAdi.Name = "TxtMusteriAdi";
-            this.TxtMusteriAdi.Size = new System.Drawing.Size(214, 24);
-            this.TxtMusteriAdi.TabIndex = 1;
+            this.txtMusteriAdi.Location = new System.Drawing.Point(94, 25);
+            this.txtMusteriAdi.MaxLength = 30;
+            this.txtMusteriAdi.Name = "txtMusteriAdi";
+            this.txtMusteriAdi.Size = new System.Drawing.Size(214, 24);
+            this.txtMusteriAdi.TabIndex = 1;
             // 
-            // TxtFormNo
+            // txtFormNo
             // 
-            this.TxtFormNo.Location = new System.Drawing.Point(109, 54);
-            this.TxtFormNo.Name = "TxtFormNo";
-            this.TxtFormNo.Size = new System.Drawing.Size(214, 24);
-            this.TxtFormNo.TabIndex = 3;
+            this.txtFormNo.Location = new System.Drawing.Point(94, 55);
+            this.txtFormNo.MaxLength = 30;
+            this.txtFormNo.Name = "txtFormNo";
+            this.txtFormNo.Size = new System.Drawing.Size(214, 24);
+            this.txtFormNo.TabIndex = 3;
             // 
-            // LblFormNo
+            // lblFormNo
             // 
-            this.LblFormNo.AutoSize = true;
-            this.LblFormNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblFormNo.Location = new System.Drawing.Point(34, 57);
-            this.LblFormNo.Name = "LblFormNo";
-            this.LblFormNo.Size = new System.Drawing.Size(58, 15);
-            this.LblFormNo.TabIndex = 2;
-            this.LblFormNo.Text = "Form No:";
+            this.lblFormNo.AutoSize = true;
+            this.lblFormNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblFormNo.Location = new System.Drawing.Point(33, 58);
+            this.lblFormNo.Name = "lblFormNo";
+            this.lblFormNo.Size = new System.Drawing.Size(58, 15);
+            this.lblFormNo.TabIndex = 2;
+            this.lblFormNo.Text = "Form No:";
             // 
-            // LblTelefon
+            // lblTelefon
             // 
-            this.LblTelefon.AutoSize = true;
-            this.LblTelefon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblTelefon.Location = new System.Drawing.Point(45, 87);
-            this.LblTelefon.Name = "LblTelefon";
-            this.LblTelefon.Size = new System.Drawing.Size(51, 15);
-            this.LblTelefon.TabIndex = 4;
-            this.LblTelefon.Text = "Telefon:";
+            this.lblTelefon.AutoSize = true;
+            this.lblTelefon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTelefon.Location = new System.Drawing.Point(40, 88);
+            this.lblTelefon.Name = "lblTelefon";
+            this.lblTelefon.Size = new System.Drawing.Size(51, 15);
+            this.lblTelefon.TabIndex = 4;
+            this.lblTelefon.Text = "Telefon:";
             // 
-            // MskdTxtTelefon
+            // mskdtxtTelefon
             // 
-            this.MskdTxtTelefon.Location = new System.Drawing.Point(109, 84);
-            this.MskdTxtTelefon.Mask = "(999) 000-0000";
-            this.MskdTxtTelefon.Name = "MskdTxtTelefon";
-            this.MskdTxtTelefon.Size = new System.Drawing.Size(214, 24);
-            this.MskdTxtTelefon.TabIndex = 5;
+            this.mskdtxtTelefon.Location = new System.Drawing.Point(94, 85);
+            this.mskdtxtTelefon.Mask = "(999) 000-0000";
+            this.mskdtxtTelefon.Name = "mskdtxtTelefon";
+            this.mskdtxtTelefon.Size = new System.Drawing.Size(214, 24);
+            this.mskdtxtTelefon.TabIndex = 5;
             // 
-            // TxtAksesuarlar
+            // txtAksesuarlar
             // 
-            this.TxtAksesuarlar.Location = new System.Drawing.Point(6, 20);
-            this.TxtAksesuarlar.Multiline = true;
-            this.TxtAksesuarlar.Name = "TxtAksesuarlar";
-            this.TxtAksesuarlar.Size = new System.Drawing.Size(335, 90);
-            this.TxtAksesuarlar.TabIndex = 21;
+            this.txtAksesuarlar.Location = new System.Drawing.Point(6, 20);
+            this.txtAksesuarlar.Multiline = true;
+            this.txtAksesuarlar.Name = "txtAksesuarlar";
+            this.txtAksesuarlar.Size = new System.Drawing.Size(320, 90);
+            this.txtAksesuarlar.TabIndex = 21;
             // 
-            // GrpBoxMusteriBilgileri
+            // grpboxMusteriBilgileri
             // 
-            this.GrpBoxMusteriBilgileri.Controls.Add(this.TxtMusteriAdi);
-            this.GrpBoxMusteriBilgileri.Controls.Add(this.LblMusteriAdi);
-            this.GrpBoxMusteriBilgileri.Controls.Add(this.LblFormNo);
-            this.GrpBoxMusteriBilgileri.Controls.Add(this.TxtFormNo);
-            this.GrpBoxMusteriBilgileri.Controls.Add(this.LblTelefon);
-            this.GrpBoxMusteriBilgileri.Controls.Add(this.MskdTxtTelefon);
-            this.GrpBoxMusteriBilgileri.Location = new System.Drawing.Point(12, 26);
-            this.GrpBoxMusteriBilgileri.Name = "GrpBoxMusteriBilgileri";
-            this.GrpBoxMusteriBilgileri.Size = new System.Drawing.Size(346, 121);
-            this.GrpBoxMusteriBilgileri.TabIndex = 23;
-            this.GrpBoxMusteriBilgileri.TabStop = false;
-            this.GrpBoxMusteriBilgileri.Text = "Müşteri Bilgileri";
+            this.grpboxMusteriBilgileri.Controls.Add(this.txtMusteriAdi);
+            this.grpboxMusteriBilgileri.Controls.Add(this.lblMusteriAdi);
+            this.grpboxMusteriBilgileri.Controls.Add(this.lblFormNo);
+            this.grpboxMusteriBilgileri.Controls.Add(this.txtFormNo);
+            this.grpboxMusteriBilgileri.Controls.Add(this.lblTelefon);
+            this.grpboxMusteriBilgileri.Controls.Add(this.mskdtxtTelefon);
+            this.grpboxMusteriBilgileri.Location = new System.Drawing.Point(12, 26);
+            this.grpboxMusteriBilgileri.Name = "grpboxMusteriBilgileri";
+            this.grpboxMusteriBilgileri.Size = new System.Drawing.Size(331, 121);
+            this.grpboxMusteriBilgileri.TabIndex = 23;
+            this.grpboxMusteriBilgileri.TabStop = false;
+            this.grpboxMusteriBilgileri.Text = "Müşteri Bilgileri";
             // 
-            // GrpBoxUrunBilgileri
+            // grpboxUrunBilgileri
             // 
-            this.GrpBoxUrunBilgileri.Controls.Add(this.LblUrunKodlari);
-            this.GrpBoxUrunBilgileri.Controls.Add(this.checkBox1);
-            this.GrpBoxUrunBilgileri.Controls.Add(this.BttnQrKodu);
-            this.GrpBoxUrunBilgileri.Controls.Add(this.TxtUcret);
-            this.GrpBoxUrunBilgileri.Controls.Add(this.LblUcret);
-            this.GrpBoxUrunBilgileri.Controls.Add(this.PcTrBoxQrKodu);
-            this.GrpBoxUrunBilgileri.Controls.Add(this.LblQrKodu);
-            this.GrpBoxUrunBilgileri.Controls.Add(this.TxtTakipNumarası);
-            this.GrpBoxUrunBilgileri.Controls.Add(this.LblTakipNumarası);
-            this.GrpBoxUrunBilgileri.Controls.Add(this.TxtUrunDurumu);
-            this.GrpBoxUrunBilgileri.Controls.Add(this.LblUrunDurumu);
-            this.GrpBoxUrunBilgileri.Controls.Add(this.TxtArizaninTanimi);
-            this.GrpBoxUrunBilgileri.Controls.Add(this.LblArizaninTanimi);
-            this.GrpBoxUrunBilgileri.Controls.Add(this.TxtUrunKodlari);
-            this.GrpBoxUrunBilgileri.Controls.Add(this.TxtUrunModeli);
-            this.GrpBoxUrunBilgileri.Controls.Add(this.LblUrunModeli);
-            this.GrpBoxUrunBilgileri.Location = new System.Drawing.Point(364, 26);
-            this.GrpBoxUrunBilgileri.Name = "GrpBoxUrunBilgileri";
-            this.GrpBoxUrunBilgileri.Size = new System.Drawing.Size(361, 365);
-            this.GrpBoxUrunBilgileri.TabIndex = 24;
-            this.GrpBoxUrunBilgileri.TabStop = false;
-            this.GrpBoxUrunBilgileri.Text = "Ürün Bilgileri";
+            this.grpboxUrunBilgileri.Controls.Add(this.lblUrunKodlari);
+            this.grpboxUrunBilgileri.Controls.Add(this.chckboxTeslimEdildi);
+            this.grpboxUrunBilgileri.Controls.Add(this.BttnQrKodu);
+            this.grpboxUrunBilgileri.Controls.Add(this.txtUcret);
+            this.grpboxUrunBilgileri.Controls.Add(this.lblUcret);
+            this.grpboxUrunBilgileri.Controls.Add(this.pctrboxQrKodu);
+            this.grpboxUrunBilgileri.Controls.Add(this.lblQrKodu);
+            this.grpboxUrunBilgileri.Controls.Add(this.txtTakipNumarası);
+            this.grpboxUrunBilgileri.Controls.Add(this.lblTakipNumarası);
+            this.grpboxUrunBilgileri.Controls.Add(this.txtUrunDurumu);
+            this.grpboxUrunBilgileri.Controls.Add(this.lblUrunDurumu);
+            this.grpboxUrunBilgileri.Controls.Add(this.txtArizaninTanimi);
+            this.grpboxUrunBilgileri.Controls.Add(this.lblArizaninTanimi);
+            this.grpboxUrunBilgileri.Controls.Add(this.txtUrunKodlari);
+            this.grpboxUrunBilgileri.Controls.Add(this.txtUrunModeli);
+            this.grpboxUrunBilgileri.Controls.Add(this.lblUrunModeli);
+            this.grpboxUrunBilgileri.Location = new System.Drawing.Point(349, 26);
+            this.grpboxUrunBilgileri.Name = "grpboxUrunBilgileri";
+            this.grpboxUrunBilgileri.Size = new System.Drawing.Size(361, 365);
+            this.grpboxUrunBilgileri.TabIndex = 24;
+            this.grpboxUrunBilgileri.TabStop = false;
+            this.grpboxUrunBilgileri.Text = "Ürün Bilgileri";
             // 
-            // TxtUcret
+            // txtUcret
             // 
-            this.TxtUcret.Location = new System.Drawing.Point(218, 328);
-            this.TxtUcret.Name = "TxtUcret";
-            this.TxtUcret.Size = new System.Drawing.Size(114, 24);
-            this.TxtUcret.TabIndex = 34;
+            this.txtUcret.Location = new System.Drawing.Point(218, 328);
+            this.txtUcret.Name = "txtUcret";
+            this.txtUcret.Size = new System.Drawing.Size(114, 24);
+            this.txtUcret.TabIndex = 34;
             // 
-            // LblUcret
+            // lblUcret
             // 
-            this.LblUcret.AutoSize = true;
-            this.LblUcret.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblUcret.Location = new System.Drawing.Point(176, 331);
-            this.LblUcret.Name = "LblUcret";
-            this.LblUcret.Size = new System.Drawing.Size(39, 15);
-            this.LblUcret.TabIndex = 33;
-            this.LblUcret.Text = "Ücret:";
+            this.lblUcret.AutoSize = true;
+            this.lblUcret.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUcret.Location = new System.Drawing.Point(176, 331);
+            this.lblUcret.Name = "lblUcret";
+            this.lblUcret.Size = new System.Drawing.Size(39, 15);
+            this.lblUcret.TabIndex = 33;
+            this.lblUcret.Text = "Ücret:";
             // 
-            // PcTrBoxQrKodu
+            // pctrboxQrKodu
             // 
-            this.PcTrBoxQrKodu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PcTrBoxQrKodu.Location = new System.Drawing.Point(118, 229);
-            this.PcTrBoxQrKodu.Name = "PcTrBoxQrKodu";
-            this.PcTrBoxQrKodu.Size = new System.Drawing.Size(214, 94);
-            this.PcTrBoxQrKodu.TabIndex = 32;
-            this.PcTrBoxQrKodu.TabStop = false;
+            this.pctrboxQrKodu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pctrboxQrKodu.Location = new System.Drawing.Point(118, 229);
+            this.pctrboxQrKodu.Name = "pctrboxQrKodu";
+            this.pctrboxQrKodu.Size = new System.Drawing.Size(214, 94);
+            this.pctrboxQrKodu.TabIndex = 32;
+            this.pctrboxQrKodu.TabStop = false;
             // 
-            // LblQrKodu
+            // lblQrKodu
             // 
-            this.LblQrKodu.AutoSize = true;
-            this.LblQrKodu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblQrKodu.Location = new System.Drawing.Point(60, 232);
-            this.LblQrKodu.Name = "LblQrKodu";
-            this.LblQrKodu.Size = new System.Drawing.Size(55, 15);
-            this.LblQrKodu.TabIndex = 31;
-            this.LblQrKodu.Text = "Qr Kodu:";
+            this.lblQrKodu.AutoSize = true;
+            this.lblQrKodu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblQrKodu.Location = new System.Drawing.Point(60, 232);
+            this.lblQrKodu.Name = "lblQrKodu";
+            this.lblQrKodu.Size = new System.Drawing.Size(55, 15);
+            this.lblQrKodu.TabIndex = 31;
+            this.lblQrKodu.Text = "Qr Kodu:";
             // 
-            // TxtTakipNumarası
+            // txtTakipNumarası
             // 
-            this.TxtTakipNumarası.Location = new System.Drawing.Point(118, 199);
-            this.TxtTakipNumarası.Name = "TxtTakipNumarası";
-            this.TxtTakipNumarası.Size = new System.Drawing.Size(214, 24);
-            this.TxtTakipNumarası.TabIndex = 30;
+            this.txtTakipNumarası.Location = new System.Drawing.Point(118, 199);
+            this.txtTakipNumarası.MaxLength = 30;
+            this.txtTakipNumarası.Name = "txtTakipNumarası";
+            this.txtTakipNumarası.Size = new System.Drawing.Size(214, 24);
+            this.txtTakipNumarası.TabIndex = 30;
             // 
-            // LblTakipNumarası
+            // lblTakipNumarası
             // 
-            this.LblTakipNumarası.AutoSize = true;
-            this.LblTakipNumarası.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblTakipNumarası.Location = new System.Drawing.Point(18, 202);
-            this.LblTakipNumarası.Name = "LblTakipNumarası";
-            this.LblTakipNumarası.Size = new System.Drawing.Size(97, 15);
-            this.LblTakipNumarası.TabIndex = 29;
-            this.LblTakipNumarası.Text = "Takip Numarası:";
+            this.lblTakipNumarası.AutoSize = true;
+            this.lblTakipNumarası.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTakipNumarası.Location = new System.Drawing.Point(18, 202);
+            this.lblTakipNumarası.Name = "lblTakipNumarası";
+            this.lblTakipNumarası.Size = new System.Drawing.Size(97, 15);
+            this.lblTakipNumarası.TabIndex = 29;
+            this.lblTakipNumarası.Text = "Takip Numarası:";
             // 
-            // TxtUrunDurumu
+            // txtUrunDurumu
             // 
-            this.TxtUrunDurumu.Location = new System.Drawing.Point(118, 169);
-            this.TxtUrunDurumu.Name = "TxtUrunDurumu";
-            this.TxtUrunDurumu.Size = new System.Drawing.Size(214, 24);
-            this.TxtUrunDurumu.TabIndex = 28;
+            this.txtUrunDurumu.Location = new System.Drawing.Point(118, 169);
+            this.txtUrunDurumu.MaxLength = 30;
+            this.txtUrunDurumu.Name = "txtUrunDurumu";
+            this.txtUrunDurumu.Size = new System.Drawing.Size(214, 24);
+            this.txtUrunDurumu.TabIndex = 28;
             // 
-            // LblUrunDurumu
+            // lblUrunDurumu
             // 
-            this.LblUrunDurumu.AutoSize = true;
-            this.LblUrunDurumu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblUrunDurumu.Location = new System.Drawing.Point(30, 172);
-            this.LblUrunDurumu.Name = "LblUrunDurumu";
-            this.LblUrunDurumu.Size = new System.Drawing.Size(85, 15);
-            this.LblUrunDurumu.TabIndex = 27;
-            this.LblUrunDurumu.Text = "Ürün Durumu:";
+            this.lblUrunDurumu.AutoSize = true;
+            this.lblUrunDurumu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUrunDurumu.Location = new System.Drawing.Point(30, 172);
+            this.lblUrunDurumu.Name = "lblUrunDurumu";
+            this.lblUrunDurumu.Size = new System.Drawing.Size(85, 15);
+            this.lblUrunDurumu.TabIndex = 27;
+            this.lblUrunDurumu.Text = "Ürün Durumu:";
             // 
-            // TxtArizaninTanimi
+            // txtArizaninTanimi
             // 
-            this.TxtArizaninTanimi.Location = new System.Drawing.Point(118, 87);
-            this.TxtArizaninTanimi.Multiline = true;
-            this.TxtArizaninTanimi.Name = "TxtArizaninTanimi";
-            this.TxtArizaninTanimi.Size = new System.Drawing.Size(214, 76);
-            this.TxtArizaninTanimi.TabIndex = 26;
+            this.txtArizaninTanimi.Location = new System.Drawing.Point(118, 87);
+            this.txtArizaninTanimi.Multiline = true;
+            this.txtArizaninTanimi.Name = "txtArizaninTanimi";
+            this.txtArizaninTanimi.Size = new System.Drawing.Size(214, 76);
+            this.txtArizaninTanimi.TabIndex = 26;
             // 
-            // LblArizaninTanimi
+            // lblArizaninTanimi
             // 
-            this.LblArizaninTanimi.AutoSize = true;
-            this.LblArizaninTanimi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblArizaninTanimi.Location = new System.Drawing.Point(20, 90);
-            this.LblArizaninTanimi.Name = "LblArizaninTanimi";
-            this.LblArizaninTanimi.Size = new System.Drawing.Size(95, 15);
-            this.LblArizaninTanimi.TabIndex = 25;
-            this.LblArizaninTanimi.Text = "Arızanın Tanımı:";
+            this.lblArizaninTanimi.AutoSize = true;
+            this.lblArizaninTanimi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblArizaninTanimi.Location = new System.Drawing.Point(20, 90);
+            this.lblArizaninTanimi.Name = "lblArizaninTanimi";
+            this.lblArizaninTanimi.Size = new System.Drawing.Size(95, 15);
+            this.lblArizaninTanimi.TabIndex = 25;
+            this.lblArizaninTanimi.Text = "Arızanın Tanımı:";
             // 
-            // TxtUrunKodlari
+            // txtUrunKodlari
             // 
-            this.TxtUrunKodlari.Location = new System.Drawing.Point(118, 57);
-            this.TxtUrunKodlari.Name = "TxtUrunKodlari";
-            this.TxtUrunKodlari.Size = new System.Drawing.Size(214, 24);
-            this.TxtUrunKodlari.TabIndex = 23;
+            this.txtUrunKodlari.Location = new System.Drawing.Point(118, 57);
+            this.txtUrunKodlari.MaxLength = 30;
+            this.txtUrunKodlari.Name = "txtUrunKodlari";
+            this.txtUrunKodlari.Size = new System.Drawing.Size(214, 24);
+            this.txtUrunKodlari.TabIndex = 23;
             // 
-            // TxtUrunModeli
+            // txtUrunModeli
             // 
-            this.TxtUrunModeli.Location = new System.Drawing.Point(118, 27);
-            this.TxtUrunModeli.Name = "TxtUrunModeli";
-            this.TxtUrunModeli.Size = new System.Drawing.Size(214, 24);
-            this.TxtUrunModeli.TabIndex = 22;
+            this.txtUrunModeli.Location = new System.Drawing.Point(118, 27);
+            this.txtUrunModeli.MaxLength = 30;
+            this.txtUrunModeli.Name = "txtUrunModeli";
+            this.txtUrunModeli.Size = new System.Drawing.Size(214, 24);
+            this.txtUrunModeli.TabIndex = 22;
             // 
-            // LblUrunModeli
+            // lblUrunModeli
             // 
-            this.LblUrunModeli.AutoSize = true;
-            this.LblUrunModeli.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblUrunModeli.Location = new System.Drawing.Point(37, 31);
-            this.LblUrunModeli.Name = "LblUrunModeli";
-            this.LblUrunModeli.Size = new System.Drawing.Size(78, 15);
-            this.LblUrunModeli.TabIndex = 21;
-            this.LblUrunModeli.Text = "Ürün Modeli:";
+            this.lblUrunModeli.AutoSize = true;
+            this.lblUrunModeli.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUrunModeli.Location = new System.Drawing.Point(37, 31);
+            this.lblUrunModeli.Name = "lblUrunModeli";
+            this.lblUrunModeli.Size = new System.Drawing.Size(78, 15);
+            this.lblUrunModeli.TabIndex = 21;
+            this.lblUrunModeli.Text = "Ürün Modeli:";
             // 
-            // GrpBoxAksesuarlar
+            // grpboxAksesuarlar
             // 
-            this.GrpBoxAksesuarlar.Controls.Add(this.TxtAksesuarlar);
-            this.GrpBoxAksesuarlar.Location = new System.Drawing.Point(12, 153);
-            this.GrpBoxAksesuarlar.Name = "GrpBoxAksesuarlar";
-            this.GrpBoxAksesuarlar.Size = new System.Drawing.Size(345, 115);
-            this.GrpBoxAksesuarlar.TabIndex = 24;
-            this.GrpBoxAksesuarlar.TabStop = false;
-            this.GrpBoxAksesuarlar.Text = "Aksesuarlar";
-            this.GrpBoxAksesuarlar.Enter += new System.EventHandler(this.GrpBoxAksesuarlar_Enter);
+            this.grpboxAksesuarlar.Controls.Add(this.txtAksesuarlar);
+            this.grpboxAksesuarlar.Location = new System.Drawing.Point(12, 153);
+            this.grpboxAksesuarlar.Name = "grpboxAksesuarlar";
+            this.grpboxAksesuarlar.Size = new System.Drawing.Size(331, 115);
+            this.grpboxAksesuarlar.TabIndex = 24;
+            this.grpboxAksesuarlar.TabStop = false;
+            this.grpboxAksesuarlar.Text = "Aksesuarlar";
             // 
-            // GrpBoxEkBilgiler
+            // grpboxEkBilgiler
             // 
-            this.GrpBoxEkBilgiler.Controls.Add(this.TxtEkBilgiler);
-            this.GrpBoxEkBilgiler.Location = new System.Drawing.Point(12, 276);
-            this.GrpBoxEkBilgiler.Name = "GrpBoxEkBilgiler";
-            this.GrpBoxEkBilgiler.Size = new System.Drawing.Size(345, 115);
-            this.GrpBoxEkBilgiler.TabIndex = 25;
-            this.GrpBoxEkBilgiler.TabStop = false;
-            this.GrpBoxEkBilgiler.Text = "Ek-Bilgiler";
+            this.grpboxEkBilgiler.Controls.Add(this.txtEkBilgiler);
+            this.grpboxEkBilgiler.Location = new System.Drawing.Point(12, 276);
+            this.grpboxEkBilgiler.Name = "grpboxEkBilgiler";
+            this.grpboxEkBilgiler.Size = new System.Drawing.Size(331, 115);
+            this.grpboxEkBilgiler.TabIndex = 25;
+            this.grpboxEkBilgiler.TabStop = false;
+            this.grpboxEkBilgiler.Text = "Ek-Bilgiler";
             // 
-            // TxtEkBilgiler
+            // txtEkBilgiler
             // 
-            this.TxtEkBilgiler.Location = new System.Drawing.Point(6, 20);
-            this.TxtEkBilgiler.Multiline = true;
-            this.TxtEkBilgiler.Name = "TxtEkBilgiler";
-            this.TxtEkBilgiler.Size = new System.Drawing.Size(335, 90);
-            this.TxtEkBilgiler.TabIndex = 21;
+            this.txtEkBilgiler.Location = new System.Drawing.Point(6, 20);
+            this.txtEkBilgiler.Multiline = true;
+            this.txtEkBilgiler.Name = "txtEkBilgiler";
+            this.txtEkBilgiler.Size = new System.Drawing.Size(320, 90);
+            this.txtEkBilgiler.TabIndex = 21;
             // 
-            // BttnYeniKayit
+            // btnYeniKayit
             // 
-            this.BttnYeniKayit.Location = new System.Drawing.Point(745, 125);
-            this.BttnYeniKayit.Name = "BttnYeniKayit";
-            this.BttnYeniKayit.Size = new System.Drawing.Size(140, 34);
-            this.BttnYeniKayit.TabIndex = 26;
-            this.BttnYeniKayit.Text = "Yeni Kayıt";
-            this.BttnYeniKayit.UseVisualStyleBackColor = true;
+            this.btnYeniKayit.Location = new System.Drawing.Point(727, 129);
+            this.btnYeniKayit.Name = "btnYeniKayit";
+            this.btnYeniKayit.Size = new System.Drawing.Size(117, 34);
+            this.btnYeniKayit.TabIndex = 26;
+            this.btnYeniKayit.Text = "Yeni Kayıt";
+            this.btnYeniKayit.UseVisualStyleBackColor = true;
             // 
-            // BttnKaydet
+            // btnKaydet
             // 
-            this.BttnKaydet.Location = new System.Drawing.Point(745, 165);
-            this.BttnKaydet.Name = "BttnKaydet";
-            this.BttnKaydet.Size = new System.Drawing.Size(140, 34);
-            this.BttnKaydet.TabIndex = 27;
-            this.BttnKaydet.Text = "Kaydet";
-            this.BttnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Location = new System.Drawing.Point(727, 169);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(117, 34);
+            this.btnKaydet.TabIndex = 27;
+            this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.UseVisualStyleBackColor = true;
             // 
-            // BttnTemizle
+            // btnTemizle
             // 
-            this.BttnTemizle.Location = new System.Drawing.Point(745, 205);
-            this.BttnTemizle.Name = "BttnTemizle";
-            this.BttnTemizle.Size = new System.Drawing.Size(140, 34);
-            this.BttnTemizle.TabIndex = 28;
-            this.BttnTemizle.Text = "Temizle";
-            this.BttnTemizle.UseVisualStyleBackColor = true;
+            this.btnTemizle.Location = new System.Drawing.Point(727, 209);
+            this.btnTemizle.Name = "btnTemizle";
+            this.btnTemizle.Size = new System.Drawing.Size(117, 34);
+            this.btnTemizle.TabIndex = 28;
+            this.btnTemizle.Text = "Temizle";
+            this.btnTemizle.UseVisualStyleBackColor = true;
             // 
-            // BttnKayitlariGoster
+            // btnKayitlariGoster
             // 
-            this.BttnKayitlariGoster.Location = new System.Drawing.Point(745, 245);
-            this.BttnKayitlariGoster.Name = "BttnKayitlariGoster";
-            this.BttnKayitlariGoster.Size = new System.Drawing.Size(140, 34);
-            this.BttnKayitlariGoster.TabIndex = 29;
-            this.BttnKayitlariGoster.Text = "Kayıtları Göster";
-            this.BttnKayitlariGoster.UseVisualStyleBackColor = true;
+            this.btnKayitlariGoster.Location = new System.Drawing.Point(727, 249);
+            this.btnKayitlariGoster.Name = "btnKayitlariGoster";
+            this.btnKayitlariGoster.Size = new System.Drawing.Size(117, 34);
+            this.btnKayitlariGoster.TabIndex = 29;
+            this.btnKayitlariGoster.Text = "Kayıtları Göster";
+            this.btnKayitlariGoster.UseVisualStyleBackColor = true;
+            this.btnKayitlariGoster.Click += new System.EventHandler(this.btnKayitlariGoster_Click);
             // 
-            // BttnGuncelle
+            // btnGuncelle
             // 
-            this.BttnGuncelle.Location = new System.Drawing.Point(745, 285);
-            this.BttnGuncelle.Name = "BttnGuncelle";
-            this.BttnGuncelle.Size = new System.Drawing.Size(140, 34);
-            this.BttnGuncelle.TabIndex = 30;
-            this.BttnGuncelle.Text = "Güncelle";
-            this.BttnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Location = new System.Drawing.Point(727, 289);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(117, 34);
+            this.btnGuncelle.TabIndex = 30;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = true;
             // 
-            // menuStrip1
+            // mnStrip
             // 
-            this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnStrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.mnStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.denemeToolStripMenuItem,
             this.ayarlarToolStripMenuItem,
             this.yardımToolStripMenuItem,
             this.çıkışYapToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(900, 24);
-            this.menuStrip1.TabIndex = 31;
-            this.menuStrip1.Text = "menuStrip1";
+            this.mnStrip.Location = new System.Drawing.Point(0, 0);
+            this.mnStrip.Name = "mnStrip";
+            this.mnStrip.Size = new System.Drawing.Size(869, 24);
+            this.mnStrip.TabIndex = 31;
+            this.mnStrip.Text = "menuStrip1";
             // 
             // denemeToolStripMenuItem
             // 
@@ -405,52 +411,52 @@
             this.denemeToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.denemeToolStripMenuItem.Text = "Araçlar";
             // 
-            // toolStrip1
+            // tlStrip
             // 
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.toolStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tlStrip.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tlStrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.tlStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TlStripLblAciklama,
             this.toolStripLabel1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 396);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(900, 25);
-            this.toolStrip1.TabIndex = 32;
-            this.toolStrip1.Text = "toolStrip1";
+            this.tlStrip.Location = new System.Drawing.Point(0, 396);
+            this.tlStrip.Name = "tlStrip";
+            this.tlStrip.Size = new System.Drawing.Size(869, 25);
+            this.tlStrip.TabIndex = 32;
+            this.tlStrip.Text = "toolStrip1";
             // 
             // TlStripLblAciklama
             // 
             this.TlStripLblAciklama.Name = "TlStripLblAciklama";
-            this.TlStripLblAciklama.Size = new System.Drawing.Size(68, 22);
+            this.TlStripLblAciklama.Size = new System.Drawing.Size(57, 22);
             this.TlStripLblAciklama.Text = "Açıklama";
             // 
             // PcTrBoxProfilResim
             // 
-            this.PcTrBoxProfilResim.Location = new System.Drawing.Point(776, 28);
+            this.PcTrBoxProfilResim.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PcTrBoxProfilResim.Location = new System.Drawing.Point(716, 33);
             this.PcTrBoxProfilResim.Name = "PcTrBoxProfilResim";
             this.PcTrBoxProfilResim.Size = new System.Drawing.Size(78, 70);
             this.PcTrBoxProfilResim.TabIndex = 33;
             this.PcTrBoxProfilResim.TabStop = false;
             // 
-            // BttnCikisYap
+            // btnCikisYap
             // 
-            this.BttnCikisYap.Location = new System.Drawing.Point(745, 325);
-            this.BttnCikisYap.Name = "BttnCikisYap";
-            this.BttnCikisYap.Size = new System.Drawing.Size(140, 34);
-            this.BttnCikisYap.TabIndex = 34;
-            this.BttnCikisYap.Text = "Çıkış Yap";
-            this.BttnCikisYap.UseVisualStyleBackColor = true;
-            this.BttnCikisYap.Click += new System.EventHandler(this.button6_Click);
+            this.btnCikisYap.Location = new System.Drawing.Point(727, 329);
+            this.btnCikisYap.Name = "btnCikisYap";
+            this.btnCikisYap.Size = new System.Drawing.Size(117, 34);
+            this.btnCikisYap.TabIndex = 34;
+            this.btnCikisYap.Text = "Çıkış Yap";
+            this.btnCikisYap.UseVisualStyleBackColor = true;
             // 
             // LblHosgeldin
             // 
             this.LblHosgeldin.AutoSize = true;
             this.LblHosgeldin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblHosgeldin.Location = new System.Drawing.Point(742, 102);
+            this.LblHosgeldin.Location = new System.Drawing.Point(713, 106);
             this.LblHosgeldin.Name = "LblHosgeldin";
-            this.LblHosgeldin.Size = new System.Drawing.Size(77, 15);
+            this.LblHosgeldin.Size = new System.Drawing.Size(135, 15);
             this.LblHosgeldin.TabIndex = 35;
-            this.LblHosgeldin.Text = "Hoş Geldiniz";
+            this.LblHosgeldin.Text = "Hoş Geldiniz Selim Bey";
             // 
             // yeniKayıtToolStripMenuItem
             // 
@@ -547,8 +553,9 @@
             // 
             // toolStripLabel1
             // 
+            this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(75, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(63, 22);
             this.toolStripLabel1.Text = "Tarih Saat";
             // 
             // BttnQrKodu
@@ -560,64 +567,67 @@
             this.BttnQrKodu.Text = "Qr Kodu Oluştur";
             this.BttnQrKodu.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // chckboxTeslimEdildi
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox1.Location = new System.Drawing.Point(15, 333);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(97, 19);
-            this.checkBox1.TabIndex = 37;
-            this.checkBox1.Text = "Teslim Edildi";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chckboxTeslimEdildi.AutoSize = true;
+            this.chckboxTeslimEdildi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.chckboxTeslimEdildi.Location = new System.Drawing.Point(15, 333);
+            this.chckboxTeslimEdildi.Name = "chckboxTeslimEdildi";
+            this.chckboxTeslimEdildi.Size = new System.Drawing.Size(97, 19);
+            this.chckboxTeslimEdildi.TabIndex = 37;
+            this.chckboxTeslimEdildi.Text = "Teslim Edildi";
+            this.chckboxTeslimEdildi.UseVisualStyleBackColor = true;
+            this.chckboxTeslimEdildi.CheckedChanged += new System.EventHandler(this.chckboxTeslimEdildi_CheckedChanged);
             // 
-            // LblUrunKodlari
+            // lblUrunKodlari
             // 
-            this.LblUrunKodlari.AutoSize = true;
-            this.LblUrunKodlari.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblUrunKodlari.Location = new System.Drawing.Point(37, 61);
-            this.LblUrunKodlari.Name = "LblUrunKodlari";
-            this.LblUrunKodlari.Size = new System.Drawing.Size(79, 15);
-            this.LblUrunKodlari.TabIndex = 38;
-            this.LblUrunKodlari.Text = "Ürün Kodları:";
+            this.lblUrunKodlari.AutoSize = true;
+            this.lblUrunKodlari.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUrunKodlari.Location = new System.Drawing.Point(37, 61);
+            this.lblUrunKodlari.Name = "lblUrunKodlari";
+            this.lblUrunKodlari.Size = new System.Drawing.Size(79, 15);
+            this.lblUrunKodlari.TabIndex = 38;
+            this.lblUrunKodlari.Text = "Ürün Kodları:";
             // 
             // FrmPersonelTeknikServisFormu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 421);
+            this.ClientSize = new System.Drawing.Size(869, 421);
             this.Controls.Add(this.LblHosgeldin);
-            this.Controls.Add(this.BttnCikisYap);
+            this.Controls.Add(this.btnCikisYap);
             this.Controls.Add(this.PcTrBoxProfilResim);
-            this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.BttnGuncelle);
-            this.Controls.Add(this.BttnKayitlariGoster);
-            this.Controls.Add(this.BttnTemizle);
-            this.Controls.Add(this.BttnKaydet);
-            this.Controls.Add(this.BttnYeniKayit);
-            this.Controls.Add(this.GrpBoxEkBilgiler);
-            this.Controls.Add(this.GrpBoxUrunBilgileri);
-            this.Controls.Add(this.GrpBoxAksesuarlar);
-            this.Controls.Add(this.GrpBoxMusteriBilgileri);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.tlStrip);
+            this.Controls.Add(this.btnGuncelle);
+            this.Controls.Add(this.btnKayitlariGoster);
+            this.Controls.Add(this.btnTemizle);
+            this.Controls.Add(this.btnKaydet);
+            this.Controls.Add(this.btnYeniKayit);
+            this.Controls.Add(this.grpboxEkBilgiler);
+            this.Controls.Add(this.grpboxUrunBilgileri);
+            this.Controls.Add(this.grpboxAksesuarlar);
+            this.Controls.Add(this.grpboxMusteriBilgileri);
+            this.Controls.Add(this.mnStrip);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.mnStrip;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(885, 460);
+            this.MinimumSize = new System.Drawing.Size(885, 460);
             this.Name = "FrmPersonelTeknikServisFormu";
             this.Text = "FrmTeknikServisFormu";
-            this.GrpBoxMusteriBilgileri.ResumeLayout(false);
-            this.GrpBoxMusteriBilgileri.PerformLayout();
-            this.GrpBoxUrunBilgileri.ResumeLayout(false);
-            this.GrpBoxUrunBilgileri.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxQrKodu)).EndInit();
-            this.GrpBoxAksesuarlar.ResumeLayout(false);
-            this.GrpBoxAksesuarlar.PerformLayout();
-            this.GrpBoxEkBilgiler.ResumeLayout(false);
-            this.GrpBoxEkBilgiler.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.grpboxMusteriBilgileri.ResumeLayout(false);
+            this.grpboxMusteriBilgileri.PerformLayout();
+            this.grpboxUrunBilgileri.ResumeLayout(false);
+            this.grpboxUrunBilgileri.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrboxQrKodu)).EndInit();
+            this.grpboxAksesuarlar.ResumeLayout(false);
+            this.grpboxAksesuarlar.PerformLayout();
+            this.grpboxEkBilgiler.ResumeLayout(false);
+            this.grpboxEkBilgiler.PerformLayout();
+            this.mnStrip.ResumeLayout(false);
+            this.mnStrip.PerformLayout();
+            this.tlStrip.ResumeLayout(false);
+            this.tlStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxProfilResim)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -626,42 +636,42 @@
 
         #endregion
 
-        private System.Windows.Forms.Label LblMusteriAdi;
-        private System.Windows.Forms.TextBox TxtMusteriAdi;
-        private System.Windows.Forms.TextBox TxtFormNo;
-        private System.Windows.Forms.Label LblFormNo;
-        private System.Windows.Forms.Label LblTelefon;
-        private System.Windows.Forms.MaskedTextBox MskdTxtTelefon;
-        private System.Windows.Forms.TextBox TxtAksesuarlar;
-        private System.Windows.Forms.GroupBox GrpBoxMusteriBilgileri;
-        private System.Windows.Forms.GroupBox GrpBoxUrunBilgileri;
-        private System.Windows.Forms.TextBox TxtUcret;
-        private System.Windows.Forms.Label LblUcret;
-        private System.Windows.Forms.PictureBox PcTrBoxQrKodu;
-        private System.Windows.Forms.Label LblQrKodu;
-        private System.Windows.Forms.TextBox TxtTakipNumarası;
-        private System.Windows.Forms.Label LblTakipNumarası;
-        private System.Windows.Forms.TextBox TxtUrunDurumu;
-        private System.Windows.Forms.Label LblUrunDurumu;
-        private System.Windows.Forms.TextBox TxtArizaninTanimi;
-        private System.Windows.Forms.Label LblArizaninTanimi;
-        private System.Windows.Forms.TextBox TxtUrunKodlari;
-        private System.Windows.Forms.TextBox TxtUrunModeli;
-        private System.Windows.Forms.Label LblUrunModeli;
-        private System.Windows.Forms.GroupBox GrpBoxAksesuarlar;
-        private System.Windows.Forms.GroupBox GrpBoxEkBilgiler;
-        private System.Windows.Forms.TextBox TxtEkBilgiler;
-        private System.Windows.Forms.Button BttnYeniKayit;
-        private System.Windows.Forms.Button BttnKaydet;
-        private System.Windows.Forms.Button BttnTemizle;
-        private System.Windows.Forms.Button BttnKayitlariGoster;
-        private System.Windows.Forms.Button BttnGuncelle;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.Label lblMusteriAdi;
+        private System.Windows.Forms.TextBox txtMusteriAdi;
+        private System.Windows.Forms.TextBox txtFormNo;
+        private System.Windows.Forms.Label lblFormNo;
+        private System.Windows.Forms.Label lblTelefon;
+        private System.Windows.Forms.MaskedTextBox mskdtxtTelefon;
+        private System.Windows.Forms.TextBox txtAksesuarlar;
+        private System.Windows.Forms.GroupBox grpboxMusteriBilgileri;
+        private System.Windows.Forms.GroupBox grpboxUrunBilgileri;
+        private System.Windows.Forms.TextBox txtUcret;
+        private System.Windows.Forms.Label lblUcret;
+        private System.Windows.Forms.PictureBox pctrboxQrKodu;
+        private System.Windows.Forms.Label lblQrKodu;
+        private System.Windows.Forms.TextBox txtTakipNumarası;
+        private System.Windows.Forms.Label lblTakipNumarası;
+        private System.Windows.Forms.TextBox txtUrunDurumu;
+        private System.Windows.Forms.Label lblUrunDurumu;
+        private System.Windows.Forms.TextBox txtArizaninTanimi;
+        private System.Windows.Forms.Label lblArizaninTanimi;
+        private System.Windows.Forms.TextBox txtUrunKodlari;
+        private System.Windows.Forms.TextBox txtUrunModeli;
+        private System.Windows.Forms.Label lblUrunModeli;
+        private System.Windows.Forms.GroupBox grpboxAksesuarlar;
+        private System.Windows.Forms.GroupBox grpboxEkBilgiler;
+        private System.Windows.Forms.TextBox txtEkBilgiler;
+        private System.Windows.Forms.Button btnYeniKayit;
+        private System.Windows.Forms.Button btnKaydet;
+        private System.Windows.Forms.Button btnTemizle;
+        private System.Windows.Forms.Button btnKayitlariGoster;
+        private System.Windows.Forms.Button btnGuncelle;
+        private System.Windows.Forms.MenuStrip mnStrip;
         private System.Windows.Forms.ToolStripMenuItem denemeToolStripMenuItem;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip tlStrip;
         private System.Windows.Forms.ToolStripLabel TlStripLblAciklama;
         private System.Windows.Forms.PictureBox PcTrBoxProfilResim;
-        private System.Windows.Forms.Button BttnCikisYap;
+        private System.Windows.Forms.Button btnCikisYap;
         private System.Windows.Forms.ToolStripMenuItem yeniKayıtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kaydetToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem temizleToolStripMenuItem;
@@ -678,8 +688,8 @@
         private System.Windows.Forms.ToolStripMenuItem hakkındaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem çıkışYapToolStripMenuItem;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox chckboxTeslimEdildi;
         private System.Windows.Forms.Button BttnQrKodu;
-        private System.Windows.Forms.Label LblUrunKodlari;
+        private System.Windows.Forms.Label lblUrunKodlari;
     }
 }

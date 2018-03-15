@@ -57,6 +57,12 @@
     <Compile Include="FrmHesapAc.Designer.cs">
       <DependentUpon>FrmHesapAc.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmKayitlariGoster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKayitlariGoster.Designer.cs">
+      <DependentUpon>FrmKayitlariGoster.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPersonelTeknikServisFormu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHesapAc.resx">
       <DependentUpon>FrmHesapAc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKayitlariGoster.resx">
+      <DependentUpon>FrmKayitlariGoster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPersonelTeknikServisFormu.resx">
       <DependentUpon>FrmPersonelTeknikServisFormu.cs</DependentUpon>
