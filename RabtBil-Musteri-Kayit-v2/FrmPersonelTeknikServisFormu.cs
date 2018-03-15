@@ -25,8 +25,7 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void btnKayitlariGoster_Click(object sender, EventArgs e)
         {
-            FrmKayitlariGoster frmKayitlariGoster = new FrmKayitlariGoster();
-            frmKayitlariGoster.Show();
+            SMF.FrmKayitlariGoster.Show();
             Hide();
         }
     }

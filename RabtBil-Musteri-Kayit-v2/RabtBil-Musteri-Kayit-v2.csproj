@@ -51,12 +51,6 @@
     <Compile Include="FrmGirisYap.Designer.cs">
       <DependentUpon>FrmGirisYap.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmHesapAc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmHesapAc.Designer.cs">
-      <DependentUpon>FrmHesapAc.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmKayitlariGoster.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,9 +74,6 @@
     <Compile Include="SMF.cs" />
     <EmbeddedResource Include="FrmGirisYap.resx">
       <DependentUpon>FrmGirisYap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmHesapAc.resx">
-      <DependentUpon>FrmHesapAc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmKayitlariGoster.resx">
       <DependentUpon>FrmKayitlariGoster.cs</DependentUpon>

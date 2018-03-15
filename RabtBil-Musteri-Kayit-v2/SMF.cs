@@ -8,6 +8,7 @@ namespace RabtBil_Musteri_Kayit_v2
         public static string UygulamaSurum = "v1.0";
         public static string UygulamaAdi = $"RabtBil Müşteri Kayıt {UygulamaSurum}";
         public static int Yetki = 2;
+        public static FrmKayitlariGoster FrmKayitlariGoster = new FrmKayitlariGoster();
 
         public enum Rol
         {
