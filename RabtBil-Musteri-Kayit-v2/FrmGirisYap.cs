@@ -14,8 +14,6 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void BttnCikisYap_Click(object sender, EventArgs e)
         {
-            FrmHesapAc _frmHesapAc = new FrmHesapAc();
-            _frmHesapAc.Show();
             Close();
         }
 
