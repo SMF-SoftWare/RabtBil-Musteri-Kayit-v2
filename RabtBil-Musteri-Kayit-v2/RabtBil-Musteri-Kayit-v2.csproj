@@ -57,6 +57,18 @@
     <Compile Include="FrmHesapAc.Designer.cs">
       <DependentUpon>FrmHesapAc.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPersonelTeknikServisFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPersonelTeknikServisFormu.Designer.cs">
+      <DependentUpon>FrmPersonelTeknikServisFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUrunTeslim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUrunTeslim.Designer.cs">
+      <DependentUpon>FrmUrunTeslim.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmGirisYap.resx">
@@ -64,6 +76,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHesapAc.resx">
       <DependentUpon>FrmHesapAc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPersonelTeknikServisFormu.resx">
+      <DependentUpon>FrmPersonelTeknikServisFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUrunTeslim.resx">
+      <DependentUpon>FrmUrunTeslim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
