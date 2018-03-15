@@ -43,7 +43,7 @@
             this.LblKullaniciAdi.AutoSize = true;
             this.LblKullaniciAdi.Location = new System.Drawing.Point(21, 78);
             this.LblKullaniciAdi.Name = "LblKullaniciAdi";
-            this.LblKullaniciAdi.Size = new System.Drawing.Size(90, 18);
+            this.LblKullaniciAdi.Size = new System.Drawing.Size(118, 24);
             this.LblKullaniciAdi.TabIndex = 0;
             this.LblKullaniciAdi.Text = "Kullanıcı Adı:";
             // 
@@ -52,7 +52,7 @@
             this.TxtKullaniciAdi.Location = new System.Drawing.Point(24, 99);
             this.TxtKullaniciAdi.MaxLength = 20;
             this.TxtKullaniciAdi.Name = "TxtKullaniciAdi";
-            this.TxtKullaniciAdi.Size = new System.Drawing.Size(247, 24);
+            this.TxtKullaniciAdi.Size = new System.Drawing.Size(247, 29);
             this.TxtKullaniciAdi.TabIndex = 1;
             // 
             // BttnGirisYap
@@ -63,13 +63,14 @@
             this.BttnGirisYap.TabIndex = 2;
             this.BttnGirisYap.Text = "Giriş Yap";
             this.BttnGirisYap.UseVisualStyleBackColor = true;
+            this.BttnGirisYap.Click += new System.EventHandler(this.BttnGirisYap_Click);
             // 
             // TxtSifre
             // 
             this.TxtSifre.Location = new System.Drawing.Point(24, 159);
             this.TxtSifre.MaxLength = 20;
             this.TxtSifre.Name = "TxtSifre";
-            this.TxtSifre.Size = new System.Drawing.Size(247, 24);
+            this.TxtSifre.Size = new System.Drawing.Size(247, 29);
             this.TxtSifre.TabIndex = 4;
             // 
             // LblSifre
@@ -77,7 +78,7 @@
             this.LblSifre.AutoSize = true;
             this.LblSifre.Location = new System.Drawing.Point(21, 138);
             this.LblSifre.Name = "LblSifre";
-            this.LblSifre.Size = new System.Drawing.Size(42, 18);
+            this.LblSifre.Size = new System.Drawing.Size(52, 24);
             this.LblSifre.TabIndex = 3;
             this.LblSifre.Text = "Şifre:";
             // 
@@ -86,7 +87,7 @@
             this.LinkLblSifremiUnuttum.AutoSize = true;
             this.LinkLblSifremiUnuttum.Location = new System.Drawing.Point(149, 284);
             this.LinkLblSifremiUnuttum.Name = "LinkLblSifremiUnuttum";
-            this.LinkLblSifremiUnuttum.Size = new System.Drawing.Size(122, 18);
+            this.LinkLblSifremiUnuttum.Size = new System.Drawing.Size(152, 24);
             this.LinkLblSifremiUnuttum.TabIndex = 5;
             this.LinkLblSifremiUnuttum.TabStop = true;
             this.LinkLblSifremiUnuttum.Text = "Şifremi Unuttum?";
@@ -97,7 +98,7 @@
             this.LblGirisBicimi.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.LblGirisBicimi.Location = new System.Drawing.Point(59, 24);
             this.LblGirisBicimi.Name = "LblGirisBicimi";
-            this.LblGirisBicimi.Size = new System.Drawing.Size(174, 31);
+            this.LblGirisBicimi.Size = new System.Drawing.Size(217, 39);
             this.LblGirisBicimi.TabIndex = 6;
             this.LblGirisBicimi.Text = "Yönetici Giriş";
             // 
@@ -113,7 +114,7 @@
             // 
             // FrmGirisYap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(297, 313);
             this.Controls.Add(this.BttnCikisYap);
@@ -125,7 +126,7 @@
             this.Controls.Add(this.TxtKullaniciAdi);
             this.Controls.Add(this.LblKullaniciAdi);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmGirisYap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmGirisYap";

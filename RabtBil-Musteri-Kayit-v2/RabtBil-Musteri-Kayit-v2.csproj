@@ -71,6 +71,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SMF.cs" />
     <EmbeddedResource Include="FrmGirisYap.resx">
       <DependentUpon>FrmGirisYap.cs</DependentUpon>
     </EmbeddedResource>
