@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.lblMusteriAdi = new System.Windows.Forms.Label();
-            this.txtMusteriAdi = new System.Windows.Forms.TextBox();
             this.txtFormNo = new System.Windows.Forms.TextBox();
             this.lblFormNo = new System.Windows.Forms.Label();
             this.lblTelefon = new System.Windows.Forms.Label();
@@ -62,22 +60,22 @@
             this.btnTemizle = new System.Windows.Forms.Button();
             this.btnKayitlariGoster = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
-            this.mnStrip = new System.Windows.Forms.MenuStrip();
-            this.denemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.yeniKayıtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kaydetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.temizleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kayıtlarıGösterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.güncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ayarlarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.türkçeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inglizceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.temaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.yardımToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lisansAnahtarıToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hakkındaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.çıkışYapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsTeknikServisFormu = new System.Windows.Forms.MenuStrip();
+            this.mnsAraclar = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsAraclarYeniKayit = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsAraclarKaydet = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsAraclarTemizle = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsKayitlariGoster = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsAraclarGuncelle = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsAyarlar = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsAyarlarDil = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsAyarlarDilTurkce = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsAyarlarDilIngilizce = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsAyarlarTema = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsYardim = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsYardimLisansAnahtari = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsYardimHakkinda = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsCikisYap = new System.Windows.Forms.ToolStripMenuItem();
             this.tlStrip = new System.Windows.Forms.ToolStrip();
             this.TlStripLblAciklama = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
@@ -85,37 +83,22 @@
             this.btnCikisYap = new System.Windows.Forms.Button();
             this.LblHosgeldin = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.txtMusteriAdi = new System.Windows.Forms.TextBox();
+            this.lblMusteriAdi = new System.Windows.Forms.Label();
+            this.lblMusteriNo = new System.Windows.Forms.Label();
             this.grpboxMusteriBilgileri.SuspendLayout();
             this.grpboxUrunBilgileri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picQrKodu)).BeginInit();
             this.grpboxAksesuarlar.SuspendLayout();
             this.grpboxEkBilgiler.SuspendLayout();
-            this.mnStrip.SuspendLayout();
+            this.mnsTeknikServisFormu.SuspendLayout();
             this.tlStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxProfilResim)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblMusteriAdi
-            // 
-            this.lblMusteriAdi.AutoSize = true;
-            this.lblMusteriAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMusteriAdi.Location = new System.Drawing.Point(20, 28);
-            this.lblMusteriAdi.Name = "lblMusteriAdi";
-            this.lblMusteriAdi.Size = new System.Drawing.Size(71, 15);
-            this.lblMusteriAdi.TabIndex = 0;
-            this.lblMusteriAdi.Text = "Müşteri Adı:";
-            // 
-            // txtMusteriAdi
-            // 
-            this.txtMusteriAdi.Location = new System.Drawing.Point(94, 25);
-            this.txtMusteriAdi.MaxLength = 30;
-            this.txtMusteriAdi.Name = "txtMusteriAdi";
-            this.txtMusteriAdi.Size = new System.Drawing.Size(214, 24);
-            this.txtMusteriAdi.TabIndex = 1;
-            // 
             // txtFormNo
             // 
-            this.txtFormNo.Location = new System.Drawing.Point(94, 55);
+            this.txtFormNo.Location = new System.Drawing.Point(94, 23);
             this.txtFormNo.MaxLength = 30;
             this.txtFormNo.Name = "txtFormNo";
             this.txtFormNo.Size = new System.Drawing.Size(214, 24);
@@ -125,7 +108,7 @@
             // 
             this.lblFormNo.AutoSize = true;
             this.lblFormNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblFormNo.Location = new System.Drawing.Point(33, 58);
+            this.lblFormNo.Location = new System.Drawing.Point(33, 26);
             this.lblFormNo.Name = "lblFormNo";
             this.lblFormNo.Size = new System.Drawing.Size(58, 15);
             this.lblFormNo.TabIndex = 2;
@@ -175,6 +158,7 @@
             // 
             // grpboxUrunBilgileri
             // 
+            this.grpboxUrunBilgileri.Controls.Add(this.lblMusteriNo);
             this.grpboxUrunBilgileri.Controls.Add(this.lblUrunKodlari);
             this.grpboxUrunBilgileri.Controls.Add(this.chckboxTeslimEdildi);
             this.grpboxUrunBilgileri.Controls.Add(this.BttnQrKodu);
@@ -423,125 +407,125 @@
             this.btnGuncelle.TabIndex = 30;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
-            // mnStrip
+            // mnsTeknikServisFormu
             // 
-            this.mnStrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.mnStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.denemeToolStripMenuItem,
-            this.ayarlarToolStripMenuItem,
-            this.yardımToolStripMenuItem,
-            this.çıkışYapToolStripMenuItem});
-            this.mnStrip.Location = new System.Drawing.Point(0, 0);
-            this.mnStrip.Name = "mnStrip";
-            this.mnStrip.Size = new System.Drawing.Size(869, 24);
-            this.mnStrip.TabIndex = 31;
-            this.mnStrip.Text = "menuStrip1";
+            this.mnsTeknikServisFormu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.mnsTeknikServisFormu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnsAraclar,
+            this.mnsAyarlar,
+            this.mnsYardim,
+            this.mnsCikisYap});
+            this.mnsTeknikServisFormu.Location = new System.Drawing.Point(0, 0);
+            this.mnsTeknikServisFormu.Name = "mnsTeknikServisFormu";
+            this.mnsTeknikServisFormu.Size = new System.Drawing.Size(869, 24);
+            this.mnsTeknikServisFormu.TabIndex = 31;
             // 
-            // denemeToolStripMenuItem
+            // mnsAraclar
             // 
-            this.denemeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.yeniKayıtToolStripMenuItem,
-            this.kaydetToolStripMenuItem,
-            this.temizleToolStripMenuItem,
-            this.kayıtlarıGösterToolStripMenuItem,
-            this.güncelleToolStripMenuItem});
-            this.denemeToolStripMenuItem.Name = "denemeToolStripMenuItem";
-            this.denemeToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.denemeToolStripMenuItem.Text = "Araçlar";
+            this.mnsAraclar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnsAraclarYeniKayit,
+            this.mnsAraclarKaydet,
+            this.mnsAraclarTemizle,
+            this.mnsKayitlariGoster,
+            this.mnsAraclarGuncelle});
+            this.mnsAraclar.Name = "mnsAraclar";
+            this.mnsAraclar.Size = new System.Drawing.Size(57, 20);
+            this.mnsAraclar.Text = "Araçlar";
             // 
-            // yeniKayıtToolStripMenuItem
+            // mnsAraclarYeniKayit
             // 
-            this.yeniKayıtToolStripMenuItem.Name = "yeniKayıtToolStripMenuItem";
-            this.yeniKayıtToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.yeniKayıtToolStripMenuItem.Text = "Yeni Kayıt";
+            this.mnsAraclarYeniKayit.Name = "mnsAraclarYeniKayit";
+            this.mnsAraclarYeniKayit.Size = new System.Drawing.Size(156, 22);
+            this.mnsAraclarYeniKayit.Text = "Yeni Kayıt";
             // 
-            // kaydetToolStripMenuItem
+            // mnsAraclarKaydet
             // 
-            this.kaydetToolStripMenuItem.Name = "kaydetToolStripMenuItem";
-            this.kaydetToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.kaydetToolStripMenuItem.Text = "Kaydet";
+            this.mnsAraclarKaydet.Name = "mnsAraclarKaydet";
+            this.mnsAraclarKaydet.Size = new System.Drawing.Size(156, 22);
+            this.mnsAraclarKaydet.Text = "Kaydet";
             // 
-            // temizleToolStripMenuItem
+            // mnsAraclarTemizle
             // 
-            this.temizleToolStripMenuItem.Name = "temizleToolStripMenuItem";
-            this.temizleToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.temizleToolStripMenuItem.Text = "Temizle";
+            this.mnsAraclarTemizle.Name = "mnsAraclarTemizle";
+            this.mnsAraclarTemizle.Size = new System.Drawing.Size(156, 22);
+            this.mnsAraclarTemizle.Text = "Temizle";
             // 
-            // kayıtlarıGösterToolStripMenuItem
+            // mnsKayitlariGoster
             // 
-            this.kayıtlarıGösterToolStripMenuItem.Name = "kayıtlarıGösterToolStripMenuItem";
-            this.kayıtlarıGösterToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.kayıtlarıGösterToolStripMenuItem.Text = "Kayıtları Göster";
+            this.mnsKayitlariGoster.Name = "mnsKayitlariGoster";
+            this.mnsKayitlariGoster.Size = new System.Drawing.Size(156, 22);
+            this.mnsKayitlariGoster.Text = "Kayıtları Göster";
             // 
-            // güncelleToolStripMenuItem
+            // mnsAraclarGuncelle
             // 
-            this.güncelleToolStripMenuItem.Name = "güncelleToolStripMenuItem";
-            this.güncelleToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.güncelleToolStripMenuItem.Text = "Güncelle";
+            this.mnsAraclarGuncelle.Name = "mnsAraclarGuncelle";
+            this.mnsAraclarGuncelle.Size = new System.Drawing.Size(156, 22);
+            this.mnsAraclarGuncelle.Text = "Güncelle";
             // 
-            // ayarlarToolStripMenuItem
+            // mnsAyarlar
             // 
-            this.ayarlarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dilToolStripMenuItem,
-            this.temaToolStripMenuItem});
-            this.ayarlarToolStripMenuItem.Name = "ayarlarToolStripMenuItem";
-            this.ayarlarToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.ayarlarToolStripMenuItem.Text = "Ayarlar";
+            this.mnsAyarlar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnsAyarlarDil,
+            this.mnsAyarlarTema});
+            this.mnsAyarlar.Name = "mnsAyarlar";
+            this.mnsAyarlar.Size = new System.Drawing.Size(56, 20);
+            this.mnsAyarlar.Text = "Ayarlar";
             // 
-            // dilToolStripMenuItem
+            // mnsAyarlarDil
             // 
-            this.dilToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.türkçeToolStripMenuItem,
-            this.inglizceToolStripMenuItem});
-            this.dilToolStripMenuItem.Name = "dilToolStripMenuItem";
-            this.dilToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
-            this.dilToolStripMenuItem.Text = "Dil";
+            this.mnsAyarlarDil.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnsAyarlarDilTurkce,
+            this.mnsAyarlarDilIngilizce});
+            this.mnsAyarlarDil.Name = "mnsAyarlarDil";
+            this.mnsAyarlarDil.Size = new System.Drawing.Size(152, 22);
+            this.mnsAyarlarDil.Text = "Dil";
             // 
-            // türkçeToolStripMenuItem
+            // mnsAyarlarDilTurkce
             // 
-            this.türkçeToolStripMenuItem.Name = "türkçeToolStripMenuItem";
-            this.türkçeToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
-            this.türkçeToolStripMenuItem.Text = "Türkçe";
+            this.mnsAyarlarDilTurkce.Name = "mnsAyarlarDilTurkce";
+            this.mnsAyarlarDilTurkce.Size = new System.Drawing.Size(152, 22);
+            this.mnsAyarlarDilTurkce.Text = "Türkçe";
             // 
-            // inglizceToolStripMenuItem
+            // mnsAyarlarDilIngilizce
             // 
-            this.inglizceToolStripMenuItem.Name = "inglizceToolStripMenuItem";
-            this.inglizceToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
-            this.inglizceToolStripMenuItem.Text = "İngilizce";
+            this.mnsAyarlarDilIngilizce.Name = "mnsAyarlarDilIngilizce";
+            this.mnsAyarlarDilIngilizce.Size = new System.Drawing.Size(152, 22);
+            this.mnsAyarlarDilIngilizce.Text = "İngilizce";
             // 
-            // temaToolStripMenuItem
+            // mnsAyarlarTema
             // 
-            this.temaToolStripMenuItem.Name = "temaToolStripMenuItem";
-            this.temaToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
-            this.temaToolStripMenuItem.Text = "Tema";
+            this.mnsAyarlarTema.Name = "mnsAyarlarTema";
+            this.mnsAyarlarTema.Size = new System.Drawing.Size(152, 22);
+            this.mnsAyarlarTema.Text = "Tema";
             // 
-            // yardımToolStripMenuItem
+            // mnsYardim
             // 
-            this.yardımToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lisansAnahtarıToolStripMenuItem,
-            this.hakkındaToolStripMenuItem});
-            this.yardımToolStripMenuItem.Name = "yardımToolStripMenuItem";
-            this.yardımToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
-            this.yardımToolStripMenuItem.Text = "Yardım";
+            this.mnsYardim.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnsYardimLisansAnahtari,
+            this.mnsYardimHakkinda});
+            this.mnsYardim.Name = "mnsYardim";
+            this.mnsYardim.Size = new System.Drawing.Size(58, 20);
+            this.mnsYardim.Text = "Yardım";
             // 
-            // lisansAnahtarıToolStripMenuItem
+            // mnsYardimLisansAnahtari
             // 
-            this.lisansAnahtarıToolStripMenuItem.Name = "lisansAnahtarıToolStripMenuItem";
-            this.lisansAnahtarıToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.lisansAnahtarıToolStripMenuItem.Text = "Lisans Anahtarı";
+            this.mnsYardimLisansAnahtari.Name = "mnsYardimLisansAnahtari";
+            this.mnsYardimLisansAnahtari.Size = new System.Drawing.Size(158, 22);
+            this.mnsYardimLisansAnahtari.Text = "Lisans Anahtarı";
             // 
-            // hakkındaToolStripMenuItem
+            // mnsYardimHakkinda
             // 
-            this.hakkındaToolStripMenuItem.Name = "hakkındaToolStripMenuItem";
-            this.hakkındaToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.hakkındaToolStripMenuItem.Text = "Hakkında";
+            this.mnsYardimHakkinda.Name = "mnsYardimHakkinda";
+            this.mnsYardimHakkinda.Size = new System.Drawing.Size(158, 22);
+            this.mnsYardimHakkinda.Text = "Hakkında";
             // 
-            // çıkışYapToolStripMenuItem
+            // mnsCikisYap
             // 
-            this.çıkışYapToolStripMenuItem.Name = "çıkışYapToolStripMenuItem";
-            this.çıkışYapToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
-            this.çıkışYapToolStripMenuItem.Text = "Çıkış Yap";
+            this.mnsCikisYap.Name = "mnsCikisYap";
+            this.mnsCikisYap.Size = new System.Drawing.Size(69, 20);
+            this.mnsCikisYap.Text = "Çıkış Yap";
             // 
             // tlStrip
             // 
@@ -572,9 +556,11 @@
             // PcTrBoxProfilResim
             // 
             this.PcTrBoxProfilResim.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PcTrBoxProfilResim.Image = global::RabtBil_Musteri_Kayit_v2.Properties.Resources.varsayilanProfilResmi;
             this.PcTrBoxProfilResim.Location = new System.Drawing.Point(740, 35);
             this.PcTrBoxProfilResim.Name = "PcTrBoxProfilResim";
             this.PcTrBoxProfilResim.Size = new System.Drawing.Size(78, 70);
+            this.PcTrBoxProfilResim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PcTrBoxProfilResim.TabIndex = 33;
             this.PcTrBoxProfilResim.TabStop = false;
             // 
@@ -592,11 +578,40 @@
             // 
             this.LblHosgeldin.AutoSize = true;
             this.LblHosgeldin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblHosgeldin.Location = new System.Drawing.Point(713, 106);
+            this.LblHosgeldin.Location = new System.Drawing.Point(716, 109);
             this.LblHosgeldin.Name = "LblHosgeldin";
             this.LblHosgeldin.Size = new System.Drawing.Size(135, 15);
             this.LblHosgeldin.TabIndex = 35;
             this.LblHosgeldin.Text = "Hoş Geldiniz Selim Bey";
+            // 
+            // txtMusteriAdi
+            // 
+            this.txtMusteriAdi.Location = new System.Drawing.Point(94, 53);
+            this.txtMusteriAdi.MaxLength = 30;
+            this.txtMusteriAdi.Name = "txtMusteriAdi";
+            this.txtMusteriAdi.Size = new System.Drawing.Size(214, 24);
+            this.txtMusteriAdi.TabIndex = 7;
+            // 
+            // lblMusteriAdi
+            // 
+            this.lblMusteriAdi.AutoSize = true;
+            this.lblMusteriAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMusteriAdi.Location = new System.Drawing.Point(20, 56);
+            this.lblMusteriAdi.Name = "lblMusteriAdi";
+            this.lblMusteriAdi.Size = new System.Drawing.Size(71, 15);
+            this.lblMusteriAdi.TabIndex = 6;
+            this.lblMusteriAdi.Text = "Müşteri Adı:";
+            // 
+            // lblMusteriNo
+            // 
+            this.lblMusteriNo.AutoSize = true;
+            this.lblMusteriNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblMusteriNo.Location = new System.Drawing.Point(221, 338);
+            this.lblMusteriNo.Name = "lblMusteriNo";
+            this.lblMusteriNo.Size = new System.Drawing.Size(67, 15);
+            this.lblMusteriNo.TabIndex = 36;
+            this.lblMusteriNo.Text = "Müşteri No";
+            this.lblMusteriNo.Visible = false;
             // 
             // FrmPersonelTeknikServisFormu
             // 
@@ -616,9 +631,9 @@
             this.Controls.Add(this.grpboxUrunBilgileri);
             this.Controls.Add(this.grpboxAksesuarlar);
             this.Controls.Add(this.grpboxMusteriBilgileri);
-            this.Controls.Add(this.mnStrip);
+            this.Controls.Add(this.mnsTeknikServisFormu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.MainMenuStrip = this.mnStrip;
+            this.MainMenuStrip = this.mnsTeknikServisFormu;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(885, 460);
             this.MinimumSize = new System.Drawing.Size(885, 460);
@@ -633,8 +648,8 @@
             this.grpboxAksesuarlar.PerformLayout();
             this.grpboxEkBilgiler.ResumeLayout(false);
             this.grpboxEkBilgiler.PerformLayout();
-            this.mnStrip.ResumeLayout(false);
-            this.mnStrip.PerformLayout();
+            this.mnsTeknikServisFormu.ResumeLayout(false);
+            this.mnsTeknikServisFormu.PerformLayout();
             this.tlStrip.ResumeLayout(false);
             this.tlStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxProfilResim)).EndInit();
@@ -645,61 +660,62 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblMusteriAdi;
-        private System.Windows.Forms.TextBox txtMusteriAdi;
-        private System.Windows.Forms.TextBox txtFormNo;
-        private System.Windows.Forms.Label lblFormNo;
-        private System.Windows.Forms.Label lblTelefon;
-        private System.Windows.Forms.MaskedTextBox mtxTelefon;
-        private System.Windows.Forms.TextBox txtAksesuarlar;
-        private System.Windows.Forms.GroupBox grpboxMusteriBilgileri;
-        private System.Windows.Forms.GroupBox grpboxUrunBilgileri;
-        private System.Windows.Forms.TextBox txtUcret;
-        private System.Windows.Forms.Label lblUcret;
-        private System.Windows.Forms.PictureBox picQrKodu;
-        private System.Windows.Forms.Label lblQrKodu;
-        private System.Windows.Forms.TextBox txtTakipNumarası;
-        private System.Windows.Forms.Label lblTakipNumarası;
-        private System.Windows.Forms.TextBox txtUrunDurumu;
-        private System.Windows.Forms.Label lblUrunDurumu;
-        private System.Windows.Forms.TextBox txtArizaninTanimi;
-        private System.Windows.Forms.Label lblArizaninTanimi;
-        private System.Windows.Forms.TextBox txtUrunKodlari;
-        private System.Windows.Forms.TextBox txtUrunModeli;
-        private System.Windows.Forms.Label lblUrunModeli;
-        private System.Windows.Forms.GroupBox grpboxAksesuarlar;
-        private System.Windows.Forms.GroupBox grpboxEkBilgiler;
-        private System.Windows.Forms.TextBox txtEkBilgiler;
-        private System.Windows.Forms.Button btnYeniKayit;
-        private System.Windows.Forms.Button btnKaydet;
-        private System.Windows.Forms.Button btnTemizle;
-        private System.Windows.Forms.Button btnKayitlariGoster;
-        private System.Windows.Forms.Button btnGuncelle;
-        private System.Windows.Forms.MenuStrip mnStrip;
-        private System.Windows.Forms.ToolStripMenuItem denemeToolStripMenuItem;
-        private System.Windows.Forms.ToolStrip tlStrip;
-        private System.Windows.Forms.ToolStripLabel TlStripLblAciklama;
-        private System.Windows.Forms.PictureBox PcTrBoxProfilResim;
-        private System.Windows.Forms.Button btnCikisYap;
-        private System.Windows.Forms.ToolStripMenuItem yeniKayıtToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kaydetToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem temizleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kayıtlarıGösterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem güncelleToolStripMenuItem;
-        private System.Windows.Forms.Label LblHosgeldin;
-        private System.Windows.Forms.ToolStripMenuItem ayarlarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dilToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem türkçeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem inglizceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem temaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem yardımToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lisansAnahtarıToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hakkındaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem çıkışYapToolStripMenuItem;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.CheckBox chckboxTeslimEdildi;
-        private System.Windows.Forms.Button BttnQrKodu;
-        private System.Windows.Forms.Label lblUrunKodlari;
-        private System.Windows.Forms.Timer timer;
+        public System.Windows.Forms.TextBox txtFormNo;
+        public System.Windows.Forms.Label lblFormNo;
+        public System.Windows.Forms.Label lblTelefon;
+        public System.Windows.Forms.MaskedTextBox mtxTelefon;
+        public System.Windows.Forms.TextBox txtAksesuarlar;
+        public System.Windows.Forms.GroupBox grpboxMusteriBilgileri;
+        public System.Windows.Forms.GroupBox grpboxUrunBilgileri;
+        public System.Windows.Forms.TextBox txtUcret;
+        public System.Windows.Forms.Label lblUcret;
+        public System.Windows.Forms.PictureBox picQrKodu;
+        public System.Windows.Forms.Label lblQrKodu;
+        public System.Windows.Forms.TextBox txtTakipNumarası;
+        public System.Windows.Forms.Label lblTakipNumarası;
+        public System.Windows.Forms.TextBox txtUrunDurumu;
+        public System.Windows.Forms.Label lblUrunDurumu;
+        public System.Windows.Forms.TextBox txtArizaninTanimi;
+        public System.Windows.Forms.Label lblArizaninTanimi;
+        public System.Windows.Forms.TextBox txtUrunKodlari;
+        public System.Windows.Forms.TextBox txtUrunModeli;
+        public System.Windows.Forms.Label lblUrunModeli;
+        public System.Windows.Forms.GroupBox grpboxAksesuarlar;
+        public System.Windows.Forms.GroupBox grpboxEkBilgiler;
+        public System.Windows.Forms.TextBox txtEkBilgiler;
+        public System.Windows.Forms.Button btnYeniKayit;
+        public System.Windows.Forms.Button btnKaydet;
+        public System.Windows.Forms.Button btnTemizle;
+        public System.Windows.Forms.Button btnKayitlariGoster;
+        public System.Windows.Forms.Button btnGuncelle;
+        public System.Windows.Forms.MenuStrip mnsTeknikServisFormu;
+        public System.Windows.Forms.ToolStripMenuItem mnsAraclar;
+        public System.Windows.Forms.ToolStrip tlStrip;
+        public System.Windows.Forms.ToolStripLabel TlStripLblAciklama;
+        public System.Windows.Forms.PictureBox PcTrBoxProfilResim;
+        public System.Windows.Forms.Button btnCikisYap;
+        public System.Windows.Forms.ToolStripMenuItem mnsAraclarYeniKayit;
+        public System.Windows.Forms.ToolStripMenuItem mnsAraclarKaydet;
+        public System.Windows.Forms.ToolStripMenuItem mnsAraclarTemizle;
+        public System.Windows.Forms.ToolStripMenuItem mnsKayitlariGoster;
+        public System.Windows.Forms.ToolStripMenuItem mnsAraclarGuncelle;
+        public System.Windows.Forms.Label LblHosgeldin;
+        public System.Windows.Forms.ToolStripMenuItem mnsAyarlar;
+        public System.Windows.Forms.ToolStripMenuItem mnsAyarlarDil;
+        public System.Windows.Forms.ToolStripMenuItem mnsAyarlarDilTurkce;
+        public System.Windows.Forms.ToolStripMenuItem mnsAyarlarDilIngilizce;
+        public System.Windows.Forms.ToolStripMenuItem mnsAyarlarTema;
+        public System.Windows.Forms.ToolStripMenuItem mnsYardim;
+        public System.Windows.Forms.ToolStripMenuItem mnsYardimLisansAnahtari;
+        public System.Windows.Forms.ToolStripMenuItem mnsYardimHakkinda;
+        public System.Windows.Forms.ToolStripMenuItem mnsCikisYap;
+        public System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        public System.Windows.Forms.CheckBox chckboxTeslimEdildi;
+        public System.Windows.Forms.Button BttnQrKodu;
+        public System.Windows.Forms.Label lblUrunKodlari;
+        public System.Windows.Forms.Timer timer;
+        public System.Windows.Forms.TextBox txtMusteriAdi;
+        public System.Windows.Forms.Label lblMusteriAdi;
+        public System.Windows.Forms.Label lblMusteriNo;
     }
 }
