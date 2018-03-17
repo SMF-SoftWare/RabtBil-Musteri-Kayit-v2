@@ -36,14 +36,15 @@ namespace RabtBil_Musteri_Kayit_v2
 
                 if (dt.Rows.Count == 1)
                 {
-                    cmd = new SqlCommand("SELECT Rol FROM Kullanicilar WHERE KullaniciAdi=@KullaniciAdi AND Sifre=@Sifre", SMF.Baglanti);
+                    cmd = new SqlCommand("SELECT Id,Rol FROM Kullanicilar WHERE KullaniciAdi=@KullaniciAdi AND Sifre=@Sifre", SMF.Baglanti);
                     cmd.Parameters.AddWithValue("@KullaniciAdi", txtKullaniciAdi.Text);
                     cmd.Parameters.AddWithValue("@Sifre", txtSifre.Text);
                     SqlDataReader dr = cmd.ExecuteReader();
 
                     while (dr.Read())
                     {
-                        switch (dr.GetInt32(0))
+                        SMF.KullaniciID = dr.GetInt32(0);
+                        switch (dr.GetInt32(1))
                         {
                             case (int)SMF.Rol.Admin:
                                 SMF.Yetki = (int)SMF.Rol.Admin;
