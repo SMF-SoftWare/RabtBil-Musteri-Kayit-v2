@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblTeslimEdenPersonel = new System.Windows.Forms.Label();
             this.txtTeslimEdenPersonel = new System.Windows.Forms.TextBox();
             this.txtTeslimAlanKisi = new System.Windows.Forms.TextBox();
@@ -35,9 +36,10 @@
             this.lblTeslimTarihi = new System.Windows.Forms.Label();
             this.lblTarih = new System.Windows.Forms.Label();
             this.tlStrip = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.tslblTarihSaat = new System.Windows.Forms.ToolStripLabel();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.btnTemizle = new System.Windows.Forms.Button();
+            this.tmrTarihSaat = new System.Windows.Forms.Timer(this.components);
             this.tlStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,19 +112,19 @@
             this.tlStrip.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tlStrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.tlStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1});
+            this.tslblTarihSaat});
             this.tlStrip.Location = new System.Drawing.Point(0, 177);
             this.tlStrip.Name = "tlStrip";
             this.tlStrip.Size = new System.Drawing.Size(263, 25);
             this.tlStrip.TabIndex = 6;
             this.tlStrip.Text = "toolStrip1";
             // 
-            // toolStripLabel1
+            // tslblTarihSaat
             // 
-            this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(60, 22);
-            this.toolStripLabel1.Text = "TarihSaat";
+            this.tslblTarihSaat.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tslblTarihSaat.Name = "tslblTarihSaat";
+            this.tslblTarihSaat.Size = new System.Drawing.Size(60, 22);
+            this.tslblTarihSaat.Text = "TarihSaat";
             // 
             // btnKaydet
             // 
@@ -141,6 +143,10 @@
             this.btnTemizle.TabIndex = 8;
             this.btnTemizle.Text = "Temizle";
             this.btnTemizle.UseVisualStyleBackColor = true;
+            // 
+            // tmrTarihSaat
+            // 
+            this.tmrTarihSaat.Tick += new System.EventHandler(this.tmrTarihSaat_Tick);
             // 
             // FrmUrunTeslim
             // 
@@ -163,6 +169,8 @@
             this.Name = "FrmUrunTeslim";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmUrunTeslim_FormClosing);
+            this.Load += new System.EventHandler(this.FrmUrunTeslim_Load);
             this.tlStrip.ResumeLayout(false);
             this.tlStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -179,8 +187,9 @@
         private System.Windows.Forms.Label lblTeslimTarihi;
         private System.Windows.Forms.Label lblTarih;
         private System.Windows.Forms.ToolStrip tlStrip;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripLabel tslblTarihSaat;
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.Button btnTemizle;
+        private System.Windows.Forms.Timer tmrTarihSaat;
     }
 }

@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tsrKayitlariGoster = new System.Windows.Forms.ToolStrip();
             this.TlStripLblAciklama = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.tslblTarihSaat = new System.Windows.Forms.ToolStripLabel();
             this.mnsKayitlariGoster = new System.Windows.Forms.MenuStrip();
             this.tsmiAraclar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAraclarYeniKayit = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,6 +52,7 @@
             this.cmbAramaAlanlari = new System.Windows.Forms.ComboBox();
             this.txtArama = new System.Windows.Forms.TextBox();
             this.btnYazdir = new System.Windows.Forms.Button();
+            this.tmrTarihSaat = new System.Windows.Forms.Timer(this.components);
             this.tsrKayitlariGoster.SuspendLayout();
             this.mnsKayitlariGoster.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRabtBilDB)).BeginInit();
@@ -62,7 +64,7 @@
             this.tsrKayitlariGoster.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.tsrKayitlariGoster.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TlStripLblAciklama,
-            this.toolStripLabel1});
+            this.tslblTarihSaat});
             this.tsrKayitlariGoster.Location = new System.Drawing.Point(0, 436);
             this.tsrKayitlariGoster.Name = "tsrKayitlariGoster";
             this.tsrKayitlariGoster.Size = new System.Drawing.Size(938, 25);
@@ -74,12 +76,12 @@
             this.TlStripLblAciklama.Size = new System.Drawing.Size(57, 22);
             this.TlStripLblAciklama.Text = "Açıklama";
             // 
-            // toolStripLabel1
+            // tslblTarihSaat
             // 
-            this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(63, 22);
-            this.toolStripLabel1.Text = "Tarih Saat";
+            this.tslblTarihSaat.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tslblTarihSaat.Name = "tslblTarihSaat";
+            this.tslblTarihSaat.Size = new System.Drawing.Size(63, 22);
+            this.tslblTarihSaat.Text = "Tarih Saat";
             // 
             // mnsKayitlariGoster
             // 
@@ -108,7 +110,7 @@
             // tsmiAraclarYeniKayit
             // 
             this.tsmiAraclarYeniKayit.Name = "tsmiAraclarYeniKayit";
-            this.tsmiAraclarYeniKayit.Size = new System.Drawing.Size(152, 22);
+            this.tsmiAraclarYeniKayit.Size = new System.Drawing.Size(127, 22);
             this.tsmiAraclarYeniKayit.Text = "Yeni Kayıt";
             this.tsmiAraclarYeniKayit.Click += new System.EventHandler(this.tsmiAraclarYeniKayit_Click);
             // 
@@ -227,7 +229,6 @@
             // 
             this.txtArama.Location = new System.Drawing.Point(485, 43);
             this.txtArama.Name = "txtArama";
-            this.txtArama.ReadOnly = true;
             this.txtArama.Size = new System.Drawing.Size(303, 24);
             this.txtArama.TabIndex = 38;
             this.txtArama.TextChanged += new System.EventHandler(this.txtArama_TextChanged);
@@ -240,6 +241,10 @@
             this.btnYazdir.TabIndex = 39;
             this.btnYazdir.Text = "Yazdır";
             this.btnYazdir.UseVisualStyleBackColor = true;
+            // 
+            // tmrTarihSaat
+            // 
+            this.tmrTarihSaat.Tick += new System.EventHandler(this.tmrTarihSaat_Tick);
             // 
             // FrmKayitlariGoster
             // 
@@ -258,6 +263,7 @@
             this.Name = "FrmKayitlariGoster";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmKayitlariGoster";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmKayitlariGoster_FormClosing);
             this.Load += new System.EventHandler(this.FrmKayitlariGoster_Load);
             this.tsrKayitlariGoster.ResumeLayout(false);
             this.tsrKayitlariGoster.PerformLayout();
@@ -273,7 +279,7 @@
 
         public System.Windows.Forms.ToolStrip tsrKayitlariGoster;
         public System.Windows.Forms.ToolStripLabel TlStripLblAciklama;
-        public System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        public System.Windows.Forms.ToolStripLabel tslblTarihSaat;
         public System.Windows.Forms.MenuStrip mnsKayitlariGoster;
         public System.Windows.Forms.ToolStripMenuItem tsmiAraclar;
         public System.Windows.Forms.ToolStripMenuItem tsmiAraclarYeniKayit;
@@ -294,5 +300,6 @@
         public System.Windows.Forms.ComboBox cmbAramaAlanlari;
         public System.Windows.Forms.TextBox txtArama;
         public System.Windows.Forms.Button btnYazdir;
+        private System.Windows.Forms.Timer tmrTarihSaat;
     }
 }

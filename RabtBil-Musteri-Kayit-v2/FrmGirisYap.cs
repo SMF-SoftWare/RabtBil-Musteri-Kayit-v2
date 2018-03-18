@@ -16,7 +16,7 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             if (String.IsNullOrWhiteSpace(txtKullaniciAdi.Text) || String.IsNullOrWhiteSpace(txtSifre.Text))
             {
-                MessageBox.Show("Kullanıcı adı veya Şifre boş!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Resources.kullaniciAdiveSifreBos", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             try
@@ -59,7 +59,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 }
                 else
                 {
-                    MessageBox.Show("Kullanıcı adı veya şifre yanlış!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Resources.kullaniciAdiveSifreYanlis", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)

@@ -35,7 +35,10 @@
             this.mtxTelefon = new System.Windows.Forms.MaskedTextBox();
             this.txtAksesuarlar = new System.Windows.Forms.TextBox();
             this.grpboxMusteriBilgileri = new System.Windows.Forms.GroupBox();
+            this.txtMusteriAdi = new System.Windows.Forms.TextBox();
+            this.lblMusteriAdi = new System.Windows.Forms.Label();
             this.grpboxUrunBilgileri = new System.Windows.Forms.GroupBox();
+            this.lblMusteriNo = new System.Windows.Forms.Label();
             this.lblUrunKodlari = new System.Windows.Forms.Label();
             this.chckboxTeslimEdildi = new System.Windows.Forms.CheckBox();
             this.BttnQrKodu = new System.Windows.Forms.Button();
@@ -78,14 +81,11 @@
             this.mnsCikisYap = new System.Windows.Forms.ToolStripMenuItem();
             this.tlStrip = new System.Windows.Forms.ToolStrip();
             this.TlStripLblAciklama = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.tslblTarihSaat = new System.Windows.Forms.ToolStripLabel();
             this.PcTrBoxProfilResim = new System.Windows.Forms.PictureBox();
             this.btnCikisYap = new System.Windows.Forms.Button();
             this.LblHosgeldin = new System.Windows.Forms.Label();
-            this.timer = new System.Windows.Forms.Timer(this.components);
-            this.txtMusteriAdi = new System.Windows.Forms.TextBox();
-            this.lblMusteriAdi = new System.Windows.Forms.Label();
-            this.lblMusteriNo = new System.Windows.Forms.Label();
+            this.tmrTarihSaat = new System.Windows.Forms.Timer(this.components);
             this.grpboxMusteriBilgileri.SuspendLayout();
             this.grpboxUrunBilgileri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picQrKodu)).BeginInit();
@@ -156,6 +156,24 @@
             this.grpboxMusteriBilgileri.TabStop = false;
             this.grpboxMusteriBilgileri.Text = "Müşteri Bilgileri";
             // 
+            // txtMusteriAdi
+            // 
+            this.txtMusteriAdi.Location = new System.Drawing.Point(94, 53);
+            this.txtMusteriAdi.MaxLength = 30;
+            this.txtMusteriAdi.Name = "txtMusteriAdi";
+            this.txtMusteriAdi.Size = new System.Drawing.Size(214, 24);
+            this.txtMusteriAdi.TabIndex = 7;
+            // 
+            // lblMusteriAdi
+            // 
+            this.lblMusteriAdi.AutoSize = true;
+            this.lblMusteriAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMusteriAdi.Location = new System.Drawing.Point(20, 56);
+            this.lblMusteriAdi.Name = "lblMusteriAdi";
+            this.lblMusteriAdi.Size = new System.Drawing.Size(71, 15);
+            this.lblMusteriAdi.TabIndex = 6;
+            this.lblMusteriAdi.Text = "Müşteri Adı:";
+            // 
             // grpboxUrunBilgileri
             // 
             this.grpboxUrunBilgileri.Controls.Add(this.lblMusteriNo);
@@ -181,6 +199,17 @@
             this.grpboxUrunBilgileri.TabIndex = 24;
             this.grpboxUrunBilgileri.TabStop = false;
             this.grpboxUrunBilgileri.Text = "Ürün Bilgileri";
+            // 
+            // lblMusteriNo
+            // 
+            this.lblMusteriNo.AutoSize = true;
+            this.lblMusteriNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblMusteriNo.Location = new System.Drawing.Point(221, 338);
+            this.lblMusteriNo.Name = "lblMusteriNo";
+            this.lblMusteriNo.Size = new System.Drawing.Size(67, 15);
+            this.lblMusteriNo.TabIndex = 36;
+            this.lblMusteriNo.Text = "Müşteri No";
+            this.lblMusteriNo.Visible = false;
             // 
             // lblUrunKodlari
             // 
@@ -479,25 +508,25 @@
             this.mnsAyarlarDilTurkce,
             this.mnsAyarlarDilIngilizce});
             this.mnsAyarlarDil.Name = "mnsAyarlarDil";
-            this.mnsAyarlarDil.Size = new System.Drawing.Size(152, 22);
+            this.mnsAyarlarDil.Size = new System.Drawing.Size(106, 22);
             this.mnsAyarlarDil.Text = "Dil";
             // 
             // mnsAyarlarDilTurkce
             // 
             this.mnsAyarlarDilTurkce.Name = "mnsAyarlarDilTurkce";
-            this.mnsAyarlarDilTurkce.Size = new System.Drawing.Size(152, 22);
+            this.mnsAyarlarDilTurkce.Size = new System.Drawing.Size(119, 22);
             this.mnsAyarlarDilTurkce.Text = "Türkçe";
             // 
             // mnsAyarlarDilIngilizce
             // 
             this.mnsAyarlarDilIngilizce.Name = "mnsAyarlarDilIngilizce";
-            this.mnsAyarlarDilIngilizce.Size = new System.Drawing.Size(152, 22);
+            this.mnsAyarlarDilIngilizce.Size = new System.Drawing.Size(119, 22);
             this.mnsAyarlarDilIngilizce.Text = "İngilizce";
             // 
             // mnsAyarlarTema
             // 
             this.mnsAyarlarTema.Name = "mnsAyarlarTema";
-            this.mnsAyarlarTema.Size = new System.Drawing.Size(152, 22);
+            this.mnsAyarlarTema.Size = new System.Drawing.Size(106, 22);
             this.mnsAyarlarTema.Text = "Tema";
             // 
             // mnsYardim
@@ -533,7 +562,7 @@
             this.tlStrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.tlStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TlStripLblAciklama,
-            this.toolStripLabel1});
+            this.tslblTarihSaat});
             this.tlStrip.Location = new System.Drawing.Point(0, 396);
             this.tlStrip.Name = "tlStrip";
             this.tlStrip.Size = new System.Drawing.Size(869, 25);
@@ -546,12 +575,12 @@
             this.TlStripLblAciklama.Size = new System.Drawing.Size(57, 22);
             this.TlStripLblAciklama.Text = "Açıklama";
             // 
-            // toolStripLabel1
+            // tslblTarihSaat
             // 
-            this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(63, 22);
-            this.toolStripLabel1.Text = "Tarih Saat";
+            this.tslblTarihSaat.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tslblTarihSaat.Name = "tslblTarihSaat";
+            this.tslblTarihSaat.Size = new System.Drawing.Size(63, 22);
+            this.tslblTarihSaat.Text = "Tarih Saat";
             // 
             // PcTrBoxProfilResim
             // 
@@ -584,34 +613,9 @@
             this.LblHosgeldin.TabIndex = 35;
             this.LblHosgeldin.Text = "Hoş Geldiniz Selim Bey";
             // 
-            // txtMusteriAdi
+            // tmrTarihSaat
             // 
-            this.txtMusteriAdi.Location = new System.Drawing.Point(94, 53);
-            this.txtMusteriAdi.MaxLength = 30;
-            this.txtMusteriAdi.Name = "txtMusteriAdi";
-            this.txtMusteriAdi.Size = new System.Drawing.Size(214, 24);
-            this.txtMusteriAdi.TabIndex = 7;
-            // 
-            // lblMusteriAdi
-            // 
-            this.lblMusteriAdi.AutoSize = true;
-            this.lblMusteriAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMusteriAdi.Location = new System.Drawing.Point(20, 56);
-            this.lblMusteriAdi.Name = "lblMusteriAdi";
-            this.lblMusteriAdi.Size = new System.Drawing.Size(71, 15);
-            this.lblMusteriAdi.TabIndex = 6;
-            this.lblMusteriAdi.Text = "Müşteri Adı:";
-            // 
-            // lblMusteriNo
-            // 
-            this.lblMusteriNo.AutoSize = true;
-            this.lblMusteriNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblMusteriNo.Location = new System.Drawing.Point(221, 338);
-            this.lblMusteriNo.Name = "lblMusteriNo";
-            this.lblMusteriNo.Size = new System.Drawing.Size(67, 15);
-            this.lblMusteriNo.TabIndex = 36;
-            this.lblMusteriNo.Text = "Müşteri No";
-            this.lblMusteriNo.Visible = false;
+            this.tmrTarihSaat.Tick += new System.EventHandler(this.tmrTarihSaat_Tick);
             // 
             // FrmPersonelTeknikServisFormu
             // 
@@ -638,7 +642,10 @@
             this.MaximumSize = new System.Drawing.Size(885, 460);
             this.MinimumSize = new System.Drawing.Size(885, 460);
             this.Name = "FrmPersonelTeknikServisFormu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTeknikServisFormu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPersonelTeknikServisFormu_FormClosing);
+            this.Load += new System.EventHandler(this.FrmPersonelTeknikServisFormu_Load);
             this.grpboxMusteriBilgileri.ResumeLayout(false);
             this.grpboxMusteriBilgileri.PerformLayout();
             this.grpboxUrunBilgileri.ResumeLayout(false);
@@ -709,11 +716,11 @@
         public System.Windows.Forms.ToolStripMenuItem mnsYardimLisansAnahtari;
         public System.Windows.Forms.ToolStripMenuItem mnsYardimHakkinda;
         public System.Windows.Forms.ToolStripMenuItem mnsCikisYap;
-        public System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        public System.Windows.Forms.ToolStripLabel tslblTarihSaat;
         public System.Windows.Forms.CheckBox chckboxTeslimEdildi;
         public System.Windows.Forms.Button BttnQrKodu;
         public System.Windows.Forms.Label lblUrunKodlari;
-        public System.Windows.Forms.Timer timer;
+        public System.Windows.Forms.Timer tmrTarihSaat;
         public System.Windows.Forms.TextBox txtMusteriAdi;
         public System.Windows.Forms.Label lblMusteriAdi;
         public System.Windows.Forms.Label lblMusteriNo;
