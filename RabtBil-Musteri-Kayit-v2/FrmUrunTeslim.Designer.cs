@@ -162,6 +162,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmUrunTeslim";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.tlStrip.ResumeLayout(false);
             this.tlStrip.PerformLayout();
             this.ResumeLayout(false);

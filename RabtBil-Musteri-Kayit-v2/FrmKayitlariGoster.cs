@@ -14,7 +14,7 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private string[] AramaAlanlari = { "Id", "FormNo", "MusteriAdi", "Telefon", "UrunModeli", "UrunKodlari", "UrunTakipNo", "UrunDurumu", "KaydiYapanID", "TeslimEdenID", "TeslimAlan", "GuncellemeTarihi", "TeslimTarihi" };
 
-        public void cmbDoldur()
+        public void CmbDoldur()
         {
             cmbAramaAlanlari.Items.Clear();
             cmbAramaAlanlari.Items.AddRange(AramaAlanlari);
@@ -57,7 +57,7 @@ namespace RabtBil_Musteri_Kayit_v2
         private void FrmKayitlariGoster_Load(object sender, EventArgs e)
         {
             VerileriGetir();
-            cmbDoldur();
+            CmbDoldur();
         }
 
         private void dgvRabtBilDB_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -69,7 +69,7 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             try
             {
-                SqlCommand sil = new SqlCommand("DELETE FROM musteribilgileri WHERE Id=@Id", SMF.Baglanti);
+                SqlCommand sil = new SqlCommand("DELETE FROM MusteriBilgileri WHERE Id=@Id", SMF.Baglanti);
                 sil.Parameters.AddWithValue("@Id", Convert.ToInt32(dgvRabtBilDB.CurrentRow?.Cells[0].Value.ToString()));
                 SMF.Baglanti.Open();
                 sil.ExecuteNonQuery();
@@ -102,6 +102,12 @@ namespace RabtBil_Musteri_Kayit_v2
             //    arama.Fill(dataset, "musteribilgileri");
             //    dgvRabtBilDB.DataSource = dataset.Tables["musteribilgileri"];
             //    SMF.Baglanti.Close();
+        }
+
+        private void tsmiAraclarYeniKayit_Click(object sender, EventArgs e)
+        {
+            SMF.FrmPersonelTeknikServisFormu.Show();
+            Hide();
         }
     }
 }

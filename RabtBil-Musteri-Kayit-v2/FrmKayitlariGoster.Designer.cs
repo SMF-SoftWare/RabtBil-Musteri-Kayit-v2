@@ -110,17 +110,18 @@
             this.tsmiAraclarYeniKayit.Name = "tsmiAraclarYeniKayit";
             this.tsmiAraclarYeniKayit.Size = new System.Drawing.Size(152, 22);
             this.tsmiAraclarYeniKayit.Text = "Yeni Kayıt";
+            this.tsmiAraclarYeniKayit.Click += new System.EventHandler(this.tsmiAraclarYeniKayit_Click);
             // 
             // tsmiAraclarGuncelle
             // 
             this.tsmiAraclarGuncelle.Name = "tsmiAraclarGuncelle";
-            this.tsmiAraclarGuncelle.Size = new System.Drawing.Size(152, 22);
+            this.tsmiAraclarGuncelle.Size = new System.Drawing.Size(127, 22);
             this.tsmiAraclarGuncelle.Text = "Güncelle";
             // 
             // tsmiAraclarSil
             // 
             this.tsmiAraclarSil.Name = "tsmiAraclarSil";
-            this.tsmiAraclarSil.Size = new System.Drawing.Size(152, 22);
+            this.tsmiAraclarSil.Size = new System.Drawing.Size(127, 22);
             this.tsmiAraclarSil.Text = "Sil";
             // 
             // tsmiAyarlar
@@ -138,25 +139,25 @@
             this.tsmiAyarlarDilTurkce,
             this.tsmiAyarlarDilIngilizce});
             this.tsmiAyarlarDil.Name = "tsmiAyarlarDil";
-            this.tsmiAyarlarDil.Size = new System.Drawing.Size(152, 22);
+            this.tsmiAyarlarDil.Size = new System.Drawing.Size(106, 22);
             this.tsmiAyarlarDil.Text = "Dil";
             // 
             // tsmiAyarlarDilTurkce
             // 
             this.tsmiAyarlarDilTurkce.Name = "tsmiAyarlarDilTurkce";
-            this.tsmiAyarlarDilTurkce.Size = new System.Drawing.Size(152, 22);
+            this.tsmiAyarlarDilTurkce.Size = new System.Drawing.Size(119, 22);
             this.tsmiAyarlarDilTurkce.Text = "Türkçe";
             // 
             // tsmiAyarlarDilIngilizce
             // 
             this.tsmiAyarlarDilIngilizce.Name = "tsmiAyarlarDilIngilizce";
-            this.tsmiAyarlarDilIngilizce.Size = new System.Drawing.Size(152, 22);
+            this.tsmiAyarlarDilIngilizce.Size = new System.Drawing.Size(119, 22);
             this.tsmiAyarlarDilIngilizce.Text = "İngilizce";
             // 
             // tsmiAyarlarTema
             // 
             this.tsmiAyarlarTema.Name = "tsmiAyarlarTema";
-            this.tsmiAyarlarTema.Size = new System.Drawing.Size(152, 22);
+            this.tsmiAyarlarTema.Size = new System.Drawing.Size(106, 22);
             this.tsmiAyarlarTema.Text = "Tema";
             // 
             // tsmiYardım
@@ -196,7 +197,9 @@
             // 
             this.dgvRabtBilDB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRabtBilDB.Location = new System.Drawing.Point(0, 80);
+            this.dgvRabtBilDB.MultiSelect = false;
             this.dgvRabtBilDB.Name = "dgvRabtBilDB";
+            this.dgvRabtBilDB.ReadOnly = true;
             this.dgvRabtBilDB.Size = new System.Drawing.Size(938, 351);
             this.dgvRabtBilDB.TabIndex = 35;
             this.dgvRabtBilDB.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRabtBilDB_CellDoubleClick);

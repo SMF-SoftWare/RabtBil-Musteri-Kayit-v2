@@ -12,11 +12,6 @@ namespace RabtBil_Musteri_Kayit_v2
             InitializeComponent();
         }
 
-        private void BttnCikisYap_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void BttnGirisYap_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(txtKullaniciAdi.Text) || String.IsNullOrWhiteSpace(txtSifre.Text))
@@ -43,7 +38,7 @@ namespace RabtBil_Musteri_Kayit_v2
 
                     while (dr.Read())
                     {
-                        SMF.KullaniciID = dr.GetInt32(0);
+                        SMF.KullaniciId = dr.GetInt32(0);
                         switch (dr.GetInt32(1))
                         {
                             case (int)SMF.Rol.Admin:
@@ -54,7 +49,6 @@ namespace RabtBil_Musteri_Kayit_v2
                                 SMF.Yetki = (int)SMF.Rol.Yonetici;
                                 break;
 
-                            case (int)SMF.Rol.Kullanici:
                             default:
                                 SMF.Yetki = (int)SMF.Rol.Kullanici;
                                 break;
