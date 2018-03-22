@@ -7,6 +7,8 @@ namespace RabtBil_Musteri_Kayit_v2
 {
     public partial class FrmPersonelTeknikServisFormu : Form
     {
+        private SMF SMF = new SMF();
+
         public FrmPersonelTeknikServisFormu()
         {
             InitializeComponent();
@@ -83,7 +85,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 kaydet.Parameters.AddWithValue("@Ucret", Convert.ToDouble(txtUcret.Text));
                 kaydet.Parameters.AddWithValue("@GuncelleyenID", SMF.KullaniciId);
                 kaydet.Parameters.AddWithValue("@GuncellemeTarihi", DateTime.Now);
-                kaydet.Parameters.AddWithValue("@ID", SMF.FrmKayitlariGoster.dgvRabtBilDB.CurrentRow?.Cells[0].Value.ToString());
+                kaydet.Parameters.AddWithValue("@ID", lblMusteriNo.Text);
                 SMF.Baglanti.Open();
                 kaydet.ExecuteNonQuery();
                 MessageBox.Show("Resources.kaydedildi", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -103,8 +105,7 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void btnCikisYap_Click(object sender, EventArgs e)
         {
-            SMF.FrmGirisYap.Show();
-            Hide();
+            Application.Restart();
         }
 
         private void btnTemizle_Click(object sender, EventArgs e)
@@ -121,14 +122,14 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void btnKayitlariGoster_Click(object sender, EventArgs e)
         {
-            SMF.FrmKayitlariGoster.VerileriGetir();
-            SMF.FrmKayitlariGoster.Show();
-            Hide();
+            FrmKayitlariGoster frm = new FrmKayitlariGoster();
+            frm.ShowDialog();
         }
 
         private void chckboxTeslimEdildi_CheckedChanged(object sender, EventArgs e)
         {
-            SMF.FrmUrunTeslim.ShowDialog();
+            FrmUrunTeslim frm = new FrmUrunTeslim();
+            frm.ShowDialog();
         }
 
         public void Temizle()
@@ -178,11 +179,6 @@ namespace RabtBil_Musteri_Kayit_v2
         private void tmrTarihSaat_Tick(object sender, EventArgs e)
         {
             tslblTarihSaat.Text = DateTime.Now.ToString(CultureInfo.CurrentCulture);
-        }
-
-        private void FrmPersonelTeknikServisFormu_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

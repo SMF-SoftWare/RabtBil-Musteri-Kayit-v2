@@ -169,7 +169,6 @@
             this.Name = "FrmUrunTeslim";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmUrunTeslim_FormClosing);
             this.Load += new System.EventHandler(this.FrmUrunTeslim_Load);
             this.tlStrip.ResumeLayout(false);
             this.tlStrip.PerformLayout();

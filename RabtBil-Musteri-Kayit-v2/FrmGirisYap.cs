@@ -39,6 +39,7 @@ namespace RabtBil_Musteri_Kayit_v2
                     while (dr.Read())
                     {
                         SMF.KullaniciId = dr.GetInt32(0);
+
                         switch (dr.GetInt32(1))
                         {
                             case (int)SMF.Rol.Admin:
@@ -54,8 +55,8 @@ namespace RabtBil_Musteri_Kayit_v2
                                 break;
                         }
                     }
-                    SMF.FrmPersonelTeknikServisFormu.Show();
-                    Hide();
+
+                    DialogResult = DialogResult.OK;
                 }
                 else
                 {

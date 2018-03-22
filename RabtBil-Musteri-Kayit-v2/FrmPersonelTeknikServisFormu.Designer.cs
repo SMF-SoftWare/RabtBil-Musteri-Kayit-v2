@@ -644,7 +644,6 @@
             this.Name = "FrmPersonelTeknikServisFormu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTeknikServisFormu";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPersonelTeknikServisFormu_FormClosing);
             this.Load += new System.EventHandler(this.FrmPersonelTeknikServisFormu_Load);
             this.grpboxMusteriBilgileri.ResumeLayout(false);
             this.grpboxMusteriBilgileri.PerformLayout();

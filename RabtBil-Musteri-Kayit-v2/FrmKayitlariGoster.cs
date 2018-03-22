@@ -8,6 +8,8 @@ namespace RabtBil_Musteri_Kayit_v2
 {
     public partial class FrmKayitlariGoster : Form
     {
+        private SMF SMF = new SMF();
+
         public FrmKayitlariGoster()
         {
             InitializeComponent();
@@ -49,12 +51,6 @@ namespace RabtBil_Musteri_Kayit_v2
             {
                 SMF.Baglanti.Close();
             }
-        }
-
-        private void tsmiAraclarYeniKayit_Click(object sender, EventArgs e)
-        {
-            SMF.FrmPersonelTeknikServisFormu.Show();
-            Hide();
         }
 
         private void txtArama_TextChanged(object sender, EventArgs e)
@@ -181,7 +177,6 @@ namespace RabtBil_Musteri_Kayit_v2
 
         public void Guncelle()
         {
-            MessageBox.Show("Resources.secilenKaydiDuzenliyorsun", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
             SMF.FrmPersonelTeknikServisFormu.lblMusteriNo.Text = dgvRabtBilDB.CurrentRow?.Cells[0].Value.ToString();
             SMF.FrmPersonelTeknikServisFormu.txtFormNo.Text = dgvRabtBilDB.CurrentRow?.Cells[1].Value.ToString();
             SMF.FrmPersonelTeknikServisFormu.txtMusteriAdi.Text = dgvRabtBilDB.CurrentRow?.Cells[2].Value.ToString();
@@ -196,8 +191,7 @@ namespace RabtBil_Musteri_Kayit_v2
             SMF.FrmPersonelTeknikServisFormu.txtUcret.Text = dgvRabtBilDB.CurrentRow?.Cells[11].Value.ToString();
             SMF.FrmPersonelTeknikServisFormu.KaydetEtkinMi(false);
             SMF.FrmPersonelTeknikServisFormu.GuncelleEtkinMi(true);
-            SMF.FrmPersonelTeknikServisFormu.Show();
-            Hide();
+            Close();
         }
 
         private enum AramaTuru
@@ -225,17 +219,6 @@ namespace RabtBil_Musteri_Kayit_v2
         private void tmrTarihSaat_Tick(object sender, EventArgs e)
         {
             tslblTarihSaat.Text = DateTime.Now.ToString(CultureInfo.CurrentCulture);
-        }
-        
-        private void FrmKayitlariGoster_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (e.CloseReason == CloseReason.UserClosing)
-            {
-                SMF.FrmPersonelTeknikServisFormu.Show();
-                Hide();
-                e.Cancel = true;
-            }
-
         }
     }
 }

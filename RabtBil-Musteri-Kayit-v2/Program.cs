@@ -13,7 +13,14 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmGirisYap());
+
+            FrmGirisYap frm = new FrmGirisYap();
+            frm.ShowDialog();
+
+            if (frm.DialogResult == DialogResult.OK)
+            {
+                Application.Run(new FrmPersonelTeknikServisFormu());
+            }
         }
     }
 }

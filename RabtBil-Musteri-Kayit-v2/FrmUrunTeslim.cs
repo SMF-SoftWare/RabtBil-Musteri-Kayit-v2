@@ -20,11 +20,5 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             tslblTarihSaat.Text = DateTime.Now.ToString(CultureInfo.CurrentCulture);
         }
-
-        private void FrmUrunTeslim_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            SMF.FrmPersonelTeknikServisFormu.Show();
-            Hide();
-        }
     }
 }
