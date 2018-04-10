@@ -109,7 +109,7 @@
             // 
             this.lblFormNo.AutoSize = true;
             this.lblFormNo.Font = new System.Drawing.Font("Consolas", 8F);
-            this.lblFormNo.Location = new System.Drawing.Point(36, 32);
+            this.lblFormNo.Location = new System.Drawing.Point(36, 27);
             this.lblFormNo.Name = "lblFormNo";
             this.lblFormNo.Size = new System.Drawing.Size(55, 13);
             this.lblFormNo.TabIndex = 2;
@@ -119,7 +119,7 @@
             // 
             this.lblTelefon.AutoSize = true;
             this.lblTelefon.Font = new System.Drawing.Font("Consolas", 8F);
-            this.lblTelefon.Location = new System.Drawing.Point(36, 94);
+            this.lblTelefon.Location = new System.Drawing.Point(36, 90);
             this.lblTelefon.Name = "lblTelefon";
             this.lblTelefon.Size = new System.Drawing.Size(55, 13);
             this.lblTelefon.TabIndex = 4;
@@ -173,7 +173,7 @@
             // 
             this.lblMusteriAdi.AutoSize = true;
             this.lblMusteriAdi.Font = new System.Drawing.Font("Consolas", 8F);
-            this.lblMusteriAdi.Location = new System.Drawing.Point(12, 62);
+            this.lblMusteriAdi.Location = new System.Drawing.Point(12, 58);
             this.lblMusteriAdi.Name = "lblMusteriAdi";
             this.lblMusteriAdi.Size = new System.Drawing.Size(79, 13);
             this.lblMusteriAdi.TabIndex = 6;
@@ -221,7 +221,7 @@
             // 
             this.lblUrunKodlari.AutoSize = true;
             this.lblUrunKodlari.Font = new System.Drawing.Font("Consolas", 8F);
-            this.lblUrunKodlari.Location = new System.Drawing.Point(30, 56);
+            this.lblUrunKodlari.Location = new System.Drawing.Point(30, 52);
             this.lblUrunKodlari.Name = "lblUrunKodlari";
             this.lblUrunKodlari.Size = new System.Drawing.Size(85, 13);
             this.lblUrunKodlari.TabIndex = 38;
@@ -261,7 +261,7 @@
             // 
             this.lblUcret.AutoSize = true;
             this.lblUcret.Font = new System.Drawing.Font("Consolas", 8F);
-            this.lblUcret.Location = new System.Drawing.Point(172, 319);
+            this.lblUcret.Location = new System.Drawing.Point(169, 315);
             this.lblUcret.Name = "lblUcret";
             this.lblUcret.Size = new System.Drawing.Size(43, 13);
             this.lblUcret.TabIndex = 33;
@@ -366,7 +366,7 @@
             // 
             this.lblUrunModeli.AutoSize = true;
             this.lblUrunModeli.Font = new System.Drawing.Font("Consolas", 8F);
-            this.lblUrunModeli.Location = new System.Drawing.Point(36, 26);
+            this.lblUrunModeli.Location = new System.Drawing.Point(36, 22);
             this.lblUrunModeli.Name = "lblUrunModeli";
             this.lblUrunModeli.Size = new System.Drawing.Size(79, 13);
             this.lblUrunModeli.TabIndex = 21;
@@ -602,7 +602,7 @@
             // 
             this.PcTrBoxProfilResim.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PcTrBoxProfilResim.Image = global::RabtBil_Musteri_Kayit_v2.Properties.Resources.varsayilanProfilResmi;
-            this.PcTrBoxProfilResim.Location = new System.Drawing.Point(740, 35);
+            this.PcTrBoxProfilResim.Location = new System.Drawing.Point(750, 38);
             this.PcTrBoxProfilResim.Name = "PcTrBoxProfilResim";
             this.PcTrBoxProfilResim.Size = new System.Drawing.Size(78, 70);
             this.PcTrBoxProfilResim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -624,11 +624,11 @@
             // 
             this.LblHosgeldin.AutoSize = true;
             this.LblHosgeldin.Font = new System.Drawing.Font("Consolas", 8F);
-            this.LblHosgeldin.Location = new System.Drawing.Point(716, 109);
+            this.LblHosgeldin.Location = new System.Drawing.Point(722, 111);
             this.LblHosgeldin.Name = "LblHosgeldin";
-            this.LblHosgeldin.Size = new System.Drawing.Size(139, 13);
+            this.LblHosgeldin.Size = new System.Drawing.Size(109, 13);
             this.LblHosgeldin.TabIndex = 35;
-            this.LblHosgeldin.Text = "Hoş Geldiniz Selim Bey";
+            this.LblHosgeldin.Text = "Hoş Geldin Selim!";
             // 
             // tmrTarihSaat
             // 

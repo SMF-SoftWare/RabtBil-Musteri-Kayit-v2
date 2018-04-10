@@ -32,7 +32,7 @@ namespace RabtBil_Musteri_Kayit_v2
 
                 if (dt.Rows.Count == 1)
                 {
-                    cmd = new SqlCommand("SELECT Id,Rol FROM Kullanicilar WHERE KullaniciAdi=@KullaniciAdi AND Sifre=@Sifre", SMF.Baglanti);
+                    cmd = new SqlCommand("SELECT Id,Rol,Adi FROM Kullanicilar WHERE KullaniciAdi=@KullaniciAdi AND Sifre=@Sifre", SMF.Baglanti);
                     cmd.Parameters.AddWithValue("@KullaniciAdi", txtKullaniciAdi.Text);
                     cmd.Parameters.AddWithValue("@Sifre", txtSifre.Text);
                     SqlDataReader dr = cmd.ExecuteReader();
@@ -40,6 +40,7 @@ namespace RabtBil_Musteri_Kayit_v2
                     while (dr.Read())
                     {
                         SMF.KullaniciId = dr.GetInt32(0);
+                        SMF.KullaniciAdi = dr["Adi"].ToString();
 
                         switch (dr.GetInt32(1))
                         {
