@@ -102,6 +102,9 @@
     <EmbeddedResource Include="FrmPersonelTeknikServisFormu.resx">
       <DependentUpon>FrmPersonelTeknikServisFormu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmProfil.resx">
+      <DependentUpon>FrmProfil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmUrunTeslim.resx">
       <DependentUpon>FrmUrunTeslim.cs</DependentUpon>
     </EmbeddedResource>
