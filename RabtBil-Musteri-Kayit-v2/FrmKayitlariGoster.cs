@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
 
@@ -219,6 +220,34 @@ namespace RabtBil_Musteri_Kayit_v2
         private void tmrTarihSaat_Tick(object sender, EventArgs e)
         {
             tslblTarihSaat.Text = DateTime.Now.ToString(CultureInfo.CurrentCulture);
+        }
+
+        private void tsmiBaskiOnizleme_Click(object sender, EventArgs e)
+        {
+            ppdBaskiOnizleme.ShowDialog();
+        }
+
+        private void btnYazdir_Click(object sender, EventArgs e)
+        {
+            pdcBelge.Print();
+        }
+
+        private void pdcBelge_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            //Font YaziFontlari = new Font("Times New Roman", 14, FontStyle.Regular);
+            //SolidBrush YaziRenk = new SolidBrush(Color.Black);
+            //e.Graphics.DrawImage(Properties.Resources., 0, 0);
+            //e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[1].Value.ToString(), YaziFontlari, YaziRenk, 260, 245);//MusteriAdi
+            //e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[2].Value.ToString(), YaziFontlari, YaziRenk, 260, 297);//FormNo
+            //e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[3].Value.ToString(), YaziFontlari, YaziRenk, 260, 345);//Telefon
+            //e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[4].Value.ToString(), YaziFontlari, YaziRenk, 260, 397);//UrunModeli
+            //e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[6].Value.ToString(), YaziFontlari, YaziRenk, 260, 449);//ImeiSeriNo
+            //e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[7].Value.ToString(), YaziFontlari, YaziRenk, 260, 496);//ArizaTanimi
+            //e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[8].Value.ToString(), YaziFontlari, YaziRenk, 260, 547);//UrunDurumu
+            //e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[9].Value.ToString(), YaziFontlari, YaziRenk, 260, 592);//TakipNo
+            //e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[12].Value.ToString(), YaziFontlari, YaziRenk, 260, 642);//Aksesuarlar
+            //e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[11].Value.ToString() + " ₺", YaziFontlari, YaziRenk, 665, 805);//Ucret
+            //e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[14].Value.ToString(), YaziFontlari, YaziRenk, 610, 245);//TarihSaat
         }
     }
 }

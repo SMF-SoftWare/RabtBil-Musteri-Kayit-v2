@@ -40,25 +40,31 @@
             // lblKullaniciAdi
             // 
             this.lblKullaniciAdi.AutoSize = true;
-            this.lblKullaniciAdi.Location = new System.Drawing.Point(21, 78);
+            this.lblKullaniciAdi.Font = new System.Drawing.Font("Consolas", 8F);
+            this.lblKullaniciAdi.Location = new System.Drawing.Point(23, 66);
+            this.lblKullaniciAdi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblKullaniciAdi.Name = "lblKullaniciAdi";
-            this.lblKullaniciAdi.Size = new System.Drawing.Size(90, 18);
+            this.lblKullaniciAdi.Size = new System.Drawing.Size(91, 13);
             this.lblKullaniciAdi.TabIndex = 0;
             this.lblKullaniciAdi.Text = "Kullanıcı Adı:";
             // 
             // txtKullaniciAdi
             // 
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(24, 99);
+            this.txtKullaniciAdi.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(26, 83);
+            this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtKullaniciAdi.MaxLength = 20;
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
-            this.txtKullaniciAdi.Size = new System.Drawing.Size(247, 24);
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(229, 23);
             this.txtKullaniciAdi.TabIndex = 1;
             // 
             // btnGirisYap
             // 
-            this.btnGirisYap.Location = new System.Drawing.Point(24, 189);
+            this.btnGirisYap.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGirisYap.Location = new System.Drawing.Point(27, 159);
+            this.btnGirisYap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGirisYap.Name = "btnGirisYap";
-            this.btnGirisYap.Size = new System.Drawing.Size(247, 40);
+            this.btnGirisYap.Size = new System.Drawing.Size(228, 33);
             this.btnGirisYap.TabIndex = 2;
             this.btnGirisYap.Text = "Giriş Yap";
             this.btnGirisYap.UseVisualStyleBackColor = true;
@@ -66,27 +72,33 @@
             // 
             // txtSifre
             // 
-            this.txtSifre.Location = new System.Drawing.Point(24, 159);
+            this.txtSifre.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSifre.Location = new System.Drawing.Point(27, 134);
+            this.txtSifre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSifre.MaxLength = 20;
             this.txtSifre.Name = "txtSifre";
-            this.txtSifre.Size = new System.Drawing.Size(247, 24);
+            this.txtSifre.Size = new System.Drawing.Size(228, 23);
             this.txtSifre.TabIndex = 4;
             // 
             // lblSifre
             // 
             this.lblSifre.AutoSize = true;
-            this.lblSifre.Location = new System.Drawing.Point(21, 138);
+            this.lblSifre.Font = new System.Drawing.Font("Consolas", 8F);
+            this.lblSifre.Location = new System.Drawing.Point(24, 117);
+            this.lblSifre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSifre.Name = "lblSifre";
-            this.lblSifre.Size = new System.Drawing.Size(42, 18);
+            this.lblSifre.Size = new System.Drawing.Size(43, 13);
             this.lblSifre.TabIndex = 3;
             this.lblSifre.Text = "Şifre:";
             // 
             // linkLblSifremiUnuttum
             // 
             this.linkLblSifremiUnuttum.AutoSize = true;
-            this.linkLblSifremiUnuttum.Location = new System.Drawing.Point(149, 232);
+            this.linkLblSifremiUnuttum.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.linkLblSifremiUnuttum.Location = new System.Drawing.Point(136, 194);
+            this.linkLblSifremiUnuttum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLblSifremiUnuttum.Name = "linkLblSifremiUnuttum";
-            this.linkLblSifremiUnuttum.Size = new System.Drawing.Size(122, 18);
+            this.linkLblSifremiUnuttum.Size = new System.Drawing.Size(119, 15);
             this.linkLblSifremiUnuttum.TabIndex = 5;
             this.linkLblSifremiUnuttum.TabStop = true;
             this.linkLblSifremiUnuttum.Text = "Şifremi Unuttum?";
@@ -94,18 +106,19 @@
             // lblGirisBicimi
             // 
             this.lblGirisBicimi.AutoSize = true;
-            this.lblGirisBicimi.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblGirisBicimi.Location = new System.Drawing.Point(59, 24);
+            this.lblGirisBicimi.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblGirisBicimi.Location = new System.Drawing.Point(30, 20);
+            this.lblGirisBicimi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGirisBicimi.Name = "lblGirisBicimi";
-            this.lblGirisBicimi.Size = new System.Drawing.Size(174, 31);
+            this.lblGirisBicimi.Size = new System.Drawing.Size(225, 32);
             this.lblGirisBicimi.TabIndex = 6;
             this.lblGirisBicimi.Text = "Yönetici Giriş";
             // 
             // FrmGirisYap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(297, 272);
+            this.ClientSize = new System.Drawing.Size(279, 229);
             this.Controls.Add(this.lblGirisBicimi);
             this.Controls.Add(this.linkLblSifremiUnuttum);
             this.Controls.Add(this.txtSifre);
@@ -113,8 +126,7 @@
             this.Controls.Add(this.btnGirisYap);
             this.Controls.Add(this.txtKullaniciAdi);
             this.Controls.Add(this.lblKullaniciAdi);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Name = "FrmGirisYap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmGirisYap";

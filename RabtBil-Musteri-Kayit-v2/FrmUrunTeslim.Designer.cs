@@ -46,76 +46,70 @@
             // lblTeslimEdenPersonel
             // 
             this.lblTeslimEdenPersonel.AutoSize = true;
-            this.lblTeslimEdenPersonel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblTeslimEdenPersonel.Location = new System.Drawing.Point(5, 6);
-            this.lblTeslimEdenPersonel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTeslimEdenPersonel.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTeslimEdenPersonel.Location = new System.Drawing.Point(18, 16);
             this.lblTeslimEdenPersonel.Name = "lblTeslimEdenPersonel";
-            this.lblTeslimEdenPersonel.Size = new System.Drawing.Size(131, 15);
+            this.lblTeslimEdenPersonel.Size = new System.Drawing.Size(133, 13);
             this.lblTeslimEdenPersonel.TabIndex = 0;
             this.lblTeslimEdenPersonel.Text = "Teslim Eden Personel:";
             // 
             // txtTeslimEdenPersonel
             // 
-            this.txtTeslimEdenPersonel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.txtTeslimEdenPersonel.Location = new System.Drawing.Point(2, 24);
-            this.txtTeslimEdenPersonel.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTeslimEdenPersonel.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtTeslimEdenPersonel.Location = new System.Drawing.Point(15, 32);
             this.txtTeslimEdenPersonel.MaxLength = 30;
             this.txtTeslimEdenPersonel.Name = "txtTeslimEdenPersonel";
-            this.txtTeslimEdenPersonel.Size = new System.Drawing.Size(255, 24);
+            this.txtTeslimEdenPersonel.Size = new System.Drawing.Size(244, 23);
             this.txtTeslimEdenPersonel.TabIndex = 1;
             // 
             // txtTeslimAlanKisi
             // 
-            this.txtTeslimAlanKisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.txtTeslimAlanKisi.Location = new System.Drawing.Point(2, 73);
-            this.txtTeslimAlanKisi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTeslimAlanKisi.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtTeslimAlanKisi.Location = new System.Drawing.Point(15, 79);
             this.txtTeslimAlanKisi.MaxLength = 30;
             this.txtTeslimAlanKisi.Name = "txtTeslimAlanKisi";
-            this.txtTeslimAlanKisi.Size = new System.Drawing.Size(255, 24);
+            this.txtTeslimAlanKisi.Size = new System.Drawing.Size(244, 23);
             this.txtTeslimAlanKisi.TabIndex = 3;
             // 
             // lblTeslimAlanKisi
             // 
             this.lblTeslimAlanKisi.AutoSize = true;
-            this.lblTeslimAlanKisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblTeslimAlanKisi.Location = new System.Drawing.Point(5, 55);
-            this.lblTeslimAlanKisi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTeslimAlanKisi.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTeslimAlanKisi.Location = new System.Drawing.Point(17, 63);
             this.lblTeslimAlanKisi.Name = "lblTeslimAlanKisi";
-            this.lblTeslimAlanKisi.Size = new System.Drawing.Size(97, 15);
+            this.lblTeslimAlanKisi.Size = new System.Drawing.Size(109, 13);
             this.lblTeslimAlanKisi.TabIndex = 2;
             this.lblTeslimAlanKisi.Text = "Teslim Alan Kişi:";
             // 
             // lblTeslimTarihi
             // 
             this.lblTeslimTarihi.AutoSize = true;
-            this.lblTeslimTarihi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblTeslimTarihi.Location = new System.Drawing.Point(9, 107);
-            this.lblTeslimTarihi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTeslimTarihi.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTeslimTarihi.Location = new System.Drawing.Point(16, 110);
             this.lblTeslimTarihi.Name = "lblTeslimTarihi";
-            this.lblTeslimTarihi.Size = new System.Drawing.Size(81, 15);
+            this.lblTeslimTarihi.Size = new System.Drawing.Size(91, 13);
             this.lblTeslimTarihi.TabIndex = 4;
             this.lblTeslimTarihi.Text = "Teslim Tarihi:";
             // 
             // lblTarih
             // 
             this.lblTarih.AutoSize = true;
-            this.lblTarih.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.lblTarih.Location = new System.Drawing.Point(104, 105);
-            this.lblTarih.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTarih.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTarih.Location = new System.Drawing.Point(113, 110);
             this.lblTarih.Name = "lblTarih";
-            this.lblTarih.Size = new System.Drawing.Size(41, 18);
+            this.lblTarih.Size = new System.Drawing.Size(37, 13);
             this.lblTarih.TabIndex = 5;
             this.lblTarih.Text = "Tarih";
             // 
             // tlStrip
             // 
             this.tlStrip.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tlStrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.tlStrip.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tlStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tslblTarihSaat});
-            this.tlStrip.Location = new System.Drawing.Point(0, 177);
+            this.tlStrip.Location = new System.Drawing.Point(0, 173);
             this.tlStrip.Name = "tlStrip";
-            this.tlStrip.Size = new System.Drawing.Size(263, 25);
+            this.tlStrip.Size = new System.Drawing.Size(275, 25);
             this.tlStrip.TabIndex = 6;
             this.tlStrip.Text = "toolStrip1";
             // 
@@ -123,23 +117,27 @@
             // 
             this.tslblTarihSaat.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.tslblTarihSaat.Name = "tslblTarihSaat";
-            this.tslblTarihSaat.Size = new System.Drawing.Size(60, 22);
+            this.tslblTarihSaat.Size = new System.Drawing.Size(61, 22);
             this.tslblTarihSaat.Text = "TarihSaat";
             // 
             // btnKaydet
             // 
-            this.btnKaydet.Location = new System.Drawing.Point(8, 133);
+            this.btnKaydet.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKaydet.Location = new System.Drawing.Point(15, 135);
+            this.btnKaydet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(93, 37);
+            this.btnKaydet.Size = new System.Drawing.Size(72, 31);
             this.btnKaydet.TabIndex = 7;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
             // 
             // btnTemizle
             // 
-            this.btnTemizle.Location = new System.Drawing.Point(107, 133);
+            this.btnTemizle.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTemizle.Location = new System.Drawing.Point(92, 135);
+            this.btnTemizle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(93, 37);
+            this.btnTemizle.Size = new System.Drawing.Size(72, 31);
             this.btnTemizle.TabIndex = 8;
             this.btnTemizle.Text = "Temizle";
             this.btnTemizle.UseVisualStyleBackColor = true;
@@ -150,9 +148,9 @@
             // 
             // FrmUrunTeslim
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(263, 202);
+            this.ClientSize = new System.Drawing.Size(275, 198);
             this.Controls.Add(this.btnTemizle);
             this.Controls.Add(this.btnKaydet);
             this.Controls.Add(this.tlStrip);
@@ -162,8 +160,7 @@
             this.Controls.Add(this.lblTeslimAlanKisi);
             this.Controls.Add(this.txtTeslimEdenPersonel);
             this.Controls.Add(this.lblTeslimEdenPersonel);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmUrunTeslim";

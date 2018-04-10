@@ -180,5 +180,35 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             tslblTarihSaat.Text = DateTime.Now.ToString(CultureInfo.CurrentCulture);
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpboxMusteriBilgileri_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpboxEkBilgiler_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpboxUrunBilgileri_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tlStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void mnsTeknikServisFormu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }
