@@ -634,17 +634,6 @@
             // 
             this.tmrTarihSaat.Tick += new System.EventHandler(this.tmrTarihSaat_Tick);
             // 
-            // grpboxAksesuarlar
-            // 
-            this.grpboxAksesuarlar.Controls.Add(this.txtAksesuarlar);
-            this.grpboxAksesuarlar.Font = new System.Drawing.Font("Consolas", 9.75F);
-            this.grpboxAksesuarlar.Location = new System.Drawing.Point(12, 153);
-            this.grpboxAksesuarlar.Name = "grpboxAksesuarlar";
-            this.grpboxAksesuarlar.Size = new System.Drawing.Size(331, 115);
-            this.grpboxAksesuarlar.TabIndex = 24;
-            this.grpboxAksesuarlar.TabStop = false;
-            this.grpboxAksesuarlar.Text = "Aksesuarlar";
-            // 
             // FrmPersonelTeknikServisFormu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
