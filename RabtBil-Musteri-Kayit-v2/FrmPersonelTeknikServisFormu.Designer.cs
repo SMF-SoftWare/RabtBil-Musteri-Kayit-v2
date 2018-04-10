@@ -608,6 +608,7 @@
             this.PcTrBoxProfilResim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PcTrBoxProfilResim.TabIndex = 33;
             this.PcTrBoxProfilResim.TabStop = false;
+            this.PcTrBoxProfilResim.Click += new System.EventHandler(this.PcTrBoxProfilResim_Click);
             // 
             // btnCikisYap
             // 

@@ -184,5 +184,11 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             tslblTarihSaat.Text = DateTime.Now.ToString(CultureInfo.CurrentCulture);
         }
+
+        private void PcTrBoxProfilResim_Click(object sender, EventArgs e)
+        {
+            FrmProfil frm = new FrmProfil();
+            frm.ShowDialog();
+        }
     }
 }

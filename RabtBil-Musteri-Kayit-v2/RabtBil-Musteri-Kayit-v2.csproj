@@ -78,6 +78,12 @@
     <Compile Include="FrmPersonelTeknikServisFormu.Designer.cs">
       <DependentUpon>FrmPersonelTeknikServisFormu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProfil.Designer.cs">
+      <DependentUpon>FrmProfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUrunTeslim.cs">
       <SubType>Form</SubType>
     </Compile>
