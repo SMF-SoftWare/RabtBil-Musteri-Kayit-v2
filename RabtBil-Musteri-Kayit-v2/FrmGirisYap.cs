@@ -43,15 +43,15 @@ namespace RabtBil_Musteri_Kayit_v2
                         switch (dr.GetInt32(1))
                         {
                             case (int)SMF.Rol.Admin:
-                                SMF.Yetki = (int)SMF.Rol.Admin;
+                                SMF.Yetki = SMF.Rol.Admin;
                                 break;
 
                             case (int)SMF.Rol.Yonetici:
-                                SMF.Yetki = (int)SMF.Rol.Yonetici;
+                                SMF.Yetki = SMF.Rol.Yonetici;
                                 break;
 
                             default:
-                                SMF.Yetki = (int)SMF.Rol.Kullanici;
+                                SMF.Yetki = SMF.Rol.Kullanici;
                                 break;
                         }
                     }
