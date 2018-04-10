@@ -476,35 +476,35 @@
             // mnsAraclarYeniKayit
             // 
             this.mnsAraclarYeniKayit.Name = "mnsAraclarYeniKayit";
-            this.mnsAraclarYeniKayit.Size = new System.Drawing.Size(180, 22);
+            this.mnsAraclarYeniKayit.Size = new System.Drawing.Size(170, 22);
             this.mnsAraclarYeniKayit.Text = "Yeni Kayıt";
             this.mnsAraclarYeniKayit.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // mnsAraclarKaydet
             // 
             this.mnsAraclarKaydet.Name = "mnsAraclarKaydet";
-            this.mnsAraclarKaydet.Size = new System.Drawing.Size(180, 22);
+            this.mnsAraclarKaydet.Size = new System.Drawing.Size(170, 22);
             this.mnsAraclarKaydet.Text = "Kaydet";
             this.mnsAraclarKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // mnsAraclarTemizle
             // 
             this.mnsAraclarTemizle.Name = "mnsAraclarTemizle";
-            this.mnsAraclarTemizle.Size = new System.Drawing.Size(180, 22);
+            this.mnsAraclarTemizle.Size = new System.Drawing.Size(170, 22);
             this.mnsAraclarTemizle.Text = "Temizle";
             this.mnsAraclarTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
             // mnsKayitlariGoster
             // 
             this.mnsKayitlariGoster.Name = "mnsKayitlariGoster";
-            this.mnsKayitlariGoster.Size = new System.Drawing.Size(180, 22);
+            this.mnsKayitlariGoster.Size = new System.Drawing.Size(170, 22);
             this.mnsKayitlariGoster.Text = "Kayıtları Göster";
             this.mnsKayitlariGoster.Click += new System.EventHandler(this.btnKayitlariGoster_Click);
             // 
             // mnsAraclarGuncelle
             // 
             this.mnsAraclarGuncelle.Name = "mnsAraclarGuncelle";
-            this.mnsAraclarGuncelle.Size = new System.Drawing.Size(180, 22);
+            this.mnsAraclarGuncelle.Size = new System.Drawing.Size(170, 22);
             this.mnsAraclarGuncelle.Text = "Güncelle";
             this.mnsAraclarGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
@@ -523,25 +523,25 @@
             this.mnsAyarlarDilTurkce,
             this.mnsAyarlarDilIngilizce});
             this.mnsAyarlarDil.Name = "mnsAyarlarDil";
-            this.mnsAyarlarDil.Size = new System.Drawing.Size(180, 22);
+            this.mnsAyarlarDil.Size = new System.Drawing.Size(98, 22);
             this.mnsAyarlarDil.Text = "Dil";
             // 
             // mnsAyarlarDilTurkce
             // 
             this.mnsAyarlarDilTurkce.Name = "mnsAyarlarDilTurkce";
-            this.mnsAyarlarDilTurkce.Size = new System.Drawing.Size(180, 22);
+            this.mnsAyarlarDilTurkce.Size = new System.Drawing.Size(128, 22);
             this.mnsAyarlarDilTurkce.Text = "Türkçe";
             // 
             // mnsAyarlarDilIngilizce
             // 
             this.mnsAyarlarDilIngilizce.Name = "mnsAyarlarDilIngilizce";
-            this.mnsAyarlarDilIngilizce.Size = new System.Drawing.Size(180, 22);
+            this.mnsAyarlarDilIngilizce.Size = new System.Drawing.Size(128, 22);
             this.mnsAyarlarDilIngilizce.Text = "İngilizce";
             // 
             // mnsAyarlarTema
             // 
             this.mnsAyarlarTema.Name = "mnsAyarlarTema";
-            this.mnsAyarlarTema.Size = new System.Drawing.Size(180, 22);
+            this.mnsAyarlarTema.Size = new System.Drawing.Size(98, 22);
             this.mnsAyarlarTema.Text = "Tema";
             // 
             // mnsYardim
@@ -556,13 +556,13 @@
             // mnsYardimLisansAnahtari
             // 
             this.mnsYardimLisansAnahtari.Name = "mnsYardimLisansAnahtari";
-            this.mnsYardimLisansAnahtari.Size = new System.Drawing.Size(180, 22);
+            this.mnsYardimLisansAnahtari.Size = new System.Drawing.Size(164, 22);
             this.mnsYardimLisansAnahtari.Text = "Lisans Anahtarı";
             // 
             // mnsYardimHakkinda
             // 
             this.mnsYardimHakkinda.Name = "mnsYardimHakkinda";
-            this.mnsYardimHakkinda.Size = new System.Drawing.Size(180, 22);
+            this.mnsYardimHakkinda.Size = new System.Drawing.Size(164, 22);
             this.mnsYardimHakkinda.Text = "Hakkında";
             // 
             // mnsCikisYap
@@ -633,6 +633,17 @@
             // tmrTarihSaat
             // 
             this.tmrTarihSaat.Tick += new System.EventHandler(this.tmrTarihSaat_Tick);
+            // 
+            // grpboxAksesuarlar
+            // 
+            this.grpboxAksesuarlar.Controls.Add(this.txtAksesuarlar);
+            this.grpboxAksesuarlar.Font = new System.Drawing.Font("Consolas", 9.75F);
+            this.grpboxAksesuarlar.Location = new System.Drawing.Point(12, 153);
+            this.grpboxAksesuarlar.Name = "grpboxAksesuarlar";
+            this.grpboxAksesuarlar.Size = new System.Drawing.Size(331, 115);
+            this.grpboxAksesuarlar.TabIndex = 36;
+            this.grpboxAksesuarlar.TabStop = false;
+            this.grpboxAksesuarlar.Text = "Aksesuarlar";
             // 
             // FrmPersonelTeknikServisFormu
             // 
