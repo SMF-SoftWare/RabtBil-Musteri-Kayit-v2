@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Globalization;
 using System.Windows.Forms;
@@ -44,6 +45,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 cmd.Parameters.AddWithValue("@Ucret", Convert.ToDouble(txtUcret.Text));
                 cmd.Parameters.AddWithValue("@KaydiYapanID", SMF.KullaniciId);
                 cmd.Parameters.AddWithValue("@KayitTarihi", DateTime.Now);
+                if (SMF.Baglanti.State != ConnectionState.Open)
                 SMF.Baglanti.Open();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Resources.kaydedildi", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -86,6 +88,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 kaydet.Parameters.AddWithValue("@GuncelleyenID", SMF.KullaniciId);
                 kaydet.Parameters.AddWithValue("@GuncellemeTarihi", DateTime.Now);
                 kaydet.Parameters.AddWithValue("@ID", lblMusteriNo.Text);
+                if (SMF.Baglanti.State != ConnectionState.Open)
                 SMF.Baglanti.Open();
                 kaydet.ExecuteNonQuery();
                 MessageBox.Show("Resources.kaydedildi", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);

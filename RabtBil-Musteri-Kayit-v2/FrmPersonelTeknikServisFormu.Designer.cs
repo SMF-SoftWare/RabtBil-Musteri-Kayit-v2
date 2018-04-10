@@ -55,7 +55,6 @@
             this.txtUrunKodlari = new System.Windows.Forms.TextBox();
             this.txtUrunModeli = new System.Windows.Forms.TextBox();
             this.lblUrunModeli = new System.Windows.Forms.Label();
-            this.grpboxAksesuarlar = new System.Windows.Forms.GroupBox();
             this.grpboxEkBilgiler = new System.Windows.Forms.GroupBox();
             this.txtEkBilgiler = new System.Windows.Forms.TextBox();
             this.btnYeniKayit = new System.Windows.Forms.Button();
@@ -86,17 +85,15 @@
             this.btnCikisYap = new System.Windows.Forms.Button();
             this.LblHosgeldin = new System.Windows.Forms.Label();
             this.tmrTarihSaat = new System.Windows.Forms.Timer(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.grpboxAksesuarlar = new System.Windows.Forms.GroupBox();
             this.grpboxMusteriBilgileri.SuspendLayout();
             this.grpboxUrunBilgileri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picQrKodu)).BeginInit();
-            this.grpboxAksesuarlar.SuspendLayout();
             this.grpboxEkBilgiler.SuspendLayout();
             this.mnsTeknikServisFormu.SuspendLayout();
             this.tlStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxProfilResim)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.grpboxAksesuarlar.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtFormNo
@@ -139,6 +136,7 @@
             // 
             // txtAksesuarlar
             // 
+            this.txtAksesuarlar.Font = new System.Drawing.Font("Consolas", 9.75F);
             this.txtAksesuarlar.Location = new System.Drawing.Point(6, 20);
             this.txtAksesuarlar.MaxLength = 156;
             this.txtAksesuarlar.Multiline = true;
@@ -375,16 +373,6 @@
             this.lblUrunModeli.Size = new System.Drawing.Size(79, 13);
             this.lblUrunModeli.TabIndex = 21;
             this.lblUrunModeli.Text = "Ürün Modeli:";
-            // 
-            // grpboxAksesuarlar
-            // 
-            this.grpboxAksesuarlar.Controls.Add(this.txtAksesuarlar);
-            this.grpboxAksesuarlar.Location = new System.Drawing.Point(12, 153);
-            this.grpboxAksesuarlar.Name = "grpboxAksesuarlar";
-            this.grpboxAksesuarlar.Size = new System.Drawing.Size(331, 115);
-            this.grpboxAksesuarlar.TabIndex = 24;
-            this.grpboxAksesuarlar.TabStop = false;
-            this.grpboxAksesuarlar.Text = "Aksesuarlar";
             // 
             // grpboxEkBilgiler
             // 
@@ -645,27 +633,16 @@
             // 
             this.tmrTarihSaat.Tick += new System.EventHandler(this.tmrTarihSaat_Tick);
             // 
-            // groupBox1
+            // grpboxAksesuarlar
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 153);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(331, 115);
-            this.groupBox1.TabIndex = 24;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Aksesuarlar";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(6, 20);
-            this.textBox1.MaxLength = 156;
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(320, 90);
-            this.textBox1.TabIndex = 21;
+            this.grpboxAksesuarlar.Controls.Add(this.txtAksesuarlar);
+            this.grpboxAksesuarlar.Font = new System.Drawing.Font("Consolas", 9.75F);
+            this.grpboxAksesuarlar.Location = new System.Drawing.Point(12, 153);
+            this.grpboxAksesuarlar.Name = "grpboxAksesuarlar";
+            this.grpboxAksesuarlar.Size = new System.Drawing.Size(331, 115);
+            this.grpboxAksesuarlar.TabIndex = 24;
+            this.grpboxAksesuarlar.TabStop = false;
+            this.grpboxAksesuarlar.Text = "Aksesuarlar";
             // 
             // FrmPersonelTeknikServisFormu
             // 
@@ -683,7 +660,6 @@
             this.Controls.Add(this.btnYeniKayit);
             this.Controls.Add(this.grpboxEkBilgiler);
             this.Controls.Add(this.grpboxUrunBilgileri);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grpboxAksesuarlar);
             this.Controls.Add(this.grpboxMusteriBilgileri);
             this.Controls.Add(this.mnsTeknikServisFormu);
@@ -701,8 +677,6 @@
             this.grpboxUrunBilgileri.ResumeLayout(false);
             this.grpboxUrunBilgileri.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picQrKodu)).EndInit();
-            this.grpboxAksesuarlar.ResumeLayout(false);
-            this.grpboxAksesuarlar.PerformLayout();
             this.grpboxEkBilgiler.ResumeLayout(false);
             this.grpboxEkBilgiler.PerformLayout();
             this.mnsTeknikServisFormu.ResumeLayout(false);
@@ -710,8 +684,8 @@
             this.tlStrip.ResumeLayout(false);
             this.tlStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxProfilResim)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grpboxAksesuarlar.ResumeLayout(false);
+            this.grpboxAksesuarlar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -739,7 +713,6 @@
         public System.Windows.Forms.TextBox txtUrunKodlari;
         public System.Windows.Forms.TextBox txtUrunModeli;
         public System.Windows.Forms.Label lblUrunModeli;
-        public System.Windows.Forms.GroupBox grpboxAksesuarlar;
         public System.Windows.Forms.GroupBox grpboxEkBilgiler;
         public System.Windows.Forms.TextBox txtEkBilgiler;
         public System.Windows.Forms.Button btnYeniKayit;
@@ -776,7 +749,6 @@
         public System.Windows.Forms.TextBox txtMusteriAdi;
         public System.Windows.Forms.Label lblMusteriAdi;
         public System.Windows.Forms.Label lblMusteriNo;
-        public System.Windows.Forms.GroupBox groupBox1;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.GroupBox grpboxAksesuarlar;
     }
 }

@@ -161,10 +161,13 @@
             // 
             // dgvRabtBilDB
             // 
+            this.dgvRabtBilDB.AllowUserToAddRows = false;
             this.dgvRabtBilDB.AllowUserToOrderColumns = true;
+            this.dgvRabtBilDB.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvRabtBilDB.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvRabtBilDB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRabtBilDB.Location = new System.Drawing.Point(0, 57);
-            this.dgvRabtBilDB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvRabtBilDB.Margin = new System.Windows.Forms.Padding(2);
             this.dgvRabtBilDB.MultiSelect = false;
             this.dgvRabtBilDB.Name = "dgvRabtBilDB";
             this.dgvRabtBilDB.ReadOnly = true;
@@ -177,7 +180,7 @@
             // 
             this.btnSil.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSil.Location = new System.Drawing.Point(16, 24);
-            this.btnSil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSil.Margin = new System.Windows.Forms.Padding(2);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(100, 29);
             this.btnSil.TabIndex = 36;
@@ -191,7 +194,7 @@
             this.cmbAramaAlanlari.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbAramaAlanlari.FormattingEnabled = true;
             this.cmbAramaAlanlari.Location = new System.Drawing.Point(378, 28);
-            this.cmbAramaAlanlari.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbAramaAlanlari.Margin = new System.Windows.Forms.Padding(2);
             this.cmbAramaAlanlari.Name = "cmbAramaAlanlari";
             this.cmbAramaAlanlari.Size = new System.Drawing.Size(177, 23);
             this.cmbAramaAlanlari.TabIndex = 37;
@@ -200,7 +203,7 @@
             // 
             this.txtArama.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtArama.Location = new System.Drawing.Point(559, 28);
-            this.txtArama.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtArama.Margin = new System.Windows.Forms.Padding(2);
             this.txtArama.Name = "txtArama";
             this.txtArama.Size = new System.Drawing.Size(237, 23);
             this.txtArama.TabIndex = 38;
@@ -210,7 +213,7 @@
             // 
             this.btnYazdir.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnYazdir.Location = new System.Drawing.Point(120, 24);
-            this.btnYazdir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnYazdir.Margin = new System.Windows.Forms.Padding(2);
             this.btnYazdir.Name = "btnYazdir";
             this.btnYazdir.Size = new System.Drawing.Size(100, 29);
             this.btnYazdir.TabIndex = 39;
@@ -240,7 +243,7 @@
             // 
             this.btnPdfAktar.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnPdfAktar.Location = new System.Drawing.Point(224, 24);
-            this.btnPdfAktar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPdfAktar.Margin = new System.Windows.Forms.Padding(2);
             this.btnPdfAktar.Name = "btnPdfAktar";
             this.btnPdfAktar.Size = new System.Drawing.Size(100, 29);
             this.btnPdfAktar.TabIndex = 40;
