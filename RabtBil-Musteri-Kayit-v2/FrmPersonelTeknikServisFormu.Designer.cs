@@ -159,7 +159,6 @@
             this.grpboxMusteriBilgileri.TabIndex = 23;
             this.grpboxMusteriBilgileri.TabStop = false;
             this.grpboxMusteriBilgileri.Text = "Müşteri Bilgileri";
-            this.grpboxMusteriBilgileri.Enter += new System.EventHandler(this.grpboxMusteriBilgileri_Enter);
             // 
             // txtMusteriAdi
             // 
@@ -206,7 +205,6 @@
             this.grpboxUrunBilgileri.TabIndex = 24;
             this.grpboxUrunBilgileri.TabStop = false;
             this.grpboxUrunBilgileri.Text = "Ürün Bilgileri";
-            this.grpboxUrunBilgileri.Enter += new System.EventHandler(this.grpboxUrunBilgileri_Enter);
             // 
             // lblMusteriNo
             // 
@@ -384,7 +382,6 @@
             this.grpboxEkBilgiler.TabIndex = 25;
             this.grpboxEkBilgiler.TabStop = false;
             this.grpboxEkBilgiler.Text = "Ek-Bilgiler";
-            this.grpboxEkBilgiler.Enter += new System.EventHandler(this.grpboxEkBilgiler_Enter);
             // 
             // txtEkBilgiler
             // 
@@ -463,7 +460,6 @@
             this.mnsTeknikServisFormu.Name = "mnsTeknikServisFormu";
             this.mnsTeknikServisFormu.Size = new System.Drawing.Size(869, 24);
             this.mnsTeknikServisFormu.TabIndex = 31;
-            this.mnsTeknikServisFormu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mnsTeknikServisFormu_ItemClicked);
             // 
             // mnsAraclar
             // 
@@ -480,32 +476,37 @@
             // mnsAraclarYeniKayit
             // 
             this.mnsAraclarYeniKayit.Name = "mnsAraclarYeniKayit";
-            this.mnsAraclarYeniKayit.Size = new System.Drawing.Size(170, 22);
+            this.mnsAraclarYeniKayit.Size = new System.Drawing.Size(180, 22);
             this.mnsAraclarYeniKayit.Text = "Yeni Kayıt";
+            this.mnsAraclarYeniKayit.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // mnsAraclarKaydet
             // 
             this.mnsAraclarKaydet.Name = "mnsAraclarKaydet";
-            this.mnsAraclarKaydet.Size = new System.Drawing.Size(170, 22);
+            this.mnsAraclarKaydet.Size = new System.Drawing.Size(180, 22);
             this.mnsAraclarKaydet.Text = "Kaydet";
+            this.mnsAraclarKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // mnsAraclarTemizle
             // 
             this.mnsAraclarTemizle.Name = "mnsAraclarTemizle";
-            this.mnsAraclarTemizle.Size = new System.Drawing.Size(170, 22);
+            this.mnsAraclarTemizle.Size = new System.Drawing.Size(180, 22);
             this.mnsAraclarTemizle.Text = "Temizle";
+            this.mnsAraclarTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
             // mnsKayitlariGoster
             // 
             this.mnsKayitlariGoster.Name = "mnsKayitlariGoster";
-            this.mnsKayitlariGoster.Size = new System.Drawing.Size(170, 22);
+            this.mnsKayitlariGoster.Size = new System.Drawing.Size(180, 22);
             this.mnsKayitlariGoster.Text = "Kayıtları Göster";
+            this.mnsKayitlariGoster.Click += new System.EventHandler(this.btnKayitlariGoster_Click);
             // 
             // mnsAraclarGuncelle
             // 
             this.mnsAraclarGuncelle.Name = "mnsAraclarGuncelle";
-            this.mnsAraclarGuncelle.Size = new System.Drawing.Size(170, 22);
+            this.mnsAraclarGuncelle.Size = new System.Drawing.Size(180, 22);
             this.mnsAraclarGuncelle.Text = "Güncelle";
+            this.mnsAraclarGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // mnsAyarlar
             // 
@@ -522,25 +523,25 @@
             this.mnsAyarlarDilTurkce,
             this.mnsAyarlarDilIngilizce});
             this.mnsAyarlarDil.Name = "mnsAyarlarDil";
-            this.mnsAyarlarDil.Size = new System.Drawing.Size(98, 22);
+            this.mnsAyarlarDil.Size = new System.Drawing.Size(180, 22);
             this.mnsAyarlarDil.Text = "Dil";
             // 
             // mnsAyarlarDilTurkce
             // 
             this.mnsAyarlarDilTurkce.Name = "mnsAyarlarDilTurkce";
-            this.mnsAyarlarDilTurkce.Size = new System.Drawing.Size(128, 22);
+            this.mnsAyarlarDilTurkce.Size = new System.Drawing.Size(180, 22);
             this.mnsAyarlarDilTurkce.Text = "Türkçe";
             // 
             // mnsAyarlarDilIngilizce
             // 
             this.mnsAyarlarDilIngilizce.Name = "mnsAyarlarDilIngilizce";
-            this.mnsAyarlarDilIngilizce.Size = new System.Drawing.Size(128, 22);
+            this.mnsAyarlarDilIngilizce.Size = new System.Drawing.Size(180, 22);
             this.mnsAyarlarDilIngilizce.Text = "İngilizce";
             // 
             // mnsAyarlarTema
             // 
             this.mnsAyarlarTema.Name = "mnsAyarlarTema";
-            this.mnsAyarlarTema.Size = new System.Drawing.Size(98, 22);
+            this.mnsAyarlarTema.Size = new System.Drawing.Size(180, 22);
             this.mnsAyarlarTema.Text = "Tema";
             // 
             // mnsYardim
@@ -555,13 +556,13 @@
             // mnsYardimLisansAnahtari
             // 
             this.mnsYardimLisansAnahtari.Name = "mnsYardimLisansAnahtari";
-            this.mnsYardimLisansAnahtari.Size = new System.Drawing.Size(164, 22);
+            this.mnsYardimLisansAnahtari.Size = new System.Drawing.Size(180, 22);
             this.mnsYardimLisansAnahtari.Text = "Lisans Anahtarı";
             // 
             // mnsYardimHakkinda
             // 
             this.mnsYardimHakkinda.Name = "mnsYardimHakkinda";
-            this.mnsYardimHakkinda.Size = new System.Drawing.Size(164, 22);
+            this.mnsYardimHakkinda.Size = new System.Drawing.Size(180, 22);
             this.mnsYardimHakkinda.Text = "Hakkında";
             // 
             // mnsCikisYap
@@ -569,6 +570,7 @@
             this.mnsCikisYap.Name = "mnsCikisYap";
             this.mnsCikisYap.Size = new System.Drawing.Size(73, 20);
             this.mnsCikisYap.Text = "Çıkış Yap";
+            this.mnsCikisYap.Click += new System.EventHandler(this.btnCikisYap_Click);
             // 
             // tlStrip
             // 
@@ -582,7 +584,6 @@
             this.tlStrip.Size = new System.Drawing.Size(869, 25);
             this.tlStrip.TabIndex = 32;
             this.tlStrip.Text = "toolStrip1";
-            this.tlStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.tlStrip_ItemClicked);
             // 
             // TlStripLblAciklama
             // 

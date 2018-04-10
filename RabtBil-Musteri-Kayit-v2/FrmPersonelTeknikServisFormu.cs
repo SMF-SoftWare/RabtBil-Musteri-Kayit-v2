@@ -46,7 +46,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 cmd.Parameters.AddWithValue("@KaydiYapanID", SMF.KullaniciId);
                 cmd.Parameters.AddWithValue("@KayitTarihi", DateTime.Now);
                 if (SMF.Baglanti.State != ConnectionState.Open)
-                SMF.Baglanti.Open();
+                    SMF.Baglanti.Open();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Resources.kaydedildi", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -89,7 +89,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 kaydet.Parameters.AddWithValue("@GuncellemeTarihi", DateTime.Now);
                 kaydet.Parameters.AddWithValue("@ID", lblMusteriNo.Text);
                 if (SMF.Baglanti.State != ConnectionState.Open)
-                SMF.Baglanti.Open();
+                    SMF.Baglanti.Open();
                 kaydet.ExecuteNonQuery();
                 MessageBox.Show("Resources.kaydedildi", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -182,36 +182,6 @@ namespace RabtBil_Musteri_Kayit_v2
         private void tmrTarihSaat_Tick(object sender, EventArgs e)
         {
             tslblTarihSaat.Text = DateTime.Now.ToString(CultureInfo.CurrentCulture);
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void grpboxMusteriBilgileri_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void grpboxEkBilgiler_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void grpboxUrunBilgileri_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tlStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void mnsTeknikServisFormu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
         }
     }
 }

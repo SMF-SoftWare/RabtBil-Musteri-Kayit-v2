@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
 
@@ -40,7 +39,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 SqlCommand cmd = new SqlCommand("DELETE FROM MusteriBilgileri WHERE Id=@Id", SMF.Baglanti);
                 cmd.Parameters.AddWithValue("@Id", Convert.ToInt32(dgvRabtBilDB.CurrentRow?.Cells[0].Value.ToString()));
                 if (SMF.Baglanti.State != ConnectionState.Open)
-                SMF.Baglanti.Open();
+                    SMF.Baglanti.Open();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Resources.secilenKayitSilindi", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 VerileriGetir();
@@ -134,7 +133,7 @@ namespace RabtBil_Musteri_Kayit_v2
                         break;
                 }
                 if (SMF.Baglanti.State != ConnectionState.Open)
-                SMF.Baglanti.Open();
+                    SMF.Baglanti.Open();
                 SqlDataAdapter da = new SqlDataAdapter($"Select * From MusteriBilgileri Where {_aramaTuru} Like @Ara", SMF.Baglanti);
                 da.SelectCommand.Parameters.AddWithValue("@Ara", $"%{txtArama.Text.ToLower()}%");
                 DataTable dt = new DataTable();
@@ -162,7 +161,7 @@ namespace RabtBil_Musteri_Kayit_v2
             try
             {
                 if (SMF.Baglanti.State != ConnectionState.Open)
-                SMF.Baglanti.Open();
+                    SMF.Baglanti.Open();
                 SqlDataAdapter da = new SqlDataAdapter("Select * From MusteriBilgileri", SMF.Baglanti);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
