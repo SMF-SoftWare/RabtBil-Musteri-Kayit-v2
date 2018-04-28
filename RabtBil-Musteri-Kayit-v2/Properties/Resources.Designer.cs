@@ -83,6 +83,16 @@ namespace RabtBil_Musteri_Kayit_v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap RabtBilYaziciSablonu {
+            get {
+                object obj = ResourceManager.GetObject("RabtBilYaziciSablonu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap varsayilanProfilResmi {
             get {
                 object obj = ResourceManager.GetObject("varsayilanProfilResmi", resourceCulture);

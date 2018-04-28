@@ -52,6 +52,7 @@
             this.pdcBelge = new System.Drawing.Printing.PrintDocument();
             this.ppdBaskiOnizleme = new System.Windows.Forms.PrintPreviewDialog();
             this.btnPdfAktar = new System.Windows.Forms.Button();
+            this.btnExcelAktar = new System.Windows.Forms.Button();
             this.tsrKayitlariGoster.SuspendLayout();
             this.mnsKayitlariGoster.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRabtBilDB)).BeginInit();
@@ -66,7 +67,7 @@
             this.tslblTarihSaat});
             this.tsrKayitlariGoster.Location = new System.Drawing.Point(0, 359);
             this.tsrKayitlariGoster.Name = "tsrKayitlariGoster";
-            this.tsrKayitlariGoster.Size = new System.Drawing.Size(844, 25);
+            this.tsrKayitlariGoster.Size = new System.Drawing.Size(922, 25);
             this.tsrKayitlariGoster.TabIndex = 34;
             // 
             // TlStripLblAciklama
@@ -92,7 +93,7 @@
             this.mnsKayitlariGoster.Location = new System.Drawing.Point(0, 0);
             this.mnsKayitlariGoster.Name = "mnsKayitlariGoster";
             this.mnsKayitlariGoster.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.mnsKayitlariGoster.Size = new System.Drawing.Size(844, 24);
+            this.mnsKayitlariGoster.Size = new System.Drawing.Size(922, 24);
             this.mnsKayitlariGoster.TabIndex = 33;
             // 
             // tsmiAyarlar
@@ -172,17 +173,17 @@
             this.dgvRabtBilDB.Name = "dgvRabtBilDB";
             this.dgvRabtBilDB.ReadOnly = true;
             this.dgvRabtBilDB.RowHeadersVisible = false;
-            this.dgvRabtBilDB.Size = new System.Drawing.Size(844, 304);
+            this.dgvRabtBilDB.Size = new System.Drawing.Size(922, 304);
             this.dgvRabtBilDB.TabIndex = 35;
             this.dgvRabtBilDB.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRabtBilDB_CellDoubleClick);
             // 
             // btnSil
             // 
             this.btnSil.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSil.Location = new System.Drawing.Point(16, 24);
+            this.btnSil.Location = new System.Drawing.Point(2, 24);
             this.btnSil.Margin = new System.Windows.Forms.Padding(2);
             this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(100, 29);
+            this.btnSil.Size = new System.Drawing.Size(107, 29);
             this.btnSil.TabIndex = 36;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
@@ -193,7 +194,7 @@
             this.cmbAramaAlanlari.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAramaAlanlari.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbAramaAlanlari.FormattingEnabled = true;
-            this.cmbAramaAlanlari.Location = new System.Drawing.Point(378, 28);
+            this.cmbAramaAlanlari.Location = new System.Drawing.Point(502, 28);
             this.cmbAramaAlanlari.Margin = new System.Windows.Forms.Padding(2);
             this.cmbAramaAlanlari.Name = "cmbAramaAlanlari";
             this.cmbAramaAlanlari.Size = new System.Drawing.Size(177, 23);
@@ -202,7 +203,7 @@
             // txtArama
             // 
             this.txtArama.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtArama.Location = new System.Drawing.Point(559, 28);
+            this.txtArama.Location = new System.Drawing.Point(683, 28);
             this.txtArama.Margin = new System.Windows.Forms.Padding(2);
             this.txtArama.Name = "txtArama";
             this.txtArama.Size = new System.Drawing.Size(237, 23);
@@ -212,10 +213,10 @@
             // btnYazdir
             // 
             this.btnYazdir.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnYazdir.Location = new System.Drawing.Point(120, 24);
+            this.btnYazdir.Location = new System.Drawing.Point(114, 24);
             this.btnYazdir.Margin = new System.Windows.Forms.Padding(2);
             this.btnYazdir.Name = "btnYazdir";
-            this.btnYazdir.Size = new System.Drawing.Size(100, 29);
+            this.btnYazdir.Size = new System.Drawing.Size(107, 29);
             this.btnYazdir.TabIndex = 39;
             this.btnYazdir.Text = "Yazdır";
             this.btnYazdir.UseVisualStyleBackColor = true;
@@ -234,6 +235,7 @@
             this.ppdBaskiOnizleme.AutoScrollMargin = new System.Drawing.Size(0, 0);
             this.ppdBaskiOnizleme.AutoScrollMinSize = new System.Drawing.Size(0, 0);
             this.ppdBaskiOnizleme.ClientSize = new System.Drawing.Size(400, 300);
+            this.ppdBaskiOnizleme.Document = this.pdcBelge;
             this.ppdBaskiOnizleme.Enabled = true;
             this.ppdBaskiOnizleme.Icon = ((System.Drawing.Icon)(resources.GetObject("ppdBaskiOnizleme.Icon")));
             this.ppdBaskiOnizleme.Name = "ppdBaskiOnizleme";
@@ -242,19 +244,33 @@
             // btnPdfAktar
             // 
             this.btnPdfAktar.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnPdfAktar.Location = new System.Drawing.Point(224, 24);
+            this.btnPdfAktar.Location = new System.Drawing.Point(225, 24);
             this.btnPdfAktar.Margin = new System.Windows.Forms.Padding(2);
             this.btnPdfAktar.Name = "btnPdfAktar";
-            this.btnPdfAktar.Size = new System.Drawing.Size(100, 29);
+            this.btnPdfAktar.Size = new System.Drawing.Size(107, 29);
             this.btnPdfAktar.TabIndex = 40;
             this.btnPdfAktar.Text = "Pdf\'ye Aktar";
             this.btnPdfAktar.UseVisualStyleBackColor = true;
+            this.btnPdfAktar.Click += new System.EventHandler(this.btnPdfAktar_Click);
+            // 
+            // btnExcelAktar
+            // 
+            this.btnExcelAktar.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnExcelAktar.Location = new System.Drawing.Point(336, 24);
+            this.btnExcelAktar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExcelAktar.Name = "btnExcelAktar";
+            this.btnExcelAktar.Size = new System.Drawing.Size(107, 29);
+            this.btnExcelAktar.TabIndex = 41;
+            this.btnExcelAktar.Text = "Excel\'e Aktar";
+            this.btnExcelAktar.UseVisualStyleBackColor = true;
+            this.btnExcelAktar.Click += new System.EventHandler(this.btnExcelAktar_Click);
             // 
             // FrmKayitlariGoster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(844, 384);
+            this.ClientSize = new System.Drawing.Size(922, 384);
+            this.Controls.Add(this.btnExcelAktar);
             this.Controls.Add(this.btnPdfAktar);
             this.Controls.Add(this.btnYazdir);
             this.Controls.Add(this.txtArama);
@@ -302,5 +318,6 @@
         private System.Drawing.Printing.PrintDocument pdcBelge;
         private System.Windows.Forms.PrintPreviewDialog ppdBaskiOnizleme;
         public System.Windows.Forms.Button btnPdfAktar;
+        public System.Windows.Forms.Button btnExcelAktar;
     }
 }
