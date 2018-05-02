@@ -27,8 +27,17 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private readonly string[] _aramaAlanlari = { "Id", "FormNo", "MusteriAdi", "Telefon", "UrunModeli", "UrunKodlari", "ArizaTanimi", "Aksesuarlar", "EkBilgiler", "UrunTakipNo", "UrunDurumu", "Ucret", "KaydiYapanID", "KayitTarihi", "GuncellemeTarihi", "TeslimEdenID", "TeslimAlan", "TeslimTarihi" };
 
+        public void YazicilariListele()
+        {
+            foreach (String yazici in PrinterSettings.InstalledPrinters)
+            {
+                cmbYaziciListesi.Items.Add(yazici);
+            }
+        }
+
         private void FrmKayitlariGoster_Load(object sender, EventArgs e)
         {
+            YazicilariListele();
             VerileriGetir();
             CmbDoldur();
             cmbAramaAlanlari.SelectedIndex = 0;
@@ -238,7 +247,10 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void btnYazdir_Click(object sender, EventArgs e)
         {
-            pdcBelge.Print();
+            PrintDocument pd = new PrintDocument();
+            pd.PrinterSettings.PrinterName = cmbYaziciListesi.Text;
+            pd.PrintPage += new PrintPageEventHandler(this.pdcBelge_PrintPage);
+            pd.Print();
         }
 
         private void pdcBelge_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -262,10 +274,10 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void btnPdfAktar_Click(object sender, EventArgs e)
         {
-            PrintDocument doc = new PrintDocument();
-            doc.PrintPage += new PrintPageEventHandler(this.pdcBelge_PrintPage);
-            doc.DocumentName = dgvRabtBilDB.CurrentRow.Cells[0].Value.ToString();
-            doc.Print();
+            PrintDocument pd = new PrintDocument();
+            pd.PrinterSettings.PrinterName = cmbYaziciListesi.Text;
+            pd.PrintPage += new PrintPageEventHandler(this.pdcBelge_PrintPage);
+            pd.Print();
         }
 
         private void btnExcelAktar_Click(object sender, EventArgs e)
@@ -292,6 +304,25 @@ namespace RabtBil_Musteri_Kayit_v2
                     MyRange.Value2 = dgvRabtBilDB[j, i].Value == null ? "" : dgvRabtBilDB[j, i].Value;
                     MyRange.Select();
                 }
+            }
+        }
+
+        private void cmbYaziciListesi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbYaziciListesi.Text=="Microsoft XPS Document Writer")
+            {
+                btnPdfAktar.Enabled = true;
+                btnYazdir.Enabled = false;
+            }
+            else if (cmbYaziciListesi.Text=="Microsoft Print to PDF")
+            {
+                btnYazdir.Enabled = true;
+                btnPdfAktar.Enabled = false;
+            }
+            else
+            {
+                btnYazdir.Enabled = false;
+                btnPdfAktar.Enabled = false;
             }
         }
     }

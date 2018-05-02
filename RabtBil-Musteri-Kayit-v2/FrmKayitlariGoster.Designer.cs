@@ -53,6 +53,9 @@
             this.ppdBaskiOnizleme = new System.Windows.Forms.PrintPreviewDialog();
             this.btnPdfAktar = new System.Windows.Forms.Button();
             this.btnExcelAktar = new System.Windows.Forms.Button();
+            this.cmbYaziciListesi = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tsrKayitlariGoster.SuspendLayout();
             this.mnsKayitlariGoster.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRabtBilDB)).BeginInit();
@@ -65,7 +68,7 @@
             this.tsrKayitlariGoster.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TlStripLblAciklama,
             this.tslblTarihSaat});
-            this.tsrKayitlariGoster.Location = new System.Drawing.Point(0, 359);
+            this.tsrKayitlariGoster.Location = new System.Drawing.Point(0, 406);
             this.tsrKayitlariGoster.Name = "tsrKayitlariGoster";
             this.tsrKayitlariGoster.Size = new System.Drawing.Size(922, 25);
             this.tsrKayitlariGoster.TabIndex = 34;
@@ -212,13 +215,14 @@
             // 
             // btnYazdir
             // 
+            this.btnYazdir.Enabled = false;
             this.btnYazdir.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnYazdir.Location = new System.Drawing.Point(114, 24);
+            this.btnYazdir.Location = new System.Drawing.Point(353, 365);
             this.btnYazdir.Margin = new System.Windows.Forms.Padding(2);
             this.btnYazdir.Name = "btnYazdir";
             this.btnYazdir.Size = new System.Drawing.Size(107, 29);
             this.btnYazdir.TabIndex = 39;
-            this.btnYazdir.Text = "Yazdır";
+            this.btnYazdir.Text = "Pdf\'ye Aktar";
             this.btnYazdir.UseVisualStyleBackColor = true;
             this.btnYazdir.Click += new System.EventHandler(this.btnYazdir_Click);
             // 
@@ -243,20 +247,21 @@
             // 
             // btnPdfAktar
             // 
+            this.btnPdfAktar.Enabled = false;
             this.btnPdfAktar.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnPdfAktar.Location = new System.Drawing.Point(225, 24);
+            this.btnPdfAktar.Location = new System.Drawing.Point(464, 365);
             this.btnPdfAktar.Margin = new System.Windows.Forms.Padding(2);
             this.btnPdfAktar.Name = "btnPdfAktar";
             this.btnPdfAktar.Size = new System.Drawing.Size(107, 29);
             this.btnPdfAktar.TabIndex = 40;
-            this.btnPdfAktar.Text = "Pdf\'ye Aktar";
+            this.btnPdfAktar.Text = "Xps\'ye Aktar";
             this.btnPdfAktar.UseVisualStyleBackColor = true;
             this.btnPdfAktar.Click += new System.EventHandler(this.btnPdfAktar_Click);
             // 
             // btnExcelAktar
             // 
             this.btnExcelAktar.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnExcelAktar.Location = new System.Drawing.Point(336, 24);
+            this.btnExcelAktar.Location = new System.Drawing.Point(113, 24);
             this.btnExcelAktar.Margin = new System.Windows.Forms.Padding(2);
             this.btnExcelAktar.Name = "btnExcelAktar";
             this.btnExcelAktar.Size = new System.Drawing.Size(107, 29);
@@ -265,11 +270,44 @@
             this.btnExcelAktar.UseVisualStyleBackColor = true;
             this.btnExcelAktar.Click += new System.EventHandler(this.btnExcelAktar_Click);
             // 
+            // cmbYaziciListesi
+            // 
+            this.cmbYaziciListesi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbYaziciListesi.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbYaziciListesi.FormattingEnabled = true;
+            this.cmbYaziciListesi.Location = new System.Drawing.Point(172, 370);
+            this.cmbYaziciListesi.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbYaziciListesi.Name = "cmbYaziciListesi";
+            this.cmbYaziciListesi.Size = new System.Drawing.Size(177, 23);
+            this.cmbYaziciListesi.TabIndex = 42;
+            this.cmbYaziciListesi.SelectedIndexChanged += new System.EventHandler(this.cmbYaziciListesi_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 375);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(161, 15);
+            this.label1.TabIndex = 43;
+            this.label1.Text = "Lütfen Yazıcıyı Seçin:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(336, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(133, 15);
+            this.label2.TabIndex = 44;
+            this.label2.Text = "Lütfen alan Seçin:";
+            // 
             // FrmKayitlariGoster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(922, 384);
+            this.ClientSize = new System.Drawing.Size(922, 431);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cmbYaziciListesi);
             this.Controls.Add(this.btnExcelAktar);
             this.Controls.Add(this.btnPdfAktar);
             this.Controls.Add(this.btnYazdir);
@@ -319,5 +357,8 @@
         private System.Windows.Forms.PrintPreviewDialog ppdBaskiOnizleme;
         public System.Windows.Forms.Button btnPdfAktar;
         public System.Windows.Forms.Button btnExcelAktar;
+        public System.Windows.Forms.ComboBox cmbYaziciListesi;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
