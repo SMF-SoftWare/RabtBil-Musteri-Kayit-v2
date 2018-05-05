@@ -20,7 +20,7 @@ namespace RabtBil_Musteri_Kayit_v2
             txtFormNo.Focus();
             GuncelleEtkinMi(false);
             tmrTarihSaat.Enabled = true;
-            LblHosgeldin.Text = $"Hoş Geldin {SMF.KullaniciAdi}!";
+            LblHosgeldin.Text = $"Hoş Geldin, {SMF.KullaniciAdi}!";
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)

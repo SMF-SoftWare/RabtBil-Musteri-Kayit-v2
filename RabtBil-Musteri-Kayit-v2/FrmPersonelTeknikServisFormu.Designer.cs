@@ -663,9 +663,9 @@
             this.LblHosgeldin.Font = new System.Drawing.Font("Consolas", 9F);
             this.LblHosgeldin.Location = new System.Drawing.Point(739, 6);
             this.LblHosgeldin.Name = "LblHosgeldin";
-            this.LblHosgeldin.Size = new System.Drawing.Size(126, 14);
+            this.LblHosgeldin.Size = new System.Drawing.Size(98, 14);
             this.LblHosgeldin.TabIndex = 35;
-            this.LblHosgeldin.Text = "Hoş Geldin Selim!";
+            this.LblHosgeldin.Text = "Hoş Geldin, !";
             // 
             // tmrTarihSaat
             // 

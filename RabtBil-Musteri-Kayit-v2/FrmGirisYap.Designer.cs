@@ -81,6 +81,7 @@
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(276, 25);
             this.txtSifre.TabIndex = 3;
+            this.txtSifre.UseSystemPasswordChar = true;
             // 
             // lblSifre
             // 
