@@ -314,5 +314,60 @@ namespace RabtBil_Musteri_Kayit_v2
                 btnYazdir.Enabled = false;
             }
         }
+
+        private void VarsayilanAciklama_MouseLeave(object sender, EventArgs e)
+        {
+            TlStripLblAciklama.Text = "Açıklama";
+        }
+
+        private void btnSil_MouseHover(object sender, EventArgs e)
+        {
+            TlStripLblAciklama.Text = "Seçili olan müşterileri siler";
+        }
+
+        private void btnExcelAktar_MouseHover(object sender, EventArgs e)
+        {
+            TlStripLblAciklama.Text = "Kayıtlı müşterileri bir tuşla excel'e aktarın";
+        }
+
+        private void cmbAramaAlanlari_MouseHover(object sender, EventArgs e)
+        {
+            TlStripLblAciklama.Text = "Seçili arama alanlarına göre arama yapar";
+        }
+
+        private void cmbYaziciListesi_MouseHover(object sender, EventArgs e)
+        {
+            TlStripLblAciklama.Text = "Yazıcı listesini gösterir";
+        }
+
+        private void btnYazdir_MouseHover(object sender, EventArgs e)
+        {
+            TlStripLblAciklama.Text = "Seçili yazıcı tipine göre yazdırma işlemleri yapar";
+        }
+
+        private void tsmiAyarlarDil_MouseHover(object sender, EventArgs e)
+        {
+            TlStripLblAciklama.Text = "Dil seçimi programı kolaylaştırır";
+        }
+
+        private void tsmiAyarlarTema_MouseHover(object sender, EventArgs e)
+        {
+            TlStripLblAciklama.Text = "Programın görünümünü güzelleştirmeye yarar";
+        }
+
+        private void tsmiYardımLisansAnahtarı_MouseHover(object sender, EventArgs e)
+        {
+            TlStripLblAciklama.Text = "Lisansınızın durumunu gösterir";
+        }
+
+        private void tsmiYardımHakkında_MouseHover(object sender, EventArgs e)
+        {
+            TlStripLblAciklama.Text = "Program hakkında bilgi almaya yarar";
+        }
+
+        private void tsmiBaskiOnizleme_MouseHover(object sender, EventArgs e)
+        {
+            TlStripLblAciklama.Text = "Yazdırılacak bilgi için bir ön izleme sunar";
+        }
     }
 }

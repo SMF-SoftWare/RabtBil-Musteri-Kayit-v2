@@ -492,6 +492,8 @@
             this.mnsAraclarYeniKayit.Size = new System.Drawing.Size(186, 22);
             this.mnsAraclarYeniKayit.Text = "Yeni Kayıt";
             this.mnsAraclarYeniKayit.Click += new System.EventHandler(this.btnKaydet_Click);
+            this.mnsAraclarYeniKayit.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
+            this.mnsAraclarYeniKayit.MouseHover += new System.EventHandler(this.btnYeniKayit_MouseHover);
             // 
             // mnsAraclarKaydet
             // 
@@ -499,6 +501,8 @@
             this.mnsAraclarKaydet.Size = new System.Drawing.Size(186, 22);
             this.mnsAraclarKaydet.Text = "Kaydet";
             this.mnsAraclarKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
+            this.mnsAraclarKaydet.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
+            this.mnsAraclarKaydet.MouseHover += new System.EventHandler(this.btnKaydet_MouseHover);
             // 
             // mnsAraclarTemizle
             // 
@@ -506,6 +510,8 @@
             this.mnsAraclarTemizle.Size = new System.Drawing.Size(186, 22);
             this.mnsAraclarTemizle.Text = "Temizle";
             this.mnsAraclarTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
+            this.mnsAraclarTemizle.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
+            this.mnsAraclarTemizle.MouseHover += new System.EventHandler(this.btnTemizle_MouseHover);
             // 
             // mnsKayitlariGoster
             // 
@@ -513,6 +519,8 @@
             this.mnsKayitlariGoster.Size = new System.Drawing.Size(186, 22);
             this.mnsKayitlariGoster.Text = "Kayıtları Göster";
             this.mnsKayitlariGoster.Click += new System.EventHandler(this.btnKayitlariGoster_Click);
+            this.mnsKayitlariGoster.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
+            this.mnsKayitlariGoster.MouseHover += new System.EventHandler(this.btnKayitlariGoster_MouseHover);
             // 
             // mnsAraclarGuncelle
             // 
@@ -520,6 +528,8 @@
             this.mnsAraclarGuncelle.Size = new System.Drawing.Size(186, 22);
             this.mnsAraclarGuncelle.Text = "Güncelle";
             this.mnsAraclarGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
+            this.mnsAraclarGuncelle.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
+            this.mnsAraclarGuncelle.MouseHover += new System.EventHandler(this.btnGuncelle_MouseHover);
             // 
             // mnsAyarlar
             // 
@@ -536,26 +546,30 @@
             this.mnsAyarlarDilTurkce,
             this.mnsAyarlarDilIngilizce});
             this.mnsAyarlarDil.Name = "mnsAyarlarDil";
-            this.mnsAyarlarDil.Size = new System.Drawing.Size(102, 22);
+            this.mnsAyarlarDil.Size = new System.Drawing.Size(180, 22);
             this.mnsAyarlarDil.Text = "Dil";
+            this.mnsAyarlarDil.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
+            this.mnsAyarlarDil.MouseHover += new System.EventHandler(this.mnsAyarlarDil_MouseHover);
             // 
             // mnsAyarlarDilTurkce
             // 
             this.mnsAyarlarDilTurkce.Name = "mnsAyarlarDilTurkce";
-            this.mnsAyarlarDilTurkce.Size = new System.Drawing.Size(137, 22);
+            this.mnsAyarlarDilTurkce.Size = new System.Drawing.Size(180, 22);
             this.mnsAyarlarDilTurkce.Text = "Türkçe";
             // 
             // mnsAyarlarDilIngilizce
             // 
             this.mnsAyarlarDilIngilizce.Name = "mnsAyarlarDilIngilizce";
-            this.mnsAyarlarDilIngilizce.Size = new System.Drawing.Size(137, 22);
+            this.mnsAyarlarDilIngilizce.Size = new System.Drawing.Size(180, 22);
             this.mnsAyarlarDilIngilizce.Text = "İngilizce";
             // 
             // mnsAyarlarTema
             // 
             this.mnsAyarlarTema.Name = "mnsAyarlarTema";
-            this.mnsAyarlarTema.Size = new System.Drawing.Size(102, 22);
+            this.mnsAyarlarTema.Size = new System.Drawing.Size(180, 22);
             this.mnsAyarlarTema.Text = "Tema";
+            this.mnsAyarlarTema.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
+            this.mnsAyarlarTema.MouseHover += new System.EventHandler(this.mnsAyarlarTema_MouseHover);
             // 
             // mnsYardim
             // 
@@ -569,14 +583,18 @@
             // mnsYardimLisansAnahtari
             // 
             this.mnsYardimLisansAnahtari.Name = "mnsYardimLisansAnahtari";
-            this.mnsYardimLisansAnahtari.Size = new System.Drawing.Size(179, 22);
+            this.mnsYardimLisansAnahtari.Size = new System.Drawing.Size(180, 22);
             this.mnsYardimLisansAnahtari.Text = "Lisans Anahtarı";
+            this.mnsYardimLisansAnahtari.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
+            this.mnsYardimLisansAnahtari.MouseHover += new System.EventHandler(this.mnsYardimLisansAnahtari_MouseHover);
             // 
             // mnsYardimHakkinda
             // 
             this.mnsYardimHakkinda.Name = "mnsYardimHakkinda";
-            this.mnsYardimHakkinda.Size = new System.Drawing.Size(179, 22);
+            this.mnsYardimHakkinda.Size = new System.Drawing.Size(180, 22);
             this.mnsYardimHakkinda.Text = "Hakkında";
+            this.mnsYardimHakkinda.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
+            this.mnsYardimHakkinda.MouseHover += new System.EventHandler(this.mnsYardimHakkinda_MouseHover);
             // 
             // mnsCikisYap
             // 
@@ -584,6 +602,8 @@
             this.mnsCikisYap.Size = new System.Drawing.Size(82, 20);
             this.mnsCikisYap.Text = "Çıkış Yap";
             this.mnsCikisYap.Click += new System.EventHandler(this.btnCikisYap_Click);
+            this.mnsCikisYap.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
+            this.mnsCikisYap.MouseHover += new System.EventHandler(this.btnCikisYap_MouseHover);
             // 
             // tlStrip
             // 

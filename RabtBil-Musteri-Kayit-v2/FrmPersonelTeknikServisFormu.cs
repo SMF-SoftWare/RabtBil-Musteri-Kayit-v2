@@ -228,5 +228,25 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             TlStripLblAciklama.Text = "Müşterilerin ürün takip kodunu şifreler";
         }
+
+        private void mnsAyarlarDil_MouseHover(object sender, EventArgs e)
+        {
+            TlStripLblAciklama.Text = "Dil seçimi programı kolaylaştırır";
+        }
+
+        private void mnsAyarlarTema_MouseHover(object sender, EventArgs e)
+        {
+            TlStripLblAciklama.Text = "Programın görünümünü güzelleştirmeye yarar";
+        }
+
+        private void mnsYardimLisansAnahtari_MouseHover(object sender, EventArgs e)
+        {
+            TlStripLblAciklama.Text = "Lisansınızın durumunu gösterir";
+        }
+
+        private void mnsYardimHakkinda_MouseHover(object sender, EventArgs e)
+        {
+            TlStripLblAciklama.Text = "Program hakkında bilgi almaya yarar";
+        }
     }
 }
