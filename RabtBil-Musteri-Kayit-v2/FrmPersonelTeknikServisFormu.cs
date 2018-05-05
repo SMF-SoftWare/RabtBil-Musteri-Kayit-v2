@@ -17,6 +17,7 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void FrmPersonelTeknikServisFormu_Load(object sender, EventArgs e)
         {
+            txtFormNo.Focus();
             GuncelleEtkinMi(false);
             tmrTarihSaat.Enabled = true;
             LblHosgeldin.Text = $"Hoş Geldin {SMF.KullaniciAdi}!";
