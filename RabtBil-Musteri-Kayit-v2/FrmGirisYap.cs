@@ -2,11 +2,13 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using RabtBil_Musteri_Kayit_v2.Properties;
 
 namespace RabtBil_Musteri_Kayit_v2
 {
     public partial class FrmGirisYap : Form
     {
+        private bool _gozeTiklandiMi = true;
         public FrmGirisYap()
         {
             InitializeComponent();
@@ -72,6 +74,27 @@ namespace RabtBil_Musteri_Kayit_v2
             finally
             {
                 SMF.Baglanti.Close();
+            }
+        }
+
+        private void FrmGirisYap_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbxEye_Click(object sender, EventArgs e)
+        {
+            if (_gozeTiklandiMi)
+            {
+                pbxEye.Image = Resources.eye_off;
+                txtSifre.UseSystemPasswordChar = false;
+                _gozeTiklandiMi = false;
+            }
+            else
+            {
+                pbxEye.Image = Resources.eye;
+                txtSifre.UseSystemPasswordChar = true;
+                _gozeTiklandiMi = true;
             }
         }
     }

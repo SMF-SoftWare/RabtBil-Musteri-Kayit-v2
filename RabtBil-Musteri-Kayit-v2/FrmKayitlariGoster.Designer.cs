@@ -51,7 +51,6 @@
             this.tmrTarihSaat = new System.Windows.Forms.Timer(this.components);
             this.pdcBelge = new System.Drawing.Printing.PrintDocument();
             this.ppdBaskiOnizleme = new System.Windows.Forms.PrintPreviewDialog();
-            this.btnPdfAktar = new System.Windows.Forms.Button();
             this.btnExcelAktar = new System.Windows.Forms.Button();
             this.cmbYaziciListesi = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,39 +63,38 @@
             // tsrKayitlariGoster
             // 
             this.tsrKayitlariGoster.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tsrKayitlariGoster.Font = new System.Drawing.Font("Consolas", 8F);
+            this.tsrKayitlariGoster.Font = new System.Drawing.Font("Consolas", 9F);
             this.tsrKayitlariGoster.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TlStripLblAciklama,
             this.tslblTarihSaat});
-            this.tsrKayitlariGoster.Location = new System.Drawing.Point(0, 406);
+            this.tsrKayitlariGoster.Location = new System.Drawing.Point(0, 461);
             this.tsrKayitlariGoster.Name = "tsrKayitlariGoster";
-            this.tsrKayitlariGoster.Size = new System.Drawing.Size(922, 25);
+            this.tsrKayitlariGoster.Size = new System.Drawing.Size(970, 25);
             this.tsrKayitlariGoster.TabIndex = 34;
             // 
             // TlStripLblAciklama
             // 
             this.TlStripLblAciklama.Name = "TlStripLblAciklama";
-            this.TlStripLblAciklama.Size = new System.Drawing.Size(55, 22);
+            this.TlStripLblAciklama.Size = new System.Drawing.Size(63, 22);
             this.TlStripLblAciklama.Text = "Açıklama";
             // 
             // tslblTarihSaat
             // 
             this.tslblTarihSaat.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.tslblTarihSaat.Name = "tslblTarihSaat";
-            this.tslblTarihSaat.Size = new System.Drawing.Size(67, 22);
+            this.tslblTarihSaat.Size = new System.Drawing.Size(77, 22);
             this.tslblTarihSaat.Text = "Tarih Saat";
             // 
             // mnsKayitlariGoster
             // 
-            this.mnsKayitlariGoster.Font = new System.Drawing.Font("Consolas", 8F);
+            this.mnsKayitlariGoster.Font = new System.Drawing.Font("Consolas", 9F);
             this.mnsKayitlariGoster.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiAyarlar,
             this.tsmiYardım,
             this.tsmiBaskiOnizleme});
             this.mnsKayitlariGoster.Location = new System.Drawing.Point(0, 0);
             this.mnsKayitlariGoster.Name = "mnsKayitlariGoster";
-            this.mnsKayitlariGoster.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.mnsKayitlariGoster.Size = new System.Drawing.Size(922, 24);
+            this.mnsKayitlariGoster.Size = new System.Drawing.Size(970, 24);
             this.mnsKayitlariGoster.TabIndex = 33;
             // 
             // tsmiAyarlar
@@ -105,7 +103,7 @@
             this.tsmiAyarlarDil,
             this.tsmiAyarlarTema});
             this.tsmiAyarlar.Name = "tsmiAyarlar";
-            this.tsmiAyarlar.Size = new System.Drawing.Size(61, 20);
+            this.tsmiAyarlar.Size = new System.Drawing.Size(68, 20);
             this.tsmiAyarlar.Text = "Ayarlar";
             // 
             // tsmiAyarlarDil
@@ -114,25 +112,25 @@
             this.tsmiAyarlarDilTurkce,
             this.tsmiAyarlarDilIngilizce});
             this.tsmiAyarlarDil.Name = "tsmiAyarlarDil";
-            this.tsmiAyarlarDil.Size = new System.Drawing.Size(98, 22);
+            this.tsmiAyarlarDil.Size = new System.Drawing.Size(102, 22);
             this.tsmiAyarlarDil.Text = "Dil";
             // 
             // tsmiAyarlarDilTurkce
             // 
             this.tsmiAyarlarDilTurkce.Name = "tsmiAyarlarDilTurkce";
-            this.tsmiAyarlarDilTurkce.Size = new System.Drawing.Size(128, 22);
+            this.tsmiAyarlarDilTurkce.Size = new System.Drawing.Size(137, 22);
             this.tsmiAyarlarDilTurkce.Text = "Türkçe";
             // 
             // tsmiAyarlarDilIngilizce
             // 
             this.tsmiAyarlarDilIngilizce.Name = "tsmiAyarlarDilIngilizce";
-            this.tsmiAyarlarDilIngilizce.Size = new System.Drawing.Size(128, 22);
+            this.tsmiAyarlarDilIngilizce.Size = new System.Drawing.Size(137, 22);
             this.tsmiAyarlarDilIngilizce.Text = "İngilizce";
             // 
             // tsmiAyarlarTema
             // 
             this.tsmiAyarlarTema.Name = "tsmiAyarlarTema";
-            this.tsmiAyarlarTema.Size = new System.Drawing.Size(98, 22);
+            this.tsmiAyarlarTema.Size = new System.Drawing.Size(102, 22);
             this.tsmiAyarlarTema.Text = "Tema";
             // 
             // tsmiYardım
@@ -141,25 +139,25 @@
             this.tsmiYardımLisansAnahtarı,
             this.tsmiYardımHakkında});
             this.tsmiYardım.Name = "tsmiYardım";
-            this.tsmiYardım.Size = new System.Drawing.Size(55, 20);
+            this.tsmiYardım.Size = new System.Drawing.Size(61, 20);
             this.tsmiYardım.Text = "Yardım";
             // 
             // tsmiYardımLisansAnahtarı
             // 
             this.tsmiYardımLisansAnahtarı.Name = "tsmiYardımLisansAnahtarı";
-            this.tsmiYardımLisansAnahtarı.Size = new System.Drawing.Size(164, 22);
+            this.tsmiYardımLisansAnahtarı.Size = new System.Drawing.Size(179, 22);
             this.tsmiYardımLisansAnahtarı.Text = "Lisans Anahtarı";
             // 
             // tsmiYardımHakkında
             // 
             this.tsmiYardımHakkında.Name = "tsmiYardımHakkında";
-            this.tsmiYardımHakkında.Size = new System.Drawing.Size(164, 22);
+            this.tsmiYardımHakkında.Size = new System.Drawing.Size(179, 22);
             this.tsmiYardımHakkında.Text = "Hakkında";
             // 
             // tsmiBaskiOnizleme
             // 
             this.tsmiBaskiOnizleme.Name = "tsmiBaskiOnizleme";
-            this.tsmiBaskiOnizleme.Size = new System.Drawing.Size(103, 20);
+            this.tsmiBaskiOnizleme.Size = new System.Drawing.Size(117, 20);
             this.tsmiBaskiOnizleme.Text = "Baskı Önizleme";
             this.tsmiBaskiOnizleme.Click += new System.EventHandler(this.tsmiBaskiOnizleme_Click);
             // 
@@ -170,23 +168,23 @@
             this.dgvRabtBilDB.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvRabtBilDB.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvRabtBilDB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRabtBilDB.Location = new System.Drawing.Point(0, 57);
+            this.dgvRabtBilDB.Location = new System.Drawing.Point(4, 68);
             this.dgvRabtBilDB.Margin = new System.Windows.Forms.Padding(2);
             this.dgvRabtBilDB.MultiSelect = false;
             this.dgvRabtBilDB.Name = "dgvRabtBilDB";
             this.dgvRabtBilDB.ReadOnly = true;
             this.dgvRabtBilDB.RowHeadersVisible = false;
-            this.dgvRabtBilDB.Size = new System.Drawing.Size(922, 304);
+            this.dgvRabtBilDB.Size = new System.Drawing.Size(962, 353);
             this.dgvRabtBilDB.TabIndex = 35;
             this.dgvRabtBilDB.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRabtBilDB_CellDoubleClick);
             // 
             // btnSil
             // 
-            this.btnSil.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSil.Location = new System.Drawing.Point(2, 24);
+            this.btnSil.Font = new System.Drawing.Font("Consolas", 11F);
+            this.btnSil.Location = new System.Drawing.Point(2, 29);
             this.btnSil.Margin = new System.Windows.Forms.Padding(2);
             this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(107, 29);
+            this.btnSil.Size = new System.Drawing.Size(122, 35);
             this.btnSil.TabIndex = 36;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
@@ -195,34 +193,34 @@
             // cmbAramaAlanlari
             // 
             this.cmbAramaAlanlari.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbAramaAlanlari.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbAramaAlanlari.Font = new System.Drawing.Font("Consolas", 11F);
             this.cmbAramaAlanlari.FormattingEnabled = true;
-            this.cmbAramaAlanlari.Location = new System.Drawing.Point(502, 28);
+            this.cmbAramaAlanlari.Location = new System.Drawing.Point(485, 34);
             this.cmbAramaAlanlari.Margin = new System.Windows.Forms.Padding(2);
             this.cmbAramaAlanlari.Name = "cmbAramaAlanlari";
-            this.cmbAramaAlanlari.Size = new System.Drawing.Size(177, 23);
+            this.cmbAramaAlanlari.Size = new System.Drawing.Size(202, 26);
             this.cmbAramaAlanlari.TabIndex = 37;
             // 
             // txtArama
             // 
-            this.txtArama.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtArama.Location = new System.Drawing.Point(683, 28);
+            this.txtArama.Font = new System.Drawing.Font("Consolas", 11F);
+            this.txtArama.Location = new System.Drawing.Point(692, 34);
             this.txtArama.Margin = new System.Windows.Forms.Padding(2);
             this.txtArama.Name = "txtArama";
-            this.txtArama.Size = new System.Drawing.Size(237, 23);
+            this.txtArama.Size = new System.Drawing.Size(270, 25);
             this.txtArama.TabIndex = 38;
             this.txtArama.TextChanged += new System.EventHandler(this.txtArama_TextChanged);
             // 
             // btnYazdir
             // 
             this.btnYazdir.Enabled = false;
-            this.btnYazdir.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnYazdir.Location = new System.Drawing.Point(353, 365);
+            this.btnYazdir.Font = new System.Drawing.Font("Consolas", 11F);
+            this.btnYazdir.Location = new System.Drawing.Point(590, 424);
             this.btnYazdir.Margin = new System.Windows.Forms.Padding(2);
             this.btnYazdir.Name = "btnYazdir";
-            this.btnYazdir.Size = new System.Drawing.Size(107, 29);
+            this.btnYazdir.Size = new System.Drawing.Size(122, 35);
             this.btnYazdir.TabIndex = 39;
-            this.btnYazdir.Text = "Pdf\'ye Aktar";
+            this.btnYazdir.Text = "Yazdır";
             this.btnYazdir.UseVisualStyleBackColor = true;
             this.btnYazdir.Click += new System.EventHandler(this.btnYazdir_Click);
             // 
@@ -245,26 +243,13 @@
             this.ppdBaskiOnizleme.Name = "ppdBaskiOnizleme";
             this.ppdBaskiOnizleme.Visible = false;
             // 
-            // btnPdfAktar
-            // 
-            this.btnPdfAktar.Enabled = false;
-            this.btnPdfAktar.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnPdfAktar.Location = new System.Drawing.Point(464, 365);
-            this.btnPdfAktar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPdfAktar.Name = "btnPdfAktar";
-            this.btnPdfAktar.Size = new System.Drawing.Size(107, 29);
-            this.btnPdfAktar.TabIndex = 40;
-            this.btnPdfAktar.Text = "Xps\'ye Aktar";
-            this.btnPdfAktar.UseVisualStyleBackColor = true;
-            this.btnPdfAktar.Click += new System.EventHandler(this.btnPdfAktar_Click);
-            // 
             // btnExcelAktar
             // 
-            this.btnExcelAktar.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnExcelAktar.Location = new System.Drawing.Point(113, 24);
+            this.btnExcelAktar.Font = new System.Drawing.Font("Consolas", 11F);
+            this.btnExcelAktar.Location = new System.Drawing.Point(129, 29);
             this.btnExcelAktar.Margin = new System.Windows.Forms.Padding(2);
             this.btnExcelAktar.Name = "btnExcelAktar";
-            this.btnExcelAktar.Size = new System.Drawing.Size(107, 29);
+            this.btnExcelAktar.Size = new System.Drawing.Size(122, 35);
             this.btnExcelAktar.TabIndex = 41;
             this.btnExcelAktar.Text = "Excel\'e Aktar";
             this.btnExcelAktar.UseVisualStyleBackColor = true;
@@ -273,43 +258,44 @@
             // cmbYaziciListesi
             // 
             this.cmbYaziciListesi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbYaziciListesi.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbYaziciListesi.Font = new System.Drawing.Font("Consolas", 11F);
             this.cmbYaziciListesi.FormattingEnabled = true;
-            this.cmbYaziciListesi.Location = new System.Drawing.Point(172, 370);
+            this.cmbYaziciListesi.Location = new System.Drawing.Point(384, 430);
             this.cmbYaziciListesi.Margin = new System.Windows.Forms.Padding(2);
             this.cmbYaziciListesi.Name = "cmbYaziciListesi";
-            this.cmbYaziciListesi.Size = new System.Drawing.Size(177, 23);
+            this.cmbYaziciListesi.Size = new System.Drawing.Size(202, 26);
             this.cmbYaziciListesi.TabIndex = 42;
             this.cmbYaziciListesi.SelectedIndexChanged += new System.EventHandler(this.cmbYaziciListesi_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 375);
+            this.label1.Font = new System.Drawing.Font("Consolas", 9F);
+            this.label1.Location = new System.Drawing.Point(220, 439);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 15);
+            this.label1.Size = new System.Drawing.Size(161, 14);
             this.label1.TabIndex = 43;
             this.label1.Text = "Lütfen Yazıcıyı Seçin:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(336, 36);
+            this.label2.Font = new System.Drawing.Font("Consolas", 9F);
+            this.label2.Location = new System.Drawing.Point(349, 43);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 15);
+            this.label2.Size = new System.Drawing.Size(133, 14);
             this.label2.TabIndex = 44;
             this.label2.Text = "Lütfen alan Seçin:";
             // 
             // FrmKayitlariGoster
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(922, 431);
+            this.ClientSize = new System.Drawing.Size(970, 486);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbYaziciListesi);
             this.Controls.Add(this.btnExcelAktar);
-            this.Controls.Add(this.btnPdfAktar);
             this.Controls.Add(this.btnYazdir);
             this.Controls.Add(this.txtArama);
             this.Controls.Add(this.cmbAramaAlanlari);
@@ -317,7 +303,8 @@
             this.Controls.Add(this.dgvRabtBilDB);
             this.Controls.Add(this.tsrKayitlariGoster);
             this.Controls.Add(this.mnsKayitlariGoster);
-            this.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Font = new System.Drawing.Font("Consolas", 11F);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmKayitlariGoster";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmKayitlariGoster";
@@ -355,7 +342,6 @@
         private System.Windows.Forms.Timer tmrTarihSaat;
         private System.Drawing.Printing.PrintDocument pdcBelge;
         private System.Windows.Forms.PrintPreviewDialog ppdBaskiOnizleme;
-        public System.Windows.Forms.Button btnPdfAktar;
         public System.Windows.Forms.Button btnExcelAktar;
         public System.Windows.Forms.ComboBox cmbYaziciListesi;
         private System.Windows.Forms.Label label1;

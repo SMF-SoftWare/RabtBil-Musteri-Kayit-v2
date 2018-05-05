@@ -73,7 +73,6 @@ namespace RabtBil_Musteri_Kayit_v2
                     MessageBox.Show("Resources.metinKutulariBos", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-
                 SqlCommand kaydet = new SqlCommand("UPDATE MusteriBilgileri SET FormNo=@FormNo,MusteriAdi=@MusteriAdi,Telefon=@Telefon,UrunModeli=@UrunModeli,UrunKodlari=@UrunKodlari,ArizaTanimi=@ArizaTanimi,Aksesuarlar=@Aksesuarlar,EkBilgiler=@EkBilgiler,UrunTakipNo=@UrunTakipNo,UrunDurumu=@UrunDurumu,Ucret=@Ucret,GuncelleyenID=@GuncelleyenID,GuncellemeTarihi=@GuncellemeTarihi WHERE ID=@ID", SMF.Baglanti);
                 kaydet.Parameters.AddWithValue("@FormNo", txtMusteriAdi.Text);
                 kaydet.Parameters.AddWithValue("@MusteriAdi", txtFormNo.Text);
@@ -189,6 +188,44 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             FrmProfil frm = new FrmProfil();
             frm.ShowDialog();
+        }
+        private void VarsayilanAciklama_MouseLeave(object sender, EventArgs e)
+        {
+            TlStripLblAciklama.Text = "Açıklama";
+        }
+        private void btnYeniKayit_MouseHover(object sender, EventArgs e)
+        {
+            TlStripLblAciklama.Text = "Yeni bir kayıt oluşturur";
+        }
+
+        private void btnKaydet_MouseHover(object sender, EventArgs e)
+        {
+            TlStripLblAciklama.Text = "Müşterileri kayıt eder";
+        }
+
+        private void btnTemizle_MouseHover(object sender, EventArgs e)
+        {
+            TlStripLblAciklama.Text = "Text'lerin içini temizler";
+        }
+
+        private void btnKayitlariGoster_MouseHover(object sender, EventArgs e)
+        {
+            TlStripLblAciklama.Text = "Kaydedilen müşterileri listeler";
+        }
+
+        private void btnGuncelle_MouseHover(object sender, EventArgs e)
+        {
+            TlStripLblAciklama.Text = "Müşteri bilgilerinde değişiklik yapar";
+        }
+
+        private void btnCikisYap_MouseHover(object sender, EventArgs e)
+        {
+            TlStripLblAciklama.Text = "Oturumdan Çıkar";
+        }
+
+        private void BttnQrKodu_MouseHover(object sender, EventArgs e)
+        {
+            TlStripLblAciklama.Text = "Müşterilerin ürün takip kodunu şifreler";
         }
     }
 }
