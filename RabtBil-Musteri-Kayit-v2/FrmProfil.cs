@@ -15,6 +15,8 @@ namespace RabtBil_Musteri_Kayit_v2
             InitializeComponent();
         }
 
+        private bool gozeTiklandiMi = true;
+
         private void FrmProfil_Load(object sender, EventArgs e)
         {
             try
@@ -163,6 +165,26 @@ namespace RabtBil_Musteri_Kayit_v2
                         PcTrBoxProfiliDuzenle.Image = Resources.varsayilanProfilResmi;
                     }
                 }
+            }
+        }
+
+        private void pbxEye_Click(object sender, EventArgs e)
+        {
+            if (gozeTiklandiMi)
+            {
+                pbxEye.Image = Resources.eye_off;
+                txtMevcutSifre.UseSystemPasswordChar = false;
+                txtYeniSifre.UseSystemPasswordChar = false;
+                txtYeniSifreyiOnayla.UseSystemPasswordChar = false;
+                gozeTiklandiMi = false;
+            }
+            else
+            {
+                pbxEye.Image = Resources.eye;
+                txtMevcutSifre.UseSystemPasswordChar = true;
+                txtYeniSifre.UseSystemPasswordChar = true;
+                txtYeniSifreyiOnayla.UseSystemPasswordChar = true;
+                gozeTiklandiMi = true;
             }
         }
     }

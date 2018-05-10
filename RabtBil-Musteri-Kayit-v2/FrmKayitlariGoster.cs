@@ -1,23 +1,20 @@
-﻿using System;
+﻿using Microsoft.Office.Interop.Excel;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Globalization;
-using System.IO;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
-using Font = System.Drawing.Font;
-using Excel = Microsoft.Office.Interop.Excel;
-using Microsoft.Office.Interop.Excel;
+using Application = System.Windows.Forms.Application;
 using DataTable = System.Data.DataTable;
+using Excel = Microsoft.Office.Interop.Excel;
+using Font = System.Drawing.Font;
 
 namespace RabtBil_Musteri_Kayit_v2
 {
     public partial class FrmKayitlariGoster : Form
     {
-        private SMF SMF = new SMF();
-
         public FrmKayitlariGoster()
         {
             InitializeComponent();
@@ -29,9 +26,16 @@ namespace RabtBil_Musteri_Kayit_v2
 
         public void YazicilariListele()
         {
-            foreach (String yazici in PrinterSettings.InstalledPrinters)
+            try
             {
-                cmbYaziciListesi.Items.Add(yazici);
+                foreach (String yazici in PrinterSettings.InstalledPrinters)
+                {
+                    cmbYaziciListesi.Items.Add(yazici);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata");
             }
         }
 
@@ -179,7 +183,7 @@ namespace RabtBil_Musteri_Kayit_v2
             {
                 if (SMF.Baglanti.State != ConnectionState.Open)
                     SMF.Baglanti.Open();
-                SqlDataAdapter da = new SqlDataAdapter("Select * From MusteriBilgileri", SMF.Baglanti);
+                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM MusteriBilgileri", SMF.Baglanti);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dgvRabtBilDB.DataSource = dt;
@@ -196,20 +200,21 @@ namespace RabtBil_Musteri_Kayit_v2
 
         public void Guncelle()
         {
-            SMF.FrmPersonelTeknikServisFormu.lblMusteriNo.Text = dgvRabtBilDB.CurrentRow?.Cells[0].Value.ToString();
-            SMF.FrmPersonelTeknikServisFormu.txtFormNo.Text = dgvRabtBilDB.CurrentRow?.Cells[1].Value.ToString();
-            SMF.FrmPersonelTeknikServisFormu.txtMusteriAdi.Text = dgvRabtBilDB.CurrentRow?.Cells[2].Value.ToString();
-            SMF.FrmPersonelTeknikServisFormu.mtxTelefon.Text = dgvRabtBilDB.CurrentRow?.Cells[3].Value.ToString();
-            SMF.FrmPersonelTeknikServisFormu.txtUrunModeli.Text = dgvRabtBilDB.CurrentRow?.Cells[4].Value.ToString();
-            SMF.FrmPersonelTeknikServisFormu.txtUrunKodlari.Text = dgvRabtBilDB.CurrentRow?.Cells[5].Value.ToString();
-            SMF.FrmPersonelTeknikServisFormu.txtArizaninTanimi.Text = dgvRabtBilDB.CurrentRow?.Cells[6].Value.ToString();
-            SMF.FrmPersonelTeknikServisFormu.txtAksesuarlar.Text = dgvRabtBilDB.CurrentRow?.Cells[7].Value.ToString();
-            SMF.FrmPersonelTeknikServisFormu.txtEkBilgiler.Text = dgvRabtBilDB.CurrentRow?.Cells[8].Value.ToString();
-            SMF.FrmPersonelTeknikServisFormu.txtTakipNumarası.Text = dgvRabtBilDB.CurrentRow?.Cells[9].Value.ToString();
-            SMF.FrmPersonelTeknikServisFormu.txtUrunDurumu.Text = dgvRabtBilDB.CurrentRow?.Cells[10].Value.ToString();
-            SMF.FrmPersonelTeknikServisFormu.txtUcret.Text = dgvRabtBilDB.CurrentRow?.Cells[11].Value.ToString();
-            SMF.FrmPersonelTeknikServisFormu.KaydetEtkinMi(false);
-            SMF.FrmPersonelTeknikServisFormu.GuncelleEtkinMi(true);
+            FrmPersonelTeknikServisFormu frm = (FrmPersonelTeknikServisFormu)Application.OpenForms["FrmPersonelTeknikServisFormu"];
+            frm.lblMusteriNo.Text = dgvRabtBilDB.CurrentRow?.Cells[0].Value.ToString();
+            frm.txtFormNo.Text = dgvRabtBilDB.CurrentRow?.Cells[1].Value.ToString();
+            frm.txtMusteriAdi.Text = dgvRabtBilDB.CurrentRow?.Cells[2].Value.ToString();
+            frm.mtxTelefon.Text = dgvRabtBilDB.CurrentRow?.Cells[3].Value.ToString();
+            frm.txtUrunModeli.Text = dgvRabtBilDB.CurrentRow?.Cells[4].Value.ToString();
+            frm.txtUrunKodlari.Text = dgvRabtBilDB.CurrentRow?.Cells[5].Value.ToString();
+            frm.txtArizaninTanimi.Text = dgvRabtBilDB.CurrentRow?.Cells[6].Value.ToString();
+            frm.txtAksesuarlar.Text = dgvRabtBilDB.CurrentRow?.Cells[7].Value.ToString();
+            frm.txtEkBilgiler.Text = dgvRabtBilDB.CurrentRow?.Cells[8].Value.ToString();
+            frm.txtTakipNumarası.Text = dgvRabtBilDB.CurrentRow?.Cells[9].Value.ToString();
+            frm.txtUrunDurumu.Text = dgvRabtBilDB.CurrentRow?.Cells[10].Value.ToString();
+            frm.txtUcret.Text = dgvRabtBilDB.CurrentRow?.Cells[11].Value.ToString();
+            frm.KaydetEtkinMi(false);
+            frm.GuncelleEtkinMi(true);
             Close();
         }
 
@@ -242,77 +247,79 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void tsmiBaskiOnizleme_Click(object sender, EventArgs e)
         {
-            ppdBaskiOnizleme.ShowDialog();
+            try
+            {
+                ppdBaskiOnizleme.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata");
+            }
         }
 
         private void btnYazdir_Click(object sender, EventArgs e)
         {
-            PrintDocument pd = new PrintDocument();
-            pd.PrinterSettings.PrinterName = cmbYaziciListesi.Text;
-            pd.PrintPage += new PrintPageEventHandler(this.pdcBelge_PrintPage);
-            pd.Print();
+            try
+            {
+                PrintDocument pd = new PrintDocument();
+                pd.PrinterSettings.PrinterName = cmbYaziciListesi.Text;
+                pd.PrintPage += pdcBelge_PrintPage;
+                pd.Print();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata");
+            }
         }
 
-        private void pdcBelge_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        private void pdcBelge_PrintPage(object sender, PrintPageEventArgs e)
         {
-            Font YaziFontlari = new Font("Consolas", 12, FontStyle.Regular);
-            SolidBrush YaziRenk = new SolidBrush(Color.Black);
+            Font yaziTipi = new Font("Consolas", 12, FontStyle.Regular);
+            SolidBrush yaziRengi = new SolidBrush(Color.Black);
             e.Graphics.DrawImage(Properties.Resources.RabtBilYaziciSablonu, 0, 0);
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[1].Value.ToString(), YaziFontlari, YaziRenk, 248, 302);//FormNo
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[2].Value.ToString(), YaziFontlari, YaziRenk, 248, 341);//MusteriAdi
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[3].Value.ToString(), YaziFontlari, YaziRenk, 248, 381);//Telefon
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[4].Value.ToString(), YaziFontlari, YaziRenk, 248, 420);//UrunModeli
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[5].Value.ToString(), YaziFontlari, YaziRenk, 248, 464);//UrunKodları
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[6].Value.ToString(), YaziFontlari, YaziRenk, 248, 506);//ArizaTanimi
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[10].Value.ToString(), YaziFontlari, YaziRenk, 248, 543);//UrunDurumu
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[9].Value.ToString(), YaziFontlari, YaziRenk, 248, 583);//TakipNo
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[7].Value.ToString(), YaziFontlari, YaziRenk, 248, 662);//Aksesuarlar
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[11].Value.ToString() + " ₺", YaziFontlari, YaziRenk, 673, 792);//Ucret
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[12].Value.ToString(), YaziFontlari, YaziRenk, 248, 626);//KaydıYapan
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[13].Value.ToString(), YaziFontlari, YaziRenk, 588, 302);//TarihSaat
-        }
-
-        private void btnPdfAktar_Click(object sender, EventArgs e)
-        {
+            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[1].Value.ToString(), yaziTipi, yaziRengi, 248, 302); //FormNo
+            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[2].Value.ToString(), yaziTipi, yaziRengi, 248, 341); //MusteriAdi
+            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[3].Value.ToString(), yaziTipi, yaziRengi, 248, 381); //Telefon
+            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[4].Value.ToString(), yaziTipi, yaziRengi, 248, 420); //UrunModeli
+            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[5].Value.ToString(), yaziTipi, yaziRengi, 248, 464); //UrunKodları
+            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[6].Value.ToString(), yaziTipi, yaziRengi, 248, 506); //ArizaTanimi
+            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[10].Value.ToString(), yaziTipi, yaziRengi, 248, 543); //UrunDurumu
+            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[9].Value.ToString(), yaziTipi, yaziRengi, 248, 583); //TakipNo
+            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[7].Value.ToString(), yaziTipi, yaziRengi, 248, 662); //Aksesuarlar
+            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[11].Value + " ₺", yaziTipi, yaziRengi, 673, 792); //Ucret
+            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[12].Value.ToString(), yaziTipi, yaziRengi, 248, 626); //KaydıYapan
+            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[13].Value.ToString(), yaziTipi, yaziRengi, 588, 302); //TarihSaat
         }
 
         private void btnExcelAktar_Click(object sender, EventArgs e)
         {
-            Excel.Application excel = new Excel.Application();
-            excel.Visible = true;
-            object Missing = Type.Missing;
-            Workbook workbook = excel.Workbooks.Add(Missing);
+            Excel.Application excel = new Excel.Application {Visible = true};
+            object missing = Type.Missing;
+            Workbook workbook = excel.Workbooks.Add(missing);
             Worksheet shet1 = (Worksheet)workbook.Sheets[1];
-            int StartCol = 1;
-            int StartRow = 1;
+            const int startCol = 1;
+            int startRow = 1;
             for (int j = 0; j < dgvRabtBilDB.Columns.Count; j++)
             {
-                Range MyRange = (Range)shet1.Cells[StartRow, StartCol + j];
-                MyRange.Value2 = dgvRabtBilDB.Columns[j].HeaderText;
+                Range myRange = (Range)shet1.Cells[startRow, startCol + j];
+                myRange.Value2 = dgvRabtBilDB.Columns[j].HeaderText;
             }
 
-            StartRow++;
+            startRow++;
             for (int i = 0; i < dgvRabtBilDB.Rows.Count; i++)
             {
                 for (int j = 0; j < dgvRabtBilDB.Columns.Count; j++)
                 {
-                    Range MyRange = (Range)shet1.Cells[StartRow + i, StartCol + j];
-                    MyRange.Value2 = dgvRabtBilDB[j, i].Value == null ? "" : dgvRabtBilDB[j, i].Value;
-                    MyRange.Select();
+                    Range myRange = (Range)shet1.Cells[startRow + i, startCol + j];
+                    myRange.Value2 = dgvRabtBilDB[j, i].Value == null ? "" : dgvRabtBilDB[j, i].Value;
+                    myRange.Select();
                 }
             }
         }
 
         private void cmbYaziciListesi_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbYaziciListesi.Text!="")
-            {
-                btnYazdir.Enabled = true;
-            }
-            else
-            {
-                btnYazdir.Enabled = false;
-            }
+            btnYazdir.Enabled = cmbYaziciListesi.Text != "";
         }
 
         private void VarsayilanAciklama_MouseLeave(object sender, EventArgs e)

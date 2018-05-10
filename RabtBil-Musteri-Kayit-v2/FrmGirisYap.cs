@@ -8,7 +8,7 @@ namespace RabtBil_Musteri_Kayit_v2
 {
     public partial class FrmGirisYap : Form
     {
-        private bool _gozeTiklandiMi = true;
+        private bool gozeTiklandiMi = true;
 
         public FrmGirisYap()
         {
@@ -86,17 +86,17 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void pbxEye_Click(object sender, EventArgs e)
         {
-            if (_gozeTiklandiMi)
+            if (gozeTiklandiMi)
             {
                 pbxEye.Image = Resources.eye_off;
                 txtSifre.UseSystemPasswordChar = false;
-                _gozeTiklandiMi = false;
+                gozeTiklandiMi = false;
             }
             else
             {
                 pbxEye.Image = Resources.eye;
                 txtSifre.UseSystemPasswordChar = true;
-                _gozeTiklandiMi = true;
+                gozeTiklandiMi = true;
             }
         }
     }

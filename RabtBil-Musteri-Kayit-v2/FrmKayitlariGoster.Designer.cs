@@ -149,7 +149,7 @@
             // tsmiYardımLisansAnahtarı
             // 
             this.tsmiYardımLisansAnahtarı.Name = "tsmiYardımLisansAnahtarı";
-            this.tsmiYardımLisansAnahtarı.Size = new System.Drawing.Size(180, 22);
+            this.tsmiYardımLisansAnahtarı.Size = new System.Drawing.Size(179, 22);
             this.tsmiYardımLisansAnahtarı.Text = "Lisans Anahtarı";
             this.tsmiYardımLisansAnahtarı.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
             this.tsmiYardımLisansAnahtarı.MouseHover += new System.EventHandler(this.tsmiYardımLisansAnahtarı_MouseHover);
@@ -157,7 +157,7 @@
             // tsmiYardımHakkında
             // 
             this.tsmiYardımHakkında.Name = "tsmiYardımHakkında";
-            this.tsmiYardımHakkında.Size = new System.Drawing.Size(180, 22);
+            this.tsmiYardımHakkında.Size = new System.Drawing.Size(179, 22);
             this.tsmiYardımHakkında.Text = "Hakkında";
             this.tsmiYardımHakkında.Click += new System.EventHandler(this.tsmiYardımHakkında_Click);
             this.tsmiYardımHakkında.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
@@ -179,20 +179,20 @@
             this.dgvRabtBilDB.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvRabtBilDB.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvRabtBilDB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRabtBilDB.Location = new System.Drawing.Point(4, 68);
+            this.dgvRabtBilDB.Location = new System.Drawing.Point(11, 68);
             this.dgvRabtBilDB.Margin = new System.Windows.Forms.Padding(2);
             this.dgvRabtBilDB.MultiSelect = false;
             this.dgvRabtBilDB.Name = "dgvRabtBilDB";
             this.dgvRabtBilDB.ReadOnly = true;
             this.dgvRabtBilDB.RowHeadersVisible = false;
-            this.dgvRabtBilDB.Size = new System.Drawing.Size(962, 353);
+            this.dgvRabtBilDB.Size = new System.Drawing.Size(948, 353);
             this.dgvRabtBilDB.TabIndex = 35;
             this.dgvRabtBilDB.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRabtBilDB_CellDoubleClick);
             // 
             // btnSil
             // 
             this.btnSil.Font = new System.Drawing.Font("Consolas", 11F);
-            this.btnSil.Location = new System.Drawing.Point(2, 29);
+            this.btnSil.Location = new System.Drawing.Point(11, 29);
             this.btnSil.Margin = new System.Windows.Forms.Padding(2);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(122, 35);
@@ -222,7 +222,7 @@
             this.txtArama.Location = new System.Drawing.Point(692, 34);
             this.txtArama.Margin = new System.Windows.Forms.Padding(2);
             this.txtArama.Name = "txtArama";
-            this.txtArama.Size = new System.Drawing.Size(270, 25);
+            this.txtArama.Size = new System.Drawing.Size(267, 25);
             this.txtArama.TabIndex = 38;
             this.txtArama.TextChanged += new System.EventHandler(this.txtArama_TextChanged);
             // 
@@ -263,7 +263,7 @@
             // btnExcelAktar
             // 
             this.btnExcelAktar.Font = new System.Drawing.Font("Consolas", 11F);
-            this.btnExcelAktar.Location = new System.Drawing.Point(129, 29);
+            this.btnExcelAktar.Location = new System.Drawing.Point(138, 29);
             this.btnExcelAktar.Margin = new System.Windows.Forms.Padding(2);
             this.btnExcelAktar.Name = "btnExcelAktar";
             this.btnExcelAktar.Size = new System.Drawing.Size(122, 35);
@@ -292,7 +292,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 9F);
-            this.label1.Location = new System.Drawing.Point(220, 439);
+            this.label1.Location = new System.Drawing.Point(218, 435);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(161, 14);
             this.label1.TabIndex = 43;
@@ -302,7 +302,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 9F);
-            this.label2.Location = new System.Drawing.Point(349, 43);
+            this.label2.Location = new System.Drawing.Point(347, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(133, 14);
             this.label2.TabIndex = 44;

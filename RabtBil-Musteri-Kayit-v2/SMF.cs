@@ -16,10 +16,10 @@ namespace RabtBil_Musteri_Kayit_v2
         public static string KullaniciAdi;
         public static string ProfilResmiYolu;
         public static string ProfilKlasoru;
-        public static FrmGirisYap FrmGirisYap = (FrmGirisYap)Application.OpenForms["FrmGirisYap"];
-        public static FrmPersonelTeknikServisFormu FrmPersonelTeknikServisFormu = (FrmPersonelTeknikServisFormu)Application.OpenForms["FrmPersonelTeknikServisFormu"];
-        public static FrmKayitlariGoster FrmKayitlariGoster = (FrmKayitlariGoster)Application.OpenForms["FrmKayitlariGoster"];
-        public static FrmUrunTeslim FrmUrunTeslim = (FrmUrunTeslim)Application.OpenForms["FrmUrunTeslim"];
+        //public static FrmGirisYap FrmGirisYap = (FrmGirisYap)Application.OpenForms["FrmGirisYap"];
+        //public static FrmPersonelTeknikServisFormu FrmPersonelTeknikServisFormu = (FrmPersonelTeknikServisFormu)Application.OpenForms["FrmPersonelTeknikServisFormu"];
+        //public static FrmKayitlariGoster FrmKayitlariGoster = (FrmKayitlariGoster)Application.OpenForms["FrmKayitlariGoster"];
+        //public static FrmUrunTeslim FrmUrunTeslim = (FrmUrunTeslim)Application.OpenForms["FrmUrunTeslim"];
 
         public static bool EpostaDogruMu(string eposta)
         {

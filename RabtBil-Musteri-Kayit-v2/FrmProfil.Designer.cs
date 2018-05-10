@@ -46,6 +46,7 @@
             this.btnKapat = new System.Windows.Forms.Button();
             this.mnsTeknikServisFormu = new System.Windows.Forms.MenuStrip();
             this.tsmiAraclar = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiGucluSifreOlustur = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAyarlar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDil = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiTurkce = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,10 +55,11 @@
             this.tsmiYardim = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiLisansAnahtari = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiHakkinda = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiGucluSifreOlustur = new System.Windows.Forms.ToolStripMenuItem();
             this.PcTrBoxProfiliDuzenle = new System.Windows.Forms.PictureBox();
+            this.pbxEye = new System.Windows.Forms.PictureBox();
             this.mnsTeknikServisFormu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxProfiliDuzenle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxEye)).BeginInit();
             this.SuspendLayout();
             // 
             // txtKullaniciAdi
@@ -255,6 +257,13 @@
             this.tsmiAraclar.Size = new System.Drawing.Size(68, 20);
             this.tsmiAraclar.Text = "Araçlar";
             // 
+            // tsmiGucluSifreOlustur
+            // 
+            this.tsmiGucluSifreOlustur.Name = "tsmiGucluSifreOlustur";
+            this.tsmiGucluSifreOlustur.Size = new System.Drawing.Size(207, 22);
+            this.tsmiGucluSifreOlustur.Text = "Güçlü Şifre Oluştur";
+            this.tsmiGucluSifreOlustur.Click += new System.EventHandler(this.tsmiGucluSifreOlustur_Click);
+            // 
             // tsmiAyarlar
             // 
             this.tsmiAyarlar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -270,25 +279,25 @@
             this.tsmiTurkce,
             this.tsmiIngilizce});
             this.tsmiDil.Name = "tsmiDil";
-            this.tsmiDil.Size = new System.Drawing.Size(180, 22);
+            this.tsmiDil.Size = new System.Drawing.Size(102, 22);
             this.tsmiDil.Text = "Dil";
             // 
             // tsmiTurkce
             // 
             this.tsmiTurkce.Name = "tsmiTurkce";
-            this.tsmiTurkce.Size = new System.Drawing.Size(180, 22);
+            this.tsmiTurkce.Size = new System.Drawing.Size(137, 22);
             this.tsmiTurkce.Text = "Türkçe";
             // 
             // tsmiIngilizce
             // 
             this.tsmiIngilizce.Name = "tsmiIngilizce";
-            this.tsmiIngilizce.Size = new System.Drawing.Size(180, 22);
+            this.tsmiIngilizce.Size = new System.Drawing.Size(137, 22);
             this.tsmiIngilizce.Text = "İngilizce";
             // 
             // tsmiTema
             // 
             this.tsmiTema.Name = "tsmiTema";
-            this.tsmiTema.Size = new System.Drawing.Size(180, 22);
+            this.tsmiTema.Size = new System.Drawing.Size(102, 22);
             this.tsmiTema.Text = "Tema";
             // 
             // tsmiYardim
@@ -303,22 +312,15 @@
             // tsmiLisansAnahtari
             // 
             this.tsmiLisansAnahtari.Name = "tsmiLisansAnahtari";
-            this.tsmiLisansAnahtari.Size = new System.Drawing.Size(180, 22);
+            this.tsmiLisansAnahtari.Size = new System.Drawing.Size(179, 22);
             this.tsmiLisansAnahtari.Text = "Lisans Anahtarı";
             // 
             // tsmiHakkinda
             // 
             this.tsmiHakkinda.Name = "tsmiHakkinda";
-            this.tsmiHakkinda.Size = new System.Drawing.Size(180, 22);
+            this.tsmiHakkinda.Size = new System.Drawing.Size(179, 22);
             this.tsmiHakkinda.Text = "Hakkında";
             this.tsmiHakkinda.Click += new System.EventHandler(this.tsmiHakkinda_Click);
-            // 
-            // tsmiGucluSifreOlustur
-            // 
-            this.tsmiGucluSifreOlustur.Name = "tsmiGucluSifreOlustur";
-            this.tsmiGucluSifreOlustur.Size = new System.Drawing.Size(207, 22);
-            this.tsmiGucluSifreOlustur.Text = "Güçlü Şifre Oluştur";
-            this.tsmiGucluSifreOlustur.Click += new System.EventHandler(this.tsmiGucluSifreOlustur_Click);
             // 
             // PcTrBoxProfiliDuzenle
             // 
@@ -331,12 +333,25 @@
             this.PcTrBoxProfiliDuzenle.TabStop = false;
             this.PcTrBoxProfiliDuzenle.Click += new System.EventHandler(this.PcTrBoxProfiliDuzenle_Click);
             // 
+            // pbxEye
+            // 
+            this.pbxEye.Image = global::RabtBil_Musteri_Kayit_v2.Properties.Resources.eye;
+            this.pbxEye.Location = new System.Drawing.Point(408, 59);
+            this.pbxEye.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pbxEye.Name = "pbxEye";
+            this.pbxEye.Size = new System.Drawing.Size(28, 20);
+            this.pbxEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxEye.TabIndex = 33;
+            this.pbxEye.TabStop = false;
+            this.pbxEye.Click += new System.EventHandler(this.pbxEye_Click);
+            // 
             // FrmProfil
             // 
             this.AcceptButton = this.btnGuncelle;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(623, 241);
+            this.Controls.Add(this.pbxEye);
             this.Controls.Add(this.mnsTeknikServisFormu);
             this.Controls.Add(this.btnKapat);
             this.Controls.Add(this.PcTrBoxProfiliDuzenle);
@@ -364,6 +379,7 @@
             this.mnsTeknikServisFormu.ResumeLayout(false);
             this.mnsTeknikServisFormu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxProfiliDuzenle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxEye)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -398,5 +414,6 @@
         public System.Windows.Forms.ToolStripMenuItem tsmiYardim;
         public System.Windows.Forms.ToolStripMenuItem tsmiLisansAnahtari;
         public System.Windows.Forms.ToolStripMenuItem tsmiHakkinda;
+        private System.Windows.Forms.PictureBox pbxEye;
     }
 }

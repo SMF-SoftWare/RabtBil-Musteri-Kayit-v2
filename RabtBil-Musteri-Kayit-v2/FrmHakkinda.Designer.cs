@@ -38,9 +38,9 @@
             this.lblLisans = new System.Windows.Forms.Label();
             this.linklblLisansiDegistir = new System.Windows.Forms.LinkLabel();
             this.gbxSMFSoftWare = new System.Windows.Forms.GroupBox();
-            this.lblOgrenci1 = new System.Windows.Forms.Label();
-            this.lblOgrenci2 = new System.Windows.Forms.Label();
             this.lblOgrenci3 = new System.Windows.Forms.Label();
+            this.lblOgrenci2 = new System.Windows.Forms.Label();
+            this.lblOgrenci1 = new System.Windows.Forms.Label();
             this.lblCopyRight = new System.Windows.Forms.Label();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.gbxSMFSoftWare.SuspendLayout();
@@ -138,14 +138,14 @@
             this.gbxSMFSoftWare.TabStop = false;
             this.gbxSMFSoftWare.Text = "SMF-SoftWare";
             // 
-            // lblOgrenci1
+            // lblOgrenci3
             // 
-            this.lblOgrenci1.AutoSize = true;
-            this.lblOgrenci1.Location = new System.Drawing.Point(6, 30);
-            this.lblOgrenci1.Name = "lblOgrenci1";
-            this.lblOgrenci1.Size = new System.Drawing.Size(240, 18);
-            this.lblOgrenci1.TabIndex = 9;
-            this.lblOgrenci1.Text = "16300031031 - Ali KÖMESÖĞÜTLÜ";
+            this.lblOgrenci3.AutoSize = true;
+            this.lblOgrenci3.Location = new System.Drawing.Point(6, 93);
+            this.lblOgrenci3.Name = "lblOgrenci3";
+            this.lblOgrenci3.Size = new System.Drawing.Size(256, 18);
+            this.lblOgrenci3.TabIndex = 11;
+            this.lblOgrenci3.Text = "16300031011 - Selim Baki FINDIK";
             // 
             // lblOgrenci2
             // 
@@ -156,14 +156,14 @@
             this.lblOgrenci2.TabIndex = 10;
             this.lblOgrenci2.Text = "163000310?? - Fırat GÖRGÜLÜ";
             // 
-            // lblOgrenci3
+            // lblOgrenci1
             // 
-            this.lblOgrenci3.AutoSize = true;
-            this.lblOgrenci3.Location = new System.Drawing.Point(6, 93);
-            this.lblOgrenci3.Name = "lblOgrenci3";
-            this.lblOgrenci3.Size = new System.Drawing.Size(256, 18);
-            this.lblOgrenci3.TabIndex = 11;
-            this.lblOgrenci3.Text = "16300031011 - Selim Baki FINDIK";
+            this.lblOgrenci1.AutoSize = true;
+            this.lblOgrenci1.Location = new System.Drawing.Point(6, 30);
+            this.lblOgrenci1.Name = "lblOgrenci1";
+            this.lblOgrenci1.Size = new System.Drawing.Size(240, 18);
+            this.lblOgrenci1.TabIndex = 9;
+            this.lblOgrenci1.Text = "16300031031 - Ali KÖMESÖĞÜTLÜ";
             // 
             // lblCopyRight
             // 
@@ -201,8 +201,11 @@
             this.Controls.Add(this.lblVersiyon);
             this.Controls.Add(this.lblProgramAdi);
             this.Font = new System.Drawing.Font("Consolas", 11F);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "FrmHakkinda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hakkında";
             this.gbxSMFSoftWare.ResumeLayout(false);
             this.gbxSMFSoftWare.PerformLayout();
