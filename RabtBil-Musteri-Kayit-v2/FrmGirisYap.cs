@@ -1,20 +1,25 @@
-﻿using System;
+﻿using RabtBil_Musteri_Kayit_v2.Properties;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using RabtBil_Musteri_Kayit_v2.Properties;
 
 namespace RabtBil_Musteri_Kayit_v2
 {
     public partial class FrmGirisYap : Form
     {
         private bool _gozeTiklandiMi = true;
+
         public FrmGirisYap()
         {
             InitializeComponent();
         }
 
-        private void BttnGirisYap_Click(object sender, EventArgs e)
+        private void FrmGirisYap_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void btnGirisYap_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(txtKullaniciAdi.Text) || String.IsNullOrWhiteSpace(txtSifre.Text))
             {
@@ -24,7 +29,7 @@ namespace RabtBil_Musteri_Kayit_v2
             try
             {
                 if (SMF.Baglanti.State != ConnectionState.Open)
-                SMF.Baglanti.Open();
+                    SMF.Baglanti.Open();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM Kullanicilar WHERE KullaniciAdi=@KullaniciAdi AND Sifre=@Sifre", SMF.Baglanti);
                 cmd.Parameters.AddWithValue("@KullaniciAdi", txtKullaniciAdi.Text);
                 cmd.Parameters.AddWithValue("@Sifre", txtSifre.Text);
@@ -39,10 +44,12 @@ namespace RabtBil_Musteri_Kayit_v2
                     cmd.Parameters.AddWithValue("@Sifre", txtSifre.Text);
                     SqlDataReader dr = cmd.ExecuteReader();
 
-                    while (dr.Read())
+                    if (dr.Read())
                     {
                         SMF.KullaniciId = dr.GetInt32(0);
                         SMF.KullaniciAdi = dr["Adi"].ToString();
+                        SMF.ProfilKlasoru = Application.StartupPath + $@"\Profil\{SMF.KullaniciId}";
+                        SMF.ProfilResmiYolu = Application.StartupPath + $@"\Profil\{SMF.KullaniciId}\ProfilResmi.SMF";
 
                         switch (dr.GetInt32(1))
                         {
@@ -75,11 +82,6 @@ namespace RabtBil_Musteri_Kayit_v2
             {
                 SMF.Baglanti.Close();
             }
-        }
-
-        private void FrmGirisYap_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void pbxEye_Click(object sender, EventArgs e)

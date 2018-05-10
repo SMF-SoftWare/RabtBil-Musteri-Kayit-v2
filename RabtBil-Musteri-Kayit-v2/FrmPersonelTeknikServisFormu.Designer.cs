@@ -583,7 +583,7 @@
             // mnsYardimLisansAnahtari
             // 
             this.mnsYardimLisansAnahtari.Name = "mnsYardimLisansAnahtari";
-            this.mnsYardimLisansAnahtari.Size = new System.Drawing.Size(180, 22);
+            this.mnsYardimLisansAnahtari.Size = new System.Drawing.Size(179, 22);
             this.mnsYardimLisansAnahtari.Text = "Lisans Anahtarı";
             this.mnsYardimLisansAnahtari.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
             this.mnsYardimLisansAnahtari.MouseHover += new System.EventHandler(this.mnsYardimLisansAnahtari_MouseHover);
@@ -591,7 +591,7 @@
             // mnsYardimHakkinda
             // 
             this.mnsYardimHakkinda.Name = "mnsYardimHakkinda";
-            this.mnsYardimHakkinda.Size = new System.Drawing.Size(180, 22);
+            this.mnsYardimHakkinda.Size = new System.Drawing.Size(179, 22);
             this.mnsYardimHakkinda.Text = "Hakkında";
             this.mnsYardimHakkinda.Click += new System.EventHandler(this.mnsYardimHakkinda_Click);
             this.mnsYardimHakkinda.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);

@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Windows.Forms;
+using RabtBil_Musteri_Kayit_v2.Properties;
 
 namespace RabtBil_Musteri_Kayit_v2
 {
@@ -21,6 +24,15 @@ namespace RabtBil_Musteri_Kayit_v2
             GuncelleEtkinMi(false);
             tmrTarihSaat.Enabled = true;
             LblHosgeldin.Text = $"Hoş Geldin, {SMF.KullaniciAdi}!";
+
+            try
+            {
+                PcTrBoxProfilResim.Image = File.Exists(SMF.ProfilResmiYolu) ? Image.FromFile(SMF.ProfilResmiYolu) : Resources.varsayilanProfilResmi;
+            }
+            catch (Exception)
+            {
+                PcTrBoxProfilResim.Image = Resources.varsayilanProfilResmi;
+            }
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
