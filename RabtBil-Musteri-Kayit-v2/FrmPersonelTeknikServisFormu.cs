@@ -248,5 +248,11 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             TlStripLblAciklama.Text = "Program hakkında bilgi almaya yarar";
         }
+
+        private void mnsYardimHakkinda_Click(object sender, EventArgs e)
+        {
+            FrmHakkinda frmHakkinda = new FrmHakkinda();
+            frmHakkinda.ShowDialog();
+        }
     }
 }

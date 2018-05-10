@@ -112,7 +112,7 @@
             this.tsmiAyarlarDilTurkce,
             this.tsmiAyarlarDilIngilizce});
             this.tsmiAyarlarDil.Name = "tsmiAyarlarDil";
-            this.tsmiAyarlarDil.Size = new System.Drawing.Size(180, 22);
+            this.tsmiAyarlarDil.Size = new System.Drawing.Size(102, 22);
             this.tsmiAyarlarDil.Text = "Dil";
             this.tsmiAyarlarDil.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
             this.tsmiAyarlarDil.MouseHover += new System.EventHandler(this.tsmiAyarlarDil_MouseHover);
@@ -120,19 +120,19 @@
             // tsmiAyarlarDilTurkce
             // 
             this.tsmiAyarlarDilTurkce.Name = "tsmiAyarlarDilTurkce";
-            this.tsmiAyarlarDilTurkce.Size = new System.Drawing.Size(180, 22);
+            this.tsmiAyarlarDilTurkce.Size = new System.Drawing.Size(137, 22);
             this.tsmiAyarlarDilTurkce.Text = "Türkçe";
             // 
             // tsmiAyarlarDilIngilizce
             // 
             this.tsmiAyarlarDilIngilizce.Name = "tsmiAyarlarDilIngilizce";
-            this.tsmiAyarlarDilIngilizce.Size = new System.Drawing.Size(180, 22);
+            this.tsmiAyarlarDilIngilizce.Size = new System.Drawing.Size(137, 22);
             this.tsmiAyarlarDilIngilizce.Text = "İngilizce";
             // 
             // tsmiAyarlarTema
             // 
             this.tsmiAyarlarTema.Name = "tsmiAyarlarTema";
-            this.tsmiAyarlarTema.Size = new System.Drawing.Size(180, 22);
+            this.tsmiAyarlarTema.Size = new System.Drawing.Size(102, 22);
             this.tsmiAyarlarTema.Text = "Tema";
             this.tsmiAyarlarTema.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
             this.tsmiAyarlarTema.MouseHover += new System.EventHandler(this.tsmiAyarlarTema_MouseHover);
@@ -159,6 +159,7 @@
             this.tsmiYardımHakkında.Name = "tsmiYardımHakkında";
             this.tsmiYardımHakkında.Size = new System.Drawing.Size(180, 22);
             this.tsmiYardımHakkında.Text = "Hakkında";
+            this.tsmiYardımHakkında.Click += new System.EventHandler(this.tsmiYardımHakkında_Click);
             this.tsmiYardımHakkında.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
             this.tsmiYardımHakkında.MouseHover += new System.EventHandler(this.tsmiYardımHakkında_MouseHover);
             // 

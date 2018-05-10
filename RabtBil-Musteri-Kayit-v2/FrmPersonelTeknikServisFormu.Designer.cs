@@ -546,7 +546,7 @@
             this.mnsAyarlarDilTurkce,
             this.mnsAyarlarDilIngilizce});
             this.mnsAyarlarDil.Name = "mnsAyarlarDil";
-            this.mnsAyarlarDil.Size = new System.Drawing.Size(180, 22);
+            this.mnsAyarlarDil.Size = new System.Drawing.Size(102, 22);
             this.mnsAyarlarDil.Text = "Dil";
             this.mnsAyarlarDil.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
             this.mnsAyarlarDil.MouseHover += new System.EventHandler(this.mnsAyarlarDil_MouseHover);
@@ -554,19 +554,19 @@
             // mnsAyarlarDilTurkce
             // 
             this.mnsAyarlarDilTurkce.Name = "mnsAyarlarDilTurkce";
-            this.mnsAyarlarDilTurkce.Size = new System.Drawing.Size(180, 22);
+            this.mnsAyarlarDilTurkce.Size = new System.Drawing.Size(137, 22);
             this.mnsAyarlarDilTurkce.Text = "Türkçe";
             // 
             // mnsAyarlarDilIngilizce
             // 
             this.mnsAyarlarDilIngilizce.Name = "mnsAyarlarDilIngilizce";
-            this.mnsAyarlarDilIngilizce.Size = new System.Drawing.Size(180, 22);
+            this.mnsAyarlarDilIngilizce.Size = new System.Drawing.Size(137, 22);
             this.mnsAyarlarDilIngilizce.Text = "İngilizce";
             // 
             // mnsAyarlarTema
             // 
             this.mnsAyarlarTema.Name = "mnsAyarlarTema";
-            this.mnsAyarlarTema.Size = new System.Drawing.Size(180, 22);
+            this.mnsAyarlarTema.Size = new System.Drawing.Size(102, 22);
             this.mnsAyarlarTema.Text = "Tema";
             this.mnsAyarlarTema.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
             this.mnsAyarlarTema.MouseHover += new System.EventHandler(this.mnsAyarlarTema_MouseHover);
@@ -593,6 +593,7 @@
             this.mnsYardimHakkinda.Name = "mnsYardimHakkinda";
             this.mnsYardimHakkinda.Size = new System.Drawing.Size(180, 22);
             this.mnsYardimHakkinda.Text = "Hakkında";
+            this.mnsYardimHakkinda.Click += new System.EventHandler(this.mnsYardimHakkinda_Click);
             this.mnsYardimHakkinda.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
             this.mnsYardimHakkinda.MouseHover += new System.EventHandler(this.mnsYardimHakkinda_MouseHover);
             // 

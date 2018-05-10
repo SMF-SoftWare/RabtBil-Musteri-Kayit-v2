@@ -369,5 +369,11 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             TlStripLblAciklama.Text = "Yazdırılacak bilgi için bir ön izleme sunar";
         }
+
+        private void tsmiYardımHakkında_Click(object sender, EventArgs e)
+        {
+            FrmHakkinda frmHakkinda = new FrmHakkinda();
+            frmHakkinda.ShowDialog();
+        }
     }
 }
