@@ -18,27 +18,29 @@ namespace RabtBil_Musteri_Kayit_v2
         private void FrmUrunTeslim_Load(object sender, EventArgs e)
         {
             tmrTarihSaat.Enabled = true;
+            string teslimEdenId = null;
 
             try
             {
                 if (SMF.Baglanti.State != ConnectionState.Open)
                     SMF.Baglanti.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Adi, Soyadi FROM Kullanicilar WHERE ID=@ID", SMF.Baglanti);
-                cmd.Parameters.AddWithValue("@ID", SMF.KullaniciId);
+                SqlCommand cmd = new SqlCommand("SELECT TeslimEdenID, TeslimAlan, TeslimTarihi FROM MusteriBilgileri WHERE ID=@ID", SMF.Baglanti);
+                cmd.Parameters.AddWithValue("@ID", frm.lblMusteriNo.Text);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    txtTeslimEdenPersonel.Text = $"{dr["Adi"]} {dr["Soyadi"]}";
+                    teslimEdenId = dr["TeslimEdenID"].ToString();
+                    txtTeslimAlanKisi.Text = dr["TeslimAlan"].ToString();
+                    lblTarih.Text = dr["TeslimTarihi"].ToString();
                 }
                 dr.Close();
 
-                cmd = new SqlCommand("SELECT TeslimAlan, TeslimTarihi FROM MusteriBilgileri WHERE ID=@ID", SMF.Baglanti);
-                cmd.Parameters.AddWithValue("@ID", frm.lblMusteriNo.Text);
+                cmd = new SqlCommand("SELECT Adi, Soyadi FROM Kullanicilar WHERE ID=@ID", SMF.Baglanti);
+                cmd.Parameters.AddWithValue("@ID", teslimEdenId);
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    txtTeslimAlanKisi.Text = dr["TeslimAlan"].ToString();
-                    lblTarih.Text = dr["TeslimTarihi"].ToString();
+                    txtTeslimEdenPersonel.Text = $"{dr["Adi"]} {dr["Soyadi"]}";
                 }
                 dr.Close();
             }
