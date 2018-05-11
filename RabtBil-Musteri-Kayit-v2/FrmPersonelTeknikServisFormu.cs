@@ -17,6 +17,8 @@ namespace RabtBil_Musteri_Kayit_v2
             InitializeComponent();
         }
 
+        private bool yenidenBaslat;
+
         private void FrmPersonelTeknikServisFormu_Load(object sender, EventArgs e)
         {
             GuncelleEtkinMi(false);
@@ -119,7 +121,8 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void btnCikisYap_Click(object sender, EventArgs e)
         {
-            Application.Restart();
+            yenidenBaslat = true;
+            Application.Exit();
         }
 
         private void btnTemizle_Click(object sender, EventArgs e)
@@ -261,7 +264,18 @@ namespace RabtBil_Musteri_Kayit_v2
             if (txtFormNo.TextLength > 0 || txtMusteriAdi.TextLength > 0 || mtxTelefon.Text != @"(    )        " || txtAksesuarlar.TextLength > 0 || txtEkBilgiler.TextLength > 0 || txtUrunModeli.TextLength > 0 || txtUrunKodlari.TextLength > 0 || txtArizaninTanimi.TextLength > 0 || txtUrunDurumu.TextLength > 0 || txtUcret.TextLength > 0)
             {
                 DialogResult dr = MessageBox.Show("Bu Sayfayı Kapatırsanız Yaptığınız Değişiklikler Kaybolacaktır!", SMF.UygulamaAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                e.Cancel = dr == DialogResult.No;
+
+                if (dr == DialogResult.No)
+                {
+                    e.Cancel = true;
+                    yenidenBaslat = false;
+                    return;
+                }
+
+                if (yenidenBaslat)
+                {
+                    Application.Restart();
+                }
             }
         }
 
