@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using System.Data.SqlClient;
 using System.Globalization;
 using System.Windows.Forms;
@@ -22,8 +21,7 @@ namespace RabtBil_Musteri_Kayit_v2
 
             try
             {
-                if (SMF.Baglanti.State != ConnectionState.Open)
-                    SMF.Baglanti.Open();
+                SMF.BaglantiKapaliysaAc();
                 SqlCommand cmd = new SqlCommand("SELECT TeslimEdenID, TeslimAlan, TeslimTarihi FROM MusteriBilgileri WHERE ID=@ID", SMF.Baglanti);
                 cmd.Parameters.AddWithValue("@ID", frm.lblMusteriNo.Text);
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -68,8 +66,7 @@ namespace RabtBil_Musteri_Kayit_v2
             }
             try
             {
-                if (SMF.Baglanti.State != ConnectionState.Open)
-                    SMF.Baglanti.Open();
+                SMF.BaglantiKapaliysaAc();
                 SqlCommand kaydet = new SqlCommand("UPDATE MusteriBilgileri SET TeslimEdenID=@TeslimEdenID, TeslimAlan=@TeslimAlan, TeslimTarihi=@TeslimTarihi WHERE ID=@ID", SMF.Baglanti);
                 kaydet.Parameters.AddWithValue("@TeslimEdenID", SMF.KullaniciId);
                 kaydet.Parameters.AddWithValue("@TeslimAlan", txtTeslimAlanKisi.Text);
@@ -93,8 +90,7 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             try
             {
-                if (SMF.Baglanti.State != ConnectionState.Open)
-                    SMF.Baglanti.Open();
+                SMF.BaglantiKapaliysaAc();
                 SqlCommand cmd = new SqlCommand("SELECT TeslimEdenId FROM MusteriBilgileri WHERE ID=@ID", SMF.Baglanti);
                 cmd.Parameters.AddWithValue("@ID", frm.lblMusteriNo.Text);
                 SqlDataReader dr = cmd.ExecuteReader();

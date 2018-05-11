@@ -1,6 +1,5 @@
 ﻿using Microsoft.Office.Interop.Excel;
 using System;
-using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Printing;
@@ -61,8 +60,7 @@ namespace RabtBil_Musteri_Kayit_v2
             {
                 SqlCommand cmd = new SqlCommand("DELETE FROM MusteriBilgileri WHERE Id=@Id", SMF.Baglanti);
                 cmd.Parameters.AddWithValue("@Id", Convert.ToInt32(dgvRabtBilDB.CurrentRow?.Cells[0].Value.ToString()));
-                if (SMF.Baglanti.State != ConnectionState.Open)
-                    SMF.Baglanti.Open();
+                SMF.BaglantiKapaliysaAc();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Resources.secilenKayitSilindi", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 VerileriGetir();
@@ -155,8 +153,7 @@ namespace RabtBil_Musteri_Kayit_v2
                         _aramaTuru = _aramaAlanlari[17];
                         break;
                 }
-                if (SMF.Baglanti.State != ConnectionState.Open)
-                    SMF.Baglanti.Open();
+                SMF.BaglantiKapaliysaAc();
                 SqlDataAdapter da = new SqlDataAdapter($"Select * From MusteriBilgileri Where {_aramaTuru} Like @Ara", SMF.Baglanti);
                 da.SelectCommand.Parameters.AddWithValue("@Ara", $"%{txtArama.Text.ToLower()}%");
                 DataTable dt = new DataTable();
@@ -183,8 +180,7 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             try
             {
-                if (SMF.Baglanti.State != ConnectionState.Open)
-                    SMF.Baglanti.Open();
+                SMF.BaglantiKapaliysaAc();
                 SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM MusteriBilgileri", SMF.Baglanti);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -218,8 +214,7 @@ namespace RabtBil_Musteri_Kayit_v2
 
             try
             {
-                if (SMF.Baglanti.State != ConnectionState.Open)
-                    SMF.Baglanti.Open();
+                SMF.BaglantiKapaliysaAc();
                 SqlCommand cmd = new SqlCommand("SELECT TeslimEdenId FROM MusteriBilgileri WHERE ID=@ID", SMF.Baglanti);
                 cmd.Parameters.AddWithValue("@ID", frm.lblMusteriNo.Text);
                 SqlDataReader dr = cmd.ExecuteReader();

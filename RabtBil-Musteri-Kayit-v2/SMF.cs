@@ -18,10 +18,6 @@ namespace RabtBil_Musteri_Kayit_v2
         public static string KullaniciAdi;
         public static string ProfilResmiYolu;
         public static string ProfilKlasoru;
-        //public static FrmGirisYap FrmGirisYap = (FrmGirisYap)Application.OpenForms["FrmGirisYap"];
-        //public static FrmPersonelTeknikServisFormu FrmPersonelTeknikServisFormu = (FrmPersonelTeknikServisFormu)Application.OpenForms["FrmPersonelTeknikServisFormu"];
-        //public static FrmKayitlariGoster FrmKayitlariGoster = (FrmKayitlariGoster)Application.OpenForms["FrmKayitlariGoster"];
-        //public static FrmUrunTeslim FrmUrunTeslim = (FrmUrunTeslim)Application.OpenForms["FrmUrunTeslim"];
 
         public static bool EpostaDogruMu(string eposta)
         {
@@ -53,9 +49,8 @@ namespace RabtBil_Musteri_Kayit_v2
 
             try
             {
-                if (SMF.Baglanti.State != ConnectionState.Open)
-                    SMF.Baglanti.Open();
-                SqlCommand cmd = new SqlCommand("SELECT MAX(ID)+1 as SonId FROM MusteriBilgileri", SMF.Baglanti);
+                BaglantiKapaliysaAc();
+                SqlCommand cmd = new SqlCommand("SELECT MAX(ID)+1 as SonId FROM MusteriBilgileri", Baglanti);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
@@ -70,9 +65,15 @@ namespace RabtBil_Musteri_Kayit_v2
             }
             finally
             {
-                SMF.Baglanti.Close();
+                Baglanti.Close();
             }
             return $"SMF{id}{gun}{saat}{ay}{dakika}{yil}{saniye}";
+        }
+
+        public static void BaglantiKapaliysaAc()
+        {
+            if (Baglanti.State != ConnectionState.Open)
+                Baglanti.Open();
         }
 
         public enum Rol

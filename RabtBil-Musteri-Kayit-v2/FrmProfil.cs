@@ -23,8 +23,7 @@ namespace RabtBil_Musteri_Kayit_v2
             {
                 SqlCommand cmd = new SqlCommand("SELECT * FROM kullanicilar WHERE Id=@Id", SMF.Baglanti);
                 cmd.Parameters.AddWithValue("@Id", SMF.KullaniciId);
-                if (SMF.Baglanti.State != ConnectionState.Open)
-                    SMF.Baglanti.Open();
+                SMF.BaglantiKapaliysaAc();
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
@@ -87,8 +86,7 @@ namespace RabtBil_Musteri_Kayit_v2
 
             if (String.IsNullOrWhiteSpace(txtYeniSifre.Text) || String.IsNullOrWhiteSpace(txtYeniSifreyiOnayla.Text))
             {
-                if (SMF.Baglanti.State != ConnectionState.Open)
-                    SMF.Baglanti.Open();
+                SMF.BaglantiKapaliysaAc();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM Kullanicilar WHERE Id=@Id AND Sifre=@Sifre", SMF.Baglanti);
                 cmd.Parameters.AddWithValue("@Id", SMF.KullaniciId);
                 cmd.Parameters.AddWithValue("@Sifre", txtMevcutSifre.Text);
@@ -104,8 +102,7 @@ namespace RabtBil_Musteri_Kayit_v2
                     cmd.Parameters.AddWithValue("@Soyadi", txtSoyadi.Text);
                     cmd.Parameters.AddWithValue("@Eposta", txtEpostaAdresi.Text);
                     cmd.Parameters.AddWithValue("@Id", SMF.KullaniciId);
-                    if (SMF.Baglanti.State != ConnectionState.Open)
-                        SMF.Baglanti.Open();
+                    SMF.BaglantiKapaliysaAc();
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Bilgileriniz Güncellendi!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Application.Restart();
@@ -126,13 +123,13 @@ namespace RabtBil_Musteri_Kayit_v2
                 cmd.Parameters.AddWithValue("@Eposta", txtEpostaAdresi.Text);
                 cmd.Parameters.AddWithValue("@Sifre", txtYeniSifre.Text);
                 cmd.Parameters.AddWithValue("@Id", SMF.KullaniciId);
-                if (SMF.Baglanti.State != ConnectionState.Open)
-                    SMF.Baglanti.Open();
+                SMF.BaglantiKapaliysaAc();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Bilgileriniz Güncellendi!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Application.Restart();
             }
         }
+
         private void btnKapat_Click(object sender, EventArgs e)
         {
             Close();

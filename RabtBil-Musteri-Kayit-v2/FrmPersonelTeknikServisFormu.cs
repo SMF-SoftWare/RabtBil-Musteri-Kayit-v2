@@ -1,7 +1,6 @@
 ﻿using QRCoder;
 using RabtBil_Musteri_Kayit_v2.Properties;
 using System;
-using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
@@ -59,14 +58,13 @@ namespace RabtBil_Musteri_Kayit_v2
                 cmd.Parameters.AddWithValue("@Ucret", Convert.ToDouble(txtUcret.Text));
                 cmd.Parameters.AddWithValue("@KaydiYapanID", SMF.KullaniciId);
                 cmd.Parameters.AddWithValue("@KayitTarihi", DateTime.Now);
-                if (SMF.Baglanti.State != ConnectionState.Open)
-                    SMF.Baglanti.Open();
+                SMF.BaglantiKapaliysaAc();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Resources.kaydedildi", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,"Hata");
+                MessageBox.Show(ex.Message, "Hata");
             }
             finally
             {
@@ -101,8 +99,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 kaydet.Parameters.AddWithValue("@GuncelleyenID", SMF.KullaniciId);
                 kaydet.Parameters.AddWithValue("@GuncellemeTarihi", DateTime.Now);
                 kaydet.Parameters.AddWithValue("@ID", lblMusteriNo.Text);
-                if (SMF.Baglanti.State != ConnectionState.Open)
-                    SMF.Baglanti.Open();
+                SMF.BaglantiKapaliysaAc();
                 kaydet.ExecuteNonQuery();
                 MessageBox.Show("Resources.kaydedildi", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -204,6 +201,7 @@ namespace RabtBil_Musteri_Kayit_v2
             Bitmap qrCodeAsBitmap = qrCode.GetGraphic(5);
             picQrKodu.Image = qrCodeAsBitmap;
         }
+
         private void tmrTarihSaat_Tick(object sender, EventArgs e)
         {
             tslblTarihSaat.Text = DateTime.Now.ToString(CultureInfo.CurrentCulture);

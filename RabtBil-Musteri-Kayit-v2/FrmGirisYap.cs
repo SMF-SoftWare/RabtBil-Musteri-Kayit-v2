@@ -28,8 +28,7 @@ namespace RabtBil_Musteri_Kayit_v2
             }
             try
             {
-                if (SMF.Baglanti.State != ConnectionState.Open)
-                    SMF.Baglanti.Open();
+                SMF.BaglantiKapaliysaAc();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM Kullanicilar WHERE KullaniciAdi=@KullaniciAdi AND Sifre=@Sifre", SMF.Baglanti);
                 cmd.Parameters.AddWithValue("@KullaniciAdi", txtKullaniciAdi.Text);
                 cmd.Parameters.AddWithValue("@Sifre", txtSifre.Text);
