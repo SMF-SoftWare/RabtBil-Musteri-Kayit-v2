@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
+using QRCoder;
 using RabtBil_Musteri_Kayit_v2.Properties;
 
 namespace RabtBil_Musteri_Kayit_v2
@@ -265,6 +266,16 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             FrmHakkinda frmHakkinda = new FrmHakkinda();
             frmHakkinda.ShowDialog();
+        }
+
+        private void BttnQrKodu_Click(object sender, EventArgs e)
+        {
+            PayloadGenerator.Url generator = new PayloadGenerator.Url("localhost");
+            QRCodeGenerator qrGenerator = new QRCodeGenerator();
+            QRCodeData qrCodeData = qrGenerator.CreateQrCode(generator, QRCodeGenerator.ECCLevel.Q);
+            QRCode qrCode = new QRCode(qrCodeData);
+            Bitmap qrCodeAsBitmap = qrCode.GetGraphic(5);
+            picQrKodu.Image = qrCodeAsBitmap;
         }
     }
 }

@@ -16,5 +16,11 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmPersonelTeknikServisFormu frm = new FrmPersonelTeknikServisFormu();;
+            frm.ShowDialog();
+        }
     }
 }
