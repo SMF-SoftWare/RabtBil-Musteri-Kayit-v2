@@ -1,4 +1,6 @@
-﻿using System.Data.SqlClient;
+﻿using System;
+using System.Data;
+using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -36,6 +38,41 @@ namespace RabtBil_Musteri_Kayit_v2
                 sb.Append(i.ToString("x2").ToUpper());
             }
             return sb.ToString();
+        }
+
+        public static string TakipKoduOlustur()
+        {
+            DateTime simdi = DateTime.Now;
+            string id = null;
+            int gun = simdi.Day;
+            int saat = simdi.Hour;
+            int ay = simdi.Month;
+            int dakika = simdi.Minute;
+            string yil = simdi.ToString("yy");
+            int saniye = simdi.Second;
+
+            try
+            {
+                if (SMF.Baglanti.State != ConnectionState.Open)
+                    SMF.Baglanti.Open();
+                SqlCommand cmd = new SqlCommand("SELECT MAX(ID)+1 as SonId FROM MusteriBilgileri", SMF.Baglanti);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    id = dr["SonId"].ToString();
+                }
+
+                dr.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata");
+            }
+            finally
+            {
+                SMF.Baglanti.Close();
+            }
+            return $"SMF{id}{gun}{saat}{ay}{dakika}{yil}{saniye}";
         }
 
         public enum Rol

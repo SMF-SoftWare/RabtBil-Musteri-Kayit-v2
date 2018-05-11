@@ -144,7 +144,9 @@
             this.Controls.Add(this.txtKullaniciAdi);
             this.Controls.Add(this.lblKullaniciAdi);
             this.Font = new System.Drawing.Font("Consolas", 11F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
             this.Name = "FrmGirisYap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmGirisYap";

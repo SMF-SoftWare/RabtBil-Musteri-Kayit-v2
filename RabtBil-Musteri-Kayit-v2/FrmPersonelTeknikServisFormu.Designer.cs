@@ -245,6 +245,7 @@
             this.BttnQrKodu.TabIndex = 13;
             this.BttnQrKodu.Text = "Qr Kodu Oluştur";
             this.BttnQrKodu.UseVisualStyleBackColor = true;
+            this.BttnQrKodu.Visible = false;
             this.BttnQrKodu.Click += new System.EventHandler(this.BttnQrKodu_Click);
             this.BttnQrKodu.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
             this.BttnQrKodu.MouseHover += new System.EventHandler(this.BttnQrKodu_MouseHover);
@@ -279,6 +280,7 @@
             // 
             // txtTakipNumarası
             // 
+            this.txtTakipNumarası.Enabled = false;
             this.txtTakipNumarası.Font = new System.Drawing.Font("Consolas", 11F);
             this.txtTakipNumarası.Location = new System.Drawing.Point(144, 181);
             this.txtTakipNumarası.MaxLength = 30;
@@ -704,8 +706,10 @@
             this.Controls.Add(this.grpboxMusteriBilgileri);
             this.Controls.Add(this.mnsTeknikServisFormu);
             this.Font = new System.Drawing.Font("Consolas", 11F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.mnsTeknikServisFormu;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(925, 470);
             this.MinimumSize = new System.Drawing.Size(925, 470);
             this.Name = "FrmPersonelTeknikServisFormu";

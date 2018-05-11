@@ -1,19 +1,17 @@
-﻿using System;
+﻿using QRCoder;
+using RabtBil_Musteri_Kayit_v2.Properties;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
-using QRCoder;
-using RabtBil_Musteri_Kayit_v2.Properties;
 
 namespace RabtBil_Musteri_Kayit_v2
 {
     public partial class FrmPersonelTeknikServisFormu : Form
     {
-        private SMF SMF = new SMF();
-
         public FrmPersonelTeknikServisFormu()
         {
             InitializeComponent();
@@ -24,6 +22,8 @@ namespace RabtBil_Musteri_Kayit_v2
             GuncelleEtkinMi(false);
             tmrTarihSaat.Enabled = true;
             LblHosgeldin.Text = $"Hoş Geldin, {SMF.KullaniciAdi}!";
+            txtTakipNumarası.Text = SMF.TakipKoduOlustur();
+            QrKoduOlustur();
 
             try
             {
@@ -64,9 +64,9 @@ namespace RabtBil_Musteri_Kayit_v2
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Resources.kaydedildi", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Resources.metinKutulariBos", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message,"Hata");
             }
             finally
             {
@@ -135,6 +135,8 @@ namespace RabtBil_Musteri_Kayit_v2
             GuncelleEtkinMi(false);
             KaydetEtkinMi(true);
             chckboxTeslimEdildi.Checked = false;
+            txtTakipNumarası.Text = SMF.TakipKoduOlustur();
+            QrKoduOlustur();
         }
 
         private void btnKayitlariGoster_Click(object sender, EventArgs e)
@@ -160,9 +162,7 @@ namespace RabtBil_Musteri_Kayit_v2
             txtUrunKodlari.Clear();
             txtArizaninTanimi.Clear();
             txtUrunDurumu.Clear();
-            txtTakipNumarası.Clear();
             txtUcret.Clear();
-            picQrKodu.Image = null;
         }
 
         public void GuncelleEtkinMi(bool value)
@@ -195,6 +195,15 @@ namespace RabtBil_Musteri_Kayit_v2
             }
         }
 
+        public void QrKoduOlustur()
+        {
+            PayloadGenerator.Url generator = new PayloadGenerator.Url($@"localhost\{txtTakipNumarası.Text}");
+            QRCodeGenerator qrGenerator = new QRCodeGenerator();
+            QRCodeData qrCodeData = qrGenerator.CreateQrCode(generator, QRCodeGenerator.ECCLevel.Q);
+            QRCode qrCode = new QRCode(qrCodeData);
+            Bitmap qrCodeAsBitmap = qrCode.GetGraphic(5);
+            picQrKodu.Image = qrCodeAsBitmap;
+        }
         private void tmrTarihSaat_Tick(object sender, EventArgs e)
         {
             tslblTarihSaat.Text = DateTime.Now.ToString(CultureInfo.CurrentCulture);
@@ -205,10 +214,12 @@ namespace RabtBil_Musteri_Kayit_v2
             FrmProfil frm = new FrmProfil();
             frm.ShowDialog();
         }
+
         private void VarsayilanAciklama_MouseLeave(object sender, EventArgs e)
         {
             TlStripLblAciklama.Text = "Açıklama";
         }
+
         private void btnYeniKayit_MouseHover(object sender, EventArgs e)
         {
             TlStripLblAciklama.Text = "Yeni bir kayıt oluşturur";
@@ -272,7 +283,7 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void BttnQrKodu_Click(object sender, EventArgs e)
         {
-            PayloadGenerator.Url generator = new PayloadGenerator.Url("localhost");
+            PayloadGenerator.Url generator = new PayloadGenerator.Url($@"localhost\{txtTakipNumarası.Text}");
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
             QRCodeData qrCodeData = qrGenerator.CreateQrCode(generator, QRCodeGenerator.ECCLevel.Q);
             QRCode qrCode = new QRCode(qrCodeData);
