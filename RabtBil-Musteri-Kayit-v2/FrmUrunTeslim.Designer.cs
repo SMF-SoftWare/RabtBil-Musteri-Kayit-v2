@@ -55,6 +55,7 @@
             // 
             // txtTeslimEdenPersonel
             // 
+            this.txtTeslimEdenPersonel.Enabled = false;
             this.txtTeslimEdenPersonel.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTeslimEdenPersonel.Location = new System.Drawing.Point(15, 32);
             this.txtTeslimEdenPersonel.MaxLength = 30;
@@ -97,9 +98,8 @@
             this.lblTarih.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTarih.Location = new System.Drawing.Point(113, 110);
             this.lblTarih.Name = "lblTarih";
-            this.lblTarih.Size = new System.Drawing.Size(37, 13);
+            this.lblTarih.Size = new System.Drawing.Size(0, 13);
             this.lblTarih.TabIndex = 5;
-            this.lblTarih.Text = "Tarih";
             // 
             // tlStrip
             // 
@@ -124,23 +124,25 @@
             // 
             this.btnKaydet.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKaydet.Location = new System.Drawing.Point(15, 135);
-            this.btnKaydet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnKaydet.Margin = new System.Windows.Forms.Padding(2);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(72, 31);
             this.btnKaydet.TabIndex = 7;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // btnTemizle
             // 
             this.btnTemizle.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnTemizle.Location = new System.Drawing.Point(92, 135);
-            this.btnTemizle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTemizle.Margin = new System.Windows.Forms.Padding(2);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(72, 31);
             this.btnTemizle.TabIndex = 8;
             this.btnTemizle.Text = "Temizle";
             this.btnTemizle.UseVisualStyleBackColor = true;
+            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
             // tmrTarihSaat
             // 
@@ -166,6 +168,7 @@
             this.Name = "FrmUrunTeslim";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmUrunTeslim_FormClosing);
             this.Load += new System.EventHandler(this.FrmUrunTeslim_Load);
             this.tlStrip.ResumeLayout(false);
             this.tlStrip.PerformLayout();

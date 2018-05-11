@@ -21,7 +21,6 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void FrmPersonelTeknikServisFormu_Load(object sender, EventArgs e)
         {
-            txtFormNo.Focus();
             GuncelleEtkinMi(false);
             tmrTarihSaat.Enabled = true;
             LblHosgeldin.Text = $"Hoş Geldin, {SMF.KullaniciAdi}!";
@@ -135,6 +134,7 @@ namespace RabtBil_Musteri_Kayit_v2
             Temizle();
             GuncelleEtkinMi(false);
             KaydetEtkinMi(true);
+            chckboxTeslimEdildi.Checked = false;
         }
 
         private void btnKayitlariGoster_Click(object sender, EventArgs e)
@@ -171,11 +171,13 @@ namespace RabtBil_Musteri_Kayit_v2
             {
                 btnGuncelle.Enabled = true;
                 mnsAraclarGuncelle.Enabled = true;
+                chckboxTeslimEdildi.Enabled = true;
             }
             else
             {
                 btnGuncelle.Enabled = false;
                 mnsAraclarGuncelle.Enabled = false;
+                chckboxTeslimEdildi.Enabled = false;
             }
         }
 

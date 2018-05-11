@@ -8,7 +8,9 @@ using System.Globalization;
 using System.Windows.Forms;
 using Application = System.Windows.Forms.Application;
 using DataTable = System.Data.DataTable;
+
 using Excel = Microsoft.Office.Interop.Excel;
+
 using Font = System.Drawing.Font;
 
 namespace RabtBil_Musteri_Kayit_v2
@@ -213,6 +215,29 @@ namespace RabtBil_Musteri_Kayit_v2
             frm.txtTakipNumarası.Text = dgvRabtBilDB.CurrentRow?.Cells[9].Value.ToString();
             frm.txtUrunDurumu.Text = dgvRabtBilDB.CurrentRow?.Cells[10].Value.ToString();
             frm.txtUcret.Text = dgvRabtBilDB.CurrentRow?.Cells[11].Value.ToString();
+
+            try
+            {
+                if (SMF.Baglanti.State != ConnectionState.Open)
+                    SMF.Baglanti.Open();
+                SqlCommand cmd = new SqlCommand("SELECT TeslimEdenId FROM MusteriBilgileri WHERE ID=@ID", SMF.Baglanti);
+                cmd.Parameters.AddWithValue("@ID", frm.lblMusteriNo.Text);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    frm.chckboxTeslimEdildi.Checked = dr["TeslimEdenId"].ToString() != "";
+                }
+                dr.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata");
+            }
+            finally
+            {
+                SMF.Baglanti.Close();
+            }
+
             frm.KaydetEtkinMi(false);
             frm.GuncelleEtkinMi(true);
             Close();
@@ -293,7 +318,7 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void btnExcelAktar_Click(object sender, EventArgs e)
         {
-            Excel.Application excel = new Excel.Application {Visible = true};
+            Excel.Application excel = new Excel.Application { Visible = true };
             object missing = Type.Missing;
             Workbook workbook = excel.Workbooks.Add(missing);
             Worksheet shet1 = (Worksheet)workbook.Sheets[1];

@@ -38,7 +38,7 @@
             this.txtMusteriAdi = new System.Windows.Forms.TextBox();
             this.lblMusteriAdi = new System.Windows.Forms.Label();
             this.grpboxUrunBilgileri = new System.Windows.Forms.GroupBox();
-            this.lblMusteriNo = new System.Windows.Forms.Label();
+            this.picQrKodu = new System.Windows.Forms.PictureBox();
             this.lblUrunKodlari = new System.Windows.Forms.Label();
             this.chckboxTeslimEdildi = new System.Windows.Forms.CheckBox();
             this.BttnQrKodu = new System.Windows.Forms.Button();
@@ -54,6 +54,7 @@
             this.txtUrunKodlari = new System.Windows.Forms.TextBox();
             this.txtUrunModeli = new System.Windows.Forms.TextBox();
             this.lblUrunModeli = new System.Windows.Forms.Label();
+            this.lblMusteriNo = new System.Windows.Forms.Label();
             this.grpboxEkBilgiler = new System.Windows.Forms.GroupBox();
             this.txtEkBilgiler = new System.Windows.Forms.TextBox();
             this.btnYeniKayit = new System.Windows.Forms.Button();
@@ -85,15 +86,14 @@
             this.tmrTarihSaat = new System.Windows.Forms.Timer(this.components);
             this.grpboxAksesuarlar = new System.Windows.Forms.GroupBox();
             this.PcTrBoxProfilResim = new System.Windows.Forms.PictureBox();
-            this.picQrKodu = new System.Windows.Forms.PictureBox();
             this.grpboxMusteriBilgileri.SuspendLayout();
             this.grpboxUrunBilgileri.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picQrKodu)).BeginInit();
             this.grpboxEkBilgiler.SuspendLayout();
             this.mnsTeknikServisFormu.SuspendLayout();
             this.tlStrip.SuspendLayout();
             this.grpboxAksesuarlar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxProfilResim)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picQrKodu)).BeginInit();
             this.SuspendLayout();
             // 
             // txtFormNo
@@ -198,23 +198,21 @@
             this.grpboxUrunBilgileri.Controls.Add(this.txtUrunModeli);
             this.grpboxUrunBilgileri.Controls.Add(this.lblUrunModeli);
             this.grpboxUrunBilgileri.Font = new System.Drawing.Font("Consolas", 11F);
-            this.grpboxUrunBilgileri.Location = new System.Drawing.Point(361, 28);
+            this.grpboxUrunBilgileri.Location = new System.Drawing.Point(362, 26);
             this.grpboxUrunBilgileri.Name = "grpboxUrunBilgileri";
             this.grpboxUrunBilgileri.Size = new System.Drawing.Size(389, 365);
             this.grpboxUrunBilgileri.TabIndex = 4;
             this.grpboxUrunBilgileri.TabStop = false;
             this.grpboxUrunBilgileri.Text = "Ürün Bilgileri";
             // 
-            // lblMusteriNo
+            // picQrKodu
             // 
-            this.lblMusteriNo.AutoSize = true;
-            this.lblMusteriNo.Font = new System.Drawing.Font("Consolas", 9F);
-            this.lblMusteriNo.Location = new System.Drawing.Point(630, 392);
-            this.lblMusteriNo.Name = "lblMusteriNo";
-            this.lblMusteriNo.Size = new System.Drawing.Size(77, 14);
-            this.lblMusteriNo.TabIndex = 36;
-            this.lblMusteriNo.Text = "Müşteri No";
-            this.lblMusteriNo.Visible = false;
+            this.picQrKodu.Location = new System.Drawing.Point(207, 212);
+            this.picQrKodu.Name = "picQrKodu";
+            this.picQrKodu.Size = new System.Drawing.Size(100, 100);
+            this.picQrKodu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picQrKodu.TabIndex = 38;
+            this.picQrKodu.TabStop = false;
             // 
             // lblUrunKodlari
             // 
@@ -236,7 +234,7 @@
             this.chckboxTeslimEdildi.TabIndex = 12;
             this.chckboxTeslimEdildi.Text = "Teslim Edildi";
             this.chckboxTeslimEdildi.UseVisualStyleBackColor = true;
-            this.chckboxTeslimEdildi.CheckedChanged += new System.EventHandler(this.chckboxTeslimEdildi_CheckedChanged);
+            this.chckboxTeslimEdildi.Click += new System.EventHandler(this.chckboxTeslimEdildi_CheckedChanged);
             // 
             // BttnQrKodu
             // 
@@ -365,6 +363,17 @@
             this.lblUrunModeli.TabIndex = 6;
             this.lblUrunModeli.Text = "Ürün Modeli:";
             // 
+            // lblMusteriNo
+            // 
+            this.lblMusteriNo.AutoSize = true;
+            this.lblMusteriNo.Font = new System.Drawing.Font("Consolas", 9F);
+            this.lblMusteriNo.Location = new System.Drawing.Point(618, 392);
+            this.lblMusteriNo.Name = "lblMusteriNo";
+            this.lblMusteriNo.Size = new System.Drawing.Size(77, 14);
+            this.lblMusteriNo.TabIndex = 36;
+            this.lblMusteriNo.Text = "Müşteri No";
+            this.lblMusteriNo.Visible = false;
+            // 
             // grpboxEkBilgiler
             // 
             this.grpboxEkBilgiler.Controls.Add(this.txtEkBilgiler);
@@ -402,7 +411,7 @@
             // btnKaydet
             // 
             this.btnKaydet.Font = new System.Drawing.Font("Consolas", 11F);
-            this.btnKaydet.Location = new System.Drawing.Point(761, 151);
+            this.btnKaydet.Location = new System.Drawing.Point(761, 149);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(129, 44);
             this.btnKaydet.TabIndex = 15;
@@ -626,7 +635,7 @@
             // btnCikisYap
             // 
             this.btnCikisYap.Font = new System.Drawing.Font("Consolas", 11F);
-            this.btnCikisYap.Location = new System.Drawing.Point(761, 349);
+            this.btnCikisYap.Location = new System.Drawing.Point(761, 347);
             this.btnCikisYap.Name = "btnCikisYap";
             this.btnCikisYap.Size = new System.Drawing.Size(129, 44);
             this.btnCikisYap.TabIndex = 19;
@@ -666,22 +675,13 @@
             // 
             this.PcTrBoxProfilResim.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PcTrBoxProfilResim.Image = global::RabtBil_Musteri_Kayit_v2.Properties.Resources.varsayilanProfilResmi;
-            this.PcTrBoxProfilResim.Location = new System.Drawing.Point(795, 28);
+            this.PcTrBoxProfilResim.Location = new System.Drawing.Point(787, 27);
             this.PcTrBoxProfilResim.Name = "PcTrBoxProfilResim";
             this.PcTrBoxProfilResim.Size = new System.Drawing.Size(70, 70);
             this.PcTrBoxProfilResim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PcTrBoxProfilResim.TabIndex = 33;
             this.PcTrBoxProfilResim.TabStop = false;
             this.PcTrBoxProfilResim.Click += new System.EventHandler(this.PcTrBoxProfilResim_Click);
-            // 
-            // picQrKodu
-            // 
-            this.picQrKodu.Location = new System.Drawing.Point(207, 212);
-            this.picQrKodu.Name = "picQrKodu";
-            this.picQrKodu.Size = new System.Drawing.Size(100, 100);
-            this.picQrKodu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picQrKodu.TabIndex = 38;
-            this.picQrKodu.TabStop = false;
             // 
             // FrmPersonelTeknikServisFormu
             // 
@@ -716,6 +716,7 @@
             this.grpboxMusteriBilgileri.PerformLayout();
             this.grpboxUrunBilgileri.ResumeLayout(false);
             this.grpboxUrunBilgileri.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picQrKodu)).EndInit();
             this.grpboxEkBilgiler.ResumeLayout(false);
             this.grpboxEkBilgiler.PerformLayout();
             this.mnsTeknikServisFormu.ResumeLayout(false);
@@ -725,7 +726,6 @@
             this.grpboxAksesuarlar.ResumeLayout(false);
             this.grpboxAksesuarlar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxProfilResim)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picQrKodu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
