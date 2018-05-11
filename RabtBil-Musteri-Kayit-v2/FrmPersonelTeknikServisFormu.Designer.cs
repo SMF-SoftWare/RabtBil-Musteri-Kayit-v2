@@ -634,7 +634,7 @@
             // lblHosgeldin
             // 
             this.lblHosgeldin.AutoSize = true;
-            this.lblHosgeldin.BackColor = System.Drawing.Color.White;
+            this.lblHosgeldin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblHosgeldin.Font = new System.Drawing.Font("Consolas", 9F);
             this.lblHosgeldin.Location = new System.Drawing.Point(739, 6);
             this.lblHosgeldin.Name = "lblHosgeldin";

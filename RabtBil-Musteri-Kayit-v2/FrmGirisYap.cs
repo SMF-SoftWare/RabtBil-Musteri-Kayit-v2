@@ -31,16 +31,13 @@ namespace RabtBil_Musteri_Kayit_v2
                 SMF.BaglantiKapaliysaAc();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM Kullanicilar WHERE KullaniciAdi=@KullaniciAdi AND Sifre=@Sifre", SMF.Baglanti);
                 cmd.Parameters.AddWithValue("@KullaniciAdi", txtKullaniciAdi.Text);
-                cmd.Parameters.AddWithValue("@Sifre", txtSifre.Text);
+                cmd.Parameters.AddWithValue("@Sifre", SMF.GetMd5Hash(txtSifre.Text));
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
 
                 if (dt.Rows.Count == 1)
                 {
-                    cmd = new SqlCommand("SELECT Id,Rol,Adi FROM Kullanicilar WHERE KullaniciAdi=@KullaniciAdi AND Sifre=@Sifre", SMF.Baglanti);
-                    cmd.Parameters.AddWithValue("@KullaniciAdi", txtKullaniciAdi.Text);
-                    cmd.Parameters.AddWithValue("@Sifre", txtSifre.Text);
                     SqlDataReader dr = cmd.ExecuteReader();
 
                     if (dr.Read())
@@ -50,7 +47,7 @@ namespace RabtBil_Musteri_Kayit_v2
                         SMF.ProfilKlasoru = Application.StartupPath + $@"\Profil\{SMF.KullaniciId}";
                         SMF.ProfilResmiYolu = Application.StartupPath + $@"\Profil\{SMF.KullaniciId}\ProfilResmi.SMF";
 
-                        switch (dr.GetInt32(1))
+                        switch (dr.GetInt32(6))
                         {
                             case (int)SMF.Rol.Admin:
                                 SMF.Yetki = SMF.Rol.Admin;

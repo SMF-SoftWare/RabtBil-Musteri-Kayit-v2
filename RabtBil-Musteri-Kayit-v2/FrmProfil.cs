@@ -89,7 +89,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 SMF.BaglantiKapaliysaAc();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM Kullanicilar WHERE Id=@Id AND Sifre=@Sifre", SMF.Baglanti);
                 cmd.Parameters.AddWithValue("@Id", SMF.KullaniciId);
-                cmd.Parameters.AddWithValue("@Sifre", txtMevcutSifre.Text);
+                cmd.Parameters.AddWithValue("@Sifre", SMF.GetMd5Hash(txtMevcutSifre.Text));
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
@@ -105,7 +105,7 @@ namespace RabtBil_Musteri_Kayit_v2
                     SMF.BaglantiKapaliysaAc();
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Bilgileriniz Güncellendi!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Application.Restart();
+                    Close();
                 }
                 else
                 {
@@ -121,12 +121,12 @@ namespace RabtBil_Musteri_Kayit_v2
                 cmd.Parameters.AddWithValue("@Adi", txtAdi.Text);
                 cmd.Parameters.AddWithValue("@Soyadi", txtSoyadi.Text);
                 cmd.Parameters.AddWithValue("@Eposta", txtEpostaAdresi.Text);
-                cmd.Parameters.AddWithValue("@Sifre", txtYeniSifre.Text);
+                cmd.Parameters.AddWithValue("@Sifre", SMF.GetMd5Hash(txtMevcutSifre.Text));
                 cmd.Parameters.AddWithValue("@Id", SMF.KullaniciId);
                 SMF.BaglantiKapaliysaAc();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Bilgileriniz Güncellendi!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Application.Restart();
+                Close();
             }
         }
 
