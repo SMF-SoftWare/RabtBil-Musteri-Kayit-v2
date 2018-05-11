@@ -41,7 +41,6 @@
             this.picQrKodu = new System.Windows.Forms.PictureBox();
             this.lblUrunKodlari = new System.Windows.Forms.Label();
             this.chckboxTeslimEdildi = new System.Windows.Forms.CheckBox();
-            this.BttnQrKodu = new System.Windows.Forms.Button();
             this.txtUcret = new System.Windows.Forms.TextBox();
             this.lblUcret = new System.Windows.Forms.Label();
             this.lblQrKodu = new System.Windows.Forms.Label();
@@ -184,7 +183,6 @@
             this.grpboxUrunBilgileri.Controls.Add(this.picQrKodu);
             this.grpboxUrunBilgileri.Controls.Add(this.lblUrunKodlari);
             this.grpboxUrunBilgileri.Controls.Add(this.chckboxTeslimEdildi);
-            this.grpboxUrunBilgileri.Controls.Add(this.BttnQrKodu);
             this.grpboxUrunBilgileri.Controls.Add(this.txtUcret);
             this.grpboxUrunBilgileri.Controls.Add(this.lblUcret);
             this.grpboxUrunBilgileri.Controls.Add(this.lblQrKodu);
@@ -235,20 +233,6 @@
             this.chckboxTeslimEdildi.Text = "Teslim Edildi";
             this.chckboxTeslimEdildi.UseVisualStyleBackColor = true;
             this.chckboxTeslimEdildi.Click += new System.EventHandler(this.chckboxTeslimEdildi_CheckedChanged);
-            // 
-            // BttnQrKodu
-            // 
-            this.BttnQrKodu.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BttnQrKodu.Location = new System.Drawing.Point(59, 231);
-            this.BttnQrKodu.Name = "BttnQrKodu";
-            this.BttnQrKodu.Size = new System.Drawing.Size(79, 49);
-            this.BttnQrKodu.TabIndex = 13;
-            this.BttnQrKodu.Text = "Qr Kodu Oluştur";
-            this.BttnQrKodu.UseVisualStyleBackColor = true;
-            this.BttnQrKodu.Visible = false;
-            this.BttnQrKodu.Click += new System.EventHandler(this.BttnQrKodu_Click);
-            this.BttnQrKodu.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
-            this.BttnQrKodu.MouseHover += new System.EventHandler(this.BttnQrKodu_MouseHover);
             // 
             // txtUcret
             // 
@@ -715,6 +699,7 @@
             this.Name = "FrmPersonelTeknikServisFormu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTeknikServisFormu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPersonelTeknikServisFormu_FormClosing);
             this.Load += new System.EventHandler(this.FrmPersonelTeknikServisFormu_Load);
             this.grpboxMusteriBilgileri.ResumeLayout(false);
             this.grpboxMusteriBilgileri.PerformLayout();
@@ -786,7 +771,6 @@
         public System.Windows.Forms.ToolStripMenuItem mnsCikisYap;
         public System.Windows.Forms.ToolStripLabel tslblTarihSaat;
         public System.Windows.Forms.CheckBox chckboxTeslimEdildi;
-        public System.Windows.Forms.Button BttnQrKodu;
         public System.Windows.Forms.Label lblUrunKodlari;
         public System.Windows.Forms.Timer tmrTarihSaat;
         public System.Windows.Forms.TextBox txtMusteriAdi;

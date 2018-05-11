@@ -128,6 +128,15 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void btnYeniKayit_Click(object sender, EventArgs e)
         {
+            if (txtFormNo.TextLength > 0 || txtMusteriAdi.TextLength > 0 || mtxTelefon.Text != @"(    )        " || txtAksesuarlar.TextLength > 0 || txtEkBilgiler.TextLength > 0 || txtUrunModeli.TextLength > 0 || txtUrunKodlari.TextLength > 0 || txtArizaninTanimi.TextLength > 0 || txtUrunDurumu.TextLength > 0 || txtUcret.TextLength > 0)
+            {
+                DialogResult dr = MessageBox.Show("Bu Sayfayı Kapatırsanız Yaptığınız Değişiklikler Kaybolacaktır!", SMF.UygulamaAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (dr == DialogResult.No)
+                {
+                    return;
+                }
+            }
+
             Temizle();
             GuncelleEtkinMi(false);
             KaydetEtkinMi(true);
@@ -138,6 +147,15 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void btnKayitlariGoster_Click(object sender, EventArgs e)
         {
+            if (txtFormNo.TextLength > 0 || txtMusteriAdi.TextLength > 0 || mtxTelefon.Text != @"(    )        " || txtAksesuarlar.TextLength > 0 || txtEkBilgiler.TextLength > 0 || txtUrunModeli.TextLength > 0 || txtUrunKodlari.TextLength > 0 || txtArizaninTanimi.TextLength > 0 || txtUrunDurumu.TextLength > 0 || txtUcret.TextLength > 0)
+            {
+                DialogResult dr = MessageBox.Show("Bu Sayfayı Kapatırsanız Yaptığınız Değişiklikler Kaybolacaktır!", SMF.UygulamaAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (dr == DialogResult.No)
+                {
+                    return;
+                }
+            }
+
             FrmKayitlariGoster frm = new FrmKayitlariGoster();
             frm.ShowDialog();
         }
@@ -279,14 +297,13 @@ namespace RabtBil_Musteri_Kayit_v2
             frmHakkinda.ShowDialog();
         }
 
-        private void BttnQrKodu_Click(object sender, EventArgs e)
+        private void FrmPersonelTeknikServisFormu_FormClosing(object sender, FormClosingEventArgs e)
         {
-            PayloadGenerator.Url generator = new PayloadGenerator.Url($@"localhost\{txtTakipNumarası.Text}");
-            QRCodeGenerator qrGenerator = new QRCodeGenerator();
-            QRCodeData qrCodeData = qrGenerator.CreateQrCode(generator, QRCodeGenerator.ECCLevel.Q);
-            QRCode qrCode = new QRCode(qrCodeData);
-            Bitmap qrCodeAsBitmap = qrCode.GetGraphic(5);
-            picQrKodu.Image = qrCodeAsBitmap;
+            if (txtFormNo.TextLength > 0 || txtMusteriAdi.TextLength > 0 || mtxTelefon.Text != @"(    )        " || txtAksesuarlar.TextLength > 0 || txtEkBilgiler.TextLength > 0 || txtUrunModeli.TextLength > 0 || txtUrunKodlari.TextLength > 0 || txtArizaninTanimi.TextLength > 0 || txtUrunDurumu.TextLength > 0 || txtUcret.TextLength > 0)
+            {
+                DialogResult dr = MessageBox.Show("Bu Sayfayı Kapatırsanız Yaptığınız Değişiklikler Kaybolacaktır!", SMF.UygulamaAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                e.Cancel = dr == DialogResult.No;
+            }
         }
     }
 }

@@ -67,7 +67,7 @@ namespace RabtBil_Musteri_Kayit_v2
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Resources.Hata");
+                MessageBox.Show(ex.Message, "Hata");
             }
             finally
             {
@@ -162,7 +162,7 @@ namespace RabtBil_Musteri_Kayit_v2
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Resources.Hata");
+                MessageBox.Show(ex.Message, "Hata");
             }
             finally
             {
