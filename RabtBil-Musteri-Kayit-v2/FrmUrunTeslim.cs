@@ -96,7 +96,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    frm.chckboxTeslimEdildi.Checked = dr["TeslimEdenId"].ToString() != "";
+                    frm.chkTeslimEdildi.Checked = dr["TeslimEdenId"].ToString() != "";
                 }
                 dr.Close();
             }

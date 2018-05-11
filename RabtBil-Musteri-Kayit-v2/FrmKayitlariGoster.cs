@@ -220,7 +220,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    frm.chckboxTeslimEdildi.Checked = dr["TeslimEdenId"].ToString() != "";
+                    frm.chkTeslimEdildi.Checked = dr["TeslimEdenId"].ToString() != "";
                 }
                 dr.Close();
             }
@@ -342,7 +342,7 @@ namespace RabtBil_Musteri_Kayit_v2
             btnYazdir.Enabled = cmbYaziciListesi.Text != "";
         }
 
-        private void VarsayilanAciklama_MouseLeave(object sender, EventArgs e)
+        private void varsayilanAciklama_MouseLeave(object sender, EventArgs e)
         {
             TlStripLblAciklama.Text = "Açıklama";
         }
@@ -397,7 +397,7 @@ namespace RabtBil_Musteri_Kayit_v2
             TlStripLblAciklama.Text = "Yazdırılacak bilgi için bir ön izleme sunar";
         }
 
-        private void tsmiYardımHakkında_Click(object sender, EventArgs e)
+        private void tsmiYardımHakkında_Click_1(object sender, EventArgs e)
         {
             FrmHakkinda frmHakkinda = new FrmHakkinda();
             frmHakkinda.ShowDialog();

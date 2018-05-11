@@ -35,10 +35,10 @@
             this.tslblTarihSaat = new System.Windows.Forms.ToolStripLabel();
             this.mnsKayitlariGoster = new System.Windows.Forms.MenuStrip();
             this.tsmiAyarlar = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiAyarlarDil = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiAyarlarDilTurkce = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiAyarlarDilIngilizce = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiAyarlarTema = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDil = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiTurkce = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiIngilizce = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiTema = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiYardım = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiYardımLisansAnahtarı = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiYardımHakkında = new System.Windows.Forms.ToolStripMenuItem();
@@ -100,42 +100,42 @@
             // tsmiAyarlar
             // 
             this.tsmiAyarlar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiAyarlarDil,
-            this.tsmiAyarlarTema});
+            this.tsmiDil,
+            this.tsmiTema});
             this.tsmiAyarlar.Name = "tsmiAyarlar";
             this.tsmiAyarlar.Size = new System.Drawing.Size(68, 20);
             this.tsmiAyarlar.Text = "Ayarlar";
             // 
-            // tsmiAyarlarDil
+            // tsmiDil
             // 
-            this.tsmiAyarlarDil.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiAyarlarDilTurkce,
-            this.tsmiAyarlarDilIngilizce});
-            this.tsmiAyarlarDil.Name = "tsmiAyarlarDil";
-            this.tsmiAyarlarDil.Size = new System.Drawing.Size(102, 22);
-            this.tsmiAyarlarDil.Text = "Dil";
-            this.tsmiAyarlarDil.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
-            this.tsmiAyarlarDil.MouseHover += new System.EventHandler(this.tsmiAyarlarDil_MouseHover);
+            this.tsmiDil.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiTurkce,
+            this.tsmiIngilizce});
+            this.tsmiDil.Name = "tsmiDil";
+            this.tsmiDil.Size = new System.Drawing.Size(180, 22);
+            this.tsmiDil.Text = "Dil";
+            this.tsmiDil.MouseLeave += new System.EventHandler(this.varsayilanAciklama_MouseLeave);
+            this.tsmiDil.MouseHover += new System.EventHandler(this.tsmiAyarlarDil_MouseHover);
             // 
-            // tsmiAyarlarDilTurkce
+            // tsmiTurkce
             // 
-            this.tsmiAyarlarDilTurkce.Name = "tsmiAyarlarDilTurkce";
-            this.tsmiAyarlarDilTurkce.Size = new System.Drawing.Size(137, 22);
-            this.tsmiAyarlarDilTurkce.Text = "Türkçe";
+            this.tsmiTurkce.Name = "tsmiTurkce";
+            this.tsmiTurkce.Size = new System.Drawing.Size(180, 22);
+            this.tsmiTurkce.Text = "Türkçe";
             // 
-            // tsmiAyarlarDilIngilizce
+            // tsmiIngilizce
             // 
-            this.tsmiAyarlarDilIngilizce.Name = "tsmiAyarlarDilIngilizce";
-            this.tsmiAyarlarDilIngilizce.Size = new System.Drawing.Size(137, 22);
-            this.tsmiAyarlarDilIngilizce.Text = "İngilizce";
+            this.tsmiIngilizce.Name = "tsmiIngilizce";
+            this.tsmiIngilizce.Size = new System.Drawing.Size(180, 22);
+            this.tsmiIngilizce.Text = "İngilizce";
             // 
-            // tsmiAyarlarTema
+            // tsmiTema
             // 
-            this.tsmiAyarlarTema.Name = "tsmiAyarlarTema";
-            this.tsmiAyarlarTema.Size = new System.Drawing.Size(102, 22);
-            this.tsmiAyarlarTema.Text = "Tema";
-            this.tsmiAyarlarTema.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
-            this.tsmiAyarlarTema.MouseHover += new System.EventHandler(this.tsmiAyarlarTema_MouseHover);
+            this.tsmiTema.Name = "tsmiTema";
+            this.tsmiTema.Size = new System.Drawing.Size(180, 22);
+            this.tsmiTema.Text = "Tema";
+            this.tsmiTema.MouseLeave += new System.EventHandler(this.varsayilanAciklama_MouseLeave);
+            this.tsmiTema.MouseHover += new System.EventHandler(this.tsmiAyarlarTema_MouseHover);
             // 
             // tsmiYardım
             // 
@@ -149,18 +149,18 @@
             // tsmiYardımLisansAnahtarı
             // 
             this.tsmiYardımLisansAnahtarı.Name = "tsmiYardımLisansAnahtarı";
-            this.tsmiYardımLisansAnahtarı.Size = new System.Drawing.Size(179, 22);
+            this.tsmiYardımLisansAnahtarı.Size = new System.Drawing.Size(180, 22);
             this.tsmiYardımLisansAnahtarı.Text = "Lisans Anahtarı";
-            this.tsmiYardımLisansAnahtarı.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
+            this.tsmiYardımLisansAnahtarı.MouseLeave += new System.EventHandler(this.varsayilanAciklama_MouseLeave);
             this.tsmiYardımLisansAnahtarı.MouseHover += new System.EventHandler(this.tsmiYardımLisansAnahtarı_MouseHover);
             // 
             // tsmiYardımHakkında
             // 
             this.tsmiYardımHakkında.Name = "tsmiYardımHakkında";
-            this.tsmiYardımHakkında.Size = new System.Drawing.Size(179, 22);
+            this.tsmiYardımHakkında.Size = new System.Drawing.Size(180, 22);
             this.tsmiYardımHakkında.Text = "Hakkında";
-            this.tsmiYardımHakkında.Click += new System.EventHandler(this.tsmiYardımHakkında_Click);
-            this.tsmiYardımHakkında.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
+            this.tsmiYardımHakkında.Click += new System.EventHandler(this.tsmiYardımHakkında_Click_1);
+            this.tsmiYardımHakkında.MouseLeave += new System.EventHandler(this.varsayilanAciklama_MouseLeave);
             this.tsmiYardımHakkında.MouseHover += new System.EventHandler(this.tsmiYardımHakkında_MouseHover);
             // 
             // tsmiBaskiOnizleme
@@ -169,7 +169,7 @@
             this.tsmiBaskiOnizleme.Size = new System.Drawing.Size(117, 20);
             this.tsmiBaskiOnizleme.Text = "Baskı Önizleme";
             this.tsmiBaskiOnizleme.Click += new System.EventHandler(this.tsmiBaskiOnizleme_Click);
-            this.tsmiBaskiOnizleme.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
+            this.tsmiBaskiOnizleme.MouseLeave += new System.EventHandler(this.varsayilanAciklama_MouseLeave);
             this.tsmiBaskiOnizleme.MouseHover += new System.EventHandler(this.tsmiBaskiOnizleme_MouseHover);
             // 
             // dgvRabtBilDB
@@ -200,7 +200,7 @@
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
-            this.btnSil.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
+            this.btnSil.MouseLeave += new System.EventHandler(this.varsayilanAciklama_MouseLeave);
             this.btnSil.MouseHover += new System.EventHandler(this.btnSil_MouseHover);
             // 
             // cmbAramaAlanlari
@@ -213,7 +213,7 @@
             this.cmbAramaAlanlari.Name = "cmbAramaAlanlari";
             this.cmbAramaAlanlari.Size = new System.Drawing.Size(202, 26);
             this.cmbAramaAlanlari.TabIndex = 37;
-            this.cmbAramaAlanlari.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
+            this.cmbAramaAlanlari.MouseLeave += new System.EventHandler(this.varsayilanAciklama_MouseLeave);
             this.cmbAramaAlanlari.MouseHover += new System.EventHandler(this.cmbAramaAlanlari_MouseHover);
             // 
             // txtArama
@@ -238,7 +238,7 @@
             this.btnYazdir.Text = "Yazdır";
             this.btnYazdir.UseVisualStyleBackColor = true;
             this.btnYazdir.Click += new System.EventHandler(this.btnYazdir_Click);
-            this.btnYazdir.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
+            this.btnYazdir.MouseLeave += new System.EventHandler(this.varsayilanAciklama_MouseLeave);
             this.btnYazdir.MouseHover += new System.EventHandler(this.btnYazdir_MouseHover);
             // 
             // tmrTarihSaat
@@ -271,7 +271,7 @@
             this.btnExcelAktar.Text = "Excel\'e Aktar";
             this.btnExcelAktar.UseVisualStyleBackColor = true;
             this.btnExcelAktar.Click += new System.EventHandler(this.btnExcelAktar_Click);
-            this.btnExcelAktar.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
+            this.btnExcelAktar.MouseLeave += new System.EventHandler(this.varsayilanAciklama_MouseLeave);
             this.btnExcelAktar.MouseHover += new System.EventHandler(this.btnExcelAktar_MouseHover);
             // 
             // cmbYaziciListesi
@@ -285,7 +285,7 @@
             this.cmbYaziciListesi.Size = new System.Drawing.Size(202, 26);
             this.cmbYaziciListesi.TabIndex = 42;
             this.cmbYaziciListesi.SelectedIndexChanged += new System.EventHandler(this.cmbYaziciListesi_SelectedIndexChanged);
-            this.cmbYaziciListesi.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
+            this.cmbYaziciListesi.MouseLeave += new System.EventHandler(this.varsayilanAciklama_MouseLeave);
             this.cmbYaziciListesi.MouseHover += new System.EventHandler(this.cmbYaziciListesi_MouseHover);
             // 
             // label1
@@ -349,10 +349,10 @@
         public System.Windows.Forms.ToolStripLabel tslblTarihSaat;
         public System.Windows.Forms.MenuStrip mnsKayitlariGoster;
         public System.Windows.Forms.ToolStripMenuItem tsmiAyarlar;
-        public System.Windows.Forms.ToolStripMenuItem tsmiAyarlarDil;
-        public System.Windows.Forms.ToolStripMenuItem tsmiAyarlarDilTurkce;
-        public System.Windows.Forms.ToolStripMenuItem tsmiAyarlarDilIngilizce;
-        public System.Windows.Forms.ToolStripMenuItem tsmiAyarlarTema;
+        public System.Windows.Forms.ToolStripMenuItem tsmiDil;
+        public System.Windows.Forms.ToolStripMenuItem tsmiTurkce;
+        public System.Windows.Forms.ToolStripMenuItem tsmiIngilizce;
+        public System.Windows.Forms.ToolStripMenuItem tsmiTema;
         public System.Windows.Forms.ToolStripMenuItem tsmiYardım;
         public System.Windows.Forms.ToolStripMenuItem tsmiYardımLisansAnahtarı;
         public System.Windows.Forms.ToolStripMenuItem tsmiYardımHakkında;

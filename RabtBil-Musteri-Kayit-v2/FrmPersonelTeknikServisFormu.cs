@@ -20,7 +20,7 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             GuncelleEtkinMi(false);
             tmrTarihSaat.Enabled = true;
-            LblHosgeldin.Text = $"Hoş Geldin, {SMF.KullaniciAdi}!";
+            lblHosgeldin.Text = $"Hoş Geldin, {SMF.KullaniciAdi}!";
             txtTakipNumarası.Text = SMF.TakipKoduOlustur();
             QrKoduOlustur();
 
@@ -140,7 +140,7 @@ namespace RabtBil_Musteri_Kayit_v2
             Temizle();
             GuncelleEtkinMi(false);
             KaydetEtkinMi(true);
-            chckboxTeslimEdildi.Checked = false;
+            chkTeslimEdildi.Checked = false;
             txtTakipNumarası.Text = SMF.TakipKoduOlustur();
             QrKoduOlustur();
         }
@@ -159,78 +159,6 @@ namespace RabtBil_Musteri_Kayit_v2
             FrmKayitlariGoster frm = new FrmKayitlariGoster();
             frm.ShowDialog();
         }
-
-        private void chckboxTeslimEdildi_CheckedChanged(object sender, EventArgs e)
-        {
-            FrmUrunTeslim frm = new FrmUrunTeslim();
-            frm.ShowDialog();
-        }
-
-        public void Temizle()
-        {
-            txtMusteriAdi.Clear();
-            txtFormNo.Clear();
-            mtxTelefon.Clear();
-            txtAksesuarlar.Clear();
-            txtEkBilgiler.Clear();
-            txtUrunModeli.Clear();
-            txtUrunKodlari.Clear();
-            txtArizaninTanimi.Clear();
-            txtUrunDurumu.Clear();
-            txtUcret.Clear();
-        }
-
-        public void GuncelleEtkinMi(bool value)
-        {
-            if (value)
-            {
-                btnGuncelle.Enabled = true;
-                mnsAraclarGuncelle.Enabled = true;
-                chckboxTeslimEdildi.Enabled = true;
-            }
-            else
-            {
-                btnGuncelle.Enabled = false;
-                mnsAraclarGuncelle.Enabled = false;
-                chckboxTeslimEdildi.Enabled = false;
-            }
-        }
-
-        public void KaydetEtkinMi(bool value)
-        {
-            if (value)
-            {
-                btnKaydet.Enabled = true;
-                mnsAraclarKaydet.Enabled = true;
-            }
-            else
-            {
-                btnKaydet.Enabled = false;
-                mnsAraclarKaydet.Enabled = false;
-            }
-        }
-
-        public void QrKoduOlustur()
-        {
-            PayloadGenerator.Url generator = new PayloadGenerator.Url($@"localhost\{txtTakipNumarası.Text}");
-            QRCodeGenerator qrGenerator = new QRCodeGenerator();
-            QRCodeData qrCodeData = qrGenerator.CreateQrCode(generator, QRCodeGenerator.ECCLevel.Q);
-            QRCode qrCode = new QRCode(qrCodeData);
-            Bitmap qrCodeAsBitmap = qrCode.GetGraphic(5);
-            picQrKodu.Image = qrCodeAsBitmap;
-        }
-
-        private void tmrTarihSaat_Tick(object sender, EventArgs e)
-        {
-            tslblTarihSaat.Text = DateTime.Now.ToString(CultureInfo.CurrentCulture);
-        }
-
-        private void PcTrBoxProfilResim_Click(object sender, EventArgs e)
-        {
-            FrmProfil frm = new FrmProfil();
-            frm.ShowDialog();
-        }
-
         private void VarsayilanAciklama_MouseLeave(object sender, EventArgs e)
         {
             TlStripLblAciklama.Text = "Açıklama";
@@ -240,7 +168,6 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             TlStripLblAciklama.Text = "Yeni bir kayıt oluşturur";
         }
-
         private void btnKaydet_MouseHover(object sender, EventArgs e)
         {
             TlStripLblAciklama.Text = "Müşterileri kayıt eder";
@@ -266,9 +193,16 @@ namespace RabtBil_Musteri_Kayit_v2
             TlStripLblAciklama.Text = "Oturumdan Çıkar";
         }
 
-        private void BttnQrKodu_MouseHover(object sender, EventArgs e)
+        private void chkTeslimEdildi_Click(object sender, EventArgs e)
         {
-            TlStripLblAciklama.Text = "Müşterilerin ürün takip kodunu şifreler";
+            FrmUrunTeslim frm = new FrmUrunTeslim();
+            frm.ShowDialog();
+        }
+
+        private void PcTrBoxProfilResim_Click(object sender, EventArgs e)
+        {
+            FrmProfil frm = new FrmProfil();
+            frm.ShowDialog();
         }
 
         private void mnsAyarlarDil_MouseHover(object sender, EventArgs e)
@@ -304,6 +238,64 @@ namespace RabtBil_Musteri_Kayit_v2
                 DialogResult dr = MessageBox.Show("Bu Sayfayı Kapatırsanız Yaptığınız Değişiklikler Kaybolacaktır!", SMF.UygulamaAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 e.Cancel = dr == DialogResult.No;
             }
+        }
+        private void tmrTarihSaat_Tick(object sender, EventArgs e)
+        {
+            tslblTarihSaat.Text = DateTime.Now.ToString(CultureInfo.CurrentCulture);
+        }
+
+        public void GuncelleEtkinMi(bool value)
+        {
+            if (value)
+            {
+                btnGuncelle.Enabled = true;
+                tsmiGuncelle.Enabled = true;
+                chkTeslimEdildi.Enabled = true;
+            }
+            else
+            {
+                btnGuncelle.Enabled = false;
+                tsmiGuncelle.Enabled = false;
+                chkTeslimEdildi.Enabled = false;
+            }
+        }
+
+        public void Temizle()
+        {
+            txtMusteriAdi.Clear();
+            txtFormNo.Clear();
+            mtxTelefon.Clear();
+            txtAksesuarlar.Clear();
+            txtEkBilgiler.Clear();
+            txtUrunModeli.Clear();
+            txtUrunKodlari.Clear();
+            txtArizaninTanimi.Clear();
+            txtUrunDurumu.Clear();
+            txtUcret.Clear();
+        }
+
+        public void KaydetEtkinMi(bool value)
+        {
+            if (value)
+            {
+                btnKaydet.Enabled = true;
+                tsmiKaydet.Enabled = true;
+            }
+            else
+            {
+                btnKaydet.Enabled = false;
+                tsmiKaydet.Enabled = false;
+            }
+        }
+
+        public void QrKoduOlustur()
+        {
+            PayloadGenerator.Url generator = new PayloadGenerator.Url($@"localhost:1337\takipno\{txtTakipNumarası.Text}");
+            QRCodeGenerator qrGenerator = new QRCodeGenerator();
+            QRCodeData qrCodeData = qrGenerator.CreateQrCode(generator, QRCodeGenerator.ECCLevel.Q);
+            QRCode qrCode = new QRCode(qrCodeData);
+            Bitmap qrCodeAsBitmap = qrCode.GetGraphic(5);
+            picQrKodu.Image = qrCodeAsBitmap;
         }
     }
 }
