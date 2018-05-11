@@ -1,6 +1,7 @@
 ﻿using QRCoder;
 using RabtBil_Musteri_Kayit_v2.Properties;
 using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
@@ -156,9 +157,32 @@ namespace RabtBil_Musteri_Kayit_v2
                 }
             }
 
+            try
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM MusteriBilgileri", SMF.Baglanti);
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+
+                if (dt.Rows.Count < 1)
+                {
+                    MessageBox.Show("Veritabanında Hiç Soru Yok!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata");
+            }
+            finally
+            {
+                SMF.Baglanti.Close();
+            }
+
             FrmKayitlariGoster frm = new FrmKayitlariGoster();
             frm.ShowDialog();
         }
+
         private void VarsayilanAciklama_MouseLeave(object sender, EventArgs e)
         {
             TlStripLblAciklama.Text = "Açıklama";
@@ -168,6 +192,7 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             TlStripLblAciklama.Text = "Yeni bir kayıt oluşturur";
         }
+
         private void btnKaydet_MouseHover(object sender, EventArgs e)
         {
             TlStripLblAciklama.Text = "Müşterileri kayıt eder";
@@ -239,6 +264,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 e.Cancel = dr == DialogResult.No;
             }
         }
+
         private void tmrTarihSaat_Tick(object sender, EventArgs e)
         {
             tslblTarihSaat.Text = DateTime.Now.ToString(CultureInfo.CurrentCulture);
