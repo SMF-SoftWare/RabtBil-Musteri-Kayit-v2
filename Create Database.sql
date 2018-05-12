@@ -45,3 +45,13 @@ CREATE TABLE [dbo].[MusteriBilgileri] (
     PRIMARY KEY CLUSTERED ([Id] ASC),
     CONSTRAINT [KM_Kullaniciler] FOREIGN KEY ([KaydiYapanID]) REFERENCES [dbo].[Kullanicilar] ([Id]) ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+
+
+-------------------------------
+-- Varsayılan Kullanıcılar
+-------------------------------
+
+INSERT INTO [dbo].[Kullanicilar] ([KullaniciAdi], [Sifre], [Rol]) VALUES (N'1', N'C4CA4238A0B923820DCC509A6F75849B', 0)
+INSERT INTO [dbo].[Kullanicilar] ([KullaniciAdi], [Sifre], [Rol]) VALUES (N'2', N'C4CA4238A0B923820DCC509A6F75849B', 1)
+INSERT INTO [dbo].[Kullanicilar] ([KullaniciAdi], [Sifre], [Rol]) VALUES (N'3', N'C4CA4238A0B923820DCC509A6F75849B', 2)
