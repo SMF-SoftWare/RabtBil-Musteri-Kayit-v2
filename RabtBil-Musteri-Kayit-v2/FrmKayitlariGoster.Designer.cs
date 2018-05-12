@@ -112,7 +112,7 @@
             this.tsmiTurkce,
             this.tsmiIngilizce});
             this.tsmiDil.Name = "tsmiDil";
-            this.tsmiDil.Size = new System.Drawing.Size(180, 22);
+            this.tsmiDil.Size = new System.Drawing.Size(102, 22);
             this.tsmiDil.Text = "Dil";
             this.tsmiDil.MouseLeave += new System.EventHandler(this.varsayilanAciklama_MouseLeave);
             this.tsmiDil.MouseHover += new System.EventHandler(this.tsmiAyarlarDil_MouseHover);
@@ -120,19 +120,19 @@
             // tsmiTurkce
             // 
             this.tsmiTurkce.Name = "tsmiTurkce";
-            this.tsmiTurkce.Size = new System.Drawing.Size(180, 22);
+            this.tsmiTurkce.Size = new System.Drawing.Size(137, 22);
             this.tsmiTurkce.Text = "Türkçe";
             // 
             // tsmiIngilizce
             // 
             this.tsmiIngilizce.Name = "tsmiIngilizce";
-            this.tsmiIngilizce.Size = new System.Drawing.Size(180, 22);
+            this.tsmiIngilizce.Size = new System.Drawing.Size(137, 22);
             this.tsmiIngilizce.Text = "İngilizce";
             // 
             // tsmiTema
             // 
             this.tsmiTema.Name = "tsmiTema";
-            this.tsmiTema.Size = new System.Drawing.Size(180, 22);
+            this.tsmiTema.Size = new System.Drawing.Size(102, 22);
             this.tsmiTema.Text = "Tema";
             this.tsmiTema.MouseLeave += new System.EventHandler(this.varsayilanAciklama_MouseLeave);
             this.tsmiTema.MouseHover += new System.EventHandler(this.tsmiAyarlarTema_MouseHover);
@@ -149,7 +149,7 @@
             // tsmiYardımLisansAnahtarı
             // 
             this.tsmiYardımLisansAnahtarı.Name = "tsmiYardımLisansAnahtarı";
-            this.tsmiYardımLisansAnahtarı.Size = new System.Drawing.Size(180, 22);
+            this.tsmiYardımLisansAnahtarı.Size = new System.Drawing.Size(179, 22);
             this.tsmiYardımLisansAnahtarı.Text = "Lisans Anahtarı";
             this.tsmiYardımLisansAnahtarı.MouseLeave += new System.EventHandler(this.varsayilanAciklama_MouseLeave);
             this.tsmiYardımLisansAnahtarı.MouseHover += new System.EventHandler(this.tsmiYardımLisansAnahtarı_MouseHover);
@@ -157,7 +157,7 @@
             // tsmiYardımHakkında
             // 
             this.tsmiYardımHakkında.Name = "tsmiYardımHakkında";
-            this.tsmiYardımHakkında.Size = new System.Drawing.Size(180, 22);
+            this.tsmiYardımHakkında.Size = new System.Drawing.Size(179, 22);
             this.tsmiYardımHakkında.Text = "Hakkında";
             this.tsmiYardımHakkında.Click += new System.EventHandler(this.tsmiYardımHakkında_Click_1);
             this.tsmiYardımHakkında.MouseLeave += new System.EventHandler(this.varsayilanAciklama_MouseLeave);
@@ -185,6 +185,7 @@
             this.dgvRabtBilDB.Name = "dgvRabtBilDB";
             this.dgvRabtBilDB.ReadOnly = true;
             this.dgvRabtBilDB.RowHeadersVisible = false;
+            this.dgvRabtBilDB.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRabtBilDB.Size = new System.Drawing.Size(948, 353);
             this.dgvRabtBilDB.TabIndex = 35;
             this.dgvRabtBilDB.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRabtBilDB_CellDoubleClick);

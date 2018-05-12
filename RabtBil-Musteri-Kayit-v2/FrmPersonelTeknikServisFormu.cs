@@ -300,20 +300,6 @@ namespace RabtBil_Musteri_Kayit_v2
             }
         }
 
-        public void Temizle()
-        {
-            txtMusteriAdi.Clear();
-            txtFormNo.Clear();
-            mtxTelefon.Clear();
-            txtAksesuarlar.Clear();
-            txtEkBilgiler.Clear();
-            txtUrunModeli.Clear();
-            txtUrunKodlari.Clear();
-            txtArizaninTanimi.Clear();
-            txtUrunDurumu.Clear();
-            txtUcret.Clear();
-        }
-
         public void KaydetEtkinMi(bool value)
         {
             if (value)
@@ -336,6 +322,20 @@ namespace RabtBil_Musteri_Kayit_v2
             QRCode qrCode = new QRCode(qrCodeData);
             Bitmap qrCodeAsBitmap = qrCode.GetGraphic(5);
             picQrKodu.Image = qrCodeAsBitmap;
+        }
+
+        public void Temizle()
+        {
+            txtMusteriAdi.Clear();
+            txtFormNo.Clear();
+            mtxTelefon.Clear();
+            txtAksesuarlar.Clear();
+            txtEkBilgiler.Clear();
+            txtUrunModeli.Clear();
+            txtUrunKodlari.Clear();
+            txtArizaninTanimi.Clear();
+            txtUrunDurumu.Clear();
+            txtUcret.Clear();
         }
     }
 }

@@ -24,10 +24,10 @@ namespace RabtBil_Musteri_Kayit_v2
             return Regex.IsMatch(eposta, @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
         }
 
-        public static string GetMd5Hash(string text)
+        public static string GetMd5Hash(string yazi)
         {
             MD5 md5 = MD5.Create();
-            byte[] data = md5.ComputeHash(Encoding.UTF8.GetBytes(text));
+            byte[] data = md5.ComputeHash(Encoding.UTF8.GetBytes(yazi));
             StringBuilder sb = new StringBuilder();
             foreach (var i in data)
             {
