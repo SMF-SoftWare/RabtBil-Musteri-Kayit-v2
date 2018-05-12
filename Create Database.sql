@@ -52,4 +52,4 @@ CREATE TABLE [dbo].[MusteriBilgileri] (
 
 INSERT INTO [dbo].[Kullanicilar] ([KullaniciAdi], [Sifre], [Rol]) VALUES (N'1', N'C4CA4238A0B923820DCC509A6F75849B', 0) --Kullanıcı Adı: 1 Şifre: 1 Rol: Admin
 INSERT INTO [dbo].[Kullanicilar] ([KullaniciAdi], [Sifre], [Rol]) VALUES (N'2', N'C4CA4238A0B923820DCC509A6F75849B', 1) --Kullanıcı Adı: 2 Şifre: 1 Rol: Yönetici
-INSERT INTO [dbo].[Kullanicilar] ([KullaniciAdi], [Sifre], [Rol]) VALUES (N'3', N'C4CA4238A0B923820DCC509A6F75849B', 2) --Kullanıcı Adı: 3 Şifre: 1 Rol: Kullancıı
+INSERT INTO [dbo].[Kullanicilar] ([KullaniciAdi], [Sifre], [Rol]) VALUES (N'3', N'C4CA4238A0B923820DCC509A6F75849B', 2) --Kullanıcı Adı: 3 Şifre: 1 Rol: Kullanıcı
