@@ -53,8 +53,8 @@
             this.ppdBaskiOnizleme = new System.Windows.Forms.PrintPreviewDialog();
             this.btnExcelAktar = new System.Windows.Forms.Button();
             this.cmbYaziciListesi = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblYaziciSecin = new System.Windows.Forms.Label();
+            this.lblAlanSecin = new System.Windows.Forms.Label();
             this.tsKayitlariGoster.SuspendLayout();
             this.mnsKayitlariGoster.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRabtBilDB)).BeginInit();
@@ -112,26 +112,26 @@
             this.tsmiTurkce,
             this.tsmiIngilizce});
             this.tsmiDil.Name = "tsmiDil";
-            this.tsmiDil.Size = new System.Drawing.Size(180, 22);
+            this.tsmiDil.Size = new System.Drawing.Size(102, 22);
             this.tsmiDil.Text = "Dil";
             this.tsmiDil.MouseLeave += new System.EventHandler(this.varsayilanAciklama_MouseLeave);
             // 
             // tsmiTurkce
             // 
             this.tsmiTurkce.Name = "tsmiTurkce";
-            this.tsmiTurkce.Size = new System.Drawing.Size(180, 22);
+            this.tsmiTurkce.Size = new System.Drawing.Size(137, 22);
             this.tsmiTurkce.Text = "Türkçe";
             // 
             // tsmiIngilizce
             // 
             this.tsmiIngilizce.Name = "tsmiIngilizce";
-            this.tsmiIngilizce.Size = new System.Drawing.Size(180, 22);
+            this.tsmiIngilizce.Size = new System.Drawing.Size(137, 22);
             this.tsmiIngilizce.Text = "İngilizce";
             // 
             // tsmiTema
             // 
             this.tsmiTema.Name = "tsmiTema";
-            this.tsmiTema.Size = new System.Drawing.Size(180, 22);
+            this.tsmiTema.Size = new System.Drawing.Size(102, 22);
             this.tsmiTema.Text = "Tema";
             this.tsmiTema.MouseLeave += new System.EventHandler(this.varsayilanAciklama_MouseLeave);
             // 
@@ -147,14 +147,14 @@
             // tsmiLisansAnahtarı
             // 
             this.tsmiLisansAnahtarı.Name = "tsmiLisansAnahtarı";
-            this.tsmiLisansAnahtarı.Size = new System.Drawing.Size(180, 22);
+            this.tsmiLisansAnahtarı.Size = new System.Drawing.Size(179, 22);
             this.tsmiLisansAnahtarı.Text = "Lisans Anahtarı";
             this.tsmiLisansAnahtarı.MouseLeave += new System.EventHandler(this.varsayilanAciklama_MouseLeave);
             // 
             // tsmiHakkinda
             // 
             this.tsmiHakkinda.Name = "tsmiHakkinda";
-            this.tsmiHakkinda.Size = new System.Drawing.Size(180, 22);
+            this.tsmiHakkinda.Size = new System.Drawing.Size(179, 22);
             this.tsmiHakkinda.Text = "Hakkında";
             this.tsmiHakkinda.Click += new System.EventHandler(this.tsmiYardımHakkında_Click_1);
             this.tsmiHakkinda.MouseLeave += new System.EventHandler(this.varsayilanAciklama_MouseLeave);
@@ -279,33 +279,33 @@
             this.cmbYaziciListesi.SelectedIndexChanged += new System.EventHandler(this.cmbYaziciListesi_SelectedIndexChanged);
             this.cmbYaziciListesi.MouseLeave += new System.EventHandler(this.varsayilanAciklama_MouseLeave);
             // 
-            // label1
+            // lblYaziciSecin
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Consolas", 9F);
-            this.label1.Location = new System.Drawing.Point(218, 435);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 14);
-            this.label1.TabIndex = 43;
-            this.label1.Text = "Lütfen Yazıcıyı Seçin:";
+            this.lblYaziciSecin.AutoSize = true;
+            this.lblYaziciSecin.Font = new System.Drawing.Font("Consolas", 9F);
+            this.lblYaziciSecin.Location = new System.Drawing.Point(218, 435);
+            this.lblYaziciSecin.Name = "lblYaziciSecin";
+            this.lblYaziciSecin.Size = new System.Drawing.Size(161, 14);
+            this.lblYaziciSecin.TabIndex = 43;
+            this.lblYaziciSecin.Text = "Lütfen Yazıcıyı Seçin:";
             // 
-            // label2
+            // lblAlanSecin
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Consolas", 9F);
-            this.label2.Location = new System.Drawing.Point(347, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 14);
-            this.label2.TabIndex = 44;
-            this.label2.Text = "Lütfen alan Seçin:";
+            this.lblAlanSecin.AutoSize = true;
+            this.lblAlanSecin.Font = new System.Drawing.Font("Consolas", 9F);
+            this.lblAlanSecin.Location = new System.Drawing.Point(347, 40);
+            this.lblAlanSecin.Name = "lblAlanSecin";
+            this.lblAlanSecin.Size = new System.Drawing.Size(133, 14);
+            this.lblAlanSecin.TabIndex = 44;
+            this.lblAlanSecin.Text = "Lütfen alan Seçin:";
             // 
             // FrmKayitlariGoster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(970, 486);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblAlanSecin);
+            this.Controls.Add(this.lblYaziciSecin);
             this.Controls.Add(this.cmbYaziciListesi);
             this.Controls.Add(this.btnExcelAktar);
             this.Controls.Add(this.btnYazdir);
@@ -358,7 +358,7 @@
         private System.Windows.Forms.PrintPreviewDialog ppdBaskiOnizleme;
         public System.Windows.Forms.Button btnExcelAktar;
         public System.Windows.Forms.ComboBox cmbYaziciListesi;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblYaziciSecin;
+        private System.Windows.Forms.Label lblAlanSecin;
     }
 }

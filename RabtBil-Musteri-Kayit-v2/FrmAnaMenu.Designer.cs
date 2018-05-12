@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAnaMenu));
             this.btnTeknikServisFormu = new System.Windows.Forms.Button();
-            this.btnKayitlariGoster = new System.Windows.Forms.Button();
             this.btnCikisYap = new System.Windows.Forms.Button();
             this.btnProfiliDuzenle = new System.Windows.Forms.Button();
             this.btnPersonelEkle = new System.Windows.Forms.Button();
@@ -56,24 +55,6 @@
             this.btnTeknikServisFormu.UseVisualStyleBackColor = false;
             this.btnTeknikServisFormu.Click += new System.EventHandler(this.btnTeknikServisFormu_Click);
             // 
-            // btnKayitlariGoster
-            // 
-            this.btnKayitlariGoster.BackColor = System.Drawing.Color.White;
-            this.btnKayitlariGoster.FlatAppearance.BorderSize = 0;
-            this.btnKayitlariGoster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKayitlariGoster.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.btnKayitlariGoster.Image = ((System.Drawing.Image)(resources.GetObject("btnKayitlariGoster.Image")));
-            this.btnKayitlariGoster.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnKayitlariGoster.Location = new System.Drawing.Point(116, 11);
-            this.btnKayitlariGoster.Margin = new System.Windows.Forms.Padding(0);
-            this.btnKayitlariGoster.Name = "btnKayitlariGoster";
-            this.btnKayitlariGoster.Size = new System.Drawing.Size(100, 100);
-            this.btnKayitlariGoster.TabIndex = 1;
-            this.btnKayitlariGoster.Text = "Kayıtları Göster";
-            this.btnKayitlariGoster.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnKayitlariGoster.UseVisualStyleBackColor = false;
-            this.btnKayitlariGoster.Click += new System.EventHandler(this.btnKayitlariGoster_Click);
-            // 
             // btnCikisYap
             // 
             this.btnCikisYap.BackColor = System.Drawing.Color.White;
@@ -82,7 +63,7 @@
             this.btnCikisYap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnCikisYap.Image = ((System.Drawing.Image)(resources.GetObject("btnCikisYap.Image")));
             this.btnCikisYap.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCikisYap.Location = new System.Drawing.Point(328, 11);
+            this.btnCikisYap.Location = new System.Drawing.Point(210, 9);
             this.btnCikisYap.Margin = new System.Windows.Forms.Padding(0);
             this.btnCikisYap.Name = "btnCikisYap";
             this.btnCikisYap.Size = new System.Drawing.Size(100, 100);
@@ -100,7 +81,7 @@
             this.btnProfiliDuzenle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnProfiliDuzenle.Image = ((System.Drawing.Image)(resources.GetObject("btnProfiliDuzenle.Image")));
             this.btnProfiliDuzenle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnProfiliDuzenle.Location = new System.Drawing.Point(222, 11);
+            this.btnProfiliDuzenle.Location = new System.Drawing.Point(110, 11);
             this.btnProfiliDuzenle.Margin = new System.Windows.Forms.Padding(0);
             this.btnProfiliDuzenle.Name = "btnProfiliDuzenle";
             this.btnProfiliDuzenle.Size = new System.Drawing.Size(100, 100);
@@ -118,7 +99,7 @@
             this.btnPersonelEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnPersonelEkle.Image = ((System.Drawing.Image)(resources.GetObject("btnPersonelEkle.Image")));
             this.btnPersonelEkle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPersonelEkle.Location = new System.Drawing.Point(65, 117);
+            this.btnPersonelEkle.Location = new System.Drawing.Point(10, 117);
             this.btnPersonelEkle.Margin = new System.Windows.Forms.Padding(0);
             this.btnPersonelEkle.Name = "btnPersonelEkle";
             this.btnPersonelEkle.Size = new System.Drawing.Size(100, 100);
@@ -136,7 +117,7 @@
             this.btnProgramHakkinda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnProgramHakkinda.Image = ((System.Drawing.Image)(resources.GetObject("btnProgramHakkinda.Image")));
             this.btnProgramHakkinda.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnProgramHakkinda.Location = new System.Drawing.Point(277, 117);
+            this.btnProgramHakkinda.Location = new System.Drawing.Point(210, 117);
             this.btnProgramHakkinda.Margin = new System.Windows.Forms.Padding(0);
             this.btnProgramHakkinda.Name = "btnProgramHakkinda";
             this.btnProgramHakkinda.Size = new System.Drawing.Size(100, 100);
@@ -154,7 +135,7 @@
             this.btnProgramiEtkinlestir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnProgramiEtkinlestir.Image = ((System.Drawing.Image)(resources.GetObject("btnProgramiEtkinlestir.Image")));
             this.btnProgramiEtkinlestir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnProgramiEtkinlestir.Location = new System.Drawing.Point(171, 117);
+            this.btnProgramiEtkinlestir.Location = new System.Drawing.Point(110, 117);
             this.btnProgramiEtkinlestir.Margin = new System.Windows.Forms.Padding(0);
             this.btnProgramiEtkinlestir.Name = "btnProgramiEtkinlestir";
             this.btnProgramiEtkinlestir.Size = new System.Drawing.Size(100, 100);
@@ -168,13 +149,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(442, 229);
+            this.ClientSize = new System.Drawing.Size(323, 229);
             this.Controls.Add(this.btnProgramiEtkinlestir);
             this.Controls.Add(this.btnProgramHakkinda);
             this.Controls.Add(this.btnPersonelEkle);
             this.Controls.Add(this.btnProfiliDuzenle);
             this.Controls.Add(this.btnCikisYap);
-            this.Controls.Add(this.btnKayitlariGoster);
             this.Controls.Add(this.btnTeknikServisFormu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -188,7 +168,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnTeknikServisFormu;
-        private System.Windows.Forms.Button btnKayitlariGoster;
         private System.Windows.Forms.Button btnCikisYap;
         private System.Windows.Forms.Button btnProfiliDuzenle;
         private System.Windows.Forms.Button btnPersonelEkle;

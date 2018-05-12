@@ -154,7 +154,7 @@ namespace RabtBil_Musteri_Kayit_v2
                         break;
                 }
                 SMF.BaglantiKapaliysaAc();
-                SqlDataAdapter da = new SqlDataAdapter($"Select * From MusteriBilgileri Where {_aramaTuru} Like @Ara", SMF.Baglanti);
+                SqlDataAdapter da = new SqlDataAdapter($"SELECT * FROM MusteriBilgileri WHERE {_aramaTuru} LIKE @Ara", SMF.Baglanti);
                 da.SelectCommand.Parameters.AddWithValue("@Ara", $"%{txtArama.Text.ToLower()}%");
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -220,7 +220,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    frm.chkTeslimEdildi.Checked = dr["TeslimEdenId"].ToString() != "";
+                    frm.chkTeslimEdildi.Checked = dr["TeslimEdenId"].ToString() != String.Empty;
                 }
                 dr.Close();
             }
