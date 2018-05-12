@@ -46,8 +46,6 @@ CREATE TABLE [dbo].[MusteriBilgileri] (
     CONSTRAINT [KM_Kullaniciler] FOREIGN KEY ([KaydiYapanID]) REFERENCES [dbo].[Kullanicilar] ([Id]) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-
-
 -------------------------------
 -- Varsayılan Kullanıcılar
 -------------------------------
