@@ -19,6 +19,11 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void FrmProfil_Load(object sender, EventArgs e)
         {
+            if (SMF.YoneticiMi)
+            {
+                txtKullaniciAdi.Enabled = true;
+            }
+
             try
             {
                 SqlCommand cmd = new SqlCommand("SELECT * FROM kullanicilar WHERE Id=@Id", SMF.Baglanti);

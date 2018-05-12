@@ -64,6 +64,7 @@
             // 
             // txtKullaniciAdi
             // 
+            this.txtKullaniciAdi.Enabled = false;
             this.txtKullaniciAdi.Font = new System.Drawing.Font("Consolas", 11F);
             this.txtKullaniciAdi.Location = new System.Drawing.Point(161, 27);
             this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(2);
