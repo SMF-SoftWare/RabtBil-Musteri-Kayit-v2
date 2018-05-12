@@ -46,7 +46,7 @@ namespace RabtBil_Musteri_Kayit_v2
             {
                 PcTrBoxProfiliDuzenle.Image = File.Exists(SMF.ProfilResmiYolu) ? Image.FromFile(SMF.ProfilResmiYolu) : Resources.varsayilanProfilResmi;
             }
-            catch (Exception)
+            catch
             {
                 PcTrBoxProfiliDuzenle.Image = Resources.varsayilanProfilResmi;
             }
@@ -157,7 +157,7 @@ namespace RabtBil_Musteri_Kayit_v2
                         PcTrBoxProfiliDuzenle.Image = File.Exists(SMF.ProfilResmiYolu) ? Image.FromFile(SMF.ProfilResmiYolu) : Resources.varsayilanProfilResmi;
                         frm.PcTrBoxProfilResim.Image = File.Exists(SMF.ProfilResmiYolu) ? Image.FromFile(SMF.ProfilResmiYolu) : Resources.varsayilanProfilResmi;
                     }
-                    catch (Exception)
+                    catch
                     {
                         PcTrBoxProfiliDuzenle.Image = Resources.varsayilanProfilResmi;
                     }

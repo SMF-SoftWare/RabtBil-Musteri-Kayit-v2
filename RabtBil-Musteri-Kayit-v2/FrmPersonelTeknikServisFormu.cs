@@ -18,6 +18,7 @@ namespace RabtBil_Musteri_Kayit_v2
         }
 
         private bool yenidenBaslat;
+        private string cmdText;
 
         private void FrmPersonelTeknikServisFormu_Load(object sender, EventArgs e)
         {
@@ -31,7 +32,7 @@ namespace RabtBil_Musteri_Kayit_v2
             {
                 PcTrBoxProfilResim.Image = File.Exists(SMF.ProfilResmiYolu) ? Image.FromFile(SMF.ProfilResmiYolu) : Resources.varsayilanProfilResmi;
             }
-            catch (Exception)
+            catch
             {
                 PcTrBoxProfilResim.Image = Resources.varsayilanProfilResmi;
             }
@@ -162,7 +163,9 @@ namespace RabtBil_Musteri_Kayit_v2
 
             try
             {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM MusteriBilgileri", SMF.Baglanti);
+                cmdText = SMF.YoneticiMi ? "SELECT * FROM MusteriBilgileri" : "SELECT * FROM MusteriBilgileri WHERE KaydiYapanID=@KaydiYapanID";
+                SqlCommand cmd = new SqlCommand(cmdText, SMF.Baglanti);
+                cmd.Parameters.AddWithValue("@KaydiYapanID", SMF.KullaniciId);
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);

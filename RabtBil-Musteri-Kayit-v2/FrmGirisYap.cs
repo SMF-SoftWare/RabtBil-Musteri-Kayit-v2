@@ -63,7 +63,7 @@ namespace RabtBil_Musteri_Kayit_v2
                         }
                     }
 
-                    if (SMF.Yetki==SMF.Rol.Admin || SMF.Yetki == SMF.Rol.Yonetici)
+                    if (SMF.Yetki == SMF.Rol.Admin || SMF.Yetki == SMF.Rol.Yonetici)
                     {
                         SMF.YoneticiMi = true;
                     }
@@ -94,7 +94,8 @@ namespace RabtBil_Musteri_Kayit_v2
                 gozeTiklandiMi = false;
             }
             else
-            {   pbxEye.Image = Resources.eye_off;
+            {
+                pbxEye.Image = Resources.eye_off;
                 txtSifre.UseSystemPasswordChar = false;
                 gozeTiklandiMi = true;
             }

@@ -20,7 +20,6 @@ namespace RabtBil_Musteri_Kayit_v2
         public static string ProfilKlasoru;
         public static bool YoneticiMi;
 
-
         public static bool EpostaDogruMu(string eposta)
         {
             return Regex.IsMatch(eposta, @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");

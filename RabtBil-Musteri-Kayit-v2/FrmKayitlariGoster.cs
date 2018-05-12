@@ -21,8 +21,8 @@ namespace RabtBil_Musteri_Kayit_v2
             InitializeComponent();
         }
 
+        private string daText;
         private string _aramaTuru;
-
         private readonly string[] _aramaAlanlari = { "Id", "FormNo", "MusteriAdi", "Telefon", "UrunModeli", "UrunKodlari", "ArizaTanimi", "Aksesuarlar", "EkBilgiler", "UrunTakipNo", "UrunDurumu", "Ucret", "KaydiYapanID", "KayitTarihi", "GuncellemeTarihi", "TeslimEdenID", "TeslimAlan", "TeslimTarihi" };
 
         public void YazicilariListele()
@@ -181,7 +181,9 @@ namespace RabtBil_Musteri_Kayit_v2
             try
             {
                 SMF.BaglantiKapaliysaAc();
-                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM MusteriBilgileri", SMF.Baglanti);
+                daText = SMF.YoneticiMi ? "SELECT * FROM MusteriBilgileri" : "SELECT * FROM MusteriBilgileri WHERE KaydiYapanID=@KaydiYapanID";
+                SqlDataAdapter da = new SqlDataAdapter(daText, SMF.Baglanti);
+                da.SelectCommand.Parameters.AddWithValue("@KaydiYapanID", SMF.KullaniciId);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dgvRabtBilDB.DataSource = dt;
