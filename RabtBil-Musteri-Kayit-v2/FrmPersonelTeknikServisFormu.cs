@@ -271,11 +271,11 @@ namespace RabtBil_Musteri_Kayit_v2
                     yenidenBaslat = false;
                     return;
                 }
+            }
 
-                if (yenidenBaslat)
-                {
-                    Application.Restart();
-                }
+            if (yenidenBaslat)
+            {
+                Application.Restart();
             }
         }
 
