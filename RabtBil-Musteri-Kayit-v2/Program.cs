@@ -17,7 +17,11 @@ namespace RabtBil_Musteri_Kayit_v2
             FrmGirisYap frm = new FrmGirisYap();
             frm.ShowDialog();
 
-            if (frm.DialogResult == DialogResult.OK)
+            if (frm.DialogResult == DialogResult.OK && SMF.YoneticiMi)
+            {
+                Application.Run(new FrmAnaMenu());
+            }
+            else if (frm.DialogResult == DialogResult.OK)
             {
                 Application.Run(new FrmPersonelTeknikServisFormu());
             }

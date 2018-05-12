@@ -29,134 +29,139 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAnaMenu));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnTeknikServisFormu = new System.Windows.Forms.Button();
+            this.btnKayitlariGoster = new System.Windows.Forms.Button();
+            this.btnCikisYap = new System.Windows.Forms.Button();
+            this.btnProfiliDuzenle = new System.Windows.Forms.Button();
+            this.btnPersonelEkle = new System.Windows.Forms.Button();
+            this.btnProgramHakkinda = new System.Windows.Forms.Button();
+            this.btnProgramiEtkinlestir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnTeknikServisFormu
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(10, 11);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 100);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Teknik Servis Formu";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnTeknikServisFormu.BackColor = System.Drawing.Color.White;
+            this.btnTeknikServisFormu.FlatAppearance.BorderSize = 0;
+            this.btnTeknikServisFormu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTeknikServisFormu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTeknikServisFormu.Image = ((System.Drawing.Image)(resources.GetObject("btnTeknikServisFormu.Image")));
+            this.btnTeknikServisFormu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnTeknikServisFormu.Location = new System.Drawing.Point(10, 11);
+            this.btnTeknikServisFormu.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTeknikServisFormu.Name = "btnTeknikServisFormu";
+            this.btnTeknikServisFormu.Size = new System.Drawing.Size(100, 100);
+            this.btnTeknikServisFormu.TabIndex = 0;
+            this.btnTeknikServisFormu.Text = "Teknik Servis Formu";
+            this.btnTeknikServisFormu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnTeknikServisFormu.UseVisualStyleBackColor = false;
+            this.btnTeknikServisFormu.Click += new System.EventHandler(this.btnTeknikServisFormu_Click);
             // 
-            // button2
+            // btnKayitlariGoster
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(116, 11);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 100);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Kayıtları Göster";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnKayitlariGoster.BackColor = System.Drawing.Color.White;
+            this.btnKayitlariGoster.FlatAppearance.BorderSize = 0;
+            this.btnKayitlariGoster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKayitlariGoster.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btnKayitlariGoster.Image = ((System.Drawing.Image)(resources.GetObject("btnKayitlariGoster.Image")));
+            this.btnKayitlariGoster.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnKayitlariGoster.Location = new System.Drawing.Point(116, 11);
+            this.btnKayitlariGoster.Margin = new System.Windows.Forms.Padding(0);
+            this.btnKayitlariGoster.Name = "btnKayitlariGoster";
+            this.btnKayitlariGoster.Size = new System.Drawing.Size(100, 100);
+            this.btnKayitlariGoster.TabIndex = 1;
+            this.btnKayitlariGoster.Text = "Kayıtları Göster";
+            this.btnKayitlariGoster.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnKayitlariGoster.UseVisualStyleBackColor = false;
+            this.btnKayitlariGoster.Click += new System.EventHandler(this.btnKayitlariGoster_Click);
             // 
-            // button4
+            // btnCikisYap
             // 
-            this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(328, 11);
-            this.button4.Margin = new System.Windows.Forms.Padding(0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 100);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Çıkış\r\nYap";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnCikisYap.BackColor = System.Drawing.Color.White;
+            this.btnCikisYap.FlatAppearance.BorderSize = 0;
+            this.btnCikisYap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCikisYap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btnCikisYap.Image = ((System.Drawing.Image)(resources.GetObject("btnCikisYap.Image")));
+            this.btnCikisYap.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCikisYap.Location = new System.Drawing.Point(328, 11);
+            this.btnCikisYap.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCikisYap.Name = "btnCikisYap";
+            this.btnCikisYap.Size = new System.Drawing.Size(100, 100);
+            this.btnCikisYap.TabIndex = 3;
+            this.btnCikisYap.Text = "Çıkış\r\nYap";
+            this.btnCikisYap.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCikisYap.UseVisualStyleBackColor = false;
+            this.btnCikisYap.Click += new System.EventHandler(this.btnCikisYap_Click);
             // 
-            // button7
+            // btnProfiliDuzenle
             // 
-            this.button7.BackColor = System.Drawing.Color.White;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button7.Location = new System.Drawing.Point(222, 11);
-            this.button7.Margin = new System.Windows.Forms.Padding(0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(100, 100);
-            this.button7.TabIndex = 2;
-            this.button7.Text = "Profili Düzenle";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnProfiliDuzenle.BackColor = System.Drawing.Color.White;
+            this.btnProfiliDuzenle.FlatAppearance.BorderSize = 0;
+            this.btnProfiliDuzenle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfiliDuzenle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btnProfiliDuzenle.Image = ((System.Drawing.Image)(resources.GetObject("btnProfiliDuzenle.Image")));
+            this.btnProfiliDuzenle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnProfiliDuzenle.Location = new System.Drawing.Point(222, 11);
+            this.btnProfiliDuzenle.Margin = new System.Windows.Forms.Padding(0);
+            this.btnProfiliDuzenle.Name = "btnProfiliDuzenle";
+            this.btnProfiliDuzenle.Size = new System.Drawing.Size(100, 100);
+            this.btnProfiliDuzenle.TabIndex = 2;
+            this.btnProfiliDuzenle.Text = "Profili Düzenle";
+            this.btnProfiliDuzenle.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnProfiliDuzenle.UseVisualStyleBackColor = false;
+            this.btnProfiliDuzenle.Click += new System.EventHandler(this.btnProfiliDuzenle_Click);
             // 
-            // button3
+            // btnPersonelEkle
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(65, 117);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 100);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Personel\r\nEkle";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnPersonelEkle.BackColor = System.Drawing.Color.White;
+            this.btnPersonelEkle.FlatAppearance.BorderSize = 0;
+            this.btnPersonelEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPersonelEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btnPersonelEkle.Image = ((System.Drawing.Image)(resources.GetObject("btnPersonelEkle.Image")));
+            this.btnPersonelEkle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPersonelEkle.Location = new System.Drawing.Point(65, 117);
+            this.btnPersonelEkle.Margin = new System.Windows.Forms.Padding(0);
+            this.btnPersonelEkle.Name = "btnPersonelEkle";
+            this.btnPersonelEkle.Size = new System.Drawing.Size(100, 100);
+            this.btnPersonelEkle.TabIndex = 4;
+            this.btnPersonelEkle.Text = "Personel\r\nEkle";
+            this.btnPersonelEkle.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPersonelEkle.UseVisualStyleBackColor = false;
+            this.btnPersonelEkle.Click += new System.EventHandler(this.btnPersonelEkle_Click);
             // 
-            // button5
+            // btnProgramHakkinda
             // 
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(277, 117);
-            this.button5.Margin = new System.Windows.Forms.Padding(0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 100);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Program Hakkında";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnProgramHakkinda.BackColor = System.Drawing.Color.White;
+            this.btnProgramHakkinda.FlatAppearance.BorderSize = 0;
+            this.btnProgramHakkinda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProgramHakkinda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btnProgramHakkinda.Image = ((System.Drawing.Image)(resources.GetObject("btnProgramHakkinda.Image")));
+            this.btnProgramHakkinda.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnProgramHakkinda.Location = new System.Drawing.Point(277, 117);
+            this.btnProgramHakkinda.Margin = new System.Windows.Forms.Padding(0);
+            this.btnProgramHakkinda.Name = "btnProgramHakkinda";
+            this.btnProgramHakkinda.Size = new System.Drawing.Size(100, 100);
+            this.btnProgramHakkinda.TabIndex = 6;
+            this.btnProgramHakkinda.Text = "Program Hakkında";
+            this.btnProgramHakkinda.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnProgramHakkinda.UseVisualStyleBackColor = false;
+            this.btnProgramHakkinda.Click += new System.EventHandler(this.btnProgramHakkinda_Click);
             // 
-            // button6
+            // btnProgramiEtkinlestir
             // 
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button6.Location = new System.Drawing.Point(171, 117);
-            this.button6.Margin = new System.Windows.Forms.Padding(0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(100, 100);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Programı Etkinleştir";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnProgramiEtkinlestir.BackColor = System.Drawing.Color.White;
+            this.btnProgramiEtkinlestir.FlatAppearance.BorderSize = 0;
+            this.btnProgramiEtkinlestir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProgramiEtkinlestir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btnProgramiEtkinlestir.Image = ((System.Drawing.Image)(resources.GetObject("btnProgramiEtkinlestir.Image")));
+            this.btnProgramiEtkinlestir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnProgramiEtkinlestir.Location = new System.Drawing.Point(171, 117);
+            this.btnProgramiEtkinlestir.Margin = new System.Windows.Forms.Padding(0);
+            this.btnProgramiEtkinlestir.Name = "btnProgramiEtkinlestir";
+            this.btnProgramiEtkinlestir.Size = new System.Drawing.Size(100, 100);
+            this.btnProgramiEtkinlestir.TabIndex = 5;
+            this.btnProgramiEtkinlestir.Text = "Programı Etkinleştir";
+            this.btnProgramiEtkinlestir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnProgramiEtkinlestir.UseVisualStyleBackColor = false;
             // 
             // FrmAnaMenu
             // 
@@ -164,16 +169,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(442, 229);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnProgramiEtkinlestir);
+            this.Controls.Add(this.btnProgramHakkinda);
+            this.Controls.Add(this.btnPersonelEkle);
+            this.Controls.Add(this.btnProfiliDuzenle);
+            this.Controls.Add(this.btnCikisYap);
+            this.Controls.Add(this.btnKayitlariGoster);
+            this.Controls.Add(this.btnTeknikServisFormu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FrmAnaMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAnaMenu";
             this.ResumeLayout(false);
 
@@ -181,12 +187,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnTeknikServisFormu;
+        private System.Windows.Forms.Button btnKayitlariGoster;
+        private System.Windows.Forms.Button btnCikisYap;
+        private System.Windows.Forms.Button btnProfiliDuzenle;
+        private System.Windows.Forms.Button btnPersonelEkle;
+        private System.Windows.Forms.Button btnProgramHakkinda;
+        private System.Windows.Forms.Button btnProgramiEtkinlestir;
     }
 }

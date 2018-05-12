@@ -169,7 +169,7 @@ namespace RabtBil_Musteri_Kayit_v2
 
                 if (dt.Rows.Count < 1)
                 {
-                    MessageBox.Show("Veritabanında Hiç Soru Yok!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Veritabanında Hiç Kayıt Yok!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
             }

@@ -305,6 +305,7 @@
             this.Controls.Add(this.lblKullaniciAdi);
             this.Controls.Add(this.txtKullaniciAdi);
             this.Name = "FrmPersonelEkle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPersonelEkle";
             this.Load += new System.EventHandler(this.FrmPersonelEkle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKullanicilar)).EndInit();

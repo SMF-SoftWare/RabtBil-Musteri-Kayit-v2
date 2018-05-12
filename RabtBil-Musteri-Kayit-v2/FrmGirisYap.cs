@@ -63,6 +63,11 @@ namespace RabtBil_Musteri_Kayit_v2
                         }
                     }
 
+                    if (SMF.Yetki==SMF.Rol.Admin || SMF.Yetki == SMF.Rol.Yonetici)
+                    {
+                        SMF.YoneticiMi = true;
+                    }
+
                     DialogResult = DialogResult.OK;
                 }
                 else
