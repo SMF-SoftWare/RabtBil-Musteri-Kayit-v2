@@ -304,6 +304,7 @@
             this.Controls.Add(this.dgvKullanicilar);
             this.Controls.Add(this.lblKullaniciAdi);
             this.Controls.Add(this.txtKullaniciAdi);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmPersonelEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPersonelEkle";

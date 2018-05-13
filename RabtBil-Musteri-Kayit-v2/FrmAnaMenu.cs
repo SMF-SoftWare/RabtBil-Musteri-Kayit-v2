@@ -47,7 +47,11 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void FrmAnaMenu_Load(object sender, EventArgs e)
         {
-            if (!SMF.LisansliMi)
+            if (!SMF.LisansliMi && SMF.AdminMi)
+            {
+                btnProgramiEtkinlestir.Enabled = true;
+            }
+            else if (!SMF.LisansliMi)
             {
                 btnProgramiEtkinlestir.Enabled = false;
             }
