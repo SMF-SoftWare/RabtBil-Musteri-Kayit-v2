@@ -466,16 +466,18 @@
             // tsmiYeniKayit
             // 
             this.tsmiYeniKayit.Name = "tsmiYeniKayit";
-            this.tsmiYeniKayit.Size = new System.Drawing.Size(186, 22);
+            this.tsmiYeniKayit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.tsmiYeniKayit.Size = new System.Drawing.Size(193, 22);
             this.tsmiYeniKayit.Text = "Yeni Kayıt";
-            this.tsmiYeniKayit.Click += new System.EventHandler(this.btnKaydet_Click);
+            this.tsmiYeniKayit.Click += new System.EventHandler(this.btnYeniKayit_Click);
             this.tsmiYeniKayit.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
             this.tsmiYeniKayit.MouseHover += new System.EventHandler(this.btnYeniKayit_MouseHover);
             // 
             // tsmiKaydet
             // 
             this.tsmiKaydet.Name = "tsmiKaydet";
-            this.tsmiKaydet.Size = new System.Drawing.Size(186, 22);
+            this.tsmiKaydet.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.tsmiKaydet.Size = new System.Drawing.Size(235, 22);
             this.tsmiKaydet.Text = "Kaydet";
             this.tsmiKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             this.tsmiKaydet.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
@@ -484,7 +486,8 @@
             // tsmiTemizle
             // 
             this.tsmiTemizle.Name = "tsmiTemizle";
-            this.tsmiTemizle.Size = new System.Drawing.Size(186, 22);
+            this.tsmiTemizle.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.tsmiTemizle.Size = new System.Drawing.Size(235, 22);
             this.tsmiTemizle.Text = "Temizle";
             this.tsmiTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             this.tsmiTemizle.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
@@ -493,7 +496,8 @@
             // tsmiKayitlariGoster
             // 
             this.tsmiKayitlariGoster.Name = "tsmiKayitlariGoster";
-            this.tsmiKayitlariGoster.Size = new System.Drawing.Size(186, 22);
+            this.tsmiKayitlariGoster.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
+            this.tsmiKayitlariGoster.Size = new System.Drawing.Size(235, 22);
             this.tsmiKayitlariGoster.Text = "Kayıtları Göster";
             this.tsmiKayitlariGoster.Click += new System.EventHandler(this.btnKayitlariGoster_Click);
             this.tsmiKayitlariGoster.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
@@ -502,7 +506,8 @@
             // tsmiGuncelle
             // 
             this.tsmiGuncelle.Name = "tsmiGuncelle";
-            this.tsmiGuncelle.Size = new System.Drawing.Size(186, 22);
+            this.tsmiGuncelle.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
+            this.tsmiGuncelle.Size = new System.Drawing.Size(235, 22);
             this.tsmiGuncelle.Text = "Güncelle";
             this.tsmiGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             this.tsmiGuncelle.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
@@ -560,7 +565,7 @@
             // tsmiLisansAnahtari
             // 
             this.tsmiLisansAnahtari.Name = "tsmiLisansAnahtari";
-            this.tsmiLisansAnahtari.Size = new System.Drawing.Size(180, 22);
+            this.tsmiLisansAnahtari.Size = new System.Drawing.Size(179, 22);
             this.tsmiLisansAnahtari.Text = "Lisans Anahtarı";
             this.tsmiLisansAnahtari.Click += new System.EventHandler(this.tsmiLisansAnahtari_Click);
             this.tsmiLisansAnahtari.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
@@ -569,7 +574,7 @@
             // tsmiHakkinda
             // 
             this.tsmiHakkinda.Name = "tsmiHakkinda";
-            this.tsmiHakkinda.Size = new System.Drawing.Size(180, 22);
+            this.tsmiHakkinda.Size = new System.Drawing.Size(179, 22);
             this.tsmiHakkinda.Text = "Hakkında";
             this.tsmiHakkinda.Click += new System.EventHandler(this.mnsYardimHakkinda_Click);
             this.tsmiHakkinda.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
