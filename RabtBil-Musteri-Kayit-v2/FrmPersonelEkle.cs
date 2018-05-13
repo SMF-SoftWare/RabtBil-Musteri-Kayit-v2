@@ -29,13 +29,19 @@ namespace RabtBil_Musteri_Kayit_v2
             dgvKullanicilar.Columns[3].HeaderText = "E-posta";
             dgvKullanicilar.Columns[3].HeaderText = "Rol";
             cmbRoller.SelectedIndex = 0;
+
+            if (SMF.YoneticiMi)
+            {
+                btnEkle.Enabled = false;
+                btnSil.Enabled = false;
+            }
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
             try
             {
-                if (String.IsNullOrWhiteSpace(txtKullaniciAdi.Text) || String.IsNullOrWhiteSpace(txtAdi.Text) || String.IsNullOrWhiteSpace(txtSoyadi.Text) || String.IsNullOrWhiteSpace(txtSifre.Text) || String.IsNullOrWhiteSpace(txtSifreyiOnayla.Text))
+                if (String.IsNullOrWhiteSpace(txtKullaniciAdi.Text))
                 {
                     MessageBox.Show("Resources.metinKutulariBos", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -161,6 +167,11 @@ namespace RabtBil_Musteri_Kayit_v2
 
         public void EkleEtkinMi(bool value)
         {
+            if (SMF.YoneticiMi)
+            {
+                btnEkle.Enabled = false;
+                return;
+            }
             btnEkle.Enabled = value;
         }
 
@@ -201,7 +212,7 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             try
             {
-                if (String.IsNullOrWhiteSpace(txtKullaniciAdi.Text) || String.IsNullOrWhiteSpace(txtAdi.Text) || String.IsNullOrWhiteSpace(txtSoyadi.Text) || String.IsNullOrWhiteSpace(txtSifre.Text) || String.IsNullOrWhiteSpace(txtSifreyiOnayla.Text))
+                if (String.IsNullOrWhiteSpace(txtKullaniciAdi.Text))
                 {
                     MessageBox.Show("Resources.metinKutulariBos", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -216,6 +227,39 @@ namespace RabtBil_Musteri_Kayit_v2
                 if (cmbRoller.SelectedIndex == 0)
                 {
                     MessageBox.Show("Bir Rol Seçin!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (String.IsNullOrWhiteSpace(txtSifre.Text) || String.IsNullOrWhiteSpace(txtSifreyiOnayla.Text))
+                {
+                    SqlCommand cmd = new SqlCommand("UPDATE Kullanicilar SET KullaniciAdi=@KullaniciAdi, Adi=@Adi, Soyadi=@Soyadi, Eposta=@Eposta, Rol=@Rol WHERE Id=@Id", SMF.Baglanti);
+                    cmd.Parameters.AddWithValue("@KullaniciAdi", txtKullaniciAdi.Text);
+                    cmd.Parameters.AddWithValue("@Adi", txtAdi.Text);
+                    cmd.Parameters.AddWithValue("@Soyadi", txtSoyadi.Text);
+                    cmd.Parameters.AddWithValue("@Eposta", txtEpostaAdresi.Text);
+                    switch (cmbRoller.SelectedIndex)
+                    {
+                        case 1:
+                            rol = 2;
+                            break;
+
+                        case 2:
+                            rol = 1;
+                            break;
+
+                        case 3:
+                            rol = 0;
+                            break;
+                    }
+                    cmd.Parameters.AddWithValue("@Rol", rol);
+                    cmd.Parameters.AddWithValue("@Id", secilenId);
+                    SMF.BaglantiKapaliysaAc();
+                    cmd.ExecuteNonQuery();
+                    EkleEtkinMi(true);
+                    GuncelleEtkinMi(false);
+                    Temizle();
+                    VerileriGetir();
+                    MessageBox.Show("Resources.kaydedildi", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
 

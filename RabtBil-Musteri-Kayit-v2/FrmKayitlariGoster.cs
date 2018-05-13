@@ -181,7 +181,7 @@ namespace RabtBil_Musteri_Kayit_v2
             try
             {
                 SMF.BaglantiKapaliysaAc();
-                daText = SMF.YoneticiMi ? "SELECT * FROM MusteriBilgileri" : "SELECT * FROM MusteriBilgileri WHERE KaydiYapanID=@KaydiYapanID";
+                daText = SMF.AdminMi || SMF.YoneticiMi ? "SELECT * FROM MusteriBilgileri" : "SELECT * FROM MusteriBilgileri WHERE KaydiYapanID=@KaydiYapanID";
                 SqlDataAdapter da = new SqlDataAdapter(daText, SMF.Baglanti);
                 da.SelectCommand.Parameters.AddWithValue("@KaydiYapanID", SMF.KullaniciId);
                 DataTable dt = new DataTable();

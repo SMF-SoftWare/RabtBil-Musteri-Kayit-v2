@@ -163,7 +163,7 @@ namespace RabtBil_Musteri_Kayit_v2
 
             try
             {
-                cmdText = SMF.YoneticiMi ? "SELECT * FROM MusteriBilgileri" : "SELECT * FROM MusteriBilgileri WHERE KaydiYapanID=@KaydiYapanID";
+                cmdText = SMF.AdminMi || SMF.YoneticiMi ? "SELECT * FROM MusteriBilgileri" : "SELECT * FROM MusteriBilgileri WHERE KaydiYapanID=@KaydiYapanID";
                 SqlCommand cmd = new SqlCommand(cmdText, SMF.Baglanti);
                 cmd.Parameters.AddWithValue("@KaydiYapanID", SMF.KullaniciId);
                 DataTable dt = new DataTable();

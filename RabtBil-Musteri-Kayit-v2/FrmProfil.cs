@@ -19,7 +19,7 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void FrmProfil_Load(object sender, EventArgs e)
         {
-            if (SMF.YoneticiMi)
+            if (SMF.AdminMi || SMF.YoneticiMi)
             {
                 txtKullaniciAdi.Enabled = true;
             }
@@ -71,6 +71,8 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
+            FrmPersonelTeknikServisFormu frm = (FrmPersonelTeknikServisFormu)Application.OpenForms["FrmPersonelTeknikServisFormu"];
+
             if (String.IsNullOrWhiteSpace(txtKullaniciAdi.Text))
             {
                 MessageBox.Show("Resources.kullaniciAdiBosOlamaz", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -109,6 +111,10 @@ namespace RabtBil_Musteri_Kayit_v2
                     cmd.Parameters.AddWithValue("@Id", SMF.KullaniciId);
                     SMF.BaglantiKapaliysaAc();
                     cmd.ExecuteNonQuery();
+
+                    SMF.KullaniciAdi = txtAdi.Text;
+                    if (frm != null) frm.lblHosgeldin.Text = $"Hoş Geldin, {SMF.KullaniciAdi}!";
+
                     MessageBox.Show("Bilgileriniz Güncellendi!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }
@@ -130,6 +136,10 @@ namespace RabtBil_Musteri_Kayit_v2
                 cmd.Parameters.AddWithValue("@Id", SMF.KullaniciId);
                 SMF.BaglantiKapaliysaAc();
                 cmd.ExecuteNonQuery();
+
+                SMF.KullaniciAdi = txtAdi.Text;
+                if (frm != null) frm.lblHosgeldin.Text = $"Hoş Geldin, {SMF.KullaniciAdi}!";
+
                 MessageBox.Show("Bilgileriniz Güncellendi!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }

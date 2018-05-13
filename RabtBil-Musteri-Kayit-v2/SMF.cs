@@ -19,6 +19,7 @@ namespace RabtBil_Musteri_Kayit_v2
         public static string ProfilResmiYolu;
         public static string ProfilKlasoru;
         public static bool YoneticiMi;
+        public static bool AdminMi;
 
         public static bool EpostaDogruMu(string eposta)
         {
