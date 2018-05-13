@@ -17,6 +17,11 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void FrmGirisYap_Load(object sender, EventArgs e)
         {
+            if (!Settings.Default.LisansliMi && !SMF.LisansiKontrolEt(Settings.Default.Eposta, Settings.Default.LisansAnahtari))
+            {
+                SMF.LisansliMi = false;
+                MessageBox.Show("Programın Deneme Sürümünü Kullanıyorsunuz!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void btnGirisYap_Click(object sender, EventArgs e)

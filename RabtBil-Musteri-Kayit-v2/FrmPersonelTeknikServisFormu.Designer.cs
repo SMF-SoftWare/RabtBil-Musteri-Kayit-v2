@@ -560,15 +560,16 @@
             // tsmiLisansAnahtari
             // 
             this.tsmiLisansAnahtari.Name = "tsmiLisansAnahtari";
-            this.tsmiLisansAnahtari.Size = new System.Drawing.Size(179, 22);
+            this.tsmiLisansAnahtari.Size = new System.Drawing.Size(180, 22);
             this.tsmiLisansAnahtari.Text = "Lisans Anahtarı";
+            this.tsmiLisansAnahtari.Click += new System.EventHandler(this.tsmiLisansAnahtari_Click);
             this.tsmiLisansAnahtari.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
             this.tsmiLisansAnahtari.MouseHover += new System.EventHandler(this.mnsYardimLisansAnahtari_MouseHover);
             // 
             // tsmiHakkinda
             // 
             this.tsmiHakkinda.Name = "tsmiHakkinda";
-            this.tsmiHakkinda.Size = new System.Drawing.Size(179, 22);
+            this.tsmiHakkinda.Size = new System.Drawing.Size(180, 22);
             this.tsmiHakkinda.Text = "Hakkında";
             this.tsmiHakkinda.Click += new System.EventHandler(this.mnsYardimHakkinda_Click);
             this.tsmiHakkinda.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);

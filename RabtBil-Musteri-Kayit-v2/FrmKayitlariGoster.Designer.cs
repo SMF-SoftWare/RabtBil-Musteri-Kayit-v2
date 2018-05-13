@@ -40,7 +40,7 @@
             this.tsmiIngilizce = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiTema = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiYardım = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiLisansAnahtarı = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiLisansAnahtari = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiHakkinda = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBaskiOnizleme = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvRabtBilDB = new System.Windows.Forms.DataGridView();
@@ -112,49 +112,50 @@
             this.tsmiTurkce,
             this.tsmiIngilizce});
             this.tsmiDil.Name = "tsmiDil";
-            this.tsmiDil.Size = new System.Drawing.Size(102, 22);
+            this.tsmiDil.Size = new System.Drawing.Size(180, 22);
             this.tsmiDil.Text = "Dil";
             this.tsmiDil.MouseLeave += new System.EventHandler(this.varsayilanAciklama_MouseLeave);
             // 
             // tsmiTurkce
             // 
             this.tsmiTurkce.Name = "tsmiTurkce";
-            this.tsmiTurkce.Size = new System.Drawing.Size(137, 22);
+            this.tsmiTurkce.Size = new System.Drawing.Size(180, 22);
             this.tsmiTurkce.Text = "Türkçe";
             // 
             // tsmiIngilizce
             // 
             this.tsmiIngilizce.Name = "tsmiIngilizce";
-            this.tsmiIngilizce.Size = new System.Drawing.Size(137, 22);
+            this.tsmiIngilizce.Size = new System.Drawing.Size(180, 22);
             this.tsmiIngilizce.Text = "İngilizce";
             // 
             // tsmiTema
             // 
             this.tsmiTema.Name = "tsmiTema";
-            this.tsmiTema.Size = new System.Drawing.Size(102, 22);
+            this.tsmiTema.Size = new System.Drawing.Size(180, 22);
             this.tsmiTema.Text = "Tema";
             this.tsmiTema.MouseLeave += new System.EventHandler(this.varsayilanAciklama_MouseLeave);
             // 
             // tsmiYardım
             // 
             this.tsmiYardım.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiLisansAnahtarı,
+            this.tsmiLisansAnahtari,
             this.tsmiHakkinda});
             this.tsmiYardım.Name = "tsmiYardım";
             this.tsmiYardım.Size = new System.Drawing.Size(61, 20);
             this.tsmiYardım.Text = "Yardım";
             // 
-            // tsmiLisansAnahtarı
+            // tsmiLisansAnahtari
             // 
-            this.tsmiLisansAnahtarı.Name = "tsmiLisansAnahtarı";
-            this.tsmiLisansAnahtarı.Size = new System.Drawing.Size(179, 22);
-            this.tsmiLisansAnahtarı.Text = "Lisans Anahtarı";
-            this.tsmiLisansAnahtarı.MouseLeave += new System.EventHandler(this.varsayilanAciklama_MouseLeave);
+            this.tsmiLisansAnahtari.Name = "tsmiLisansAnahtari";
+            this.tsmiLisansAnahtari.Size = new System.Drawing.Size(180, 22);
+            this.tsmiLisansAnahtari.Text = "Lisans Anahtarı";
+            this.tsmiLisansAnahtari.Click += new System.EventHandler(this.tsmiLisansAnahtari_Click);
+            this.tsmiLisansAnahtari.MouseLeave += new System.EventHandler(this.varsayilanAciklama_MouseLeave);
             // 
             // tsmiHakkinda
             // 
             this.tsmiHakkinda.Name = "tsmiHakkinda";
-            this.tsmiHakkinda.Size = new System.Drawing.Size(179, 22);
+            this.tsmiHakkinda.Size = new System.Drawing.Size(180, 22);
             this.tsmiHakkinda.Text = "Hakkında";
             this.tsmiHakkinda.Click += new System.EventHandler(this.tsmiYardımHakkında_Click_1);
             this.tsmiHakkinda.MouseLeave += new System.EventHandler(this.varsayilanAciklama_MouseLeave);
@@ -345,7 +346,7 @@
         public System.Windows.Forms.ToolStripMenuItem tsmiIngilizce;
         public System.Windows.Forms.ToolStripMenuItem tsmiTema;
         public System.Windows.Forms.ToolStripMenuItem tsmiYardım;
-        public System.Windows.Forms.ToolStripMenuItem tsmiLisansAnahtarı;
+        public System.Windows.Forms.ToolStripMenuItem tsmiLisansAnahtari;
         public System.Windows.Forms.ToolStripMenuItem tsmiHakkinda;
         public System.Windows.Forms.ToolStripMenuItem tsmiBaskiOnizleme;
         public System.Windows.Forms.DataGridView dgvRabtBilDB;

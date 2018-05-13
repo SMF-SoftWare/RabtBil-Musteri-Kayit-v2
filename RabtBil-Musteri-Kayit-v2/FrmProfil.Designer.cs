@@ -273,7 +273,7 @@
             this.tsmiTurkce,
             this.tsmiIngilizce});
             this.tsmiDil.Name = "tsmiDil";
-            this.tsmiDil.Size = new System.Drawing.Size(102, 22);
+            this.tsmiDil.Size = new System.Drawing.Size(180, 22);
             this.tsmiDil.Text = "Dil";
             // 
             // tsmiTurkce
@@ -291,7 +291,7 @@
             // tsmiTema
             // 
             this.tsmiTema.Name = "tsmiTema";
-            this.tsmiTema.Size = new System.Drawing.Size(102, 22);
+            this.tsmiTema.Size = new System.Drawing.Size(180, 22);
             this.tsmiTema.Text = "Tema";
             // 
             // tsmiYardim
@@ -306,13 +306,14 @@
             // tsmiLisansAnahtari
             // 
             this.tsmiLisansAnahtari.Name = "tsmiLisansAnahtari";
-            this.tsmiLisansAnahtari.Size = new System.Drawing.Size(179, 22);
+            this.tsmiLisansAnahtari.Size = new System.Drawing.Size(180, 22);
             this.tsmiLisansAnahtari.Text = "Lisans Anahtarı";
+            this.tsmiLisansAnahtari.Click += new System.EventHandler(this.tsmiLisansAnahtari_Click);
             // 
             // tsmiHakkinda
             // 
             this.tsmiHakkinda.Name = "tsmiHakkinda";
-            this.tsmiHakkinda.Size = new System.Drawing.Size(179, 22);
+            this.tsmiHakkinda.Size = new System.Drawing.Size(180, 22);
             this.tsmiHakkinda.Text = "Hakkında";
             this.tsmiHakkinda.Click += new System.EventHandler(this.tsmiHakkinda_Click);
             // 

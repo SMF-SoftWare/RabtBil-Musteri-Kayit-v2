@@ -22,6 +22,11 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void FrmPersonelTeknikServisFormu_Load(object sender, EventArgs e)
         {
+            if (!SMF.LisansliMi)
+            {
+                tsmiLisansAnahtari.Enabled = false;
+            }
+
             GuncelleEtkinMi(false);
             tmrTarihSaat.Enabled = true;
             lblHosgeldin.Text = $"Hoş Geldin, {SMF.KullaniciAdi}!";
@@ -258,8 +263,8 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void mnsYardimHakkinda_Click(object sender, EventArgs e)
         {
-            FrmHakkinda frmHakkinda = new FrmHakkinda();
-            frmHakkinda.ShowDialog();
+            FrmHakkinda frm = new FrmHakkinda();
+            frm.ShowDialog();
         }
 
         private void FrmPersonelTeknikServisFormu_FormClosing(object sender, FormClosingEventArgs e)
@@ -339,6 +344,12 @@ namespace RabtBil_Musteri_Kayit_v2
             txtArizaninTanimi.Clear();
             txtUrunDurumu.Clear();
             txtUcret.Clear();
+        }
+
+        private void tsmiLisansAnahtari_Click(object sender, EventArgs e)
+        {
+            FrmProgramiEtkinlestir frm = new FrmProgramiEtkinlestir();
+            frm.ShowDialog();
         }
     }
 }

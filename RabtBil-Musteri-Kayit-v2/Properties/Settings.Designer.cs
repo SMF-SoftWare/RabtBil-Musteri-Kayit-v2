@@ -22,5 +22,53 @@ namespace RabtBil_Musteri_Kayit_v2.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("tr")]
+        public string Dil {
+            get {
+                return ((string)(this["Dil"]));
+            }
+            set {
+                this["Dil"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool LisansliMi {
+            get {
+                return ((bool)(this["LisansliMi"]));
+            }
+            set {
+                this["LisansliMi"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LisansAnahtari {
+            get {
+                return ((string)(this["LisansAnahtari"]));
+            }
+            set {
+                this["LisansAnahtari"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Eposta {
+            get {
+                return ((string)(this["Eposta"]));
+            }
+            set {
+                this["Eposta"] = value;
+            }
+        }
     }
 }

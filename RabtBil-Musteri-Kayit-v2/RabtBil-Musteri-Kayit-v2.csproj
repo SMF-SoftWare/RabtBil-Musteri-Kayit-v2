@@ -116,6 +116,12 @@
     <Compile Include="FrmProfil.Designer.cs">
       <DependentUpon>FrmProfil.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmProgramiEtkinlestir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProgramiEtkinlestir.Designer.cs">
+      <DependentUpon>FrmProgramiEtkinlestir.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUrunTeslim.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProfil.resx">
       <DependentUpon>FrmProfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProgramiEtkinlestir.resx">
+      <DependentUpon>FrmProgramiEtkinlestir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUrunTeslim.resx">
       <DependentUpon>FrmUrunTeslim.cs</DependentUpon>

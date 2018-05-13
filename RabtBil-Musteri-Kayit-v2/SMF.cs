@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -20,6 +21,7 @@ namespace RabtBil_Musteri_Kayit_v2
         public static string ProfilKlasoru;
         public static bool YoneticiMi;
         public static bool AdminMi;
+        public static bool LisansliMi;
 
         public static bool EpostaDogruMu(string eposta)
         {
@@ -76,6 +78,36 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             if (Baglanti.State != ConnectionState.Open)
                 Baglanti.Open();
+        }
+
+        public static bool LisansiKontrolEt(string eposta, string lisans)
+        {
+            string x = eposta.ToLower();
+            string a = x;
+            string b = new string(a.ToCharArray().Reverse().ToArray());
+            string A = x.ToUpper();
+            string B = new string(A.ToCharArray().Reverse().ToArray());
+            string c = GetMd5Hash(a);
+
+            string aa = GetMd5Hash(a);
+            string bb = GetMd5Hash(b);
+            string AA = GetMd5Hash(A);
+            string BB = GetMd5Hash(B);
+            string cc = GetMd5Hash(c);
+
+            string aaa = aa.Substring(0, 5);
+            string bbb = bb.Substring(0, 5);
+            string AAA = AA.Substring(0, 5);
+            string BBB = BB.Substring(0, 5);
+            string ccc = cc.Substring(0, 5);
+
+            string license = $"{aaa}-{bbb}-{AAA}-{BBB}-{ccc}";
+            if (String.Equals(license, lisans, StringComparison.CurrentCultureIgnoreCase))
+            {
+                return true;
+            }
+
+            return false;
         }
 
         public enum Rol

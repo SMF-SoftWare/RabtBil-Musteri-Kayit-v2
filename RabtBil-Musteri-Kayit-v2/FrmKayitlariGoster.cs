@@ -42,6 +42,11 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void FrmKayitlariGoster_Load(object sender, EventArgs e)
         {
+            if (!SMF.LisansliMi)
+            {
+                tsmiLisansAnahtari.Enabled = false;
+            }
+
             YazicilariListele();
             VerileriGetir();
             CmbDoldur();
@@ -351,8 +356,14 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void tsmiYardımHakkında_Click_1(object sender, EventArgs e)
         {
-            FrmHakkinda frmHakkinda = new FrmHakkinda();
-            frmHakkinda.ShowDialog();
+            FrmHakkinda frm = new FrmHakkinda();
+            frm.ShowDialog();
+        }
+
+        private void tsmiLisansAnahtari_Click(object sender, EventArgs e)
+        {
+            FrmProgramiEtkinlestir frm = new FrmProgramiEtkinlestir();
+            frm.ShowDialog();
         }
     }
 }

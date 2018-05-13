@@ -33,7 +33,6 @@
             this.btnGirisYap = new System.Windows.Forms.Button();
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.lblSifre = new System.Windows.Forms.Label();
-            this.linkLblSifremiUnuttum = new System.Windows.Forms.LinkLabel();
             this.lblGirisBicimi = new System.Windows.Forms.Label();
             this.pbxEye = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxEye)).BeginInit();
@@ -43,7 +42,7 @@
             // 
             this.lblKullaniciAdi.AutoSize = true;
             this.lblKullaniciAdi.Font = new System.Drawing.Font("Consolas", 9F);
-            this.lblKullaniciAdi.Location = new System.Drawing.Point(26, 79);
+            this.lblKullaniciAdi.Location = new System.Drawing.Point(7, 79);
             this.lblKullaniciAdi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblKullaniciAdi.Name = "lblKullaniciAdi";
             this.lblKullaniciAdi.Size = new System.Drawing.Size(105, 14);
@@ -53,7 +52,7 @@
             // txtKullaniciAdi
             // 
             this.txtKullaniciAdi.Font = new System.Drawing.Font("Consolas", 11F);
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(30, 100);
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(11, 100);
             this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(2);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(277, 25);
@@ -62,7 +61,7 @@
             // btnGirisYap
             // 
             this.btnGirisYap.Font = new System.Drawing.Font("Consolas", 11F);
-            this.btnGirisYap.Location = new System.Drawing.Point(30, 190);
+            this.btnGirisYap.Location = new System.Drawing.Point(11, 190);
             this.btnGirisYap.Margin = new System.Windows.Forms.Padding(2);
             this.btnGirisYap.Name = "btnGirisYap";
             this.btnGirisYap.Size = new System.Drawing.Size(277, 40);
@@ -74,7 +73,7 @@
             // txtSifre
             // 
             this.txtSifre.Font = new System.Drawing.Font("Consolas", 11F);
-            this.txtSifre.Location = new System.Drawing.Point(31, 161);
+            this.txtSifre.Location = new System.Drawing.Point(12, 161);
             this.txtSifre.Margin = new System.Windows.Forms.Padding(2);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(276, 25);
@@ -85,40 +84,28 @@
             // 
             this.lblSifre.AutoSize = true;
             this.lblSifre.Font = new System.Drawing.Font("Consolas", 9F);
-            this.lblSifre.Location = new System.Drawing.Point(27, 140);
+            this.lblSifre.Location = new System.Drawing.Point(8, 140);
             this.lblSifre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSifre.Name = "lblSifre";
             this.lblSifre.Size = new System.Drawing.Size(49, 14);
             this.lblSifre.TabIndex = 2;
             this.lblSifre.Text = "Şifre:";
             // 
-            // linkLblSifremiUnuttum
-            // 
-            this.linkLblSifremiUnuttum.AutoSize = true;
-            this.linkLblSifremiUnuttum.Font = new System.Drawing.Font("Consolas", 11F);
-            this.linkLblSifremiUnuttum.Location = new System.Drawing.Point(169, 232);
-            this.linkLblSifremiUnuttum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.linkLblSifremiUnuttum.Name = "linkLblSifremiUnuttum";
-            this.linkLblSifremiUnuttum.Size = new System.Drawing.Size(136, 18);
-            this.linkLblSifremiUnuttum.TabIndex = 6;
-            this.linkLblSifremiUnuttum.TabStop = true;
-            this.linkLblSifremiUnuttum.Text = "Şifremi Unuttum?";
-            // 
             // lblGirisBicimi
             // 
             this.lblGirisBicimi.AutoSize = true;
             this.lblGirisBicimi.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblGirisBicimi.Location = new System.Drawing.Point(60, 24);
+            this.lblGirisBicimi.Location = new System.Drawing.Point(81, 24);
             this.lblGirisBicimi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGirisBicimi.Name = "lblGirisBicimi";
-            this.lblGirisBicimi.Size = new System.Drawing.Size(225, 32);
+            this.lblGirisBicimi.Size = new System.Drawing.Size(150, 32);
             this.lblGirisBicimi.TabIndex = 6;
-            this.lblGirisBicimi.Text = "Yönetici Giriş";
+            this.lblGirisBicimi.Text = "Giriş Yap";
             // 
             // pbxEye
             // 
             this.pbxEye.Image = global::RabtBil_Musteri_Kayit_v2.Properties.Resources.eye;
-            this.pbxEye.Location = new System.Drawing.Point(277, 164);
+            this.pbxEye.Location = new System.Drawing.Point(258, 164);
             this.pbxEye.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbxEye.Name = "pbxEye";
             this.pbxEye.Size = new System.Drawing.Size(28, 20);
@@ -132,10 +119,9 @@
             this.AcceptButton = this.btnGirisYap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 261);
+            this.ClientSize = new System.Drawing.Size(301, 243);
             this.Controls.Add(this.pbxEye);
             this.Controls.Add(this.lblGirisBicimi);
-            this.Controls.Add(this.linkLblSifremiUnuttum);
             this.Controls.Add(this.txtSifre);
             this.Controls.Add(this.lblSifre);
             this.Controls.Add(this.btnGirisYap);
@@ -162,7 +148,6 @@
         public System.Windows.Forms.Button btnGirisYap;
         public System.Windows.Forms.TextBox txtSifre;
         public System.Windows.Forms.Label lblSifre;
-        public System.Windows.Forms.LinkLabel linkLblSifremiUnuttum;
         public System.Windows.Forms.Label lblGirisBicimi;
         private System.Windows.Forms.PictureBox pbxEye;
     }

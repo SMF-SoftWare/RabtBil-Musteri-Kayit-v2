@@ -38,5 +38,19 @@ namespace RabtBil_Musteri_Kayit_v2
             FrmHakkinda frm = new FrmHakkinda();
             frm.ShowDialog();
         }
+
+        private void btnProgramiEtkinlestir_Click(object sender, EventArgs e)
+        {
+            FrmProgramiEtkinlestir frm = new FrmProgramiEtkinlestir();
+            frm.ShowDialog();
+        }
+
+        private void FrmAnaMenu_Load(object sender, EventArgs e)
+        {
+            if (!SMF.LisansliMi)
+            {
+                btnProgramiEtkinlestir.Enabled = false;
+            }
+        }
     }
 }

@@ -19,6 +19,11 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void FrmProfil_Load(object sender, EventArgs e)
         {
+            if (!SMF.LisansliMi)
+            {
+                tsmiLisansAnahtari.Enabled = false;
+            }
+
             if (SMF.AdminMi || SMF.YoneticiMi)
             {
                 txtKullaniciAdi.Enabled = true;
@@ -65,8 +70,8 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void tsmiHakkinda_Click(object sender, EventArgs e)
         {
-            FrmHakkinda frmHakkinda = new FrmHakkinda();
-            frmHakkinda.ShowDialog();
+            FrmHakkinda frm = new FrmHakkinda();
+            frm.ShowDialog();
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
@@ -198,6 +203,12 @@ namespace RabtBil_Musteri_Kayit_v2
                 txtYeniSifreyiOnayla.UseSystemPasswordChar = false;
                 gozeTiklandiMi = true;
             }
+        }
+
+        private void tsmiLisansAnahtari_Click(object sender, EventArgs e)
+        {
+            FrmProgramiEtkinlestir frm = new FrmProgramiEtkinlestir();
+            frm.ShowDialog();
         }
     }
 }

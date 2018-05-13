@@ -143,6 +143,7 @@
             this.btnProgramiEtkinlestir.Text = "Programı Etkinleştir";
             this.btnProgramiEtkinlestir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnProgramiEtkinlestir.UseVisualStyleBackColor = false;
+            this.btnProgramiEtkinlestir.Click += new System.EventHandler(this.btnProgramiEtkinlestir_Click);
             // 
             // FrmAnaMenu
             // 
@@ -161,6 +162,7 @@
             this.Name = "FrmAnaMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAnaMenu";
+            this.Load += new System.EventHandler(this.FrmAnaMenu_Load);
             this.ResumeLayout(false);
 
         }
