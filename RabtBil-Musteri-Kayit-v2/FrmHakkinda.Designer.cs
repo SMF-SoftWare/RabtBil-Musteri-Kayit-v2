@@ -143,7 +143,7 @@
             this.lblOgrenci2.Name = "lblOgrenci2";
             this.lblOgrenci2.Size = new System.Drawing.Size(224, 18);
             this.lblOgrenci2.TabIndex = 10;
-            this.lblOgrenci2.Text = "163000310?? - Fırat GÖRGÜLÜ";
+            this.lblOgrenci2.Text = "16300031047 - Fırat GÖRGÜLÜ";
             // 
             // lblOgrenci1
             // 
