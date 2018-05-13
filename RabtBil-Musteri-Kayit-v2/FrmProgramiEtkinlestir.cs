@@ -22,7 +22,7 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             if (String.IsNullOrWhiteSpace(txtEpostaAdresi.Text) || String.IsNullOrWhiteSpace(txtLisansAnahtari.Text))
             {
-                MessageBox.Show("Resources.epostaVeyaLisansAnahtariBos", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Resources.epostaVeyaLisansAnahtariBos", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -34,7 +34,7 @@ namespace RabtBil_Musteri_Kayit_v2
                     Settings.Default.LisansAnahtari = txtLisansAnahtari.Text.ToUpper();
                     Settings.Default.Eposta = txtEpostaAdresi.Text.ToUpper();
                     Settings.Default.Save();
-                    MessageBox.Show("Resources.lisansBasarili", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Resources.lisansBasarili", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }
                 else
@@ -43,12 +43,12 @@ namespace RabtBil_Musteri_Kayit_v2
                     Settings.Default.LisansAnahtari = null;
                     Settings.Default.Eposta = null;
                     Settings.Default.Save();
-                    MessageBox.Show("Resources.lisansTekrarDene", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Resources.lisansTekrarDene", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Resources.dogruBirEpostaGirin", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Resources.dogruBirEpostaGirin", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

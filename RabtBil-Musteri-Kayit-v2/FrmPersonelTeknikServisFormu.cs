@@ -49,7 +49,7 @@ namespace RabtBil_Musteri_Kayit_v2
             {
                 if (String.IsNullOrWhiteSpace(txtFormNo.Text) || String.IsNullOrWhiteSpace(txtMusteriAdi.Text) || mtxTelefon.Text == @"(    )        " || String.IsNullOrWhiteSpace(txtAksesuarlar.Text) || String.IsNullOrWhiteSpace(txtEkBilgiler.Text) || String.IsNullOrWhiteSpace(txtUrunModeli.Text) || String.IsNullOrWhiteSpace(txtUrunKodlari.Text) || String.IsNullOrWhiteSpace(txtArizaninTanimi.Text) || String.IsNullOrWhiteSpace(txtUrunDurumu.Text) || String.IsNullOrWhiteSpace(txtTakipNumarası.Text) || String.IsNullOrWhiteSpace(txtUcret.Text))
                 {
-                    MessageBox.Show("Resources.metinKutulariBos", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Resources.metinKutulariBos", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -69,7 +69,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 cmd.Parameters.AddWithValue("@KayitTarihi", DateTime.Now);
                 SMF.BaglantiKapaliysaAc();
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Resources.kaydedildi", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Resources.kaydedildi", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -90,7 +90,7 @@ namespace RabtBil_Musteri_Kayit_v2
             {
                 if (String.IsNullOrWhiteSpace(txtFormNo.Text) || String.IsNullOrWhiteSpace(txtMusteriAdi.Text) || mtxTelefon.Text == @"(    )        " || String.IsNullOrWhiteSpace(txtAksesuarlar.Text) || String.IsNullOrWhiteSpace(txtEkBilgiler.Text) || String.IsNullOrWhiteSpace(txtUrunModeli.Text) || String.IsNullOrWhiteSpace(txtUrunKodlari.Text) || String.IsNullOrWhiteSpace(txtArizaninTanimi.Text) || String.IsNullOrWhiteSpace(txtUrunDurumu.Text) || String.IsNullOrWhiteSpace(txtTakipNumarası.Text) || String.IsNullOrWhiteSpace(txtUcret.Text))
                 {
-                    MessageBox.Show("Resources.metinKutulariBos", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Resources.metinKutulariBos", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 SqlCommand kaydet = new SqlCommand("UPDATE MusteriBilgileri SET FormNo=@FormNo,MusteriAdi=@MusteriAdi,Telefon=@Telefon,UrunModeli=@UrunModeli,UrunKodlari=@UrunKodlari,ArizaTanimi=@ArizaTanimi,Aksesuarlar=@Aksesuarlar,EkBilgiler=@EkBilgiler,UrunTakipNo=@UrunTakipNo,UrunDurumu=@UrunDurumu,Ucret=@Ucret,GuncelleyenID=@GuncelleyenID,GuncellemeTarihi=@GuncellemeTarihi WHERE ID=@ID", SMF.Baglanti);
@@ -110,7 +110,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 kaydet.Parameters.AddWithValue("@ID", lblMusteriNo.Text);
                 SMF.BaglantiKapaliysaAc();
                 kaydet.ExecuteNonQuery();
-                MessageBox.Show("Resources.kaydedildi", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Resources.kaydedildi", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -140,7 +140,7 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             if (txtFormNo.TextLength > 0 || txtMusteriAdi.TextLength > 0 || mtxTelefon.Text != @"(    )        " || txtAksesuarlar.TextLength > 0 || txtEkBilgiler.TextLength > 0 || txtUrunModeli.TextLength > 0 || txtUrunKodlari.TextLength > 0 || txtArizaninTanimi.TextLength > 0 || txtUrunDurumu.TextLength > 0 || txtUcret.TextLength > 0)
             {
-                DialogResult dr = MessageBox.Show("Bu Sayfayı Kapatırsanız Yaptığınız Değişiklikler Kaybolacaktır!", SMF.UygulamaAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                DialogResult dr = MessageBox.Show("Bu Sayfayı Kapatırsanız Yaptığınız Değişiklikler Kaybolacaktır!", SMF.PrograminTamAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dr == DialogResult.No)
                 {
                     return;
@@ -159,7 +159,7 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             if (txtFormNo.TextLength > 0 || txtMusteriAdi.TextLength > 0 || mtxTelefon.Text != @"(    )        " || txtAksesuarlar.TextLength > 0 || txtEkBilgiler.TextLength > 0 || txtUrunModeli.TextLength > 0 || txtUrunKodlari.TextLength > 0 || txtArizaninTanimi.TextLength > 0 || txtUrunDurumu.TextLength > 0 || txtUcret.TextLength > 0)
             {
-                DialogResult dr = MessageBox.Show("Bu Sayfayı Kapatırsanız Yaptığınız Değişiklikler Kaybolacaktır!", SMF.UygulamaAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                DialogResult dr = MessageBox.Show("Bu Sayfayı Kapatırsanız Yaptığınız Değişiklikler Kaybolacaktır!", SMF.PrograminTamAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dr == DialogResult.No)
                 {
                     return;
@@ -177,7 +177,7 @@ namespace RabtBil_Musteri_Kayit_v2
 
                 if (dt.Rows.Count < 1)
                 {
-                    MessageBox.Show("Veritabanında Hiç Kayıt Yok!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Veritabanında Hiç Kayıt Yok!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
             }
@@ -271,7 +271,7 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             if (txtFormNo.TextLength > 0 || txtMusteriAdi.TextLength > 0 || mtxTelefon.Text != @"(    )        " || txtAksesuarlar.TextLength > 0 || txtEkBilgiler.TextLength > 0 || txtUrunModeli.TextLength > 0 || txtUrunKodlari.TextLength > 0 || txtArizaninTanimi.TextLength > 0 || txtUrunDurumu.TextLength > 0 || txtUcret.TextLength > 0)
             {
-                DialogResult dr = MessageBox.Show("Bu Sayfayı Kapatırsanız Yaptığınız Değişiklikler Kaybolacaktır!", SMF.UygulamaAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                DialogResult dr = MessageBox.Show("Bu Sayfayı Kapatırsanız Yaptığınız Değişiklikler Kaybolacaktır!", SMF.PrograminTamAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                 if (dr == DialogResult.No)
                 {

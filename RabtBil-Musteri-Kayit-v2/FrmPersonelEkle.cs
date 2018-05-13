@@ -43,19 +43,19 @@ namespace RabtBil_Musteri_Kayit_v2
             {
                 if (String.IsNullOrWhiteSpace(txtKullaniciAdi.Text))
                 {
-                    MessageBox.Show("Resources.metinKutulariBos", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Resources.metinKutulariBos", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
                 if (!SMF.EpostaDogruMu(txtEpostaAdresi.Text))
                 {
-                    MessageBox.Show("Resources.dogruEpostaGir", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Resources.dogruEpostaGir", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
                 if (cmbRoller.SelectedIndex == 0)
                 {
-                    MessageBox.Show("Bir Rol Seçin!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Bir Rol Seçin!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -88,7 +88,7 @@ namespace RabtBil_Musteri_Kayit_v2
                     GuncelleEtkinMi(false);
                     Temizle();
                     VerileriGetir();
-                    MessageBox.Show("Resources.kaydedildi", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Resources.kaydedildi", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -214,19 +214,19 @@ namespace RabtBil_Musteri_Kayit_v2
             {
                 if (String.IsNullOrWhiteSpace(txtKullaniciAdi.Text))
                 {
-                    MessageBox.Show("Resources.metinKutulariBos", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Resources.metinKutulariBos", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
                 if (!SMF.EpostaDogruMu(txtEpostaAdresi.Text))
                 {
-                    MessageBox.Show("Resources.dogruEpostaGir", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Resources.dogruEpostaGir", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
                 if (cmbRoller.SelectedIndex == 0)
                 {
-                    MessageBox.Show("Bir Rol Seçin!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Bir Rol Seçin!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -259,7 +259,7 @@ namespace RabtBil_Musteri_Kayit_v2
                     GuncelleEtkinMi(false);
                     Temizle();
                     VerileriGetir();
-                    MessageBox.Show("Resources.kaydedildi", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Resources.kaydedildi", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
 
@@ -293,7 +293,7 @@ namespace RabtBil_Musteri_Kayit_v2
                     GuncelleEtkinMi(false);
                     Temizle();
                     VerileriGetir();
-                    MessageBox.Show("Resources.kaydedildi", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Resources.kaydedildi", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -314,7 +314,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 cmd.Parameters.AddWithValue("@Id", Convert.ToInt32(dgvKullanicilar.CurrentRow?.Cells[0].Value));
                 SMF.BaglantiKapaliysaAc();
 
-                DialogResult dr = MessageBox.Show("Seçilen Personel Silinsin mi", SMF.UygulamaAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                DialogResult dr = MessageBox.Show("Seçilen Personel Silinsin mi", SMF.PrograminTamAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                 if (dr == DialogResult.No)
                 {
@@ -324,7 +324,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 cmd.ExecuteNonQuery();
                 Temizle();
                 VerileriGetir();
-                MessageBox.Show("Resources.secilenKayitSilindi", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Resources.secilenKayitSilindi", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

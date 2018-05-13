@@ -67,7 +67,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 cmd.Parameters.AddWithValue("@Id", Convert.ToInt32(dgvRabtBilDB.CurrentRow?.Cells[0].Value));
                 SMF.BaglantiKapaliysaAc();
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Resources.secilenKayitSilindi", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Resources.secilenKayitSilindi", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 VerileriGetir();
             }
             catch (Exception ex)

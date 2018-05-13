@@ -46,7 +46,7 @@ namespace RabtBil_Musteri_Kayit_v2
         private void btnKopyala_Click(object sender, EventArgs e)
         {
             if (sifre != null) Clipboard.SetText(sifre);
-            MessageBox.Show("Oluşturulan Şifre Panoya Kopyalandı!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Oluşturulan Şifre Panoya Kopyalandı!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
         }
 

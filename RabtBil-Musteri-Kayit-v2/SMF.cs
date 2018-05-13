@@ -12,8 +12,9 @@ namespace RabtBil_Musteri_Kayit_v2
     internal class SMF
     {
         public static SqlConnection Baglanti = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|RabtBilDB.mdf;Integrated Security=True");
-        public static string UygulamaSurum = Application.ProductVersion;
-        public static string UygulamaAdi = $"{Application.ProductName} {UygulamaSurum}";
+        public static string ProgramSurumu = Application.ProductVersion;
+        public static string PrograminAdi = Application.ProductName;
+        public static string PrograminTamAdi = $"{PrograminAdi} v{ProgramSurumu}";
         public static Rol Yetki = Rol.Kullanici;
         public static int KullaniciId;
         public static string KullaniciAdi;

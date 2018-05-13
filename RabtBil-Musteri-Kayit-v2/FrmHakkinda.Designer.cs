@@ -30,13 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHakkinda));
             this.lblProgramAdi = new System.Windows.Forms.Label();
-            this.lblVersiyon = new System.Windows.Forms.Label();
-            this.lblVersiyonNo = new System.Windows.Forms.Label();
+            this.lblSurum = new System.Windows.Forms.Label();
+            this.lblSurumNumarasi = new System.Windows.Forms.Label();
             this.lblAnaSayfa = new System.Windows.Forms.Label();
             this.linklblAnaSayfa = new System.Windows.Forms.LinkLabel();
             this.lblLisansDurumu = new System.Windows.Forms.Label();
             this.lblLisans = new System.Windows.Forms.Label();
-            this.linklblLisansiDegistir = new System.Windows.Forms.LinkLabel();
             this.gbxSMFSoftWare = new System.Windows.Forms.GroupBox();
             this.lblOgrenci3 = new System.Windows.Forms.Label();
             this.lblOgrenci2 = new System.Windows.Forms.Label();
@@ -57,24 +56,24 @@
             this.lblProgramAdi.TabIndex = 0;
             this.lblProgramAdi.Text = "RabtBil Müşteri Kayıt Programı";
             // 
-            // lblVersiyon
+            // lblSurum
             // 
-            this.lblVersiyon.AutoSize = true;
-            this.lblVersiyon.Font = new System.Drawing.Font("Consolas", 9F);
-            this.lblVersiyon.Location = new System.Drawing.Point(11, 64);
-            this.lblVersiyon.Name = "lblVersiyon";
-            this.lblVersiyon.Size = new System.Drawing.Size(70, 14);
-            this.lblVersiyon.TabIndex = 1;
-            this.lblVersiyon.Text = "Versiyon:";
+            this.lblSurum.AutoSize = true;
+            this.lblSurum.Font = new System.Drawing.Font("Consolas", 9F);
+            this.lblSurum.Location = new System.Drawing.Point(32, 64);
+            this.lblSurum.Name = "lblSurum";
+            this.lblSurum.Size = new System.Drawing.Size(49, 14);
+            this.lblSurum.TabIndex = 1;
+            this.lblSurum.Text = "Sürüm:";
             // 
-            // lblVersiyonNo
+            // lblSurumNumarasi
             // 
-            this.lblVersiyonNo.AutoSize = true;
-            this.lblVersiyonNo.Location = new System.Drawing.Point(87, 61);
-            this.lblVersiyonNo.Name = "lblVersiyonNo";
-            this.lblVersiyonNo.Size = new System.Drawing.Size(32, 18);
-            this.lblVersiyonNo.TabIndex = 2;
-            this.lblVersiyonNo.Text = "2.0";
+            this.lblSurumNumarasi.AutoSize = true;
+            this.lblSurumNumarasi.Location = new System.Drawing.Point(87, 61);
+            this.lblSurumNumarasi.Name = "lblSurumNumarasi";
+            this.lblSurumNumarasi.Size = new System.Drawing.Size(32, 18);
+            this.lblSurumNumarasi.TabIndex = 2;
+            this.lblSurumNumarasi.Text = "2.0";
             // 
             // lblAnaSayfa
             // 
@@ -115,16 +114,6 @@
             this.lblLisans.Size = new System.Drawing.Size(72, 18);
             this.lblLisans.TabIndex = 6;
             this.lblLisans.Text = "Lisanslı";
-            // 
-            // linklblLisansiDegistir
-            // 
-            this.linklblLisansiDegistir.AutoSize = true;
-            this.linklblLisansiDegistir.Location = new System.Drawing.Point(213, 123);
-            this.linklblLisansiDegistir.Name = "linklblLisansiDegistir";
-            this.linklblLisansiDegistir.Size = new System.Drawing.Size(136, 18);
-            this.linklblLisansiDegistir.TabIndex = 7;
-            this.linklblLisansiDegistir.TabStop = true;
-            this.linklblLisansiDegistir.Text = "Lisansı Değiştir";
             // 
             // gbxSMFSoftWare
             // 
@@ -172,7 +161,7 @@
             this.lblCopyRight.Name = "lblCopyRight";
             this.lblCopyRight.Size = new System.Drawing.Size(408, 18);
             this.lblCopyRight.TabIndex = 10;
-            this.lblCopyRight.Text = "Copyright © 2018 SMF-SoftWare Tüm Hakları Saklıdır";
+            this.lblCopyRight.Text = "Copyright © 2018 SMF SoftWare Tüm Hakları Saklıdır";
             // 
             // picLogo
             // 
@@ -192,13 +181,12 @@
             this.Controls.Add(this.lblCopyRight);
             this.Controls.Add(this.picLogo);
             this.Controls.Add(this.gbxSMFSoftWare);
-            this.Controls.Add(this.linklblLisansiDegistir);
             this.Controls.Add(this.lblLisans);
             this.Controls.Add(this.lblLisansDurumu);
             this.Controls.Add(this.linklblAnaSayfa);
             this.Controls.Add(this.lblAnaSayfa);
-            this.Controls.Add(this.lblVersiyonNo);
-            this.Controls.Add(this.lblVersiyon);
+            this.Controls.Add(this.lblSurumNumarasi);
+            this.Controls.Add(this.lblSurum);
             this.Controls.Add(this.lblProgramAdi);
             this.Font = new System.Drawing.Font("Consolas", 11F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -207,6 +195,7 @@
             this.Name = "FrmHakkinda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hakkında";
+            this.Load += new System.EventHandler(this.FrmHakkinda_Load);
             this.gbxSMFSoftWare.ResumeLayout(false);
             this.gbxSMFSoftWare.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
@@ -218,13 +207,12 @@
         #endregion
 
         private System.Windows.Forms.Label lblProgramAdi;
-        private System.Windows.Forms.Label lblVersiyon;
-        private System.Windows.Forms.Label lblVersiyonNo;
+        private System.Windows.Forms.Label lblSurum;
+        private System.Windows.Forms.Label lblSurumNumarasi;
         private System.Windows.Forms.Label lblAnaSayfa;
         private System.Windows.Forms.LinkLabel linklblAnaSayfa;
         private System.Windows.Forms.Label lblLisansDurumu;
         private System.Windows.Forms.Label lblLisans;
-        private System.Windows.Forms.LinkLabel linklblLisansiDegistir;
         private System.Windows.Forms.GroupBox gbxSMFSoftWare;
         private System.Windows.Forms.Label lblOgrenci3;
         private System.Windows.Forms.Label lblOgrenci2;

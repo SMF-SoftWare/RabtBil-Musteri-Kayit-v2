@@ -20,7 +20,7 @@ namespace RabtBil_Musteri_Kayit_v2
             if (!Settings.Default.LisansliMi && !SMF.LisansiKontrolEt(Settings.Default.Eposta, Settings.Default.LisansAnahtari))
             {
                 SMF.LisansliMi = false;
-                MessageBox.Show("Programın Deneme Sürümünü Kullanıyorsunuz!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Programın Deneme Sürümünü Kullanıyorsunuz!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -28,7 +28,7 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             if (String.IsNullOrWhiteSpace(txtKullaniciAdi.Text) || String.IsNullOrWhiteSpace(txtSifre.Text))
             {
-                MessageBox.Show("Resources.kullaniciAdiveSifreBos", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Resources.kullaniciAdiveSifreBos", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             try
@@ -82,7 +82,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 }
                 else
                 {
-                    MessageBox.Show("Resources.kullaniciAdiveSifreYanlis", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Resources.kullaniciAdiveSifreYanlis", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)

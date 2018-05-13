@@ -80,19 +80,19 @@ namespace RabtBil_Musteri_Kayit_v2
 
             if (String.IsNullOrWhiteSpace(txtKullaniciAdi.Text))
             {
-                MessageBox.Show("Resources.kullaniciAdiBosOlamaz", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Resources.kullaniciAdiBosOlamaz", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             if (String.IsNullOrWhiteSpace(txtMevcutSifre.Text))
             {
-                MessageBox.Show("Mevcut Şifrenizi Girin!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Mevcut Şifrenizi Girin!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             if (String.IsNullOrWhiteSpace(txtEpostaAdresi.Text) || !SMF.EpostaDogruMu(txtEpostaAdresi.Text))
             {
-                MessageBox.Show("Resources.dogruEpostaGir", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Resources.dogruEpostaGir", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -120,12 +120,12 @@ namespace RabtBil_Musteri_Kayit_v2
                     SMF.KullaniciAdi = txtAdi.Text;
                     if (frm != null) frm.lblHosgeldin.Text = $"Hoş Geldin, {SMF.KullaniciAdi}!";
 
-                    MessageBox.Show("Bilgileriniz Güncellendi!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Bilgileriniz Güncellendi!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }
                 else
                 {
-                    MessageBox.Show("Mevcut Şifreniz Yanlış!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Mevcut Şifreniz Yanlış!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 return;
             }
@@ -145,7 +145,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 SMF.KullaniciAdi = txtAdi.Text;
                 if (frm != null) frm.lblHosgeldin.Text = $"Hoş Geldin, {SMF.KullaniciAdi}!";
 
-                MessageBox.Show("Bilgileriniz Güncellendi!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bilgileriniz Güncellendi!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
         }
