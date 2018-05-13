@@ -20,6 +20,15 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void FrmPersonelEkle_Load(object sender, EventArgs e)
         {
+            if (SMF.YoneticiMi)
+            {
+                cmbRoller.Items.AddRange(new object[] { "Bir Rol Seçin", "Kullanıcı" });
+            }
+            else if (SMF.AdminMi)
+            {
+                cmbRoller.Items.AddRange(new object[] { "Bir Rol Seçin", "Kullanıcı", "Yönetici", "Admin" });
+            }
+
             VerileriGetir();
 
             dgvKullanicilar.Columns[0].HeaderText = "ID";
@@ -29,12 +38,6 @@ namespace RabtBil_Musteri_Kayit_v2
             dgvKullanicilar.Columns[3].HeaderText = "E-posta";
             dgvKullanicilar.Columns[3].HeaderText = "Rol";
             cmbRoller.SelectedIndex = 0;
-
-            if (SMF.YoneticiMi)
-            {
-                btnEkle.Enabled = false;
-                btnSil.Enabled = false;
-            }
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
@@ -53,6 +56,12 @@ namespace RabtBil_Musteri_Kayit_v2
                     return;
                 }
 
+                if (String.IsNullOrWhiteSpace(txtSifre.Text) || String.IsNullOrWhiteSpace(txtSifreyiOnayla.Text))
+                {
+                    MessageBox.Show("Şifre Girin", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 if (cmbRoller.SelectedIndex == 0)
                 {
                     MessageBox.Show("Bir Rol Seçin!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -67,20 +76,29 @@ namespace RabtBil_Musteri_Kayit_v2
                     cmd.Parameters.AddWithValue("@Adi", txtAdi.Text);
                     cmd.Parameters.AddWithValue("@Soyadi", txtSoyadi.Text);
                     cmd.Parameters.AddWithValue("@Eposta", txtEpostaAdresi.Text);
-                    switch (cmbRoller.SelectedIndex)
+
+                    if (SMF.AdminMi)
                     {
-                        case 1:
-                            rol = 2;
-                            break;
+                        switch (cmbRoller.SelectedIndex)
+                        {
+                            case 1:
+                                rol = 2;
+                                break;
 
-                        case 2:
-                            rol = 1;
-                            break;
+                            case 2:
+                                rol = 1;
+                                break;
 
-                        case 3:
-                            rol = 0;
-                            break;
+                            case 3:
+                                rol = 0;
+                                break;
+                        }
                     }
+                    else if (SMF.YoneticiMi)
+                    {
+                        rol = 2;
+                    }
+
                     cmd.Parameters.AddWithValue("@Rol", rol);
                     SMF.BaglantiKapaliysaAc();
                     cmd.ExecuteNonQuery();
@@ -126,10 +144,21 @@ namespace RabtBil_Musteri_Kayit_v2
 
         public void VerileriGetir()
         {
+            string daText = String.Empty;
+
+            if (SMF.AdminMi)
+            {
+                daText = "SELECT Id,KullaniciAdi,Adi,Soyadi,Eposta,Rol FROM Kullanicilar";
+            }
+            else if (SMF.YoneticiMi)
+            {
+                daText = "SELECT Id,KullaniciAdi,Adi,Soyadi,Eposta,Rol FROM Kullanicilar WHERE Rol=2";
+            }
+
             try
             {
                 SMF.BaglantiKapaliysaAc();
-                SqlDataAdapter da = new SqlDataAdapter("SELECT Id,KullaniciAdi,Adi,Soyadi,Eposta,Rol FROM Kullanicilar", SMF.Baglanti);
+                SqlDataAdapter da = new SqlDataAdapter(daText, SMF.Baglanti);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dgvKullanicilar.DataSource = dt;
@@ -167,11 +196,6 @@ namespace RabtBil_Musteri_Kayit_v2
 
         public void EkleEtkinMi(bool value)
         {
-            if (SMF.YoneticiMi)
-            {
-                btnEkle.Enabled = false;
-                return;
-            }
             btnEkle.Enabled = value;
         }
 
@@ -237,20 +261,29 @@ namespace RabtBil_Musteri_Kayit_v2
                     cmd.Parameters.AddWithValue("@Adi", txtAdi.Text);
                     cmd.Parameters.AddWithValue("@Soyadi", txtSoyadi.Text);
                     cmd.Parameters.AddWithValue("@Eposta", txtEpostaAdresi.Text);
-                    switch (cmbRoller.SelectedIndex)
+
+                    if (SMF.AdminMi)
                     {
-                        case 1:
-                            rol = 2;
-                            break;
+                        switch (cmbRoller.SelectedIndex)
+                        {
+                            case 1:
+                                rol = 2;
+                                break;
 
-                        case 2:
-                            rol = 1;
-                            break;
+                            case 2:
+                                rol = 1;
+                                break;
 
-                        case 3:
-                            rol = 0;
-                            break;
+                            case 3:
+                                rol = 0;
+                                break;
+                        }
                     }
+                    else if (SMF.YoneticiMi)
+                    {
+                        rol = 2;
+                    }
+
                     cmd.Parameters.AddWithValue("@Rol", rol);
                     cmd.Parameters.AddWithValue("@Id", secilenId);
                     SMF.BaglantiKapaliysaAc();
@@ -271,20 +304,29 @@ namespace RabtBil_Musteri_Kayit_v2
                     cmd.Parameters.AddWithValue("@Adi", txtAdi.Text);
                     cmd.Parameters.AddWithValue("@Soyadi", txtSoyadi.Text);
                     cmd.Parameters.AddWithValue("@Eposta", txtEpostaAdresi.Text);
-                    switch (cmbRoller.SelectedIndex)
+
+                    if (SMF.AdminMi)
                     {
-                        case 1:
-                            rol = 2;
-                            break;
+                        switch (cmbRoller.SelectedIndex)
+                        {
+                            case 1:
+                                rol = 2;
+                                break;
 
-                        case 2:
-                            rol = 1;
-                            break;
+                            case 2:
+                                rol = 1;
+                                break;
 
-                        case 3:
-                            rol = 0;
-                            break;
+                            case 3:
+                                rol = 0;
+                                break;
+                        }
                     }
+                    else if (SMF.YoneticiMi)
+                    {
+                        rol = 2;
+                    }
+
                     cmd.Parameters.AddWithValue("@Rol", rol);
                     cmd.Parameters.AddWithValue("@Id", secilenId);
                     SMF.BaglantiKapaliysaAc();

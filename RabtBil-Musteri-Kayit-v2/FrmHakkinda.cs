@@ -17,7 +17,7 @@ namespace RabtBil_Musteri_Kayit_v2
             if (SMF.LisansliMi)
             {
                 lblLisans.Text = "Lisanslı";
-                lblLisans.ForeColor=Color.Green;
+                lblLisans.ForeColor = Color.Green;
             }
             else
             {

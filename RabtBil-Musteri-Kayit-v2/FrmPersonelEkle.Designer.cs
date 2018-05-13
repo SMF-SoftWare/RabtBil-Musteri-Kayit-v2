@@ -207,11 +207,6 @@
             this.cmbRoller.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRoller.Font = new System.Drawing.Font("Consolas", 11F);
             this.cmbRoller.FormattingEnabled = true;
-            this.cmbRoller.Items.AddRange(new object[] {
-            "Bir Rol Seçin",
-            "Kullanıcı",
-            "Yönetici",
-            "Admin"});
             this.cmbRoller.Location = new System.Drawing.Point(123, 189);
             this.cmbRoller.Name = "cmbRoller";
             this.cmbRoller.Size = new System.Drawing.Size(185, 26);
