@@ -17,7 +17,7 @@ namespace RabtBil_Musteri_Kayit_v2
         private void FrmUrunTeslim_Load(object sender, EventArgs e)
         {
             tmrTarihSaat.Enabled = true;
-            string teslimEdenId = null;
+            string teslimEdenId = String.Empty;
 
             try
             {

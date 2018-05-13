@@ -44,7 +44,7 @@ namespace RabtBil_Musteri_Kayit_v2
         public static string TakipKoduOlustur()
         {
             DateTime simdi = DateTime.Now;
-            string id = null;
+            string id = String.Empty;
             int gun = simdi.Day;
             int saat = simdi.Hour;
             int ay = simdi.Month;
