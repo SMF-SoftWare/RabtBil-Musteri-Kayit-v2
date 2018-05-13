@@ -55,7 +55,6 @@
             this.txtKullaniciAdi.Font = new System.Drawing.Font("Consolas", 11F);
             this.txtKullaniciAdi.Location = new System.Drawing.Point(30, 100);
             this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(2);
-            this.txtKullaniciAdi.MaxLength = 20;
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(277, 25);
             this.txtKullaniciAdi.TabIndex = 1;
@@ -77,7 +76,6 @@
             this.txtSifre.Font = new System.Drawing.Font("Consolas", 11F);
             this.txtSifre.Location = new System.Drawing.Point(31, 161);
             this.txtSifre.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSifre.MaxLength = 20;
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(276, 25);
             this.txtSifre.TabIndex = 3;

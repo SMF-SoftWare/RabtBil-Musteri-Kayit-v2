@@ -96,7 +96,6 @@
             // txtGucluSifre
             // 
             this.txtGucluSifre.Location = new System.Drawing.Point(12, 114);
-            this.txtGucluSifre.MaxLength = 20;
             this.txtGucluSifre.Name = "txtGucluSifre";
             this.txtGucluSifre.ReadOnly = true;
             this.txtGucluSifre.Size = new System.Drawing.Size(174, 20);

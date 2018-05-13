@@ -68,7 +68,6 @@
             this.txtKullaniciAdi.Font = new System.Drawing.Font("Consolas", 11F);
             this.txtKullaniciAdi.Location = new System.Drawing.Point(161, 27);
             this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(2);
-            this.txtKullaniciAdi.MaxLength = 20;
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(277, 25);
             this.txtKullaniciAdi.TabIndex = 1;
@@ -100,7 +99,6 @@
             this.txtMevcutSifre.Font = new System.Drawing.Font("Consolas", 11F);
             this.txtMevcutSifre.Location = new System.Drawing.Point(161, 56);
             this.txtMevcutSifre.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMevcutSifre.MaxLength = 20;
             this.txtMevcutSifre.Name = "txtMevcutSifre";
             this.txtMevcutSifre.Size = new System.Drawing.Size(277, 25);
             this.txtMevcutSifre.TabIndex = 2;
@@ -111,7 +109,6 @@
             this.txtYeniSifre.Font = new System.Drawing.Font("Consolas", 11F);
             this.txtYeniSifre.Location = new System.Drawing.Point(161, 172);
             this.txtYeniSifre.Margin = new System.Windows.Forms.Padding(2);
-            this.txtYeniSifre.MaxLength = 20;
             this.txtYeniSifre.Name = "txtYeniSifre";
             this.txtYeniSifre.Size = new System.Drawing.Size(277, 25);
             this.txtYeniSifre.TabIndex = 3;
@@ -122,7 +119,6 @@
             this.txtYeniSifreyiOnayla.Font = new System.Drawing.Font("Consolas", 11F);
             this.txtYeniSifreyiOnayla.Location = new System.Drawing.Point(161, 202);
             this.txtYeniSifreyiOnayla.Margin = new System.Windows.Forms.Padding(2);
-            this.txtYeniSifreyiOnayla.MaxLength = 20;
             this.txtYeniSifreyiOnayla.Name = "txtYeniSifreyiOnayla";
             this.txtYeniSifreyiOnayla.Size = new System.Drawing.Size(277, 25);
             this.txtYeniSifreyiOnayla.TabIndex = 4;
@@ -133,7 +129,6 @@
             this.txtAdi.Font = new System.Drawing.Font("Consolas", 11F);
             this.txtAdi.Location = new System.Drawing.Point(161, 85);
             this.txtAdi.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAdi.MaxLength = 20;
             this.txtAdi.Name = "txtAdi";
             this.txtAdi.Size = new System.Drawing.Size(277, 25);
             this.txtAdi.TabIndex = 5;
@@ -187,7 +182,6 @@
             this.txtSoyadi.Font = new System.Drawing.Font("Consolas", 11F);
             this.txtSoyadi.Location = new System.Drawing.Point(161, 114);
             this.txtSoyadi.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSoyadi.MaxLength = 20;
             this.txtSoyadi.Name = "txtSoyadi";
             this.txtSoyadi.Size = new System.Drawing.Size(277, 25);
             this.txtSoyadi.TabIndex = 6;
@@ -208,7 +202,6 @@
             this.txtEpostaAdresi.Font = new System.Drawing.Font("Consolas", 11F);
             this.txtEpostaAdresi.Location = new System.Drawing.Point(161, 143);
             this.txtEpostaAdresi.Margin = new System.Windows.Forms.Padding(2);
-            this.txtEpostaAdresi.MaxLength = 20;
             this.txtEpostaAdresi.Name = "txtEpostaAdresi";
             this.txtEpostaAdresi.Size = new System.Drawing.Size(277, 25);
             this.txtEpostaAdresi.TabIndex = 7;

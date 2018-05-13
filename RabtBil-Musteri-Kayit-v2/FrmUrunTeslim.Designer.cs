@@ -58,7 +58,6 @@
             this.txtTeslimEdenPersonel.Enabled = false;
             this.txtTeslimEdenPersonel.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTeslimEdenPersonel.Location = new System.Drawing.Point(15, 32);
-            this.txtTeslimEdenPersonel.MaxLength = 30;
             this.txtTeslimEdenPersonel.Name = "txtTeslimEdenPersonel";
             this.txtTeslimEdenPersonel.Size = new System.Drawing.Size(244, 23);
             this.txtTeslimEdenPersonel.TabIndex = 1;
@@ -67,7 +66,6 @@
             // 
             this.txtTeslimAlanKisi.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTeslimAlanKisi.Location = new System.Drawing.Point(15, 79);
-            this.txtTeslimAlanKisi.MaxLength = 30;
             this.txtTeslimAlanKisi.Name = "txtTeslimAlanKisi";
             this.txtTeslimAlanKisi.Size = new System.Drawing.Size(244, 23);
             this.txtTeslimAlanKisi.TabIndex = 3;

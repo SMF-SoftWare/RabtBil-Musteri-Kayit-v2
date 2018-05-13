@@ -99,7 +99,6 @@
             // 
             this.txtFormNo.Font = new System.Drawing.Font("Consolas", 11F);
             this.txtFormNo.Location = new System.Drawing.Point(103, 23);
-            this.txtFormNo.MaxLength = 30;
             this.txtFormNo.Name = "txtFormNo";
             this.txtFormNo.Size = new System.Drawing.Size(228, 25);
             this.txtFormNo.TabIndex = 1;
@@ -137,7 +136,6 @@
             // 
             this.txtAksesuarlar.Font = new System.Drawing.Font("Consolas", 11F);
             this.txtAksesuarlar.Location = new System.Drawing.Point(5, 20);
-            this.txtAksesuarlar.MaxLength = 156;
             this.txtAksesuarlar.Multiline = true;
             this.txtAksesuarlar.Name = "txtAksesuarlar";
             this.txtAksesuarlar.Size = new System.Drawing.Size(326, 90);
@@ -163,7 +161,6 @@
             // 
             this.txtMusteriAdi.Font = new System.Drawing.Font("Consolas", 11F);
             this.txtMusteriAdi.Location = new System.Drawing.Point(103, 53);
-            this.txtMusteriAdi.MaxLength = 30;
             this.txtMusteriAdi.Name = "txtMusteriAdi";
             this.txtMusteriAdi.Size = new System.Drawing.Size(228, 25);
             this.txtMusteriAdi.TabIndex = 2;
@@ -267,7 +264,6 @@
             this.txtTakipNumarası.Enabled = false;
             this.txtTakipNumarası.Font = new System.Drawing.Font("Consolas", 11F);
             this.txtTakipNumarası.Location = new System.Drawing.Point(144, 181);
-            this.txtTakipNumarası.MaxLength = 30;
             this.txtTakipNumarası.Name = "txtTakipNumarası";
             this.txtTakipNumarası.Size = new System.Drawing.Size(228, 25);
             this.txtTakipNumarası.TabIndex = 10;
@@ -286,7 +282,6 @@
             // 
             this.txtUrunDurumu.Font = new System.Drawing.Font("Consolas", 11F);
             this.txtUrunDurumu.Location = new System.Drawing.Point(144, 151);
-            this.txtUrunDurumu.MaxLength = 30;
             this.txtUrunDurumu.Name = "txtUrunDurumu";
             this.txtUrunDurumu.Size = new System.Drawing.Size(228, 25);
             this.txtUrunDurumu.TabIndex = 9;
@@ -305,7 +300,6 @@
             // 
             this.txtArizaninTanimi.Font = new System.Drawing.Font("Consolas", 11F);
             this.txtArizaninTanimi.Location = new System.Drawing.Point(144, 77);
-            this.txtArizaninTanimi.MaxLength = 78;
             this.txtArizaninTanimi.Multiline = true;
             this.txtArizaninTanimi.Name = "txtArizaninTanimi";
             this.txtArizaninTanimi.Size = new System.Drawing.Size(228, 68);
@@ -325,7 +319,6 @@
             // 
             this.txtUrunKodlari.Font = new System.Drawing.Font("Consolas", 11F);
             this.txtUrunKodlari.Location = new System.Drawing.Point(144, 47);
-            this.txtUrunKodlari.MaxLength = 30;
             this.txtUrunKodlari.Name = "txtUrunKodlari";
             this.txtUrunKodlari.Size = new System.Drawing.Size(228, 25);
             this.txtUrunKodlari.TabIndex = 7;
@@ -334,7 +327,6 @@
             // 
             this.txtUrunModeli.Font = new System.Drawing.Font("Consolas", 11F);
             this.txtUrunModeli.Location = new System.Drawing.Point(144, 17);
-            this.txtUrunModeli.MaxLength = 30;
             this.txtUrunModeli.Name = "txtUrunModeli";
             this.txtUrunModeli.Size = new System.Drawing.Size(228, 25);
             this.txtUrunModeli.TabIndex = 6;
@@ -375,7 +367,6 @@
             // 
             this.txtEkBilgiler.Font = new System.Drawing.Font("Consolas", 11F);
             this.txtEkBilgiler.Location = new System.Drawing.Point(5, 20);
-            this.txtEkBilgiler.MaxLength = 156;
             this.txtEkBilgiler.Multiline = true;
             this.txtEkBilgiler.Name = "txtEkBilgiler";
             this.txtEkBilgiler.Size = new System.Drawing.Size(326, 90);
