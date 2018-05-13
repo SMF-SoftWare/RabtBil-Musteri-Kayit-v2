@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RabtBil_Musteri_Kayit_v2.Properties;
+using System;
 using System.Windows.Forms;
-using RabtBil_Musteri_Kayit_v2.Properties;
 
 namespace RabtBil_Musteri_Kayit_v2
 {
@@ -30,6 +23,7 @@ namespace RabtBil_Musteri_Kayit_v2
             {
                 if (SMF.LisansiKontrolEt(txtEpostaAdresi.Text, txtLisansAnahtari.Text))
                 {
+                    SMF.LisansliMi = true;
                     Settings.Default.LisansliMi = true;
                     Settings.Default.LisansAnahtari = txtLisansAnahtari.Text.ToUpper();
                     Settings.Default.Eposta = txtEpostaAdresi.Text.ToUpper();
@@ -39,10 +33,6 @@ namespace RabtBil_Musteri_Kayit_v2
                 }
                 else
                 {
-                    Settings.Default.LisansliMi = false;
-                    Settings.Default.LisansAnahtari = null;
-                    Settings.Default.Eposta = null;
-                    Settings.Default.Save();
                     MessageBox.Show("Resources.lisansTekrarDene", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }

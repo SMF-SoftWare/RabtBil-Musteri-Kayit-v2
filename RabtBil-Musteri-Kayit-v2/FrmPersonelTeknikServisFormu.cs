@@ -22,7 +22,7 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void FrmPersonelTeknikServisFormu_Load(object sender, EventArgs e)
         {
-            if (!SMF.LisansliMi)
+            if (SMF.LisansliMi)
             {
                 tsmiLisansAnahtari.Enabled = false;
             }
