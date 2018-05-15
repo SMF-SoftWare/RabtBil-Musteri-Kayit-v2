@@ -44,7 +44,6 @@
             this.btnTeknikServisFormu.BackColor = System.Drawing.Color.White;
             this.btnTeknikServisFormu.FlatAppearance.BorderSize = 0;
             this.btnTeknikServisFormu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTeknikServisFormu.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnTeknikServisFormu.Image = ((System.Drawing.Image)(resources.GetObject("btnTeknikServisFormu.Image")));
             this.btnTeknikServisFormu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnTeknikServisFormu.Location = new System.Drawing.Point(13, 38);
@@ -62,7 +61,6 @@
             this.btnCikisYap.BackColor = System.Drawing.Color.White;
             this.btnCikisYap.FlatAppearance.BorderSize = 0;
             this.btnCikisYap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCikisYap.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnCikisYap.Image = ((System.Drawing.Image)(resources.GetObject("btnCikisYap.Image")));
             this.btnCikisYap.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCikisYap.Location = new System.Drawing.Point(233, 138);
@@ -80,7 +78,6 @@
             this.btnProfiliDuzenle.BackColor = System.Drawing.Color.White;
             this.btnProfiliDuzenle.FlatAppearance.BorderSize = 0;
             this.btnProfiliDuzenle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfiliDuzenle.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnProfiliDuzenle.Image = ((System.Drawing.Image)(resources.GetObject("btnProfiliDuzenle.Image")));
             this.btnProfiliDuzenle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnProfiliDuzenle.Location = new System.Drawing.Point(123, 38);
@@ -98,7 +95,6 @@
             this.btnPersonelEkle.BackColor = System.Drawing.Color.White;
             this.btnPersonelEkle.FlatAppearance.BorderSize = 0;
             this.btnPersonelEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPersonelEkle.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnPersonelEkle.Image = ((System.Drawing.Image)(resources.GetObject("btnPersonelEkle.Image")));
             this.btnPersonelEkle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnPersonelEkle.Location = new System.Drawing.Point(233, 38);
@@ -116,7 +112,6 @@
             this.btnProgramHakkinda.BackColor = System.Drawing.Color.White;
             this.btnProgramHakkinda.FlatAppearance.BorderSize = 0;
             this.btnProgramHakkinda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProgramHakkinda.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnProgramHakkinda.Image = ((System.Drawing.Image)(resources.GetObject("btnProgramHakkinda.Image")));
             this.btnProgramHakkinda.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnProgramHakkinda.Location = new System.Drawing.Point(123, 138);
@@ -134,7 +129,6 @@
             this.btnProgramiEtkinlestir.BackColor = System.Drawing.Color.White;
             this.btnProgramiEtkinlestir.FlatAppearance.BorderSize = 0;
             this.btnProgramiEtkinlestir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProgramiEtkinlestir.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnProgramiEtkinlestir.Image = ((System.Drawing.Image)(resources.GetObject("btnProgramiEtkinlestir.Image")));
             this.btnProgramiEtkinlestir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnProgramiEtkinlestir.Location = new System.Drawing.Point(13, 138);

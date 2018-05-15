@@ -48,7 +48,6 @@
             // lblSifreUzunluguDeger
             // 
             this.lblSifreUzunluguDeger.AutoSize = true;
-            this.lblSifreUzunluguDeger.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lblSifreUzunluguDeger.Location = new System.Drawing.Point(129, 46);
             this.lblSifreUzunluguDeger.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSifreUzunluguDeger.Name = "lblSifreUzunluguDeger";
@@ -72,7 +71,6 @@
             // lblGucluSifreniz
             // 
             this.lblGucluSifreniz.AutoSize = true;
-            this.lblGucluSifreniz.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lblGucluSifreniz.Location = new System.Drawing.Point(16, 142);
             this.lblGucluSifreniz.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGucluSifreniz.Name = "lblGucluSifreniz";
@@ -83,7 +81,6 @@
             // lblSifreUzunlugu
             // 
             this.lblSifreUzunlugu.AutoSize = true;
-            this.lblSifreUzunlugu.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lblSifreUzunlugu.Location = new System.Drawing.Point(16, 46);
             this.lblSifreUzunlugu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSifreUzunlugu.Name = "lblSifreUzunlugu";

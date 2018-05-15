@@ -42,7 +42,6 @@
             // lblKullaniciAdi
             // 
             this.lblKullaniciAdi.AutoSize = true;
-            this.lblKullaniciAdi.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lblKullaniciAdi.ForeColor = System.Drawing.Color.Black;
             this.lblKullaniciAdi.Location = new System.Drawing.Point(14, 66);
             this.lblKullaniciAdi.Name = "lblKullaniciAdi";
@@ -53,7 +52,6 @@
             // txtKullaniciAdi
             // 
             this.txtKullaniciAdi.BackColor = System.Drawing.Color.White;
-            this.txtKullaniciAdi.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtKullaniciAdi.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciAdi.Location = new System.Drawing.Point(12, 89);
             this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -66,7 +64,6 @@
             this.btnGirisYap.BackColor = System.Drawing.Color.Black;
             this.btnGirisYap.FlatAppearance.BorderSize = 0;
             this.btnGirisYap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGirisYap.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnGirisYap.ForeColor = System.Drawing.Color.White;
             this.btnGirisYap.Location = new System.Drawing.Point(12, 187);
             this.btnGirisYap.Margin = new System.Windows.Forms.Padding(0);
@@ -80,7 +77,6 @@
             // txtSifre
             // 
             this.txtSifre.BackColor = System.Drawing.Color.White;
-            this.txtSifre.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtSifre.ForeColor = System.Drawing.Color.Black;
             this.txtSifre.Location = new System.Drawing.Point(12, 153);
             this.txtSifre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -92,7 +88,6 @@
             // lblSifre
             // 
             this.lblSifre.AutoSize = true;
-            this.lblSifre.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lblSifre.ForeColor = System.Drawing.Color.Black;
             this.lblSifre.Location = new System.Drawing.Point(14, 130);
             this.lblSifre.Name = "lblSifre";
