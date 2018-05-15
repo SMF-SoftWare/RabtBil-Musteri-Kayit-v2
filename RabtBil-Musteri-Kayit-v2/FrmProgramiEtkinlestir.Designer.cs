@@ -33,72 +33,97 @@
             this.lblEpostaAdresi = new System.Windows.Forms.Label();
             this.txtEpostaAdresi = new System.Windows.Forms.TextBox();
             this.btnEtkinlestir = new System.Windows.Forms.Button();
+            this.kapat = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblLisansAnahtari
             // 
             this.lblLisansAnahtari.AutoSize = true;
-            this.lblLisansAnahtari.Font = new System.Drawing.Font("Consolas", 9F);
-            this.lblLisansAnahtari.Location = new System.Drawing.Point(11, 47);
-            this.lblLisansAnahtari.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLisansAnahtari.Location = new System.Drawing.Point(15, 97);
             this.lblLisansAnahtari.Name = "lblLisansAnahtari";
-            this.lblLisansAnahtari.Size = new System.Drawing.Size(119, 14);
+            this.lblLisansAnahtari.Size = new System.Drawing.Size(119, 21);
             this.lblLisansAnahtari.TabIndex = 13;
             this.lblLisansAnahtari.Text = "Lisans Anahtarı:";
             // 
             // txtLisansAnahtari
             // 
-            this.txtLisansAnahtari.Font = new System.Drawing.Font("Consolas", 11F);
-            this.txtLisansAnahtari.Location = new System.Drawing.Point(134, 41);
-            this.txtLisansAnahtari.Margin = new System.Windows.Forms.Padding(2);
+            this.txtLisansAnahtari.Location = new System.Drawing.Point(15, 122);
             this.txtLisansAnahtari.Name = "txtLisansAnahtari";
-            this.txtLisansAnahtari.Size = new System.Drawing.Size(277, 25);
+            this.txtLisansAnahtari.Size = new System.Drawing.Size(414, 29);
             this.txtLisansAnahtari.TabIndex = 1;
             // 
             // lblEpostaAdresi
             // 
             this.lblEpostaAdresi.AutoSize = true;
-            this.lblEpostaAdresi.Font = new System.Drawing.Font("Consolas", 9F);
-            this.lblEpostaAdresi.Location = new System.Drawing.Point(18, 18);
-            this.lblEpostaAdresi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEpostaAdresi.Location = new System.Drawing.Point(15, 39);
             this.lblEpostaAdresi.Name = "lblEpostaAdresi";
-            this.lblEpostaAdresi.Size = new System.Drawing.Size(112, 14);
+            this.lblEpostaAdresi.Size = new System.Drawing.Size(113, 21);
             this.lblEpostaAdresi.TabIndex = 15;
             this.lblEpostaAdresi.Text = "E-posta Adresi:";
             // 
             // txtEpostaAdresi
             // 
-            this.txtEpostaAdresi.Font = new System.Drawing.Font("Consolas", 11F);
-            this.txtEpostaAdresi.Location = new System.Drawing.Point(134, 12);
-            this.txtEpostaAdresi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEpostaAdresi.Location = new System.Drawing.Point(15, 64);
             this.txtEpostaAdresi.Name = "txtEpostaAdresi";
-            this.txtEpostaAdresi.Size = new System.Drawing.Size(277, 25);
+            this.txtEpostaAdresi.Size = new System.Drawing.Size(414, 29);
             this.txtEpostaAdresi.TabIndex = 0;
             // 
             // btnEtkinlestir
             // 
-            this.btnEtkinlestir.Font = new System.Drawing.Font("Consolas", 11F);
-            this.btnEtkinlestir.Location = new System.Drawing.Point(134, 70);
-            this.btnEtkinlestir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEtkinlestir.BackColor = System.Drawing.Color.Black;
+            this.btnEtkinlestir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEtkinlestir.ForeColor = System.Drawing.Color.White;
+            this.btnEtkinlestir.Location = new System.Drawing.Point(15, 157);
             this.btnEtkinlestir.Name = "btnEtkinlestir";
-            this.btnEtkinlestir.Size = new System.Drawing.Size(277, 40);
+            this.btnEtkinlestir.Size = new System.Drawing.Size(416, 40);
             this.btnEtkinlestir.TabIndex = 2;
             this.btnEtkinlestir.Text = "Etkinleştir";
-            this.btnEtkinlestir.UseVisualStyleBackColor = true;
+            this.btnEtkinlestir.UseVisualStyleBackColor = false;
             this.btnEtkinlestir.Click += new System.EventHandler(this.btnEtkinlestir_Click);
+            // 
+            // kapat
+            // 
+            this.kapat.AutoSize = true;
+            this.kapat.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.kapat.Location = new System.Drawing.Point(417, 2);
+            this.kapat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.kapat.Name = "kapat";
+            this.kapat.Size = new System.Drawing.Size(23, 25);
+            this.kapat.TabIndex = 16;
+            this.kapat.Text = "X";
+            this.kapat.Click += new System.EventHandler(this.kapat_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(15, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(177, 25);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Programı Etkinleştir";
             // 
             // FrmProgramiEtkinlestir
             // 
             this.AcceptButton = this.btnEtkinlestir;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(424, 121);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(442, 207);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.kapat);
             this.Controls.Add(this.btnEtkinlestir);
             this.Controls.Add(this.lblEpostaAdresi);
             this.Controls.Add(this.txtEpostaAdresi);
             this.Controls.Add(this.lblLisansAnahtari);
             this.Controls.Add(this.txtLisansAnahtari);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "FrmProgramiEtkinlestir";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -115,5 +140,7 @@
         public System.Windows.Forms.Label lblEpostaAdresi;
         public System.Windows.Forms.TextBox txtEpostaAdresi;
         public System.Windows.Forms.Button btnEtkinlestir;
+        private System.Windows.Forms.Label kapat;
+        private System.Windows.Forms.Label label1;
     }
 }
