@@ -73,7 +73,7 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void kapat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Close();
         }
     }
 }

@@ -52,6 +52,7 @@
             // 
             // txtKullaniciAdi
             // 
+            this.txtKullaniciAdi.BackColor = System.Drawing.Color.White;
             this.txtKullaniciAdi.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtKullaniciAdi.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciAdi.Location = new System.Drawing.Point(12, 89);
@@ -78,6 +79,7 @@
             // 
             // txtSifre
             // 
+            this.txtSifre.BackColor = System.Drawing.Color.White;
             this.txtSifre.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtSifre.ForeColor = System.Drawing.Color.Black;
             this.txtSifre.Location = new System.Drawing.Point(12, 153);

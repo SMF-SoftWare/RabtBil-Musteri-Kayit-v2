@@ -39,26 +39,32 @@
             this.chkBuyukHarfler = new System.Windows.Forms.CheckBox();
             this.chkKucukHarfler = new System.Windows.Forms.CheckBox();
             this.btnYenidenOlustur = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.kapat = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trbSifreUzunlugu)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSifreUzunluguDeger
             // 
             this.lblSifreUzunluguDeger.AutoSize = true;
-            this.lblSifreUzunluguDeger.Font = new System.Drawing.Font("Consolas", 9.75F);
-            this.lblSifreUzunluguDeger.Location = new System.Drawing.Point(129, 8);
+            this.lblSifreUzunluguDeger.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblSifreUzunluguDeger.Location = new System.Drawing.Point(129, 46);
+            this.lblSifreUzunluguDeger.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSifreUzunluguDeger.Name = "lblSifreUzunluguDeger";
-            this.lblSifreUzunluguDeger.Size = new System.Drawing.Size(14, 15);
+            this.lblSifreUzunluguDeger.Size = new System.Drawing.Size(19, 21);
             this.lblSifreUzunluguDeger.TabIndex = 21;
             this.lblSifreUzunluguDeger.Text = "0";
             // 
             // trbSifreUzunlugu
             // 
-            this.trbSifreUzunlugu.Location = new System.Drawing.Point(12, 26);
+            this.trbSifreUzunlugu.LargeChange = 1;
+            this.trbSifreUzunlugu.Location = new System.Drawing.Point(20, 72);
+            this.trbSifreUzunlugu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.trbSifreUzunlugu.Maximum = 20;
             this.trbSifreUzunlugu.Minimum = 4;
             this.trbSifreUzunlugu.Name = "trbSifreUzunlugu";
-            this.trbSifreUzunlugu.Size = new System.Drawing.Size(257, 45);
+            this.trbSifreUzunlugu.Size = new System.Drawing.Size(386, 45);
             this.trbSifreUzunlugu.TabIndex = 20;
             this.trbSifreUzunlugu.Value = 4;
             this.trbSifreUzunlugu.Scroll += new System.EventHandler(this.trbSifreUzunlugu_Scroll);
@@ -66,47 +72,57 @@
             // lblGucluSifreniz
             // 
             this.lblGucluSifreniz.AutoSize = true;
-            this.lblGucluSifreniz.Font = new System.Drawing.Font("Consolas", 9.75F);
-            this.lblGucluSifreniz.Location = new System.Drawing.Point(12, 92);
+            this.lblGucluSifreniz.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblGucluSifreniz.Location = new System.Drawing.Point(16, 142);
+            this.lblGucluSifreniz.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGucluSifreniz.Name = "lblGucluSifreniz";
-            this.lblGucluSifreniz.Size = new System.Drawing.Size(112, 15);
+            this.lblGucluSifreniz.Size = new System.Drawing.Size(109, 21);
             this.lblGucluSifreniz.TabIndex = 19;
             this.lblGucluSifreniz.Text = "Güçlü Şifreniz:";
             // 
             // lblSifreUzunlugu
             // 
             this.lblSifreUzunlugu.AutoSize = true;
-            this.lblSifreUzunlugu.Font = new System.Drawing.Font("Consolas", 9.75F);
-            this.lblSifreUzunlugu.Location = new System.Drawing.Point(12, 8);
+            this.lblSifreUzunlugu.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblSifreUzunlugu.Location = new System.Drawing.Point(16, 46);
+            this.lblSifreUzunlugu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSifreUzunlugu.Name = "lblSifreUzunlugu";
-            this.lblSifreUzunlugu.Size = new System.Drawing.Size(112, 15);
+            this.lblSifreUzunlugu.Size = new System.Drawing.Size(116, 21);
             this.lblSifreUzunlugu.TabIndex = 18;
             this.lblSifreUzunlugu.Text = "Şifre Uzunluğu:";
             // 
             // btnKopyala
             // 
-            this.btnKopyala.Location = new System.Drawing.Point(303, 110);
+            this.btnKopyala.BackColor = System.Drawing.Color.Black;
+            this.btnKopyala.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKopyala.ForeColor = System.Drawing.Color.White;
+            this.btnKopyala.Location = new System.Drawing.Point(422, 162);
+            this.btnKopyala.Margin = new System.Windows.Forms.Padding(0);
             this.btnKopyala.Name = "btnKopyala";
-            this.btnKopyala.Size = new System.Drawing.Size(75, 26);
+            this.btnKopyala.Size = new System.Drawing.Size(112, 40);
             this.btnKopyala.TabIndex = 17;
             this.btnKopyala.Text = "Kopyala";
-            this.btnKopyala.UseVisualStyleBackColor = true;
+            this.btnKopyala.UseVisualStyleBackColor = false;
             this.btnKopyala.Click += new System.EventHandler(this.btnKopyala_Click);
             // 
             // txtGucluSifre
             // 
-            this.txtGucluSifre.Location = new System.Drawing.Point(12, 114);
+            this.txtGucluSifre.BackColor = System.Drawing.Color.White;
+            this.txtGucluSifre.ForeColor = System.Drawing.Color.Black;
+            this.txtGucluSifre.Location = new System.Drawing.Point(20, 168);
+            this.txtGucluSifre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGucluSifre.Name = "txtGucluSifre";
             this.txtGucluSifre.ReadOnly = true;
-            this.txtGucluSifre.Size = new System.Drawing.Size(174, 20);
+            this.txtGucluSifre.Size = new System.Drawing.Size(244, 29);
             this.txtGucluSifre.TabIndex = 16;
             // 
             // chkSemboller
             // 
             this.chkSemboller.AutoSize = true;
-            this.chkSemboller.Location = new System.Drawing.Point(291, 80);
+            this.chkSemboller.Location = new System.Drawing.Point(410, 121);
+            this.chkSemboller.Margin = new System.Windows.Forms.Padding(0);
             this.chkSemboller.Name = "chkSemboller";
-            this.chkSemboller.Size = new System.Drawing.Size(72, 17);
+            this.chkSemboller.Size = new System.Drawing.Size(100, 25);
             this.chkSemboller.TabIndex = 15;
             this.chkSemboller.Text = "Semboller";
             this.chkSemboller.UseVisualStyleBackColor = true;
@@ -115,9 +131,10 @@
             // chkSayilar
             // 
             this.chkSayilar.AutoSize = true;
-            this.chkSayilar.Location = new System.Drawing.Point(291, 57);
+            this.chkSayilar.Location = new System.Drawing.Point(410, 96);
+            this.chkSayilar.Margin = new System.Windows.Forms.Padding(0);
             this.chkSayilar.Name = "chkSayilar";
-            this.chkSayilar.Size = new System.Drawing.Size(57, 17);
+            this.chkSayilar.Size = new System.Drawing.Size(76, 25);
             this.chkSayilar.TabIndex = 14;
             this.chkSayilar.Text = "Sayılar";
             this.chkSayilar.UseVisualStyleBackColor = true;
@@ -126,9 +143,10 @@
             // chkBuyukHarfler
             // 
             this.chkBuyukHarfler.AutoSize = true;
-            this.chkBuyukHarfler.Location = new System.Drawing.Point(291, 34);
+            this.chkBuyukHarfler.Location = new System.Drawing.Point(410, 71);
+            this.chkBuyukHarfler.Margin = new System.Windows.Forms.Padding(0);
             this.chkBuyukHarfler.Name = "chkBuyukHarfler";
-            this.chkBuyukHarfler.Size = new System.Drawing.Size(90, 17);
+            this.chkBuyukHarfler.Size = new System.Drawing.Size(124, 25);
             this.chkBuyukHarfler.TabIndex = 13;
             this.chkBuyukHarfler.Text = "Büyük Harfler";
             this.chkBuyukHarfler.UseVisualStyleBackColor = true;
@@ -137,9 +155,10 @@
             // chkKucukHarfler
             // 
             this.chkKucukHarfler.AutoSize = true;
-            this.chkKucukHarfler.Location = new System.Drawing.Point(293, 11);
+            this.chkKucukHarfler.Location = new System.Drawing.Point(410, 46);
+            this.chkKucukHarfler.Margin = new System.Windows.Forms.Padding(0);
             this.chkKucukHarfler.Name = "chkKucukHarfler";
-            this.chkKucukHarfler.Size = new System.Drawing.Size(91, 17);
+            this.chkKucukHarfler.Size = new System.Drawing.Size(123, 25);
             this.chkKucukHarfler.TabIndex = 12;
             this.chkKucukHarfler.Text = "Küçük Harfler";
             this.chkKucukHarfler.UseVisualStyleBackColor = true;
@@ -147,20 +166,50 @@
             // 
             // btnYenidenOlustur
             // 
-            this.btnYenidenOlustur.Location = new System.Drawing.Point(194, 110);
+            this.btnYenidenOlustur.BackColor = System.Drawing.Color.Black;
+            this.btnYenidenOlustur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnYenidenOlustur.ForeColor = System.Drawing.Color.White;
+            this.btnYenidenOlustur.Location = new System.Drawing.Point(268, 161);
+            this.btnYenidenOlustur.Margin = new System.Windows.Forms.Padding(0);
             this.btnYenidenOlustur.Name = "btnYenidenOlustur";
-            this.btnYenidenOlustur.Size = new System.Drawing.Size(103, 26);
+            this.btnYenidenOlustur.Size = new System.Drawing.Size(154, 40);
             this.btnYenidenOlustur.TabIndex = 22;
             this.btnYenidenOlustur.Text = "Yeniden Oluştur";
-            this.btnYenidenOlustur.UseVisualStyleBackColor = true;
+            this.btnYenidenOlustur.UseVisualStyleBackColor = false;
             this.btnYenidenOlustur.Click += new System.EventHandler(this.btnYenidenOlustur_Click);
+            // 
+            // kapat
+            // 
+            this.kapat.AutoSize = true;
+            this.kapat.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.kapat.Location = new System.Drawing.Point(519, 3);
+            this.kapat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.kapat.Name = "kapat";
+            this.kapat.Size = new System.Drawing.Size(23, 25);
+            this.kapat.TabIndex = 23;
+            this.kapat.Text = "X";
+            this.kapat.Click += new System.EventHandler(this.kapat_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(15, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(171, 25);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Güçlü Şifre Oluştur";
             // 
             // FrmGucluSifreOlustur
             // 
             this.AcceptButton = this.btnKopyala;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 150);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(545, 211);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.kapat);
             this.Controls.Add(this.btnYenidenOlustur);
             this.Controls.Add(this.lblSifreUzunluguDeger);
             this.Controls.Add(this.trbSifreUzunlugu);
@@ -172,7 +221,9 @@
             this.Controls.Add(this.chkSayilar);
             this.Controls.Add(this.chkBuyukHarfler);
             this.Controls.Add(this.chkKucukHarfler);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "FrmGucluSifreOlustur";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -197,5 +248,8 @@
         private System.Windows.Forms.CheckBox chkBuyukHarfler;
         private System.Windows.Forms.CheckBox chkKucukHarfler;
         private System.Windows.Forms.Button btnYenidenOlustur;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label kapat;
+        private System.Windows.Forms.Label label1;
     }
 }
