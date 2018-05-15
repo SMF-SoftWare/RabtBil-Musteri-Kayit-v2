@@ -56,7 +56,7 @@
             // lblKullaniciAdi
             // 
             this.lblKullaniciAdi.AutoSize = true;
-            this.lblKullaniciAdi.Location = new System.Drawing.Point(26, 49);
+            this.lblKullaniciAdi.Location = new System.Drawing.Point(15, 39);
             this.lblKullaniciAdi.Name = "lblKullaniciAdi";
             this.lblKullaniciAdi.Size = new System.Drawing.Size(98, 21);
             this.lblKullaniciAdi.TabIndex = 13;
@@ -66,7 +66,7 @@
             // 
             this.txtKullaniciAdi.BackColor = System.Drawing.Color.White;
             this.txtKullaniciAdi.ForeColor = System.Drawing.Color.Black;
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(25, 74);
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(15, 64);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(276, 29);
             this.txtKullaniciAdi.TabIndex = 1;
@@ -86,14 +86,14 @@
             this.dgvKullanicilar.ReadOnly = true;
             this.dgvKullanicilar.RowHeadersVisible = false;
             this.dgvKullanicilar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKullanicilar.Size = new System.Drawing.Size(538, 407);
+            this.dgvKullanicilar.Size = new System.Drawing.Size(538, 402);
             this.dgvKullanicilar.TabIndex = 13;
             this.dgvKullanicilar.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvKullanicilar_MouseDoubleClick);
             // 
             // lblEpostaAdresi
             // 
             this.lblEpostaAdresi.AutoSize = true;
-            this.lblEpostaAdresi.Location = new System.Drawing.Point(26, 217);
+            this.lblEpostaAdresi.Location = new System.Drawing.Point(15, 213);
             this.lblEpostaAdresi.Name = "lblEpostaAdresi";
             this.lblEpostaAdresi.Size = new System.Drawing.Size(113, 21);
             this.lblEpostaAdresi.TabIndex = 31;
@@ -103,7 +103,7 @@
             // 
             this.txtEpostaAdresi.BackColor = System.Drawing.Color.White;
             this.txtEpostaAdresi.ForeColor = System.Drawing.Color.Black;
-            this.txtEpostaAdresi.Location = new System.Drawing.Point(25, 241);
+            this.txtEpostaAdresi.Location = new System.Drawing.Point(15, 238);
             this.txtEpostaAdresi.Name = "txtEpostaAdresi";
             this.txtEpostaAdresi.Size = new System.Drawing.Size(277, 29);
             this.txtEpostaAdresi.TabIndex = 4;
@@ -111,7 +111,7 @@
             // lblSoyadi
             // 
             this.lblSoyadi.AutoSize = true;
-            this.lblSoyadi.Location = new System.Drawing.Point(26, 161);
+            this.lblSoyadi.Location = new System.Drawing.Point(15, 155);
             this.lblSoyadi.Name = "lblSoyadi";
             this.lblSoyadi.Size = new System.Drawing.Size(60, 21);
             this.lblSoyadi.TabIndex = 30;
@@ -121,7 +121,7 @@
             // 
             this.txtSoyadi.BackColor = System.Drawing.Color.White;
             this.txtSoyadi.ForeColor = System.Drawing.Color.Black;
-            this.txtSoyadi.Location = new System.Drawing.Point(25, 185);
+            this.txtSoyadi.Location = new System.Drawing.Point(15, 180);
             this.txtSoyadi.Name = "txtSoyadi";
             this.txtSoyadi.Size = new System.Drawing.Size(276, 29);
             this.txtSoyadi.TabIndex = 3;
@@ -129,7 +129,7 @@
             // lblAdi
             // 
             this.lblAdi.AutoSize = true;
-            this.lblAdi.Location = new System.Drawing.Point(26, 105);
+            this.lblAdi.Location = new System.Drawing.Point(15, 97);
             this.lblAdi.Name = "lblAdi";
             this.lblAdi.Size = new System.Drawing.Size(36, 21);
             this.lblAdi.TabIndex = 29;
@@ -138,7 +138,7 @@
             // lblSifre
             // 
             this.lblSifre.AutoSize = true;
-            this.lblSifre.Location = new System.Drawing.Point(26, 273);
+            this.lblSifre.Location = new System.Drawing.Point(15, 271);
             this.lblSifre.Name = "lblSifre";
             this.lblSifre.Size = new System.Drawing.Size(45, 21);
             this.lblSifre.TabIndex = 28;
@@ -148,7 +148,7 @@
             // 
             this.txtAdi.BackColor = System.Drawing.Color.White;
             this.txtAdi.ForeColor = System.Drawing.Color.Black;
-            this.txtAdi.Location = new System.Drawing.Point(25, 129);
+            this.txtAdi.Location = new System.Drawing.Point(15, 122);
             this.txtAdi.Name = "txtAdi";
             this.txtAdi.Size = new System.Drawing.Size(276, 29);
             this.txtAdi.TabIndex = 2;
@@ -157,7 +157,7 @@
             // 
             this.txtSifre.BackColor = System.Drawing.Color.White;
             this.txtSifre.ForeColor = System.Drawing.Color.Black;
-            this.txtSifre.Location = new System.Drawing.Point(25, 297);
+            this.txtSifre.Location = new System.Drawing.Point(15, 296);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(276, 29);
             this.txtSifre.TabIndex = 5;
@@ -166,7 +166,7 @@
             // lblSifreyiOnayla
             // 
             this.lblSifreyiOnayla.AutoSize = true;
-            this.lblSifreyiOnayla.Location = new System.Drawing.Point(26, 335);
+            this.lblSifreyiOnayla.Location = new System.Drawing.Point(15, 329);
             this.lblSifreyiOnayla.Name = "lblSifreyiOnayla";
             this.lblSifreyiOnayla.Size = new System.Drawing.Size(110, 21);
             this.lblSifreyiOnayla.TabIndex = 33;
@@ -176,7 +176,7 @@
             // 
             this.txtSifreyiOnayla.BackColor = System.Drawing.Color.White;
             this.txtSifreyiOnayla.ForeColor = System.Drawing.Color.Black;
-            this.txtSifreyiOnayla.Location = new System.Drawing.Point(25, 359);
+            this.txtSifreyiOnayla.Location = new System.Drawing.Point(15, 354);
             this.txtSifreyiOnayla.Name = "txtSifreyiOnayla";
             this.txtSifreyiOnayla.Size = new System.Drawing.Size(276, 29);
             this.txtSifreyiOnayla.TabIndex = 6;
@@ -185,7 +185,7 @@
             // lblPersonelRolu
             // 
             this.lblPersonelRolu.AutoSize = true;
-            this.lblPersonelRolu.Location = new System.Drawing.Point(26, 391);
+            this.lblPersonelRolu.Location = new System.Drawing.Point(15, 387);
             this.lblPersonelRolu.Name = "lblPersonelRolu";
             this.lblPersonelRolu.Size = new System.Drawing.Size(108, 21);
             this.lblPersonelRolu.TabIndex = 34;
@@ -198,7 +198,7 @@
             this.cmbRoller.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbRoller.ForeColor = System.Drawing.Color.Black;
             this.cmbRoller.FormattingEnabled = true;
-            this.cmbRoller.Location = new System.Drawing.Point(25, 417);
+            this.cmbRoller.Location = new System.Drawing.Point(15, 412);
             this.cmbRoller.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbRoller.Name = "cmbRoller";
             this.cmbRoller.Size = new System.Drawing.Size(276, 29);
@@ -209,7 +209,7 @@
             this.btnEkle.BackColor = System.Drawing.Color.Black;
             this.btnEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEkle.ForeColor = System.Drawing.Color.White;
-            this.btnEkle.Location = new System.Drawing.Point(25, 451);
+            this.btnEkle.Location = new System.Drawing.Point(15, 446);
             this.btnEkle.Margin = new System.Windows.Forms.Padding(0);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(150, 40);
@@ -224,7 +224,7 @@
             this.btnGuncelle.Enabled = false;
             this.btnGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuncelle.ForeColor = System.Drawing.Color.White;
-            this.btnGuncelle.Location = new System.Drawing.Point(175, 451);
+            this.btnGuncelle.Location = new System.Drawing.Point(165, 446);
             this.btnGuncelle.Margin = new System.Windows.Forms.Padding(0);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(150, 40);
@@ -238,7 +238,7 @@
             this.btnSil.BackColor = System.Drawing.Color.Black;
             this.btnSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSil.ForeColor = System.Drawing.Color.White;
-            this.btnSil.Location = new System.Drawing.Point(325, 451);
+            this.btnSil.Location = new System.Drawing.Point(315, 446);
             this.btnSil.Margin = new System.Windows.Forms.Padding(0);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(150, 40);
@@ -250,7 +250,7 @@
             // pbxEye
             // 
             this.pbxEye.Image = global::RabtBil_Musteri_Kayit_v2.Properties.Resources.eye;
-            this.pbxEye.Location = new System.Drawing.Point(274, 299);
+            this.pbxEye.Location = new System.Drawing.Point(264, 299);
             this.pbxEye.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.pbxEye.Name = "pbxEye";
             this.pbxEye.Size = new System.Drawing.Size(25, 25);
@@ -288,7 +288,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(870, 500);
+            this.ClientSize = new System.Drawing.Size(870, 497);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.kapat);
             this.Controls.Add(this.pbxEye);
