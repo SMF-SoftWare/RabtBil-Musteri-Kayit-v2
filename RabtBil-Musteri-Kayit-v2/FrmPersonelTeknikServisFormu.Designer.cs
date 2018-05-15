@@ -29,21 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.txtFormNo = new System.Windows.Forms.TextBox();
-            this.lblFormNo = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPersonelTeknikServisFormu));
             this.lblTelefon = new System.Windows.Forms.Label();
             this.mtxTelefon = new System.Windows.Forms.MaskedTextBox();
             this.txtAksesuarlar = new System.Windows.Forms.TextBox();
-            this.grpMusteriBilgileri = new System.Windows.Forms.GroupBox();
             this.txtMusteriAdi = new System.Windows.Forms.TextBox();
             this.lblMusteriAdi = new System.Windows.Forms.Label();
-            this.grpUrunBilgileri = new System.Windows.Forms.GroupBox();
             this.picQrKodu = new System.Windows.Forms.PictureBox();
             this.lblUrunKodlari = new System.Windows.Forms.Label();
             this.chkTeslimEdildi = new System.Windows.Forms.CheckBox();
             this.txtUcret = new System.Windows.Forms.TextBox();
             this.lblUcret = new System.Windows.Forms.Label();
-            this.lblQrKodu = new System.Windows.Forms.Label();
             this.txtTakipNumarası = new System.Windows.Forms.TextBox();
             this.lblTakipNumarası = new System.Windows.Forms.Label();
             this.txtUrunDurumu = new System.Windows.Forms.TextBox();
@@ -54,157 +50,74 @@
             this.txtUrunModeli = new System.Windows.Forms.TextBox();
             this.lblUrunModeli = new System.Windows.Forms.Label();
             this.lblMusteriNo = new System.Windows.Forms.Label();
-            this.grpEkBilgiler = new System.Windows.Forms.GroupBox();
             this.txtEkBilgiler = new System.Windows.Forms.TextBox();
             this.btnYeniKayit = new System.Windows.Forms.Button();
             this.btnKaydet = new System.Windows.Forms.Button();
-            this.btnTemizle = new System.Windows.Forms.Button();
             this.btnKayitlariGoster = new System.Windows.Forms.Button();
-            this.btnGuncelle = new System.Windows.Forms.Button();
-            this.mnsTeknikServisFormu = new System.Windows.Forms.MenuStrip();
-            this.tsmiAraclar = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiYeniKayit = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiKaydet = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiTemizle = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiKayitlariGoster = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiGuncelle = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiAyarlar = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiDil = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiTurkce = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiIngilizce = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiTema = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiYardim = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiLisansAnahtari = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiHakkinda = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiCikisYap = new System.Windows.Forms.ToolStripMenuItem();
-            this.tlStrip = new System.Windows.Forms.ToolStrip();
-            this.TlStripLblAciklama = new System.Windows.Forms.ToolStripLabel();
-            this.tslblTarihSaat = new System.Windows.Forms.ToolStripLabel();
             this.btnCikisYap = new System.Windows.Forms.Button();
             this.lblHosgeldin = new System.Windows.Forms.Label();
             this.tmrTarihSaat = new System.Windows.Forms.Timer(this.components);
-            this.grpAksesuarlar = new System.Windows.Forms.GroupBox();
             this.PcTrBoxProfilResim = new System.Windows.Forms.PictureBox();
-            this.grpMusteriBilgileri.SuspendLayout();
-            this.grpUrunBilgileri.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtFormNo = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnGuncelle = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picQrKodu)).BeginInit();
-            this.grpEkBilgiler.SuspendLayout();
-            this.mnsTeknikServisFormu.SuspendLayout();
-            this.tlStrip.SuspendLayout();
-            this.grpAksesuarlar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxProfilResim)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtFormNo
-            // 
-            this.txtFormNo.Font = new System.Drawing.Font("Consolas", 11F);
-            this.txtFormNo.Location = new System.Drawing.Point(103, 23);
-            this.txtFormNo.Name = "txtFormNo";
-            this.txtFormNo.Size = new System.Drawing.Size(228, 25);
-            this.txtFormNo.TabIndex = 1;
-            // 
-            // lblFormNo
-            // 
-            this.lblFormNo.AutoSize = true;
-            this.lblFormNo.Font = new System.Drawing.Font("Consolas", 9F);
-            this.lblFormNo.Location = new System.Drawing.Point(36, 31);
-            this.lblFormNo.Name = "lblFormNo";
-            this.lblFormNo.Size = new System.Drawing.Size(63, 14);
-            this.lblFormNo.TabIndex = 1;
-            this.lblFormNo.Text = "Form No:";
             // 
             // lblTelefon
             // 
             this.lblTelefon.AutoSize = true;
-            this.lblTelefon.Font = new System.Drawing.Font("Consolas", 9F);
-            this.lblTelefon.Location = new System.Drawing.Point(36, 93);
+            this.lblTelefon.Location = new System.Drawing.Point(15, 97);
             this.lblTelefon.Name = "lblTelefon";
-            this.lblTelefon.Size = new System.Drawing.Size(63, 14);
+            this.lblTelefon.Size = new System.Drawing.Size(62, 21);
             this.lblTelefon.TabIndex = 3;
             this.lblTelefon.Text = "Telefon:";
             // 
             // mtxTelefon
             // 
-            this.mtxTelefon.Font = new System.Drawing.Font("Consolas", 11F);
-            this.mtxTelefon.Location = new System.Drawing.Point(103, 85);
+            this.mtxTelefon.Location = new System.Drawing.Point(15, 122);
             this.mtxTelefon.Mask = "(0999) 000 00 00";
             this.mtxTelefon.Name = "mtxTelefon";
-            this.mtxTelefon.Size = new System.Drawing.Size(228, 25);
+            this.mtxTelefon.Size = new System.Drawing.Size(256, 29);
             this.mtxTelefon.TabIndex = 3;
             // 
             // txtAksesuarlar
             // 
-            this.txtAksesuarlar.Font = new System.Drawing.Font("Consolas", 11F);
-            this.txtAksesuarlar.Location = new System.Drawing.Point(5, 20);
+            this.txtAksesuarlar.Location = new System.Drawing.Point(15, 178);
             this.txtAksesuarlar.Multiline = true;
             this.txtAksesuarlar.Name = "txtAksesuarlar";
-            this.txtAksesuarlar.Size = new System.Drawing.Size(326, 90);
+            this.txtAksesuarlar.Size = new System.Drawing.Size(256, 105);
             this.txtAksesuarlar.TabIndex = 4;
-            // 
-            // grpMusteriBilgileri
-            // 
-            this.grpMusteriBilgileri.Controls.Add(this.txtMusteriAdi);
-            this.grpMusteriBilgileri.Controls.Add(this.lblMusteriAdi);
-            this.grpMusteriBilgileri.Controls.Add(this.lblFormNo);
-            this.grpMusteriBilgileri.Controls.Add(this.txtFormNo);
-            this.grpMusteriBilgileri.Controls.Add(this.lblTelefon);
-            this.grpMusteriBilgileri.Controls.Add(this.mtxTelefon);
-            this.grpMusteriBilgileri.Font = new System.Drawing.Font("Consolas", 11F);
-            this.grpMusteriBilgileri.Location = new System.Drawing.Point(11, 26);
-            this.grpMusteriBilgileri.Name = "grpMusteriBilgileri";
-            this.grpMusteriBilgileri.Size = new System.Drawing.Size(345, 121);
-            this.grpMusteriBilgileri.TabIndex = 1;
-            this.grpMusteriBilgileri.TabStop = false;
-            this.grpMusteriBilgileri.Text = "Müşteri Bilgileri";
             // 
             // txtMusteriAdi
             // 
-            this.txtMusteriAdi.Font = new System.Drawing.Font("Consolas", 11F);
-            this.txtMusteriAdi.Location = new System.Drawing.Point(103, 53);
+            this.txtMusteriAdi.Location = new System.Drawing.Point(15, 64);
             this.txtMusteriAdi.Name = "txtMusteriAdi";
-            this.txtMusteriAdi.Size = new System.Drawing.Size(228, 25);
+            this.txtMusteriAdi.Size = new System.Drawing.Size(256, 29);
             this.txtMusteriAdi.TabIndex = 2;
             // 
             // lblMusteriAdi
             // 
             this.lblMusteriAdi.AutoSize = true;
-            this.lblMusteriAdi.Font = new System.Drawing.Font("Consolas", 9F);
-            this.lblMusteriAdi.Location = new System.Drawing.Point(8, 60);
+            this.lblMusteriAdi.Location = new System.Drawing.Point(15, 39);
             this.lblMusteriAdi.Name = "lblMusteriAdi";
-            this.lblMusteriAdi.Size = new System.Drawing.Size(91, 14);
+            this.lblMusteriAdi.Size = new System.Drawing.Size(93, 21);
             this.lblMusteriAdi.TabIndex = 2;
             this.lblMusteriAdi.Text = "Müşteri Adı:";
             // 
-            // grpUrunBilgileri
-            // 
-            this.grpUrunBilgileri.Controls.Add(this.picQrKodu);
-            this.grpUrunBilgileri.Controls.Add(this.lblUrunKodlari);
-            this.grpUrunBilgileri.Controls.Add(this.chkTeslimEdildi);
-            this.grpUrunBilgileri.Controls.Add(this.txtUcret);
-            this.grpUrunBilgileri.Controls.Add(this.lblUcret);
-            this.grpUrunBilgileri.Controls.Add(this.lblQrKodu);
-            this.grpUrunBilgileri.Controls.Add(this.txtTakipNumarası);
-            this.grpUrunBilgileri.Controls.Add(this.lblTakipNumarası);
-            this.grpUrunBilgileri.Controls.Add(this.txtUrunDurumu);
-            this.grpUrunBilgileri.Controls.Add(this.lblUrunDurumu);
-            this.grpUrunBilgileri.Controls.Add(this.txtArizaninTanimi);
-            this.grpUrunBilgileri.Controls.Add(this.lblArizaninTanimi);
-            this.grpUrunBilgileri.Controls.Add(this.txtUrunKodlari);
-            this.grpUrunBilgileri.Controls.Add(this.txtUrunModeli);
-            this.grpUrunBilgileri.Controls.Add(this.lblUrunModeli);
-            this.grpUrunBilgileri.Font = new System.Drawing.Font("Consolas", 11F);
-            this.grpUrunBilgileri.Location = new System.Drawing.Point(362, 26);
-            this.grpUrunBilgileri.Name = "grpUrunBilgileri";
-            this.grpUrunBilgileri.Size = new System.Drawing.Size(389, 365);
-            this.grpUrunBilgileri.TabIndex = 4;
-            this.grpUrunBilgileri.TabStop = false;
-            this.grpUrunBilgileri.Text = "Ürün Bilgileri";
-            // 
             // picQrKodu
             // 
-            this.picQrKodu.Location = new System.Drawing.Point(207, 212);
+            this.picQrKodu.Location = new System.Drawing.Point(208, 507);
             this.picQrKodu.Name = "picQrKodu";
-            this.picQrKodu.Size = new System.Drawing.Size(100, 100);
+            this.picQrKodu.Size = new System.Drawing.Size(112, 116);
             this.picQrKodu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picQrKodu.TabIndex = 38;
             this.picQrKodu.TabStop = false;
@@ -212,20 +125,18 @@
             // lblUrunKodlari
             // 
             this.lblUrunKodlari.AutoSize = true;
-            this.lblUrunKodlari.Font = new System.Drawing.Font("Consolas", 9F);
-            this.lblUrunKodlari.Location = new System.Drawing.Point(43, 54);
+            this.lblUrunKodlari.Location = new System.Drawing.Point(295, 96);
             this.lblUrunKodlari.Name = "lblUrunKodlari";
-            this.lblUrunKodlari.Size = new System.Drawing.Size(98, 14);
+            this.lblUrunKodlari.Size = new System.Drawing.Size(101, 21);
             this.lblUrunKodlari.TabIndex = 7;
             this.lblUrunKodlari.Text = "Ürün Kodları:";
             // 
             // chkTeslimEdildi
             // 
             this.chkTeslimEdildi.AutoSize = true;
-            this.chkTeslimEdildi.Font = new System.Drawing.Font("Consolas", 9F);
-            this.chkTeslimEdildi.Location = new System.Drawing.Point(21, 327);
+            this.chkTeslimEdildi.Location = new System.Drawing.Point(147, 429);
             this.chkTeslimEdildi.Name = "chkTeslimEdildi";
-            this.chkTeslimEdildi.Size = new System.Drawing.Size(117, 18);
+            this.chkTeslimEdildi.Size = new System.Drawing.Size(114, 25);
             this.chkTeslimEdildi.TabIndex = 12;
             this.chkTeslimEdildi.Text = "Teslim Edildi";
             this.chkTeslimEdildi.UseVisualStyleBackColor = true;
@@ -233,409 +144,171 @@
             // 
             // txtUcret
             // 
-            this.txtUcret.Font = new System.Drawing.Font("Consolas", 11F);
-            this.txtUcret.Location = new System.Drawing.Point(259, 322);
+            this.txtUcret.Location = new System.Drawing.Point(295, 371);
             this.txtUcret.Name = "txtUcret";
-            this.txtUcret.Size = new System.Drawing.Size(113, 25);
+            this.txtUcret.Size = new System.Drawing.Size(256, 29);
             this.txtUcret.TabIndex = 11;
             // 
             // lblUcret
             // 
             this.lblUcret.AutoSize = true;
-            this.lblUcret.Font = new System.Drawing.Font("Consolas", 9F);
-            this.lblUcret.Location = new System.Drawing.Point(204, 328);
+            this.lblUcret.Location = new System.Drawing.Point(295, 346);
             this.lblUcret.Name = "lblUcret";
-            this.lblUcret.Size = new System.Drawing.Size(49, 14);
+            this.lblUcret.Size = new System.Drawing.Size(50, 21);
             this.lblUcret.TabIndex = 12;
             this.lblUcret.Text = "Ücret:";
-            // 
-            // lblQrKodu
-            // 
-            this.lblQrKodu.AutoSize = true;
-            this.lblQrKodu.Font = new System.Drawing.Font("Consolas", 9F);
-            this.lblQrKodu.Location = new System.Drawing.Point(77, 214);
-            this.lblQrKodu.Name = "lblQrKodu";
-            this.lblQrKodu.Size = new System.Drawing.Size(63, 14);
-            this.lblQrKodu.TabIndex = 11;
-            this.lblQrKodu.Text = "Qr Kodu:";
             // 
             // txtTakipNumarası
             // 
             this.txtTakipNumarası.Enabled = false;
-            this.txtTakipNumarası.Font = new System.Drawing.Font("Consolas", 11F);
-            this.txtTakipNumarası.Location = new System.Drawing.Point(144, 181);
+            this.txtTakipNumarası.Location = new System.Drawing.Point(295, 429);
             this.txtTakipNumarası.Name = "txtTakipNumarası";
-            this.txtTakipNumarası.Size = new System.Drawing.Size(228, 25);
+            this.txtTakipNumarası.Size = new System.Drawing.Size(256, 29);
             this.txtTakipNumarası.TabIndex = 10;
             // 
             // lblTakipNumarası
             // 
             this.lblTakipNumarası.AutoSize = true;
-            this.lblTakipNumarası.Font = new System.Drawing.Font("Consolas", 9F);
-            this.lblTakipNumarası.Location = new System.Drawing.Point(28, 189);
+            this.lblTakipNumarası.Location = new System.Drawing.Point(295, 404);
             this.lblTakipNumarası.Name = "lblTakipNumarası";
-            this.lblTakipNumarası.Size = new System.Drawing.Size(112, 14);
+            this.lblTakipNumarası.Size = new System.Drawing.Size(120, 21);
             this.lblTakipNumarası.TabIndex = 10;
             this.lblTakipNumarası.Text = "Takip Numarası:";
             // 
             // txtUrunDurumu
             // 
-            this.txtUrunDurumu.Font = new System.Drawing.Font("Consolas", 11F);
-            this.txtUrunDurumu.Location = new System.Drawing.Point(144, 151);
+            this.txtUrunDurumu.Location = new System.Drawing.Point(295, 313);
             this.txtUrunDurumu.Name = "txtUrunDurumu";
-            this.txtUrunDurumu.Size = new System.Drawing.Size(228, 25);
+            this.txtUrunDurumu.Size = new System.Drawing.Size(256, 29);
             this.txtUrunDurumu.TabIndex = 9;
             // 
             // lblUrunDurumu
             // 
             this.lblUrunDurumu.AutoSize = true;
-            this.lblUrunDurumu.Font = new System.Drawing.Font("Consolas", 9F);
-            this.lblUrunDurumu.Location = new System.Drawing.Point(49, 159);
+            this.lblUrunDurumu.Location = new System.Drawing.Point(295, 288);
             this.lblUrunDurumu.Name = "lblUrunDurumu";
-            this.lblUrunDurumu.Size = new System.Drawing.Size(91, 14);
+            this.lblUrunDurumu.Size = new System.Drawing.Size(110, 21);
             this.lblUrunDurumu.TabIndex = 9;
             this.lblUrunDurumu.Text = "Ürün Durumu:";
             // 
             // txtArizaninTanimi
             // 
-            this.txtArizaninTanimi.Font = new System.Drawing.Font("Consolas", 11F);
-            this.txtArizaninTanimi.Location = new System.Drawing.Point(144, 77);
+            this.txtArizaninTanimi.Location = new System.Drawing.Point(295, 179);
             this.txtArizaninTanimi.Multiline = true;
             this.txtArizaninTanimi.Name = "txtArizaninTanimi";
-            this.txtArizaninTanimi.Size = new System.Drawing.Size(228, 68);
+            this.txtArizaninTanimi.Size = new System.Drawing.Size(256, 105);
             this.txtArizaninTanimi.TabIndex = 8;
             // 
             // lblArizaninTanimi
             // 
             this.lblArizaninTanimi.AutoSize = true;
-            this.lblArizaninTanimi.Font = new System.Drawing.Font("Consolas", 9F);
-            this.lblArizaninTanimi.Location = new System.Drawing.Point(22, 80);
+            this.lblArizaninTanimi.Location = new System.Drawing.Point(295, 154);
             this.lblArizaninTanimi.Name = "lblArizaninTanimi";
-            this.lblArizaninTanimi.Size = new System.Drawing.Size(119, 14);
+            this.lblArizaninTanimi.Size = new System.Drawing.Size(119, 21);
             this.lblArizaninTanimi.TabIndex = 8;
             this.lblArizaninTanimi.Text = "Arızanın Tanımı:";
             // 
             // txtUrunKodlari
             // 
-            this.txtUrunKodlari.Font = new System.Drawing.Font("Consolas", 11F);
-            this.txtUrunKodlari.Location = new System.Drawing.Point(144, 47);
+            this.txtUrunKodlari.Location = new System.Drawing.Point(295, 121);
             this.txtUrunKodlari.Name = "txtUrunKodlari";
-            this.txtUrunKodlari.Size = new System.Drawing.Size(228, 25);
+            this.txtUrunKodlari.Size = new System.Drawing.Size(256, 29);
             this.txtUrunKodlari.TabIndex = 7;
+            this.txtUrunKodlari.TextChanged += new System.EventHandler(this.txtUrunKodlari_TextChanged);
             // 
             // txtUrunModeli
             // 
-            this.txtUrunModeli.Font = new System.Drawing.Font("Consolas", 11F);
-            this.txtUrunModeli.Location = new System.Drawing.Point(144, 17);
+            this.txtUrunModeli.Location = new System.Drawing.Point(295, 64);
             this.txtUrunModeli.Name = "txtUrunModeli";
-            this.txtUrunModeli.Size = new System.Drawing.Size(228, 25);
+            this.txtUrunModeli.Size = new System.Drawing.Size(256, 29);
             this.txtUrunModeli.TabIndex = 6;
             // 
             // lblUrunModeli
             // 
             this.lblUrunModeli.AutoSize = true;
-            this.lblUrunModeli.Font = new System.Drawing.Font("Consolas", 9F);
-            this.lblUrunModeli.Location = new System.Drawing.Point(50, 25);
+            this.lblUrunModeli.Location = new System.Drawing.Point(295, 39);
             this.lblUrunModeli.Name = "lblUrunModeli";
-            this.lblUrunModeli.Size = new System.Drawing.Size(91, 14);
+            this.lblUrunModeli.Size = new System.Drawing.Size(100, 21);
             this.lblUrunModeli.TabIndex = 6;
             this.lblUrunModeli.Text = "Ürün Modeli:";
             // 
             // lblMusteriNo
             // 
             this.lblMusteriNo.AutoSize = true;
-            this.lblMusteriNo.Font = new System.Drawing.Font("Consolas", 9F);
-            this.lblMusteriNo.Location = new System.Drawing.Point(618, 392);
+            this.lblMusteriNo.Location = new System.Drawing.Point(37, 529);
             this.lblMusteriNo.Name = "lblMusteriNo";
-            this.lblMusteriNo.Size = new System.Drawing.Size(77, 14);
+            this.lblMusteriNo.Size = new System.Drawing.Size(88, 21);
             this.lblMusteriNo.TabIndex = 36;
             this.lblMusteriNo.Text = "Müşteri No";
             this.lblMusteriNo.Visible = false;
             // 
-            // grpEkBilgiler
-            // 
-            this.grpEkBilgiler.Controls.Add(this.txtEkBilgiler);
-            this.grpEkBilgiler.Font = new System.Drawing.Font("Consolas", 11F);
-            this.grpEkBilgiler.Location = new System.Drawing.Point(11, 276);
-            this.grpEkBilgiler.Name = "grpEkBilgiler";
-            this.grpEkBilgiler.Size = new System.Drawing.Size(344, 115);
-            this.grpEkBilgiler.TabIndex = 3;
-            this.grpEkBilgiler.TabStop = false;
-            this.grpEkBilgiler.Text = "Ek Bilgiler";
-            // 
             // txtEkBilgiler
             // 
-            this.txtEkBilgiler.Font = new System.Drawing.Font("Consolas", 11F);
-            this.txtEkBilgiler.Location = new System.Drawing.Point(5, 20);
+            this.txtEkBilgiler.Location = new System.Drawing.Point(15, 312);
             this.txtEkBilgiler.Multiline = true;
             this.txtEkBilgiler.Name = "txtEkBilgiler";
-            this.txtEkBilgiler.Size = new System.Drawing.Size(326, 90);
+            this.txtEkBilgiler.Size = new System.Drawing.Size(256, 105);
             this.txtEkBilgiler.TabIndex = 5;
             // 
             // btnYeniKayit
             // 
-            this.btnYeniKayit.Font = new System.Drawing.Font("Consolas", 11F);
-            this.btnYeniKayit.Location = new System.Drawing.Point(761, 101);
+            this.btnYeniKayit.BackColor = System.Drawing.Color.Black;
+            this.btnYeniKayit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnYeniKayit.ForeColor = System.Drawing.Color.White;
+            this.btnYeniKayit.Location = new System.Drawing.Point(576, 122);
             this.btnYeniKayit.Name = "btnYeniKayit";
-            this.btnYeniKayit.Size = new System.Drawing.Size(129, 44);
+            this.btnYeniKayit.Size = new System.Drawing.Size(150, 40);
             this.btnYeniKayit.TabIndex = 14;
             this.btnYeniKayit.Text = "Yeni Kayıt";
-            this.btnYeniKayit.UseVisualStyleBackColor = true;
+            this.btnYeniKayit.UseVisualStyleBackColor = false;
             this.btnYeniKayit.Click += new System.EventHandler(this.btnYeniKayit_Click);
-            this.btnYeniKayit.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
-            this.btnYeniKayit.MouseHover += new System.EventHandler(this.btnYeniKayit_MouseHover);
             // 
             // btnKaydet
             // 
-            this.btnKaydet.Font = new System.Drawing.Font("Consolas", 11F);
-            this.btnKaydet.Location = new System.Drawing.Point(761, 149);
+            this.btnKaydet.BackColor = System.Drawing.Color.Black;
+            this.btnKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKaydet.ForeColor = System.Drawing.Color.White;
+            this.btnKaydet.Location = new System.Drawing.Point(576, 168);
             this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(129, 44);
+            this.btnKaydet.Size = new System.Drawing.Size(150, 40);
             this.btnKaydet.TabIndex = 15;
             this.btnKaydet.Text = "Kaydet";
-            this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.UseVisualStyleBackColor = false;
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
-            this.btnKaydet.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
-            this.btnKaydet.MouseHover += new System.EventHandler(this.btnKaydet_MouseHover);
-            // 
-            // btnTemizle
-            // 
-            this.btnTemizle.Font = new System.Drawing.Font("Consolas", 11F);
-            this.btnTemizle.Location = new System.Drawing.Point(761, 199);
-            this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(129, 44);
-            this.btnTemizle.TabIndex = 16;
-            this.btnTemizle.Text = "Temizle";
-            this.btnTemizle.UseVisualStyleBackColor = true;
-            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
-            this.btnTemizle.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
-            this.btnTemizle.MouseHover += new System.EventHandler(this.btnTemizle_MouseHover);
             // 
             // btnKayitlariGoster
             // 
-            this.btnKayitlariGoster.Font = new System.Drawing.Font("Consolas", 11F);
-            this.btnKayitlariGoster.Location = new System.Drawing.Point(761, 249);
+            this.btnKayitlariGoster.BackColor = System.Drawing.Color.Black;
+            this.btnKayitlariGoster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKayitlariGoster.ForeColor = System.Drawing.Color.White;
+            this.btnKayitlariGoster.Location = new System.Drawing.Point(576, 214);
             this.btnKayitlariGoster.Name = "btnKayitlariGoster";
-            this.btnKayitlariGoster.Size = new System.Drawing.Size(129, 44);
+            this.btnKayitlariGoster.Size = new System.Drawing.Size(150, 40);
             this.btnKayitlariGoster.TabIndex = 17;
             this.btnKayitlariGoster.Text = "Kayıtları Göster";
-            this.btnKayitlariGoster.UseVisualStyleBackColor = true;
+            this.btnKayitlariGoster.UseVisualStyleBackColor = false;
             this.btnKayitlariGoster.Click += new System.EventHandler(this.btnKayitlariGoster_Click);
-            this.btnKayitlariGoster.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
-            this.btnKayitlariGoster.MouseHover += new System.EventHandler(this.btnKayitlariGoster_MouseHover);
-            // 
-            // btnGuncelle
-            // 
-            this.btnGuncelle.Font = new System.Drawing.Font("Consolas", 11F);
-            this.btnGuncelle.Location = new System.Drawing.Point(761, 299);
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(129, 44);
-            this.btnGuncelle.TabIndex = 18;
-            this.btnGuncelle.Text = "Güncelle";
-            this.btnGuncelle.UseVisualStyleBackColor = true;
-            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
-            this.btnGuncelle.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
-            this.btnGuncelle.MouseHover += new System.EventHandler(this.btnGuncelle_MouseHover);
-            // 
-            // mnsTeknikServisFormu
-            // 
-            this.mnsTeknikServisFormu.Font = new System.Drawing.Font("Consolas", 9F);
-            this.mnsTeknikServisFormu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiAraclar,
-            this.tsmiAyarlar,
-            this.tsmiYardim,
-            this.tsmiCikisYap});
-            this.mnsTeknikServisFormu.Location = new System.Drawing.Point(0, 0);
-            this.mnsTeknikServisFormu.Name = "mnsTeknikServisFormu";
-            this.mnsTeknikServisFormu.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.mnsTeknikServisFormu.Size = new System.Drawing.Size(909, 24);
-            this.mnsTeknikServisFormu.TabIndex = 31;
-            // 
-            // tsmiAraclar
-            // 
-            this.tsmiAraclar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiYeniKayit,
-            this.tsmiKaydet,
-            this.tsmiTemizle,
-            this.tsmiKayitlariGoster,
-            this.tsmiGuncelle});
-            this.tsmiAraclar.Name = "tsmiAraclar";
-            this.tsmiAraclar.Size = new System.Drawing.Size(68, 20);
-            this.tsmiAraclar.Text = "Araçlar";
-            // 
-            // tsmiYeniKayit
-            // 
-            this.tsmiYeniKayit.Name = "tsmiYeniKayit";
-            this.tsmiYeniKayit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.tsmiYeniKayit.Size = new System.Drawing.Size(193, 22);
-            this.tsmiYeniKayit.Text = "Yeni Kayıt";
-            this.tsmiYeniKayit.Click += new System.EventHandler(this.btnYeniKayit_Click);
-            this.tsmiYeniKayit.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
-            this.tsmiYeniKayit.MouseHover += new System.EventHandler(this.btnYeniKayit_MouseHover);
-            // 
-            // tsmiKaydet
-            // 
-            this.tsmiKaydet.Name = "tsmiKaydet";
-            this.tsmiKaydet.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.tsmiKaydet.Size = new System.Drawing.Size(235, 22);
-            this.tsmiKaydet.Text = "Kaydet";
-            this.tsmiKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
-            this.tsmiKaydet.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
-            this.tsmiKaydet.MouseHover += new System.EventHandler(this.btnKaydet_MouseHover);
-            // 
-            // tsmiTemizle
-            // 
-            this.tsmiTemizle.Name = "tsmiTemizle";
-            this.tsmiTemizle.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.tsmiTemizle.Size = new System.Drawing.Size(235, 22);
-            this.tsmiTemizle.Text = "Temizle";
-            this.tsmiTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
-            this.tsmiTemizle.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
-            this.tsmiTemizle.MouseHover += new System.EventHandler(this.btnTemizle_MouseHover);
-            // 
-            // tsmiKayitlariGoster
-            // 
-            this.tsmiKayitlariGoster.Name = "tsmiKayitlariGoster";
-            this.tsmiKayitlariGoster.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
-            this.tsmiKayitlariGoster.Size = new System.Drawing.Size(235, 22);
-            this.tsmiKayitlariGoster.Text = "Kayıtları Göster";
-            this.tsmiKayitlariGoster.Click += new System.EventHandler(this.btnKayitlariGoster_Click);
-            this.tsmiKayitlariGoster.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
-            this.tsmiKayitlariGoster.MouseHover += new System.EventHandler(this.btnKayitlariGoster_MouseHover);
-            // 
-            // tsmiGuncelle
-            // 
-            this.tsmiGuncelle.Name = "tsmiGuncelle";
-            this.tsmiGuncelle.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.tsmiGuncelle.Size = new System.Drawing.Size(235, 22);
-            this.tsmiGuncelle.Text = "Güncelle";
-            this.tsmiGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
-            this.tsmiGuncelle.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
-            this.tsmiGuncelle.MouseHover += new System.EventHandler(this.btnGuncelle_MouseHover);
-            // 
-            // tsmiAyarlar
-            // 
-            this.tsmiAyarlar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiDil,
-            this.tsmiTema});
-            this.tsmiAyarlar.Name = "tsmiAyarlar";
-            this.tsmiAyarlar.Size = new System.Drawing.Size(68, 20);
-            this.tsmiAyarlar.Text = "Ayarlar";
-            // 
-            // tsmiDil
-            // 
-            this.tsmiDil.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiTurkce,
-            this.tsmiIngilizce});
-            this.tsmiDil.Name = "tsmiDil";
-            this.tsmiDil.Size = new System.Drawing.Size(102, 22);
-            this.tsmiDil.Text = "Dil";
-            this.tsmiDil.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
-            this.tsmiDil.MouseHover += new System.EventHandler(this.mnsAyarlarDil_MouseHover);
-            // 
-            // tsmiTurkce
-            // 
-            this.tsmiTurkce.Name = "tsmiTurkce";
-            this.tsmiTurkce.Size = new System.Drawing.Size(137, 22);
-            this.tsmiTurkce.Text = "Türkçe";
-            // 
-            // tsmiIngilizce
-            // 
-            this.tsmiIngilizce.Name = "tsmiIngilizce";
-            this.tsmiIngilizce.Size = new System.Drawing.Size(137, 22);
-            this.tsmiIngilizce.Text = "İngilizce";
-            // 
-            // tsmiTema
-            // 
-            this.tsmiTema.Name = "tsmiTema";
-            this.tsmiTema.Size = new System.Drawing.Size(102, 22);
-            this.tsmiTema.Text = "Tema";
-            this.tsmiTema.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
-            this.tsmiTema.MouseHover += new System.EventHandler(this.mnsAyarlarTema_MouseHover);
-            // 
-            // tsmiYardim
-            // 
-            this.tsmiYardim.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiLisansAnahtari,
-            this.tsmiHakkinda});
-            this.tsmiYardim.Name = "tsmiYardim";
-            this.tsmiYardim.Size = new System.Drawing.Size(61, 20);
-            this.tsmiYardim.Text = "Yardım";
-            // 
-            // tsmiLisansAnahtari
-            // 
-            this.tsmiLisansAnahtari.Name = "tsmiLisansAnahtari";
-            this.tsmiLisansAnahtari.Size = new System.Drawing.Size(179, 22);
-            this.tsmiLisansAnahtari.Text = "Lisans Anahtarı";
-            this.tsmiLisansAnahtari.Click += new System.EventHandler(this.tsmiLisansAnahtari_Click);
-            this.tsmiLisansAnahtari.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
-            this.tsmiLisansAnahtari.MouseHover += new System.EventHandler(this.mnsYardimLisansAnahtari_MouseHover);
-            // 
-            // tsmiHakkinda
-            // 
-            this.tsmiHakkinda.Name = "tsmiHakkinda";
-            this.tsmiHakkinda.Size = new System.Drawing.Size(179, 22);
-            this.tsmiHakkinda.Text = "Hakkında";
-            this.tsmiHakkinda.Click += new System.EventHandler(this.mnsYardimHakkinda_Click);
-            this.tsmiHakkinda.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
-            this.tsmiHakkinda.MouseHover += new System.EventHandler(this.mnsYardimHakkinda_MouseHover);
-            // 
-            // tsmiCikisYap
-            // 
-            this.tsmiCikisYap.Name = "tsmiCikisYap";
-            this.tsmiCikisYap.Size = new System.Drawing.Size(82, 20);
-            this.tsmiCikisYap.Text = "Çıkış Yap";
-            this.tsmiCikisYap.Click += new System.EventHandler(this.btnCikisYap_Click);
-            this.tsmiCikisYap.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
-            this.tsmiCikisYap.MouseHover += new System.EventHandler(this.btnCikisYap_MouseHover);
-            // 
-            // tlStrip
-            // 
-            this.tlStrip.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tlStrip.Font = new System.Drawing.Font("Consolas", 9F);
-            this.tlStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TlStripLblAciklama,
-            this.tslblTarihSaat});
-            this.tlStrip.Location = new System.Drawing.Point(0, 406);
-            this.tlStrip.Name = "tlStrip";
-            this.tlStrip.Size = new System.Drawing.Size(909, 25);
-            this.tlStrip.TabIndex = 32;
-            this.tlStrip.Text = "toolStrip1";
-            // 
-            // TlStripLblAciklama
-            // 
-            this.TlStripLblAciklama.Name = "TlStripLblAciklama";
-            this.TlStripLblAciklama.Size = new System.Drawing.Size(63, 22);
-            this.TlStripLblAciklama.Text = "Açıklama";
-            // 
-            // tslblTarihSaat
-            // 
-            this.tslblTarihSaat.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.tslblTarihSaat.Name = "tslblTarihSaat";
-            this.tslblTarihSaat.Size = new System.Drawing.Size(77, 22);
-            this.tslblTarihSaat.Text = "Tarih Saat";
             // 
             // btnCikisYap
             // 
-            this.btnCikisYap.Font = new System.Drawing.Font("Consolas", 11F);
-            this.btnCikisYap.Location = new System.Drawing.Point(761, 347);
+            this.btnCikisYap.BackColor = System.Drawing.Color.Black;
+            this.btnCikisYap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCikisYap.ForeColor = System.Drawing.Color.White;
+            this.btnCikisYap.Location = new System.Drawing.Point(576, 397);
             this.btnCikisYap.Name = "btnCikisYap";
-            this.btnCikisYap.Size = new System.Drawing.Size(129, 44);
+            this.btnCikisYap.Size = new System.Drawing.Size(150, 40);
             this.btnCikisYap.TabIndex = 19;
             this.btnCikisYap.Text = "Çıkış Yap";
-            this.btnCikisYap.UseVisualStyleBackColor = true;
+            this.btnCikisYap.UseVisualStyleBackColor = false;
             this.btnCikisYap.Click += new System.EventHandler(this.btnCikisYap_Click);
-            this.btnCikisYap.MouseLeave += new System.EventHandler(this.VarsayilanAciklama_MouseLeave);
-            this.btnCikisYap.MouseHover += new System.EventHandler(this.btnCikisYap_MouseHover);
             // 
             // lblHosgeldin
             // 
             this.lblHosgeldin.AutoSize = true;
-            this.lblHosgeldin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.lblHosgeldin.Font = new System.Drawing.Font("Consolas", 9F);
-            this.lblHosgeldin.Location = new System.Drawing.Point(739, 6);
+            this.lblHosgeldin.BackColor = System.Drawing.Color.White;
+            this.lblHosgeldin.Location = new System.Drawing.Point(16, 430);
             this.lblHosgeldin.Name = "lblHosgeldin";
-            this.lblHosgeldin.Size = new System.Drawing.Size(98, 14);
+            this.lblHosgeldin.Size = new System.Drawing.Size(98, 21);
             this.lblHosgeldin.TabIndex = 35;
             this.lblHosgeldin.Text = "Hoş Geldin, !";
             // 
@@ -643,74 +316,189 @@
             // 
             this.tmrTarihSaat.Tick += new System.EventHandler(this.tmrTarihSaat_Tick);
             // 
-            // grpAksesuarlar
-            // 
-            this.grpAksesuarlar.Controls.Add(this.txtAksesuarlar);
-            this.grpAksesuarlar.Font = new System.Drawing.Font("Consolas", 11F);
-            this.grpAksesuarlar.Location = new System.Drawing.Point(11, 153);
-            this.grpAksesuarlar.Name = "grpAksesuarlar";
-            this.grpAksesuarlar.Size = new System.Drawing.Size(344, 115);
-            this.grpAksesuarlar.TabIndex = 2;
-            this.grpAksesuarlar.TabStop = false;
-            this.grpAksesuarlar.Text = "Aksesuarlar";
-            // 
             // PcTrBoxProfilResim
             // 
             this.PcTrBoxProfilResim.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PcTrBoxProfilResim.Image = global::RabtBil_Musteri_Kayit_v2.Properties.Resources.varsayilanProfilResmi;
-            this.PcTrBoxProfilResim.Location = new System.Drawing.Point(787, 27);
+            this.PcTrBoxProfilResim.Location = new System.Drawing.Point(614, 39);
             this.PcTrBoxProfilResim.Name = "PcTrBoxProfilResim";
-            this.PcTrBoxProfilResim.Size = new System.Drawing.Size(70, 70);
+            this.PcTrBoxProfilResim.Size = new System.Drawing.Size(80, 80);
             this.PcTrBoxProfilResim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PcTrBoxProfilResim.TabIndex = 33;
             this.PcTrBoxProfilResim.TabStop = false;
             this.PcTrBoxProfilResim.Click += new System.EventHandler(this.PcTrBoxProfilResim_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(15, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(177, 25);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "Teknik Servis Formu";
+            // 
+            // txtFormNo
+            // 
+            this.txtFormNo.Location = new System.Drawing.Point(41, 569);
+            this.txtFormNo.Name = "txtFormNo";
+            this.txtFormNo.Size = new System.Drawing.Size(127, 29);
+            this.txtFormNo.TabIndex = 39;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 155);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 21);
+            this.label2.TabIndex = 40;
+            this.label2.Text = "Aksesuarlar:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(15, 288);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 21);
+            this.label3.TabIndex = 41;
+            this.label3.Text = "Ek Bilgiler:";
+            // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.BackColor = System.Drawing.Color.Black;
+            this.btnGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuncelle.ForeColor = System.Drawing.Color.White;
+            this.btnGuncelle.Location = new System.Drawing.Point(576, 260);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(150, 40);
+            this.btnGuncelle.TabIndex = 18;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(576, 305);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 40);
+            this.button1.TabIndex = 42;
+            this.button1.Text = "Teslim Et";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(576, 351);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(150, 40);
+            this.button2.TabIndex = 43;
+            this.button2.Text = "Yazdır";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(647, 0);
+            this.button3.Margin = new System.Windows.Forms.Padding(0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(30, 30);
+            this.button3.TabIndex = 44;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.White;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(680, 0);
+            this.button5.Margin = new System.Windows.Forms.Padding(0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(30, 30);
+            this.button5.TabIndex = 46;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.Location = new System.Drawing.Point(713, 0);
+            this.button6.Margin = new System.Windows.Forms.Padding(0);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(30, 30);
+            this.button6.TabIndex = 47;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.kapat_Click);
+            // 
             // FrmPersonelTeknikServisFormu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(909, 431);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(745, 473);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnGuncelle);
+            this.Controls.Add(this.txtUcret);
+            this.Controls.Add(this.picQrKodu);
+            this.Controls.Add(this.lblUcret);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.chkTeslimEdildi);
+            this.Controls.Add(this.lblUrunKodlari);
+            this.Controls.Add(this.txtEkBilgiler);
+            this.Controls.Add(this.txtAksesuarlar);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtTakipNumarası);
+            this.Controls.Add(this.txtFormNo);
+            this.Controls.Add(this.lblTakipNumarası);
+            this.Controls.Add(this.txtMusteriAdi);
+            this.Controls.Add(this.txtUrunDurumu);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblUrunDurumu);
+            this.Controls.Add(this.mtxTelefon);
+            this.Controls.Add(this.txtArizaninTanimi);
+            this.Controls.Add(this.lblTelefon);
+            this.Controls.Add(this.lblArizaninTanimi);
+            this.Controls.Add(this.lblMusteriAdi);
+            this.Controls.Add(this.txtUrunKodlari);
             this.Controls.Add(this.lblHosgeldin);
             this.Controls.Add(this.lblMusteriNo);
+            this.Controls.Add(this.txtUrunModeli);
             this.Controls.Add(this.btnCikisYap);
+            this.Controls.Add(this.lblUrunModeli);
             this.Controls.Add(this.PcTrBoxProfilResim);
-            this.Controls.Add(this.tlStrip);
-            this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnKayitlariGoster);
-            this.Controls.Add(this.btnTemizle);
             this.Controls.Add(this.btnKaydet);
             this.Controls.Add(this.btnYeniKayit);
-            this.Controls.Add(this.grpEkBilgiler);
-            this.Controls.Add(this.grpUrunBilgileri);
-            this.Controls.Add(this.grpAksesuarlar);
-            this.Controls.Add(this.grpMusteriBilgileri);
-            this.Controls.Add(this.mnsTeknikServisFormu);
-            this.Font = new System.Drawing.Font("Consolas", 11F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MainMenuStrip = this.mnsTeknikServisFormu;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(925, 470);
-            this.MinimumSize = new System.Drawing.Size(925, 470);
             this.Name = "FrmPersonelTeknikServisFormu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTeknikServisFormu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPersonelTeknikServisFormu_FormClosing);
             this.Load += new System.EventHandler(this.FrmPersonelTeknikServisFormu_Load);
-            this.grpMusteriBilgileri.ResumeLayout(false);
-            this.grpMusteriBilgileri.PerformLayout();
-            this.grpUrunBilgileri.ResumeLayout(false);
-            this.grpUrunBilgileri.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picQrKodu)).EndInit();
-            this.grpEkBilgiler.ResumeLayout(false);
-            this.grpEkBilgiler.PerformLayout();
-            this.mnsTeknikServisFormu.ResumeLayout(false);
-            this.mnsTeknikServisFormu.PerformLayout();
-            this.tlStrip.ResumeLayout(false);
-            this.tlStrip.PerformLayout();
-            this.grpAksesuarlar.ResumeLayout(false);
-            this.grpAksesuarlar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxProfilResim)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -718,17 +506,11 @@
         }
 
         #endregion
-
-        public System.Windows.Forms.TextBox txtFormNo;
-        public System.Windows.Forms.Label lblFormNo;
         public System.Windows.Forms.Label lblTelefon;
         public System.Windows.Forms.MaskedTextBox mtxTelefon;
         public System.Windows.Forms.TextBox txtAksesuarlar;
-        public System.Windows.Forms.GroupBox grpMusteriBilgileri;
-        public System.Windows.Forms.GroupBox grpUrunBilgileri;
         public System.Windows.Forms.TextBox txtUcret;
         public System.Windows.Forms.Label lblUcret;
-        public System.Windows.Forms.Label lblQrKodu;
         public System.Windows.Forms.TextBox txtTakipNumarası;
         public System.Windows.Forms.Label lblTakipNumarası;
         public System.Windows.Forms.TextBox txtUrunDurumu;
@@ -738,42 +520,29 @@
         public System.Windows.Forms.TextBox txtUrunKodlari;
         public System.Windows.Forms.TextBox txtUrunModeli;
         public System.Windows.Forms.Label lblUrunModeli;
-        public System.Windows.Forms.GroupBox grpEkBilgiler;
         public System.Windows.Forms.TextBox txtEkBilgiler;
         public System.Windows.Forms.Button btnYeniKayit;
         public System.Windows.Forms.Button btnKaydet;
-        public System.Windows.Forms.Button btnTemizle;
         public System.Windows.Forms.Button btnKayitlariGoster;
-        public System.Windows.Forms.Button btnGuncelle;
-        public System.Windows.Forms.MenuStrip mnsTeknikServisFormu;
-        public System.Windows.Forms.ToolStripMenuItem tsmiAraclar;
-        public System.Windows.Forms.ToolStrip tlStrip;
-        public System.Windows.Forms.ToolStripLabel TlStripLblAciklama;
         public System.Windows.Forms.PictureBox PcTrBoxProfilResim;
         public System.Windows.Forms.Button btnCikisYap;
-        public System.Windows.Forms.ToolStripMenuItem tsmiYeniKayit;
-        public System.Windows.Forms.ToolStripMenuItem tsmiKaydet;
-        public System.Windows.Forms.ToolStripMenuItem tsmiTemizle;
-        public System.Windows.Forms.ToolStripMenuItem tsmiKayitlariGoster;
-        public System.Windows.Forms.ToolStripMenuItem tsmiGuncelle;
         public System.Windows.Forms.Label lblHosgeldin;
-        public System.Windows.Forms.ToolStripMenuItem tsmiAyarlar;
-        public System.Windows.Forms.ToolStripMenuItem tsmiDil;
-        public System.Windows.Forms.ToolStripMenuItem tsmiTurkce;
-        public System.Windows.Forms.ToolStripMenuItem tsmiIngilizce;
-        public System.Windows.Forms.ToolStripMenuItem tsmiTema;
-        public System.Windows.Forms.ToolStripMenuItem tsmiYardim;
-        public System.Windows.Forms.ToolStripMenuItem tsmiLisansAnahtari;
-        public System.Windows.Forms.ToolStripMenuItem tsmiHakkinda;
-        public System.Windows.Forms.ToolStripMenuItem tsmiCikisYap;
-        public System.Windows.Forms.ToolStripLabel tslblTarihSaat;
         public System.Windows.Forms.CheckBox chkTeslimEdildi;
         public System.Windows.Forms.Label lblUrunKodlari;
         public System.Windows.Forms.Timer tmrTarihSaat;
         public System.Windows.Forms.TextBox txtMusteriAdi;
         public System.Windows.Forms.Label lblMusteriAdi;
         public System.Windows.Forms.Label lblMusteriNo;
-        public System.Windows.Forms.GroupBox grpAksesuarlar;
         public System.Windows.Forms.PictureBox picQrKodu;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox txtFormNo;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Button btnGuncelle;
+        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Button button3;
+        public System.Windows.Forms.Button button5;
+        public System.Windows.Forms.Button button6;
     }
 }

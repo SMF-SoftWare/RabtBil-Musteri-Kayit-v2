@@ -17,16 +17,25 @@ namespace RabtBil_Musteri_Kayit_v2
             InitializeComponent();
         }
 
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case 0x84:
+                    base.WndProc(ref m);
+                    if ((int)m.Result == 0x1)
+                        m.Result = (IntPtr)0x2;
+                    return;
+            }
+
+            base.WndProc(ref m);
+        }
+
         private bool yenidenBaslat;
         private string cmdText;
 
         private void FrmPersonelTeknikServisFormu_Load(object sender, EventArgs e)
         {
-            if (SMF.LisansliMi)
-            {
-                tsmiLisansAnahtari.Enabled = false;
-            }
-
             GuncelleEtkinMi(false);
             tmrTarihSaat.Enabled = true;
             lblHosgeldin.Text = $"Hoş Geldin, {SMF.KullaniciAdi}!";
@@ -194,41 +203,6 @@ namespace RabtBil_Musteri_Kayit_v2
             frm.ShowDialog();
         }
 
-        private void VarsayilanAciklama_MouseLeave(object sender, EventArgs e)
-        {
-            TlStripLblAciklama.Text = "Açıklama";
-        }
-
-        private void btnYeniKayit_MouseHover(object sender, EventArgs e)
-        {
-            TlStripLblAciklama.Text = "Yeni bir kayıt oluşturur";
-        }
-
-        private void btnKaydet_MouseHover(object sender, EventArgs e)
-        {
-            TlStripLblAciklama.Text = "Müşterileri kayıt eder";
-        }
-
-        private void btnTemizle_MouseHover(object sender, EventArgs e)
-        {
-            TlStripLblAciklama.Text = "Text'lerin içini temizler";
-        }
-
-        private void btnKayitlariGoster_MouseHover(object sender, EventArgs e)
-        {
-            TlStripLblAciklama.Text = "Kaydedilen müşterileri listeler";
-        }
-
-        private void btnGuncelle_MouseHover(object sender, EventArgs e)
-        {
-            TlStripLblAciklama.Text = "Müşteri bilgilerinde değişiklik yapar";
-        }
-
-        private void btnCikisYap_MouseHover(object sender, EventArgs e)
-        {
-            TlStripLblAciklama.Text = "Oturumdan Çıkar";
-        }
-
         private void chkTeslimEdildi_Click(object sender, EventArgs e)
         {
             FrmUrunTeslim frm = new FrmUrunTeslim();
@@ -241,32 +215,7 @@ namespace RabtBil_Musteri_Kayit_v2
             frm.ShowDialog();
         }
 
-        private void mnsAyarlarDil_MouseHover(object sender, EventArgs e)
-        {
-            TlStripLblAciklama.Text = "Dil seçimi programı kolaylaştırır";
-        }
-
-        private void mnsAyarlarTema_MouseHover(object sender, EventArgs e)
-        {
-            TlStripLblAciklama.Text = "Programın görünümünü güzelleştirmeye yarar";
-        }
-
-        private void mnsYardimLisansAnahtari_MouseHover(object sender, EventArgs e)
-        {
-            TlStripLblAciklama.Text = "Lisansınızın durumunu gösterir";
-        }
-
-        private void mnsYardimHakkinda_MouseHover(object sender, EventArgs e)
-        {
-            TlStripLblAciklama.Text = "Program hakkında bilgi almaya yarar";
-        }
-
-        private void mnsYardimHakkinda_Click(object sender, EventArgs e)
-        {
-            FrmHakkinda frm = new FrmHakkinda();
-            frm.ShowDialog();
-        }
-
+       
         private void FrmPersonelTeknikServisFormu_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (txtFormNo.TextLength > 0 || txtMusteriAdi.TextLength > 0 || mtxTelefon.Text != @"(    )        " || txtAksesuarlar.TextLength > 0 || txtEkBilgiler.TextLength > 0 || txtUrunModeli.TextLength > 0 || txtUrunKodlari.TextLength > 0 || txtArizaninTanimi.TextLength > 0 || txtUrunDurumu.TextLength > 0 || txtUcret.TextLength > 0)
@@ -289,7 +238,7 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void tmrTarihSaat_Tick(object sender, EventArgs e)
         {
-            tslblTarihSaat.Text = DateTime.Now.ToString(CultureInfo.CurrentCulture);
+            //tslblTarihSaat.Text = DateTime.Now.ToString(CultureInfo.CurrentCulture);
         }
 
         public void GuncelleEtkinMi(bool value)
@@ -297,13 +246,11 @@ namespace RabtBil_Musteri_Kayit_v2
             if (value)
             {
                 btnGuncelle.Enabled = true;
-                tsmiGuncelle.Enabled = true;
                 chkTeslimEdildi.Enabled = true;
             }
             else
             {
                 btnGuncelle.Enabled = false;
-                tsmiGuncelle.Enabled = false;
                 chkTeslimEdildi.Enabled = false;
             }
         }
@@ -313,12 +260,10 @@ namespace RabtBil_Musteri_Kayit_v2
             if (value)
             {
                 btnKaydet.Enabled = true;
-                tsmiKaydet.Enabled = true;
             }
             else
             {
                 btnKaydet.Enabled = false;
-                tsmiKaydet.Enabled = false;
             }
         }
 
@@ -350,6 +295,21 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             FrmProgramiEtkinlestir frm = new FrmProgramiEtkinlestir();
             frm.ShowDialog();
+        }
+
+        private void txtUrunKodlari_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kapat_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

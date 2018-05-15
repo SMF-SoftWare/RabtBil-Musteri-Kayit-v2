@@ -35,8 +35,8 @@
             this.btnPersonelEkle = new System.Windows.Forms.Button();
             this.btnProgramHakkinda = new System.Windows.Forms.Button();
             this.btnProgramiEtkinlestir = new System.Windows.Forms.Button();
-            this.kapat = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnTeknikServisFormu
@@ -46,7 +46,7 @@
             this.btnTeknikServisFormu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTeknikServisFormu.Image = ((System.Drawing.Image)(resources.GetObject("btnTeknikServisFormu.Image")));
             this.btnTeknikServisFormu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTeknikServisFormu.Location = new System.Drawing.Point(14, 38);
+            this.btnTeknikServisFormu.Location = new System.Drawing.Point(13, 38);
             this.btnTeknikServisFormu.Margin = new System.Windows.Forms.Padding(0);
             this.btnTeknikServisFormu.Name = "btnTeknikServisFormu";
             this.btnTeknikServisFormu.Size = new System.Drawing.Size(110, 100);
@@ -63,7 +63,7 @@
             this.btnCikisYap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCikisYap.Image = ((System.Drawing.Image)(resources.GetObject("btnCikisYap.Image")));
             this.btnCikisYap.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCikisYap.Location = new System.Drawing.Point(239, 141);
+            this.btnCikisYap.Location = new System.Drawing.Point(233, 138);
             this.btnCikisYap.Margin = new System.Windows.Forms.Padding(0);
             this.btnCikisYap.Name = "btnCikisYap";
             this.btnCikisYap.Size = new System.Drawing.Size(110, 100);
@@ -80,7 +80,7 @@
             this.btnProfiliDuzenle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfiliDuzenle.Image = ((System.Drawing.Image)(resources.GetObject("btnProfiliDuzenle.Image")));
             this.btnProfiliDuzenle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnProfiliDuzenle.Location = new System.Drawing.Point(127, 38);
+            this.btnProfiliDuzenle.Location = new System.Drawing.Point(123, 38);
             this.btnProfiliDuzenle.Margin = new System.Windows.Forms.Padding(0);
             this.btnProfiliDuzenle.Name = "btnProfiliDuzenle";
             this.btnProfiliDuzenle.Size = new System.Drawing.Size(110, 100);
@@ -97,7 +97,7 @@
             this.btnPersonelEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPersonelEkle.Image = ((System.Drawing.Image)(resources.GetObject("btnPersonelEkle.Image")));
             this.btnPersonelEkle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPersonelEkle.Location = new System.Drawing.Point(240, 38);
+            this.btnPersonelEkle.Location = new System.Drawing.Point(233, 38);
             this.btnPersonelEkle.Margin = new System.Windows.Forms.Padding(0);
             this.btnPersonelEkle.Name = "btnPersonelEkle";
             this.btnPersonelEkle.Size = new System.Drawing.Size(110, 100);
@@ -114,7 +114,7 @@
             this.btnProgramHakkinda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProgramHakkinda.Image = ((System.Drawing.Image)(resources.GetObject("btnProgramHakkinda.Image")));
             this.btnProgramHakkinda.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnProgramHakkinda.Location = new System.Drawing.Point(126, 141);
+            this.btnProgramHakkinda.Location = new System.Drawing.Point(123, 138);
             this.btnProgramHakkinda.Margin = new System.Windows.Forms.Padding(0);
             this.btnProgramHakkinda.Name = "btnProgramHakkinda";
             this.btnProgramHakkinda.Size = new System.Drawing.Size(110, 100);
@@ -131,7 +131,7 @@
             this.btnProgramiEtkinlestir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProgramiEtkinlestir.Image = ((System.Drawing.Image)(resources.GetObject("btnProgramiEtkinlestir.Image")));
             this.btnProgramiEtkinlestir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnProgramiEtkinlestir.Location = new System.Drawing.Point(13, 141);
+            this.btnProgramiEtkinlestir.Location = new System.Drawing.Point(13, 138);
             this.btnProgramiEtkinlestir.Margin = new System.Windows.Forms.Padding(0);
             this.btnProgramiEtkinlestir.Name = "btnProgramiEtkinlestir";
             this.btnProgramiEtkinlestir.Size = new System.Drawing.Size(110, 100);
@@ -140,18 +140,6 @@
             this.btnProgramiEtkinlestir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnProgramiEtkinlestir.UseVisualStyleBackColor = false;
             this.btnProgramiEtkinlestir.Click += new System.EventHandler(this.btnProgramiEtkinlestir_Click);
-            // 
-            // kapat
-            // 
-            this.kapat.AutoSize = true;
-            this.kapat.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kapat.Location = new System.Drawing.Point(342, 2);
-            this.kapat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.kapat.Name = "kapat";
-            this.kapat.Size = new System.Drawing.Size(23, 25);
-            this.kapat.TabIndex = 9;
-            this.kapat.Text = "X";
-            this.kapat.Click += new System.EventHandler(this.kapat_Click);
             // 
             // label1
             // 
@@ -164,14 +152,29 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Ana Menü";
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.Location = new System.Drawing.Point(327, 0);
+            this.button6.Margin = new System.Windows.Forms.Padding(0);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(30, 30);
+            this.button6.TabIndex = 48;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.kapat_Click);
+            // 
             // FrmAnaMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(367, 261);
+            this.ClientSize = new System.Drawing.Size(358, 257);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.kapat);
             this.Controls.Add(this.btnProgramiEtkinlestir);
             this.Controls.Add(this.btnProgramHakkinda);
             this.Controls.Add(this.btnPersonelEkle);
@@ -199,7 +202,7 @@
         private System.Windows.Forms.Button btnPersonelEkle;
         private System.Windows.Forms.Button btnProgramHakkinda;
         private System.Windows.Forms.Button btnProgramiEtkinlestir;
-        private System.Windows.Forms.Label kapat;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Button button6;
     }
 }

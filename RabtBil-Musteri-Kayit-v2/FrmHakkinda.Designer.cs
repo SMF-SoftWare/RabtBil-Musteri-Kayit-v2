@@ -43,7 +43,7 @@
             this.lblCopyRight = new System.Windows.Forms.Label();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.kapat = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             this.gbxSMFSoftWare.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
@@ -187,17 +187,20 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Hakkında";
             // 
-            // kapat
+            // button6
             // 
-            this.kapat.AutoSize = true;
-            this.kapat.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kapat.Location = new System.Drawing.Point(747, 2);
-            this.kapat.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.kapat.Name = "kapat";
-            this.kapat.Size = new System.Drawing.Size(23, 25);
-            this.kapat.TabIndex = 12;
-            this.kapat.Text = "X";
-            this.kapat.Click += new System.EventHandler(this.kapat_Click);
+            this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.Location = new System.Drawing.Point(741, 2);
+            this.button6.Margin = new System.Windows.Forms.Padding(0);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(30, 30);
+            this.button6.TabIndex = 49;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.kapat_Click);
             // 
             // FrmHakkinda
             // 
@@ -205,7 +208,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(772, 264);
-            this.Controls.Add(this.kapat);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblCopyRight);
             this.Controls.Add(this.picLogo);
@@ -250,6 +253,6 @@
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.Label lblCopyRight;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label kapat;
+        public System.Windows.Forms.Button button6;
     }
 }

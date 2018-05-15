@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGucluSifreOlustur));
             this.lblSifreUzunluguDeger = new System.Windows.Forms.Label();
             this.trbSifreUzunlugu = new System.Windows.Forms.TrackBar();
             this.lblGucluSifreniz = new System.Windows.Forms.Label();
@@ -40,8 +41,8 @@
             this.chkKucukHarfler = new System.Windows.Forms.CheckBox();
             this.btnYenidenOlustur = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.kapat = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.trbSifreUzunlugu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,18 +176,6 @@
             this.btnYenidenOlustur.UseVisualStyleBackColor = false;
             this.btnYenidenOlustur.Click += new System.EventHandler(this.btnYenidenOlustur_Click);
             // 
-            // kapat
-            // 
-            this.kapat.AutoSize = true;
-            this.kapat.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kapat.Location = new System.Drawing.Point(520, 2);
-            this.kapat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.kapat.Name = "kapat";
-            this.kapat.Size = new System.Drawing.Size(23, 25);
-            this.kapat.TabIndex = 23;
-            this.kapat.Text = "X";
-            this.kapat.Click += new System.EventHandler(this.kapat_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -198,6 +187,21 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "Güçlü Şifre Oluştur";
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.Location = new System.Drawing.Point(514, 0);
+            this.button6.Margin = new System.Windows.Forms.Padding(0);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(30, 30);
+            this.button6.TabIndex = 49;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.kapat_Click);
+            // 
             // FrmGucluSifreOlustur
             // 
             this.AcceptButton = this.btnKopyala;
@@ -205,8 +209,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(545, 211);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.kapat);
             this.Controls.Add(this.btnYenidenOlustur);
             this.Controls.Add(this.lblSifreUzunluguDeger);
             this.Controls.Add(this.trbSifreUzunlugu);
@@ -246,7 +250,7 @@
         private System.Windows.Forms.CheckBox chkKucukHarfler;
         private System.Windows.Forms.Button btnYenidenOlustur;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Label kapat;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Button button6;
     }
 }

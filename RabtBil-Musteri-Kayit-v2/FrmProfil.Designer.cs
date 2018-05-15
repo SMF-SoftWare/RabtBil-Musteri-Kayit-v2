@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProfil));
             this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
             this.lblKullaniciAdi = new System.Windows.Forms.Label();
             this.lblMevcutSifre = new System.Windows.Forms.Label();
@@ -45,9 +46,9 @@
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.PcTrBoxProfiliDuzenle = new System.Windows.Forms.PictureBox();
             this.pbxEye = new System.Windows.Forms.PictureBox();
-            this.kapat = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnGucluSifreOlustur = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxProfiliDuzenle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxEye)).BeginInit();
             this.SuspendLayout();
@@ -206,18 +207,6 @@
             this.pbxEye.TabStop = false;
             this.pbxEye.Click += new System.EventHandler(this.pbxEye_Click);
             // 
-            // kapat
-            // 
-            this.kapat.AutoSize = true;
-            this.kapat.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.kapat.Location = new System.Drawing.Point(607, 2);
-            this.kapat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.kapat.Name = "kapat";
-            this.kapat.Size = new System.Drawing.Size(23, 25);
-            this.kapat.TabIndex = 37;
-            this.kapat.Text = "X";
-            this.kapat.Click += new System.EventHandler(this.kapat_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -242,6 +231,21 @@
             this.btnGucluSifreOlustur.UseVisualStyleBackColor = false;
             this.btnGucluSifreOlustur.Click += new System.EventHandler(this.btnKapat_Click);
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.Location = new System.Drawing.Point(601, 0);
+            this.button6.Margin = new System.Windows.Forms.Padding(0);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(30, 30);
+            this.button6.TabIndex = 49;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.kapat_Click);
+            // 
             // FrmProfil
             // 
             this.AcceptButton = this.btnGuncelle;
@@ -249,8 +253,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(632, 456);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.kapat);
             this.Controls.Add(this.pbxEye);
             this.Controls.Add(this.btnGucluSifreOlustur);
             this.Controls.Add(this.PcTrBoxProfiliDuzenle);
@@ -303,8 +307,8 @@
         public System.Windows.Forms.Button btnGuncelle;
         public System.Windows.Forms.PictureBox PcTrBoxProfiliDuzenle;
         private System.Windows.Forms.PictureBox pbxEye;
-        private System.Windows.Forms.Label kapat;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button btnGucluSifreOlustur;
+        public System.Windows.Forms.Button button6;
     }
 }
