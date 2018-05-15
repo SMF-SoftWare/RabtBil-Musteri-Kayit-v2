@@ -52,7 +52,7 @@
             // 
             this.lblProgramAdi.AutoSize = true;
             this.lblProgramAdi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblProgramAdi.Location = new System.Drawing.Point(17, 41);
+            this.lblProgramAdi.Location = new System.Drawing.Point(15, 39);
             this.lblProgramAdi.Name = "lblProgramAdi";
             this.lblProgramAdi.Size = new System.Drawing.Size(233, 21);
             this.lblProgramAdi.TabIndex = 0;
@@ -61,7 +61,7 @@
             // lblSurum
             // 
             this.lblSurum.AutoSize = true;
-            this.lblSurum.Location = new System.Drawing.Point(18, 66);
+            this.lblSurum.Location = new System.Drawing.Point(15, 65);
             this.lblSurum.Name = "lblSurum";
             this.lblSurum.Size = new System.Drawing.Size(60, 21);
             this.lblSurum.TabIndex = 1;
@@ -71,7 +71,7 @@
             // 
             this.lblSurumNumarasi.AutoSize = true;
             this.lblSurumNumarasi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSurumNumarasi.Location = new System.Drawing.Point(75, 66);
+            this.lblSurumNumarasi.Location = new System.Drawing.Point(72, 65);
             this.lblSurumNumarasi.Name = "lblSurumNumarasi";
             this.lblSurumNumarasi.Size = new System.Drawing.Size(32, 21);
             this.lblSurumNumarasi.TabIndex = 2;
@@ -81,7 +81,7 @@
             // 
             this.lblAnasayfa.AutoSize = true;
             this.lblAnasayfa.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblAnasayfa.Location = new System.Drawing.Point(18, 87);
+            this.lblAnasayfa.Location = new System.Drawing.Point(15, 91);
             this.lblAnasayfa.Name = "lblAnasayfa";
             this.lblAnasayfa.Size = new System.Drawing.Size(108, 21);
             this.lblAnasayfa.TabIndex = 3;
@@ -91,7 +91,7 @@
             // 
             this.linklblAnaSayfa.AutoSize = true;
             this.linklblAnaSayfa.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.linklblAnaSayfa.Location = new System.Drawing.Point(123, 87);
+            this.linklblAnaSayfa.Location = new System.Drawing.Point(120, 91);
             this.linklblAnaSayfa.Name = "linklblAnaSayfa";
             this.linklblAnaSayfa.Size = new System.Drawing.Size(148, 21);
             this.linklblAnaSayfa.TabIndex = 4;
@@ -101,7 +101,7 @@
             // lblLisansDurumu
             // 
             this.lblLisansDurumu.AutoSize = true;
-            this.lblLisansDurumu.Location = new System.Drawing.Point(18, 108);
+            this.lblLisansDurumu.Location = new System.Drawing.Point(15, 117);
             this.lblLisansDurumu.Name = "lblLisansDurumu";
             this.lblLisansDurumu.Size = new System.Drawing.Size(118, 21);
             this.lblLisansDurumu.TabIndex = 5;
@@ -112,7 +112,7 @@
             this.lblLisans.AutoSize = true;
             this.lblLisans.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblLisans.ForeColor = System.Drawing.Color.Green;
-            this.lblLisans.Location = new System.Drawing.Point(132, 108);
+            this.lblLisans.Location = new System.Drawing.Point(130, 117);
             this.lblLisans.Name = "lblLisans";
             this.lblLisans.Size = new System.Drawing.Size(61, 21);
             this.lblLisans.TabIndex = 6;
@@ -123,7 +123,7 @@
             this.gbxSMFSoftWare.Controls.Add(this.lblOgrenci3);
             this.gbxSMFSoftWare.Controls.Add(this.lblOgrenci2);
             this.gbxSMFSoftWare.Controls.Add(this.lblOgrenci1);
-            this.gbxSMFSoftWare.Location = new System.Drawing.Point(17, 136);
+            this.gbxSMFSoftWare.Location = new System.Drawing.Point(15, 142);
             this.gbxSMFSoftWare.Name = "gbxSMFSoftWare";
             this.gbxSMFSoftWare.Size = new System.Drawing.Size(350, 109);
             this.gbxSMFSoftWare.TabIndex = 8;
@@ -160,7 +160,7 @@
             // lblCopyRight
             // 
             this.lblCopyRight.AutoSize = true;
-            this.lblCopyRight.Location = new System.Drawing.Point(369, 224);
+            this.lblCopyRight.Location = new System.Drawing.Point(369, 229);
             this.lblCopyRight.Name = "lblCopyRight";
             this.lblCopyRight.Size = new System.Drawing.Size(387, 21);
             this.lblCopyRight.TabIndex = 10;
@@ -169,9 +169,9 @@
             // picLogo
             // 
             this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.Location = new System.Drawing.Point(377, 41);
+            this.picLogo.Location = new System.Drawing.Point(376, 39);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(380, 177);
+            this.picLogo.Size = new System.Drawing.Size(380, 187);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogo.TabIndex = 9;
             this.picLogo.TabStop = false;
@@ -180,7 +180,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(17, 10);
+            this.label1.Location = new System.Drawing.Point(15, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 25);
@@ -191,7 +191,7 @@
             // 
             this.kapat.AutoSize = true;
             this.kapat.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kapat.Location = new System.Drawing.Point(747, 3);
+            this.kapat.Location = new System.Drawing.Point(747, 2);
             this.kapat.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.kapat.Name = "kapat";
             this.kapat.Size = new System.Drawing.Size(23, 25);
