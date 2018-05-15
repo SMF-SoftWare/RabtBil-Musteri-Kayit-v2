@@ -15,15 +15,24 @@ namespace RabtBil_Musteri_Kayit_v2
             InitializeComponent();
         }
 
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case 0x84:
+                    base.WndProc(ref m);
+                    if ((int)m.Result == 0x1)
+                        m.Result = (IntPtr)0x2;
+                    return;
+            }
+
+            base.WndProc(ref m);
+        }
+
         private bool gozeTiklandiMi;
 
         private void FrmProfil_Load(object sender, EventArgs e)
         {
-            if (SMF.LisansliMi)
-            {
-                tsmiLisansAnahtari.Enabled = false;
-            }
-
             if (SMF.AdminMi || SMF.YoneticiMi)
             {
                 txtKullaniciAdi.Enabled = true;
@@ -152,7 +161,8 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void btnKapat_Click(object sender, EventArgs e)
         {
-            Close();
+            FrmGucluSifreOlustur frm = new FrmGucluSifreOlustur();
+            frm.ShowDialog();
         }
 
         private void PcTrBoxProfiliDuzenle_Click(object sender, EventArgs e)
@@ -209,6 +219,11 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             FrmProgramiEtkinlestir frm = new FrmProgramiEtkinlestir();
             frm.ShowDialog();
+        }
+
+        private void kapat_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

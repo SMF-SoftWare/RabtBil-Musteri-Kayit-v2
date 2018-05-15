@@ -43,21 +43,11 @@
             this.lblEpostaAdresi = new System.Windows.Forms.Label();
             this.txtEpostaAdresi = new System.Windows.Forms.TextBox();
             this.btnGuncelle = new System.Windows.Forms.Button();
-            this.btnKapat = new System.Windows.Forms.Button();
-            this.mnsTeknikServisFormu = new System.Windows.Forms.MenuStrip();
-            this.tsmiAraclar = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiGucluSifreOlustur = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiAyarlar = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiDil = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiTurkce = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiIngilizce = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiTema = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiYardim = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiLisansAnahtari = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiHakkinda = new System.Windows.Forms.ToolStripMenuItem();
             this.PcTrBoxProfiliDuzenle = new System.Windows.Forms.PictureBox();
             this.pbxEye = new System.Windows.Forms.PictureBox();
-            this.mnsTeknikServisFormu.SuspendLayout();
+            this.kapat = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnGucluSifreOlustur = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxProfiliDuzenle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxEye)).BeginInit();
             this.SuspendLayout();
@@ -65,264 +55,140 @@
             // txtKullaniciAdi
             // 
             this.txtKullaniciAdi.Enabled = false;
-            this.txtKullaniciAdi.Font = new System.Drawing.Font("Consolas", 11F);
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(161, 27);
-            this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(15, 62);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
-            this.txtKullaniciAdi.Size = new System.Drawing.Size(277, 25);
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(414, 29);
             this.txtKullaniciAdi.TabIndex = 1;
             // 
             // lblKullaniciAdi
             // 
             this.lblKullaniciAdi.AutoSize = true;
-            this.lblKullaniciAdi.Font = new System.Drawing.Font("Consolas", 9F);
-            this.lblKullaniciAdi.Location = new System.Drawing.Point(52, 33);
-            this.lblKullaniciAdi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblKullaniciAdi.Location = new System.Drawing.Point(15, 39);
             this.lblKullaniciAdi.Name = "lblKullaniciAdi";
-            this.lblKullaniciAdi.Size = new System.Drawing.Size(105, 14);
+            this.lblKullaniciAdi.Size = new System.Drawing.Size(98, 21);
             this.lblKullaniciAdi.TabIndex = 11;
             this.lblKullaniciAdi.Text = "Kullanıcı Adı:";
             // 
             // lblMevcutSifre
             // 
             this.lblMevcutSifre.AutoSize = true;
-            this.lblMevcutSifre.Font = new System.Drawing.Font("Consolas", 9F);
-            this.lblMevcutSifre.Location = new System.Drawing.Point(59, 62);
-            this.lblMevcutSifre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMevcutSifre.Location = new System.Drawing.Point(15, 95);
             this.lblMevcutSifre.Name = "lblMevcutSifre";
-            this.lblMevcutSifre.Size = new System.Drawing.Size(98, 14);
+            this.lblMevcutSifre.Size = new System.Drawing.Size(100, 21);
             this.lblMevcutSifre.TabIndex = 13;
             this.lblMevcutSifre.Text = "Mevcut Şifre:";
             // 
             // txtMevcutSifre
             // 
-            this.txtMevcutSifre.Font = new System.Drawing.Font("Consolas", 11F);
-            this.txtMevcutSifre.Location = new System.Drawing.Point(161, 56);
-            this.txtMevcutSifre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMevcutSifre.Location = new System.Drawing.Point(15, 120);
             this.txtMevcutSifre.Name = "txtMevcutSifre";
-            this.txtMevcutSifre.Size = new System.Drawing.Size(277, 25);
+            this.txtMevcutSifre.Size = new System.Drawing.Size(414, 29);
             this.txtMevcutSifre.TabIndex = 2;
             this.txtMevcutSifre.UseSystemPasswordChar = true;
             // 
             // txtYeniSifre
             // 
-            this.txtYeniSifre.Font = new System.Drawing.Font("Consolas", 11F);
-            this.txtYeniSifre.Location = new System.Drawing.Point(161, 172);
-            this.txtYeniSifre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtYeniSifre.Location = new System.Drawing.Point(15, 351);
             this.txtYeniSifre.Name = "txtYeniSifre";
-            this.txtYeniSifre.Size = new System.Drawing.Size(277, 25);
+            this.txtYeniSifre.Size = new System.Drawing.Size(414, 29);
             this.txtYeniSifre.TabIndex = 3;
             this.txtYeniSifre.UseSystemPasswordChar = true;
             // 
             // txtYeniSifreyiOnayla
             // 
-            this.txtYeniSifreyiOnayla.Font = new System.Drawing.Font("Consolas", 11F);
-            this.txtYeniSifreyiOnayla.Location = new System.Drawing.Point(161, 202);
-            this.txtYeniSifreyiOnayla.Margin = new System.Windows.Forms.Padding(2);
+            this.txtYeniSifreyiOnayla.Location = new System.Drawing.Point(15, 409);
             this.txtYeniSifreyiOnayla.Name = "txtYeniSifreyiOnayla";
-            this.txtYeniSifreyiOnayla.Size = new System.Drawing.Size(277, 25);
+            this.txtYeniSifreyiOnayla.Size = new System.Drawing.Size(414, 29);
             this.txtYeniSifreyiOnayla.TabIndex = 4;
             this.txtYeniSifreyiOnayla.UseSystemPasswordChar = true;
             // 
             // txtAdi
             // 
-            this.txtAdi.Font = new System.Drawing.Font("Consolas", 11F);
-            this.txtAdi.Location = new System.Drawing.Point(161, 85);
-            this.txtAdi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAdi.Location = new System.Drawing.Point(15, 178);
             this.txtAdi.Name = "txtAdi";
-            this.txtAdi.Size = new System.Drawing.Size(277, 25);
+            this.txtAdi.Size = new System.Drawing.Size(414, 29);
             this.txtAdi.TabIndex = 5;
             // 
             // lblYeniSifre
             // 
             this.lblYeniSifre.AutoSize = true;
-            this.lblYeniSifre.Font = new System.Drawing.Font("Consolas", 9F);
-            this.lblYeniSifre.Location = new System.Drawing.Point(74, 178);
-            this.lblYeniSifre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblYeniSifre.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblYeniSifre.Location = new System.Drawing.Point(15, 326);
             this.lblYeniSifre.Name = "lblYeniSifre";
-            this.lblYeniSifre.Size = new System.Drawing.Size(84, 14);
+            this.lblYeniSifre.Size = new System.Drawing.Size(78, 21);
             this.lblYeniSifre.TabIndex = 17;
             this.lblYeniSifre.Text = "Yeni Şifre:";
             // 
             // lblYeniSifreyiOnayla
             // 
             this.lblYeniSifreyiOnayla.AutoSize = true;
-            this.lblYeniSifreyiOnayla.Font = new System.Drawing.Font("Consolas", 9F);
-            this.lblYeniSifreyiOnayla.Location = new System.Drawing.Point(11, 208);
-            this.lblYeniSifreyiOnayla.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblYeniSifreyiOnayla.Location = new System.Drawing.Point(16, 384);
             this.lblYeniSifreyiOnayla.Name = "lblYeniSifreyiOnayla";
-            this.lblYeniSifreyiOnayla.Size = new System.Drawing.Size(147, 14);
+            this.lblYeniSifreyiOnayla.Size = new System.Drawing.Size(143, 21);
             this.lblYeniSifreyiOnayla.TabIndex = 18;
             this.lblYeniSifreyiOnayla.Text = "Yeni Şifreyi Onayla:";
             // 
             // lblAdi
             // 
             this.lblAdi.AutoSize = true;
-            this.lblAdi.Font = new System.Drawing.Font("Consolas", 9F);
-            this.lblAdi.Location = new System.Drawing.Point(122, 91);
-            this.lblAdi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAdi.Location = new System.Drawing.Point(15, 153);
             this.lblAdi.Name = "lblAdi";
-            this.lblAdi.Size = new System.Drawing.Size(35, 14);
+            this.lblAdi.Size = new System.Drawing.Size(36, 21);
             this.lblAdi.TabIndex = 19;
             this.lblAdi.Text = "Adı:";
             // 
             // lblSoyadi
             // 
             this.lblSoyadi.AutoSize = true;
-            this.lblSoyadi.Font = new System.Drawing.Font("Consolas", 9F);
-            this.lblSoyadi.Location = new System.Drawing.Point(101, 120);
-            this.lblSoyadi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSoyadi.Location = new System.Drawing.Point(15, 210);
             this.lblSoyadi.Name = "lblSoyadi";
-            this.lblSoyadi.Size = new System.Drawing.Size(56, 14);
+            this.lblSoyadi.Size = new System.Drawing.Size(60, 21);
             this.lblSoyadi.TabIndex = 21;
             this.lblSoyadi.Text = "Soyadı:";
             // 
             // txtSoyadi
             // 
-            this.txtSoyadi.Font = new System.Drawing.Font("Consolas", 11F);
-            this.txtSoyadi.Location = new System.Drawing.Point(161, 114);
-            this.txtSoyadi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSoyadi.Location = new System.Drawing.Point(15, 235);
             this.txtSoyadi.Name = "txtSoyadi";
-            this.txtSoyadi.Size = new System.Drawing.Size(277, 25);
+            this.txtSoyadi.Size = new System.Drawing.Size(414, 29);
             this.txtSoyadi.TabIndex = 6;
             // 
             // lblEpostaAdresi
             // 
             this.lblEpostaAdresi.AutoSize = true;
-            this.lblEpostaAdresi.Font = new System.Drawing.Font("Consolas", 9F);
-            this.lblEpostaAdresi.Location = new System.Drawing.Point(45, 149);
-            this.lblEpostaAdresi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEpostaAdresi.Location = new System.Drawing.Point(15, 268);
             this.lblEpostaAdresi.Name = "lblEpostaAdresi";
-            this.lblEpostaAdresi.Size = new System.Drawing.Size(112, 14);
+            this.lblEpostaAdresi.Size = new System.Drawing.Size(113, 21);
             this.lblEpostaAdresi.TabIndex = 23;
             this.lblEpostaAdresi.Text = "E-posta Adresi:";
             // 
             // txtEpostaAdresi
             // 
-            this.txtEpostaAdresi.Font = new System.Drawing.Font("Consolas", 11F);
-            this.txtEpostaAdresi.Location = new System.Drawing.Point(161, 143);
-            this.txtEpostaAdresi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEpostaAdresi.Location = new System.Drawing.Point(15, 293);
             this.txtEpostaAdresi.Name = "txtEpostaAdresi";
-            this.txtEpostaAdresi.Size = new System.Drawing.Size(277, 25);
+            this.txtEpostaAdresi.Size = new System.Drawing.Size(414, 29);
             this.txtEpostaAdresi.TabIndex = 7;
             // 
             // btnGuncelle
             // 
-            this.btnGuncelle.Font = new System.Drawing.Font("Consolas", 11F);
-            this.btnGuncelle.Location = new System.Drawing.Point(455, 143);
-            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuncelle.BackColor = System.Drawing.Color.Black;
+            this.btnGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuncelle.ForeColor = System.Drawing.Color.White;
+            this.btnGuncelle.Location = new System.Drawing.Point(453, 207);
             this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(157, 40);
+            this.btnGuncelle.Size = new System.Drawing.Size(160, 40);
             this.btnGuncelle.TabIndex = 8;
             this.btnGuncelle.Text = "Güncelle";
-            this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.UseVisualStyleBackColor = false;
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
-            // 
-            // btnKapat
-            // 
-            this.btnKapat.Font = new System.Drawing.Font("Consolas", 11F);
-            this.btnKapat.Location = new System.Drawing.Point(455, 187);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(2);
-            this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(157, 40);
-            this.btnKapat.TabIndex = 9;
-            this.btnKapat.Text = "Kapat";
-            this.btnKapat.UseVisualStyleBackColor = true;
-            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
-            // 
-            // mnsTeknikServisFormu
-            // 
-            this.mnsTeknikServisFormu.Font = new System.Drawing.Font("Consolas", 9F);
-            this.mnsTeknikServisFormu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiAraclar,
-            this.tsmiAyarlar,
-            this.tsmiYardim});
-            this.mnsTeknikServisFormu.Location = new System.Drawing.Point(0, 0);
-            this.mnsTeknikServisFormu.Name = "mnsTeknikServisFormu";
-            this.mnsTeknikServisFormu.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.mnsTeknikServisFormu.Size = new System.Drawing.Size(623, 24);
-            this.mnsTeknikServisFormu.TabIndex = 32;
-            // 
-            // tsmiAraclar
-            // 
-            this.tsmiAraclar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiGucluSifreOlustur});
-            this.tsmiAraclar.Name = "tsmiAraclar";
-            this.tsmiAraclar.Size = new System.Drawing.Size(68, 20);
-            this.tsmiAraclar.Text = "Araçlar";
-            // 
-            // tsmiGucluSifreOlustur
-            // 
-            this.tsmiGucluSifreOlustur.Name = "tsmiGucluSifreOlustur";
-            this.tsmiGucluSifreOlustur.Size = new System.Drawing.Size(207, 22);
-            this.tsmiGucluSifreOlustur.Text = "Güçlü Şifre Oluştur";
-            this.tsmiGucluSifreOlustur.Click += new System.EventHandler(this.tsmiGucluSifreOlustur_Click);
-            // 
-            // tsmiAyarlar
-            // 
-            this.tsmiAyarlar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiDil,
-            this.tsmiTema});
-            this.tsmiAyarlar.Name = "tsmiAyarlar";
-            this.tsmiAyarlar.Size = new System.Drawing.Size(68, 20);
-            this.tsmiAyarlar.Text = "Ayarlar";
-            // 
-            // tsmiDil
-            // 
-            this.tsmiDil.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiTurkce,
-            this.tsmiIngilizce});
-            this.tsmiDil.Name = "tsmiDil";
-            this.tsmiDil.Size = new System.Drawing.Size(180, 22);
-            this.tsmiDil.Text = "Dil";
-            // 
-            // tsmiTurkce
-            // 
-            this.tsmiTurkce.Name = "tsmiTurkce";
-            this.tsmiTurkce.Size = new System.Drawing.Size(137, 22);
-            this.tsmiTurkce.Text = "Türkçe";
-            // 
-            // tsmiIngilizce
-            // 
-            this.tsmiIngilizce.Name = "tsmiIngilizce";
-            this.tsmiIngilizce.Size = new System.Drawing.Size(137, 22);
-            this.tsmiIngilizce.Text = "İngilizce";
-            // 
-            // tsmiTema
-            // 
-            this.tsmiTema.Name = "tsmiTema";
-            this.tsmiTema.Size = new System.Drawing.Size(180, 22);
-            this.tsmiTema.Text = "Tema";
-            // 
-            // tsmiYardim
-            // 
-            this.tsmiYardim.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiLisansAnahtari,
-            this.tsmiHakkinda});
-            this.tsmiYardim.Name = "tsmiYardim";
-            this.tsmiYardim.Size = new System.Drawing.Size(61, 20);
-            this.tsmiYardim.Text = "Yardım";
-            // 
-            // tsmiLisansAnahtari
-            // 
-            this.tsmiLisansAnahtari.Name = "tsmiLisansAnahtari";
-            this.tsmiLisansAnahtari.Size = new System.Drawing.Size(180, 22);
-            this.tsmiLisansAnahtari.Text = "Lisans Anahtarı";
-            this.tsmiLisansAnahtari.Click += new System.EventHandler(this.tsmiLisansAnahtari_Click);
-            // 
-            // tsmiHakkinda
-            // 
-            this.tsmiHakkinda.Name = "tsmiHakkinda";
-            this.tsmiHakkinda.Size = new System.Drawing.Size(180, 22);
-            this.tsmiHakkinda.Text = "Hakkında";
-            this.tsmiHakkinda.Click += new System.EventHandler(this.tsmiHakkinda_Click);
             // 
             // PcTrBoxProfiliDuzenle
             // 
             this.PcTrBoxProfiliDuzenle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PcTrBoxProfiliDuzenle.Location = new System.Drawing.Point(481, 33);
+            this.PcTrBoxProfiliDuzenle.Location = new System.Drawing.Point(453, 39);
+            this.PcTrBoxProfiliDuzenle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PcTrBoxProfiliDuzenle.Name = "PcTrBoxProfiliDuzenle";
-            this.PcTrBoxProfiliDuzenle.Size = new System.Drawing.Size(100, 100);
+            this.PcTrBoxProfiliDuzenle.Size = new System.Drawing.Size(160, 160);
             this.PcTrBoxProfiliDuzenle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PcTrBoxProfiliDuzenle.TabIndex = 25;
             this.PcTrBoxProfiliDuzenle.TabStop = false;
@@ -331,24 +197,62 @@
             // pbxEye
             // 
             this.pbxEye.Image = global::RabtBil_Musteri_Kayit_v2.Properties.Resources.eye;
-            this.pbxEye.Location = new System.Drawing.Point(408, 59);
-            this.pbxEye.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pbxEye.Location = new System.Drawing.Point(402, 122);
+            this.pbxEye.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.pbxEye.Name = "pbxEye";
-            this.pbxEye.Size = new System.Drawing.Size(28, 20);
+            this.pbxEye.Size = new System.Drawing.Size(25, 25);
             this.pbxEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxEye.TabIndex = 33;
             this.pbxEye.TabStop = false;
             this.pbxEye.Click += new System.EventHandler(this.pbxEye_Click);
             // 
+            // kapat
+            // 
+            this.kapat.AutoSize = true;
+            this.kapat.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.kapat.Location = new System.Drawing.Point(607, 2);
+            this.kapat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.kapat.Name = "kapat";
+            this.kapat.Size = new System.Drawing.Size(23, 25);
+            this.kapat.TabIndex = 37;
+            this.kapat.Text = "X";
+            this.kapat.Click += new System.EventHandler(this.kapat_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(15, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(136, 25);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "Profili Düzenle";
+            // 
+            // btnGucluSifreOlustur
+            // 
+            this.btnGucluSifreOlustur.BackColor = System.Drawing.Color.Black;
+            this.btnGucluSifreOlustur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGucluSifreOlustur.ForeColor = System.Drawing.Color.White;
+            this.btnGucluSifreOlustur.Location = new System.Drawing.Point(453, 253);
+            this.btnGucluSifreOlustur.Name = "btnGucluSifreOlustur";
+            this.btnGucluSifreOlustur.Size = new System.Drawing.Size(160, 40);
+            this.btnGucluSifreOlustur.TabIndex = 9;
+            this.btnGucluSifreOlustur.Text = "Güçlü Şifre Oluştur";
+            this.btnGucluSifreOlustur.UseVisualStyleBackColor = false;
+            this.btnGucluSifreOlustur.Click += new System.EventHandler(this.btnKapat_Click);
+            // 
             // FrmProfil
             // 
             this.AcceptButton = this.btnGuncelle;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 241);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(632, 456);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.kapat);
             this.Controls.Add(this.pbxEye);
-            this.Controls.Add(this.mnsTeknikServisFormu);
-            this.Controls.Add(this.btnKapat);
+            this.Controls.Add(this.btnGucluSifreOlustur);
             this.Controls.Add(this.PcTrBoxProfiliDuzenle);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.lblEpostaAdresi);
@@ -365,14 +269,15 @@
             this.Controls.Add(this.txtMevcutSifre);
             this.Controls.Add(this.lblKullaniciAdi);
             this.Controls.Add(this.txtKullaniciAdi);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "FrmProfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmProfil";
             this.Load += new System.EventHandler(this.FrmProfil_Load);
-            this.mnsTeknikServisFormu.ResumeLayout(false);
-            this.mnsTeknikServisFormu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxProfiliDuzenle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxEye)).EndInit();
             this.ResumeLayout(false);
@@ -397,18 +302,9 @@
         public System.Windows.Forms.TextBox txtEpostaAdresi;
         public System.Windows.Forms.Button btnGuncelle;
         public System.Windows.Forms.PictureBox PcTrBoxProfiliDuzenle;
-        public System.Windows.Forms.Button btnKapat;
-        public System.Windows.Forms.MenuStrip mnsTeknikServisFormu;
-        public System.Windows.Forms.ToolStripMenuItem tsmiAraclar;
-        private System.Windows.Forms.ToolStripMenuItem tsmiGucluSifreOlustur;
-        public System.Windows.Forms.ToolStripMenuItem tsmiAyarlar;
-        public System.Windows.Forms.ToolStripMenuItem tsmiDil;
-        public System.Windows.Forms.ToolStripMenuItem tsmiTurkce;
-        public System.Windows.Forms.ToolStripMenuItem tsmiIngilizce;
-        public System.Windows.Forms.ToolStripMenuItem tsmiTema;
-        public System.Windows.Forms.ToolStripMenuItem tsmiYardim;
-        public System.Windows.Forms.ToolStripMenuItem tsmiLisansAnahtari;
-        public System.Windows.Forms.ToolStripMenuItem tsmiHakkinda;
         private System.Windows.Forms.PictureBox pbxEye;
+        private System.Windows.Forms.Label kapat;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Button btnGucluSifreOlustur;
     }
 }
