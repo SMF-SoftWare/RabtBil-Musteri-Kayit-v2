@@ -48,7 +48,7 @@
             // lblSifreUzunluguDeger
             // 
             this.lblSifreUzunluguDeger.AutoSize = true;
-            this.lblSifreUzunluguDeger.Location = new System.Drawing.Point(129, 46);
+            this.lblSifreUzunluguDeger.Location = new System.Drawing.Point(128, 39);
             this.lblSifreUzunluguDeger.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSifreUzunluguDeger.Name = "lblSifreUzunluguDeger";
             this.lblSifreUzunluguDeger.Size = new System.Drawing.Size(19, 21);
@@ -58,7 +58,7 @@
             // trbSifreUzunlugu
             // 
             this.trbSifreUzunlugu.LargeChange = 1;
-            this.trbSifreUzunlugu.Location = new System.Drawing.Point(20, 72);
+            this.trbSifreUzunlugu.Location = new System.Drawing.Point(15, 65);
             this.trbSifreUzunlugu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.trbSifreUzunlugu.Maximum = 20;
             this.trbSifreUzunlugu.Minimum = 4;
@@ -71,7 +71,7 @@
             // lblGucluSifreniz
             // 
             this.lblGucluSifreniz.AutoSize = true;
-            this.lblGucluSifreniz.Location = new System.Drawing.Point(16, 142);
+            this.lblGucluSifreniz.Location = new System.Drawing.Point(15, 142);
             this.lblGucluSifreniz.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGucluSifreniz.Name = "lblGucluSifreniz";
             this.lblGucluSifreniz.Size = new System.Drawing.Size(109, 21);
@@ -81,7 +81,7 @@
             // lblSifreUzunlugu
             // 
             this.lblSifreUzunlugu.AutoSize = true;
-            this.lblSifreUzunlugu.Location = new System.Drawing.Point(16, 46);
+            this.lblSifreUzunlugu.Location = new System.Drawing.Point(15, 39);
             this.lblSifreUzunlugu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSifreUzunlugu.Name = "lblSifreUzunlugu";
             this.lblSifreUzunlugu.Size = new System.Drawing.Size(116, 21);
@@ -93,7 +93,7 @@
             this.btnKopyala.BackColor = System.Drawing.Color.Black;
             this.btnKopyala.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKopyala.ForeColor = System.Drawing.Color.White;
-            this.btnKopyala.Location = new System.Drawing.Point(422, 162);
+            this.btnKopyala.Location = new System.Drawing.Point(421, 157);
             this.btnKopyala.Margin = new System.Windows.Forms.Padding(0);
             this.btnKopyala.Name = "btnKopyala";
             this.btnKopyala.Size = new System.Drawing.Size(112, 40);
@@ -106,7 +106,7 @@
             // 
             this.txtGucluSifre.BackColor = System.Drawing.Color.White;
             this.txtGucluSifre.ForeColor = System.Drawing.Color.Black;
-            this.txtGucluSifre.Location = new System.Drawing.Point(20, 168);
+            this.txtGucluSifre.Location = new System.Drawing.Point(15, 167);
             this.txtGucluSifre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGucluSifre.Name = "txtGucluSifre";
             this.txtGucluSifre.ReadOnly = true;
@@ -116,7 +116,7 @@
             // chkSemboller
             // 
             this.chkSemboller.AutoSize = true;
-            this.chkSemboller.Location = new System.Drawing.Point(410, 121);
+            this.chkSemboller.Location = new System.Drawing.Point(410, 128);
             this.chkSemboller.Margin = new System.Windows.Forms.Padding(0);
             this.chkSemboller.Name = "chkSemboller";
             this.chkSemboller.Size = new System.Drawing.Size(100, 25);
@@ -128,7 +128,7 @@
             // chkSayilar
             // 
             this.chkSayilar.AutoSize = true;
-            this.chkSayilar.Location = new System.Drawing.Point(410, 96);
+            this.chkSayilar.Location = new System.Drawing.Point(410, 98);
             this.chkSayilar.Margin = new System.Windows.Forms.Padding(0);
             this.chkSayilar.Name = "chkSayilar";
             this.chkSayilar.Size = new System.Drawing.Size(76, 25);
@@ -140,7 +140,7 @@
             // chkBuyukHarfler
             // 
             this.chkBuyukHarfler.AutoSize = true;
-            this.chkBuyukHarfler.Location = new System.Drawing.Point(410, 71);
+            this.chkBuyukHarfler.Location = new System.Drawing.Point(410, 68);
             this.chkBuyukHarfler.Margin = new System.Windows.Forms.Padding(0);
             this.chkBuyukHarfler.Name = "chkBuyukHarfler";
             this.chkBuyukHarfler.Size = new System.Drawing.Size(124, 25);
@@ -152,7 +152,7 @@
             // chkKucukHarfler
             // 
             this.chkKucukHarfler.AutoSize = true;
-            this.chkKucukHarfler.Location = new System.Drawing.Point(410, 46);
+            this.chkKucukHarfler.Location = new System.Drawing.Point(410, 38);
             this.chkKucukHarfler.Margin = new System.Windows.Forms.Padding(0);
             this.chkKucukHarfler.Name = "chkKucukHarfler";
             this.chkKucukHarfler.Size = new System.Drawing.Size(123, 25);
@@ -166,7 +166,7 @@
             this.btnYenidenOlustur.BackColor = System.Drawing.Color.Black;
             this.btnYenidenOlustur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnYenidenOlustur.ForeColor = System.Drawing.Color.White;
-            this.btnYenidenOlustur.Location = new System.Drawing.Point(268, 161);
+            this.btnYenidenOlustur.Location = new System.Drawing.Point(263, 157);
             this.btnYenidenOlustur.Margin = new System.Windows.Forms.Padding(0);
             this.btnYenidenOlustur.Name = "btnYenidenOlustur";
             this.btnYenidenOlustur.Size = new System.Drawing.Size(154, 40);
@@ -179,7 +179,7 @@
             // 
             this.kapat.AutoSize = true;
             this.kapat.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kapat.Location = new System.Drawing.Point(519, 3);
+            this.kapat.Location = new System.Drawing.Point(520, 2);
             this.kapat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.kapat.Name = "kapat";
             this.kapat.Size = new System.Drawing.Size(23, 25);
