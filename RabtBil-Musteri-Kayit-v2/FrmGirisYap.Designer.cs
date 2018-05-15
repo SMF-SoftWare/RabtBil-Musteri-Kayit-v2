@@ -43,7 +43,7 @@
             // 
             this.lblKullaniciAdi.AutoSize = true;
             this.lblKullaniciAdi.ForeColor = System.Drawing.Color.Black;
-            this.lblKullaniciAdi.Location = new System.Drawing.Point(14, 66);
+            this.lblKullaniciAdi.Location = new System.Drawing.Point(15, 54);
             this.lblKullaniciAdi.Name = "lblKullaniciAdi";
             this.lblKullaniciAdi.Size = new System.Drawing.Size(98, 21);
             this.lblKullaniciAdi.TabIndex = 0;
@@ -53,7 +53,7 @@
             // 
             this.txtKullaniciAdi.BackColor = System.Drawing.Color.White;
             this.txtKullaniciAdi.ForeColor = System.Drawing.Color.Black;
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(12, 89);
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(15, 79);
             this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(312, 29);
@@ -65,10 +65,10 @@
             this.btnGirisYap.FlatAppearance.BorderSize = 0;
             this.btnGirisYap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGirisYap.ForeColor = System.Drawing.Color.White;
-            this.btnGirisYap.Location = new System.Drawing.Point(12, 187);
+            this.btnGirisYap.Location = new System.Drawing.Point(15, 167);
             this.btnGirisYap.Margin = new System.Windows.Forms.Padding(0);
             this.btnGirisYap.Name = "btnGirisYap";
-            this.btnGirisYap.Size = new System.Drawing.Size(316, 50);
+            this.btnGirisYap.Size = new System.Drawing.Size(316, 40);
             this.btnGirisYap.TabIndex = 5;
             this.btnGirisYap.Text = "Giriş Yap";
             this.btnGirisYap.UseVisualStyleBackColor = false;
@@ -78,7 +78,7 @@
             // 
             this.txtSifre.BackColor = System.Drawing.Color.White;
             this.txtSifre.ForeColor = System.Drawing.Color.Black;
-            this.txtSifre.Location = new System.Drawing.Point(12, 153);
+            this.txtSifre.Location = new System.Drawing.Point(15, 135);
             this.txtSifre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(313, 29);
@@ -89,7 +89,7 @@
             // 
             this.lblSifre.AutoSize = true;
             this.lblSifre.ForeColor = System.Drawing.Color.Black;
-            this.lblSifre.Location = new System.Drawing.Point(14, 130);
+            this.lblSifre.Location = new System.Drawing.Point(15, 112);
             this.lblSifre.Name = "lblSifre";
             this.lblSifre.Size = new System.Drawing.Size(45, 21);
             this.lblSifre.TabIndex = 2;
@@ -101,7 +101,7 @@
             this.lblGirisBicimi.BackColor = System.Drawing.Color.Transparent;
             this.lblGirisBicimi.Font = new System.Drawing.Font("Segoe UI Semibold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblGirisBicimi.ForeColor = System.Drawing.Color.Black;
-            this.lblGirisBicimi.Location = new System.Drawing.Point(93, 9);
+            this.lblGirisBicimi.Location = new System.Drawing.Point(93, 2);
             this.lblGirisBicimi.Name = "lblGirisBicimi";
             this.lblGirisBicimi.Size = new System.Drawing.Size(156, 47);
             this.lblGirisBicimi.TabIndex = 6;
@@ -110,7 +110,7 @@
             // pbxEye
             // 
             this.pbxEye.Image = global::RabtBil_Musteri_Kayit_v2.Properties.Resources.eye;
-            this.pbxEye.Location = new System.Drawing.Point(299, 155);
+            this.pbxEye.Location = new System.Drawing.Point(300, 137);
             this.pbxEye.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pbxEye.Name = "pbxEye";
             this.pbxEye.Size = new System.Drawing.Size(25, 25);
@@ -123,7 +123,7 @@
             // 
             this.kapat.AutoSize = true;
             this.kapat.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.kapat.Location = new System.Drawing.Point(314, 2);
+            this.kapat.Location = new System.Drawing.Point(320, 2);
             this.kapat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.kapat.Name = "kapat";
             this.kapat.Size = new System.Drawing.Size(23, 25);
@@ -137,7 +137,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(340, 249);
+            this.ClientSize = new System.Drawing.Size(345, 224);
             this.Controls.Add(this.kapat);
             this.Controls.Add(this.pbxEye);
             this.Controls.Add(this.lblGirisBicimi);
