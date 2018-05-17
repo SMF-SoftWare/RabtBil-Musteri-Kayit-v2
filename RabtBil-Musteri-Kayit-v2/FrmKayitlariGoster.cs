@@ -240,8 +240,6 @@ namespace RabtBil_Musteri_Kayit_v2
                 SMF.Baglanti.Close();
             }
 
-            frm.KaydetEtkinMi(false);
-            frm.GuncelleEtkinMi(true);
             Close();
         }
 
