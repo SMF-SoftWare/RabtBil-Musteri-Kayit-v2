@@ -31,7 +31,6 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void FrmPersonelTeknikServisFormu_Load(object sender, EventArgs e)
         {
-            lblHosgeldin.Text = $"Hoş Geldin, {SMF.KullaniciAdi}!";
             txtTakipNumarasi.Text = SMF.TakipKoduOlustur();
 
             try
@@ -314,7 +313,6 @@ namespace RabtBil_Musteri_Kayit_v2
         public void Temizle()
         {
             txtMusteriAdi.Clear();
-            txtFormNo.Clear();
             mtxTelefon.Clear();
             txtAksesuarlar.Clear();
             txtEkBilgiler.Clear();

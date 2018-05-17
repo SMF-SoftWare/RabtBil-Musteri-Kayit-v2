@@ -207,7 +207,6 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             FrmPersonelTeknikServisFormu frm = (FrmPersonelTeknikServisFormu)Application.OpenForms["FrmPersonelTeknikServisFormu"];
             frm.lblMusteriNo.Text = dgvRabtBilDB.CurrentRow?.Cells[0].Value.ToString();
-            frm.txtFormNo.Text = dgvRabtBilDB.CurrentRow?.Cells[1].Value.ToString();
             frm.txtMusteriAdi.Text = dgvRabtBilDB.CurrentRow?.Cells[2].Value.ToString();
             frm.mtxTelefon.Text = dgvRabtBilDB.CurrentRow?.Cells[3].Value.ToString();
             frm.txtCihazModeli.Text = dgvRabtBilDB.CurrentRow?.Cells[4].Value.ToString();
