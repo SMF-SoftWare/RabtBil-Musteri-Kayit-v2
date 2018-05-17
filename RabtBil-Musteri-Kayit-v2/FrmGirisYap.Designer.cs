@@ -62,7 +62,7 @@
             // 
             // btnGirisYap
             // 
-            this.btnGirisYap.BackColor = System.Drawing.Color.Black;
+            this.btnGirisYap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnGirisYap.FlatAppearance.BorderSize = 0;
             this.btnGirisYap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGirisYap.ForeColor = System.Drawing.Color.White;

@@ -72,7 +72,7 @@
             // 
             // btnEtkinlestir
             // 
-            this.btnEtkinlestir.BackColor = System.Drawing.Color.Black;
+            this.btnEtkinlestir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnEtkinlestir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEtkinlestir.ForeColor = System.Drawing.Color.White;
             this.btnEtkinlestir.Location = new System.Drawing.Point(15, 157);

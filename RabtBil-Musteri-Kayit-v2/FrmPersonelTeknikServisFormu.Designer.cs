@@ -248,7 +248,7 @@
             // 
             // btnYeniKayit
             // 
-            this.btnYeniKayit.BackColor = System.Drawing.Color.Black;
+            this.btnYeniKayit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnYeniKayit.Enabled = false;
             this.btnYeniKayit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnYeniKayit.ForeColor = System.Drawing.Color.White;
@@ -262,7 +262,7 @@
             // 
             // btnKaydet
             // 
-            this.btnKaydet.BackColor = System.Drawing.Color.Black;
+            this.btnKaydet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKaydet.ForeColor = System.Drawing.Color.White;
             this.btnKaydet.Location = new System.Drawing.Point(576, 168);
@@ -275,7 +275,7 @@
             // 
             // btnKayitlariGoster
             // 
-            this.btnKayitlariGoster.BackColor = System.Drawing.Color.Black;
+            this.btnKayitlariGoster.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnKayitlariGoster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKayitlariGoster.ForeColor = System.Drawing.Color.White;
             this.btnKayitlariGoster.Location = new System.Drawing.Point(576, 214);
@@ -288,7 +288,7 @@
             // 
             // btnCikisYap
             // 
-            this.btnCikisYap.BackColor = System.Drawing.Color.Black;
+            this.btnCikisYap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnCikisYap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCikisYap.ForeColor = System.Drawing.Color.White;
             this.btnCikisYap.Location = new System.Drawing.Point(576, 397);
@@ -359,7 +359,7 @@
             // 
             // btnGuncelle
             // 
-            this.btnGuncelle.BackColor = System.Drawing.Color.Black;
+            this.btnGuncelle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnGuncelle.Enabled = false;
             this.btnGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuncelle.ForeColor = System.Drawing.Color.White;
@@ -373,7 +373,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(576, 305);
@@ -385,7 +385,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(576, 351);

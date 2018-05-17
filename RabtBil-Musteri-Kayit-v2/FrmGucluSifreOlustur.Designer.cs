@@ -91,7 +91,7 @@
             // 
             // btnKopyala
             // 
-            this.btnKopyala.BackColor = System.Drawing.Color.Black;
+            this.btnKopyala.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnKopyala.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKopyala.ForeColor = System.Drawing.Color.White;
             this.btnKopyala.Location = new System.Drawing.Point(421, 157);
@@ -164,7 +164,7 @@
             // 
             // btnYenidenOlustur
             // 
-            this.btnYenidenOlustur.BackColor = System.Drawing.Color.Black;
+            this.btnYenidenOlustur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnYenidenOlustur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnYenidenOlustur.ForeColor = System.Drawing.Color.White;
             this.btnYenidenOlustur.Location = new System.Drawing.Point(263, 157);

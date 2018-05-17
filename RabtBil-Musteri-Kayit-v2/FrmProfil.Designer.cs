@@ -172,7 +172,7 @@
             // 
             // btnGuncelle
             // 
-            this.btnGuncelle.BackColor = System.Drawing.Color.Black;
+            this.btnGuncelle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuncelle.ForeColor = System.Drawing.Color.White;
             this.btnGuncelle.Location = new System.Drawing.Point(453, 207);
@@ -220,7 +220,7 @@
             // 
             // btnGucluSifreOlustur
             // 
-            this.btnGucluSifreOlustur.BackColor = System.Drawing.Color.Black;
+            this.btnGucluSifreOlustur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnGucluSifreOlustur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGucluSifreOlustur.ForeColor = System.Drawing.Color.White;
             this.btnGucluSifreOlustur.Location = new System.Drawing.Point(453, 253);

@@ -207,7 +207,7 @@
             // 
             // btnEkle
             // 
-            this.btnEkle.BackColor = System.Drawing.Color.Black;
+            this.btnEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEkle.ForeColor = System.Drawing.Color.White;
             this.btnEkle.Location = new System.Drawing.Point(15, 446);
@@ -221,7 +221,7 @@
             // 
             // btnGuncelle
             // 
-            this.btnGuncelle.BackColor = System.Drawing.Color.Black;
+            this.btnGuncelle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnGuncelle.Enabled = false;
             this.btnGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuncelle.ForeColor = System.Drawing.Color.White;
@@ -236,7 +236,7 @@
             // 
             // btnSil
             // 
-            this.btnSil.BackColor = System.Drawing.Color.Black;
+            this.btnSil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSil.ForeColor = System.Drawing.Color.White;
             this.btnSil.Location = new System.Drawing.Point(315, 446);
