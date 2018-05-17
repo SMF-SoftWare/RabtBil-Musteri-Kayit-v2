@@ -36,6 +36,10 @@ namespace RabtBil_Musteri_Kayit_v2
                 SMF.LisansliMi = false;
                 MessageBox.Show("Programın Deneme Sürümünü Kullanıyorsunuz!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else
+            {
+                SMF.LisansliMi = true;
+            }
         }
 
         private void btnGirisYap_Click(object sender, EventArgs e)
@@ -82,7 +86,7 @@ namespace RabtBil_Musteri_Kayit_v2
                                 break;
 
                             case (int)SMF.Rol.YetkiliPersonel:
-                                SMF.Yetki = SMF.Rol.Yonetici;
+                                SMF.Yetki = SMF.Rol.YetkiliPersonel;
                                 break;
 
                             default:

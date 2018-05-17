@@ -31,6 +31,11 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void FrmPersonelTeknikServisFormu_Load(object sender, EventArgs e)
         {
+            if (SMF.LisansliMi)
+            {
+                btnProgramiEtkinlestir.Enabled = false;
+            }
+
             txtTakipNumarasi.Text = SMF.TakipKoduOlustur();
 
             try
