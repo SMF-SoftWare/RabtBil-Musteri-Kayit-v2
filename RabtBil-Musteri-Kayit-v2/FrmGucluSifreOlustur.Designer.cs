@@ -65,7 +65,7 @@
             this.trbSifreUzunlugu.Minimum = 4;
             this.trbSifreUzunlugu.Name = "trbSifreUzunlugu";
             this.trbSifreUzunlugu.Size = new System.Drawing.Size(386, 45);
-            this.trbSifreUzunlugu.TabIndex = 20;
+            this.trbSifreUzunlugu.TabIndex = 0;
             this.trbSifreUzunlugu.Value = 4;
             this.trbSifreUzunlugu.Scroll += new System.EventHandler(this.trbSifreUzunlugu_Scroll);
             // 
@@ -98,7 +98,7 @@
             this.btnKopyala.Margin = new System.Windows.Forms.Padding(0);
             this.btnKopyala.Name = "btnKopyala";
             this.btnKopyala.Size = new System.Drawing.Size(112, 40);
-            this.btnKopyala.TabIndex = 17;
+            this.btnKopyala.TabIndex = 7;
             this.btnKopyala.Text = "Kopyala";
             this.btnKopyala.UseVisualStyleBackColor = false;
             this.btnKopyala.Click += new System.EventHandler(this.btnKopyala_Click);
@@ -112,7 +112,7 @@
             this.txtGucluSifre.Name = "txtGucluSifre";
             this.txtGucluSifre.ReadOnly = true;
             this.txtGucluSifre.Size = new System.Drawing.Size(244, 29);
-            this.txtGucluSifre.TabIndex = 16;
+            this.txtGucluSifre.TabIndex = 5;
             // 
             // chkSemboller
             // 
@@ -121,7 +121,7 @@
             this.chkSemboller.Margin = new System.Windows.Forms.Padding(0);
             this.chkSemboller.Name = "chkSemboller";
             this.chkSemboller.Size = new System.Drawing.Size(100, 25);
-            this.chkSemboller.TabIndex = 15;
+            this.chkSemboller.TabIndex = 4;
             this.chkSemboller.Text = "Semboller";
             this.chkSemboller.UseVisualStyleBackColor = true;
             this.chkSemboller.CheckedChanged += new System.EventHandler(this.btnYenidenOlustur_Click);
@@ -133,7 +133,7 @@
             this.chkSayilar.Margin = new System.Windows.Forms.Padding(0);
             this.chkSayilar.Name = "chkSayilar";
             this.chkSayilar.Size = new System.Drawing.Size(76, 25);
-            this.chkSayilar.TabIndex = 14;
+            this.chkSayilar.TabIndex = 3;
             this.chkSayilar.Text = "Sayılar";
             this.chkSayilar.UseVisualStyleBackColor = true;
             this.chkSayilar.CheckedChanged += new System.EventHandler(this.btnYenidenOlustur_Click);
@@ -145,7 +145,7 @@
             this.chkBuyukHarfler.Margin = new System.Windows.Forms.Padding(0);
             this.chkBuyukHarfler.Name = "chkBuyukHarfler";
             this.chkBuyukHarfler.Size = new System.Drawing.Size(124, 25);
-            this.chkBuyukHarfler.TabIndex = 13;
+            this.chkBuyukHarfler.TabIndex = 2;
             this.chkBuyukHarfler.Text = "Büyük Harfler";
             this.chkBuyukHarfler.UseVisualStyleBackColor = true;
             this.chkBuyukHarfler.CheckedChanged += new System.EventHandler(this.btnYenidenOlustur_Click);
@@ -157,7 +157,7 @@
             this.chkKucukHarfler.Margin = new System.Windows.Forms.Padding(0);
             this.chkKucukHarfler.Name = "chkKucukHarfler";
             this.chkKucukHarfler.Size = new System.Drawing.Size(123, 25);
-            this.chkKucukHarfler.TabIndex = 12;
+            this.chkKucukHarfler.TabIndex = 1;
             this.chkKucukHarfler.Text = "Küçük Harfler";
             this.chkKucukHarfler.UseVisualStyleBackColor = true;
             this.chkKucukHarfler.CheckedChanged += new System.EventHandler(this.btnYenidenOlustur_Click);
@@ -171,7 +171,7 @@
             this.btnYenidenOlustur.Margin = new System.Windows.Forms.Padding(0);
             this.btnYenidenOlustur.Name = "btnYenidenOlustur";
             this.btnYenidenOlustur.Size = new System.Drawing.Size(154, 40);
-            this.btnYenidenOlustur.TabIndex = 22;
+            this.btnYenidenOlustur.TabIndex = 6;
             this.btnYenidenOlustur.Text = "Yeniden Oluştur";
             this.btnYenidenOlustur.UseVisualStyleBackColor = false;
             this.btnYenidenOlustur.Click += new System.EventHandler(this.btnYenidenOlustur_Click);
@@ -198,7 +198,8 @@
             this.btnKapat.Margin = new System.Windows.Forms.Padding(0);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(30, 30);
-            this.btnKapat.TabIndex = 49;
+            this.btnKapat.TabIndex = 8;
+            this.btnKapat.TabStop = false;
             this.btnKapat.UseVisualStyleBackColor = false;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 

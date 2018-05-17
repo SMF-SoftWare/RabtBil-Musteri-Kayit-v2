@@ -95,7 +95,6 @@
             this.linklblAnaSayfa.Name = "linklblAnaSayfa";
             this.linklblAnaSayfa.Size = new System.Drawing.Size(148, 21);
             this.linklblAnaSayfa.TabIndex = 4;
-            this.linklblAnaSayfa.TabStop = true;
             this.linklblAnaSayfa.Text = "www.casper.com.tr";
             // 
             // lblLisansDurumu
@@ -199,6 +198,7 @@
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(30, 30);
             this.btnKapat.TabIndex = 49;
+            this.btnKapat.TabStop = false;
             this.btnKapat.UseVisualStyleBackColor = false;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 

@@ -70,7 +70,7 @@
             this.txtKullaniciAdi.Location = new System.Drawing.Point(15, 64);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(276, 29);
-            this.txtKullaniciAdi.TabIndex = 1;
+            this.txtKullaniciAdi.TabIndex = 0;
             // 
             // dgvKullanicilar
             // 
@@ -88,7 +88,7 @@
             this.dgvKullanicilar.RowHeadersVisible = false;
             this.dgvKullanicilar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKullanicilar.Size = new System.Drawing.Size(538, 402);
-            this.dgvKullanicilar.TabIndex = 13;
+            this.dgvKullanicilar.TabIndex = 10;
             this.dgvKullanicilar.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvKullanicilar_MouseDoubleClick);
             // 
             // lblEpostaAdresi
@@ -107,7 +107,7 @@
             this.txtEpostaAdresi.Location = new System.Drawing.Point(15, 238);
             this.txtEpostaAdresi.Name = "txtEpostaAdresi";
             this.txtEpostaAdresi.Size = new System.Drawing.Size(277, 29);
-            this.txtEpostaAdresi.TabIndex = 4;
+            this.txtEpostaAdresi.TabIndex = 3;
             // 
             // lblSoyadi
             // 
@@ -125,7 +125,7 @@
             this.txtSoyadi.Location = new System.Drawing.Point(15, 180);
             this.txtSoyadi.Name = "txtSoyadi";
             this.txtSoyadi.Size = new System.Drawing.Size(276, 29);
-            this.txtSoyadi.TabIndex = 3;
+            this.txtSoyadi.TabIndex = 2;
             // 
             // lblAdi
             // 
@@ -152,7 +152,7 @@
             this.txtAdi.Location = new System.Drawing.Point(15, 122);
             this.txtAdi.Name = "txtAdi";
             this.txtAdi.Size = new System.Drawing.Size(276, 29);
-            this.txtAdi.TabIndex = 2;
+            this.txtAdi.TabIndex = 1;
             // 
             // txtSifre
             // 
@@ -161,7 +161,7 @@
             this.txtSifre.Location = new System.Drawing.Point(15, 296);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(276, 29);
-            this.txtSifre.TabIndex = 5;
+            this.txtSifre.TabIndex = 4;
             this.txtSifre.UseSystemPasswordChar = true;
             // 
             // lblSifreyiOnayla
@@ -180,7 +180,7 @@
             this.txtSifreyiOnayla.Location = new System.Drawing.Point(15, 354);
             this.txtSifreyiOnayla.Name = "txtSifreyiOnayla";
             this.txtSifreyiOnayla.Size = new System.Drawing.Size(276, 29);
-            this.txtSifreyiOnayla.TabIndex = 6;
+            this.txtSifreyiOnayla.TabIndex = 5;
             this.txtSifreyiOnayla.UseSystemPasswordChar = true;
             // 
             // lblPersonelRolu
@@ -203,7 +203,7 @@
             this.cmbRoller.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbRoller.Name = "cmbRoller";
             this.cmbRoller.Size = new System.Drawing.Size(276, 29);
-            this.cmbRoller.TabIndex = 8;
+            this.cmbRoller.TabIndex = 6;
             // 
             // btnEkle
             // 
@@ -214,7 +214,7 @@
             this.btnEkle.Margin = new System.Windows.Forms.Padding(0);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(150, 40);
-            this.btnEkle.TabIndex = 9;
+            this.btnEkle.TabIndex = 7;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = false;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
@@ -229,7 +229,7 @@
             this.btnGuncelle.Margin = new System.Windows.Forms.Padding(0);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(150, 40);
-            this.btnGuncelle.TabIndex = 10;
+            this.btnGuncelle.TabIndex = 8;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
@@ -243,7 +243,7 @@
             this.btnSil.Margin = new System.Windows.Forms.Padding(0);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(150, 40);
-            this.btnSil.TabIndex = 11;
+            this.btnSil.TabIndex = 9;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
@@ -282,7 +282,8 @@
             this.btnKapat.Margin = new System.Windows.Forms.Padding(0);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(30, 30);
-            this.btnKapat.TabIndex = 49;
+            this.btnKapat.TabIndex = 11;
+            this.btnKapat.TabStop = false;
             this.btnKapat.UseVisualStyleBackColor = false;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
