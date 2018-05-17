@@ -15,13 +15,13 @@ namespace RabtBil_Musteri_Kayit_v2
         public static string ProgramSurumu = Application.ProductVersion;
         public static string PrograminAdi = Application.ProductName;
         public static string PrograminTamAdi = $"{PrograminAdi} v{ProgramSurumu}";
-        public static Rol Yetki = Rol.Kullanici;
+        public static Rol Yetki = Rol.Personel;
         public static int KullaniciId;
         public static string KullaniciAdi;
         public static string ProfilResmiYolu;
         public static string ProfilKlasoru;
         public static bool YoneticiMi;
-        public static bool AdminMi;
+        public static bool YetkiliPersonelMi;
         public static bool LisansliMi;
 
         public static bool EpostaDogruMu(string eposta)
@@ -113,9 +113,9 @@ namespace RabtBil_Musteri_Kayit_v2
 
         public enum Rol
         {
-            Admin,
             Yonetici,
-            Kullanici
+            YetkiliPersonel,
+            Personel
         }
     }
 }

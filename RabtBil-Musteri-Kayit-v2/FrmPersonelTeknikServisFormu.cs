@@ -155,7 +155,7 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             try
             {
-                string cmdText = SMF.AdminMi || SMF.YoneticiMi ? "SELECT * FROM MusteriBilgileri" : "SELECT * FROM MusteriBilgileri WHERE KaydiYapanID=@KaydiYapanID";
+                string cmdText = SMF.YoneticiMi || SMF.YetkiliPersonelMi ? "SELECT * FROM MusteriBilgileri" : "SELECT * FROM MusteriBilgileri WHERE KaydiYapanID=@KaydiYapanID";
                 SqlCommand cmd = new SqlCommand(cmdText, SMF.Baglanti);
                 cmd.Parameters.AddWithValue("@KaydiYapanID", SMF.KullaniciId);
                 DataTable dt = new DataTable();

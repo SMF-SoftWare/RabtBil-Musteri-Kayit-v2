@@ -36,11 +36,11 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             if (SMF.YoneticiMi)
             {
-                cmbRoller.Items.AddRange(new object[] { "Bir Rol Seçin", "Kullanıcı" });
+                cmbRoller.Items.AddRange(new object[] { "Bir Rol Seçin", "Personel", "Yetkili Personel", "Yonetici" });
             }
-            else if (SMF.AdminMi)
+            else if (SMF.YetkiliPersonelMi)
             {
-                cmbRoller.Items.AddRange(new object[] { "Bir Rol Seçin", "Kullanıcı", "Yönetici", "Admin" });
+                cmbRoller.Items.AddRange(new object[] { "Bir Rol Seçin", "Personel" });
             }
 
             VerileriGetir();
@@ -109,7 +109,7 @@ namespace RabtBil_Musteri_Kayit_v2
                     cmd.Parameters.AddWithValue("@Soyadi", txtSoyadi.Text);
                     cmd.Parameters.AddWithValue("@Eposta", txtEpostaAdresi.Text);
 
-                    if (SMF.AdminMi)
+                    if (SMF.YoneticiMi)
                     {
                         switch (cmbRoller.SelectedIndex)
                         {
@@ -126,7 +126,7 @@ namespace RabtBil_Musteri_Kayit_v2
                                 break;
                         }
                     }
-                    else if (SMF.YoneticiMi)
+                    else if (SMF.YetkiliPersonelMi)
                     {
                         rol = 2;
                     }
@@ -197,7 +197,7 @@ namespace RabtBil_Musteri_Kayit_v2
                     cmd.Parameters.AddWithValue("@Soyadi", txtSoyadi.Text);
                     cmd.Parameters.AddWithValue("@Eposta", txtEpostaAdresi.Text);
 
-                    if (SMF.AdminMi)
+                    if (SMF.YoneticiMi)
                     {
                         switch (cmbRoller.SelectedIndex)
                         {
@@ -214,7 +214,7 @@ namespace RabtBil_Musteri_Kayit_v2
                                 break;
                         }
                     }
-                    else if (SMF.YoneticiMi)
+                    else if (SMF.YetkiliPersonelMi)
                     {
                         rol = 2;
                     }
@@ -240,7 +240,7 @@ namespace RabtBil_Musteri_Kayit_v2
                     cmd.Parameters.AddWithValue("@Soyadi", txtSoyadi.Text);
                     cmd.Parameters.AddWithValue("@Eposta", txtEpostaAdresi.Text);
 
-                    if (SMF.AdminMi)
+                    if (SMF.YoneticiMi)
                     {
                         switch (cmbRoller.SelectedIndex)
                         {
@@ -257,7 +257,7 @@ namespace RabtBil_Musteri_Kayit_v2
                                 break;
                         }
                     }
-                    else if (SMF.YoneticiMi)
+                    else if (SMF.YetkiliPersonelMi)
                     {
                         rol = 2;
                     }
@@ -373,11 +373,11 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             string daText = String.Empty;
 
-            if (SMF.AdminMi)
+            if (SMF.YoneticiMi)
             {
                 daText = "SELECT Id,KullaniciAdi,Adi,Soyadi,Eposta,Rol FROM Kullanicilar";
             }
-            else if (SMF.YoneticiMi)
+            else if (SMF.YetkiliPersonelMi)
             {
                 daText = "SELECT Id,KullaniciAdi,Adi,Soyadi,Eposta,Rol FROM Kullanicilar WHERE Rol=2";
             }

@@ -33,7 +33,7 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void FrmProfil_Load(object sender, EventArgs e)
         {
-            if (SMF.AdminMi || SMF.YoneticiMi)
+            if (SMF.YoneticiMi || SMF.YetkiliPersonelMi)
             {
                 txtKullaniciAdi.Enabled = true;
             }

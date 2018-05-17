@@ -55,8 +55,8 @@
             this.btnCikisYap = new System.Windows.Forms.Button();
             this.picProfilResmi = new System.Windows.Forms.PictureBox();
             this.lblBaslik = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblAksesuarlar = new System.Windows.Forms.Label();
+            this.lblEkBilgiler = new System.Windows.Forms.Label();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnTeslimEt = new System.Windows.Forms.Button();
             this.btnYazdir = new System.Windows.Forms.Button();
@@ -125,6 +125,7 @@
             this.chkTeslimEdildi.TabIndex = 55;
             this.chkTeslimEdildi.Text = "Teslim Edildi";
             this.chkTeslimEdildi.UseVisualStyleBackColor = true;
+            this.chkTeslimEdildi.Visible = false;
             this.chkTeslimEdildi.Click += new System.EventHandler(this.chkTeslimEdildi_Click);
             // 
             // txtUcret
@@ -224,6 +225,7 @@
             this.lblMusteriNo.Size = new System.Drawing.Size(88, 21);
             this.lblMusteriNo.TabIndex = 36;
             this.lblMusteriNo.Text = "Müşteri No";
+            this.lblMusteriNo.Visible = false;
             // 
             // txtEkBilgiler
             // 
@@ -309,23 +311,23 @@
             this.lblBaslik.TabIndex = 38;
             this.lblBaslik.Text = "Teknik Servis Formu";
             // 
-            // label2
+            // lblAksesuarlar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 155);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 21);
-            this.label2.TabIndex = 40;
-            this.label2.Text = "Aksesuarlar:";
+            this.lblAksesuarlar.AutoSize = true;
+            this.lblAksesuarlar.Location = new System.Drawing.Point(15, 155);
+            this.lblAksesuarlar.Name = "lblAksesuarlar";
+            this.lblAksesuarlar.Size = new System.Drawing.Size(94, 21);
+            this.lblAksesuarlar.TabIndex = 40;
+            this.lblAksesuarlar.Text = "Aksesuarlar:";
             // 
-            // label3
+            // lblEkBilgiler
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 288);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 21);
-            this.label3.TabIndex = 41;
-            this.label3.Text = "Ek Bilgiler:";
+            this.lblEkBilgiler.AutoSize = true;
+            this.lblEkBilgiler.Location = new System.Drawing.Point(15, 288);
+            this.lblEkBilgiler.Name = "lblEkBilgiler";
+            this.lblEkBilgiler.Size = new System.Drawing.Size(81, 21);
+            this.lblEkBilgiler.TabIndex = 41;
+            this.lblEkBilgiler.Text = "Ek Bilgiler:";
             // 
             // btnGuncelle
             // 
@@ -427,12 +429,12 @@
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.txtUcret);
             this.Controls.Add(this.lblUcret);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblEkBilgiler);
             this.Controls.Add(this.chkTeslimEdildi);
             this.Controls.Add(this.lblCihazinSeriNumarasi);
             this.Controls.Add(this.txtEkBilgiler);
             this.Controls.Add(this.txtAksesuarlar);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblAksesuarlar);
             this.Controls.Add(this.txtTakipNumarasi);
             this.Controls.Add(this.lblTakipNumarasi);
             this.Controls.Add(this.txtMusteriAdi);
@@ -495,8 +497,8 @@
         public System.Windows.Forms.Label lblMusteriAdi;
         public System.Windows.Forms.Label lblMusteriNo;
         private System.Windows.Forms.Label lblBaslik;
-        public System.Windows.Forms.Label label2;
-        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label lblAksesuarlar;
+        public System.Windows.Forms.Label lblEkBilgiler;
         public System.Windows.Forms.Button btnGuncelle;
         public System.Windows.Forms.Button btnTeslimEt;
         public System.Windows.Forms.Button btnYazdir;

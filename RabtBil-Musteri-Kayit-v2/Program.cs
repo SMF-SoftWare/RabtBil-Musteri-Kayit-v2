@@ -17,7 +17,7 @@ namespace RabtBil_Musteri_Kayit_v2
             FrmGirisYap frm = new FrmGirisYap();
             frm.ShowDialog();
 
-            if (SMF.AdminMi || SMF.YoneticiMi)
+            if (SMF.YoneticiMi || SMF.YetkiliPersonelMi)
             {
                 Application.Run(new FrmAnaMenu());
             }

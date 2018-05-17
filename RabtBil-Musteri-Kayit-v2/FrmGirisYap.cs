@@ -77,28 +77,28 @@ namespace RabtBil_Musteri_Kayit_v2
 
                         switch (dr.GetInt32(6))
                         {
-                            case (int)SMF.Rol.Admin:
-                                SMF.Yetki = SMF.Rol.Admin;
-                                break;
-
                             case (int)SMF.Rol.Yonetici:
                                 SMF.Yetki = SMF.Rol.Yonetici;
                                 break;
 
+                            case (int)SMF.Rol.YetkiliPersonel:
+                                SMF.Yetki = SMF.Rol.Yonetici;
+                                break;
+
                             default:
-                                SMF.Yetki = SMF.Rol.Kullanici;
+                                SMF.Yetki = SMF.Rol.Personel;
                                 break;
                         }
-                    }
-
-                    if (SMF.Yetki == SMF.Rol.Admin)
-                    {
-                        SMF.AdminMi = true;
                     }
 
                     if (SMF.Yetki == SMF.Rol.Yonetici)
                     {
                         SMF.YoneticiMi = true;
+                    }
+
+                    if (SMF.Yetki == SMF.Rol.YetkiliPersonel)
+                    {
+                        SMF.YetkiliPersonelMi = true;
                     }
 
                     DialogResult = DialogResult.OK;
