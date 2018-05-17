@@ -40,11 +40,20 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void btnGirisYap_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(txtKullaniciAdi.Text) || String.IsNullOrWhiteSpace(txtSifre.Text))
+            if (String.IsNullOrWhiteSpace(txtKullaniciAdi.Text))
             {
-                MessageBox.Show("Resources.kullaniciAdiveSifreBos", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Kullanıcı Adı Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtKullaniciAdi.Focus();
                 return;
             }
+
+            if (String.IsNullOrWhiteSpace(txtSifre.Text))
+            {
+                MessageBox.Show("Şifre Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtSifre.Focus();
+                return;
+            }
+
             try
             {
                 SMF.BaglantiKapaliysaAc();
@@ -96,7 +105,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 }
                 else
                 {
-                    MessageBox.Show("Resources.kullaniciAdiveSifreYanlis", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Kullanıcı Adı veya Şifre Yanlış!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -109,25 +118,25 @@ namespace RabtBil_Musteri_Kayit_v2
             }
         }
 
-        private void pbxEye_Click(object sender, EventArgs e)
+        private void btnKapat_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void picGoz_Click(object sender, EventArgs e)
         {
             if (gozeTiklandiMi)
             {
-                pbxEye.Image = Resources.eye;
+                picGoz.Image = Resources.eye;
                 txtSifre.UseSystemPasswordChar = true;
                 gozeTiklandiMi = false;
             }
             else
             {
-                pbxEye.Image = Resources.eye_off;
+                picGoz.Image = Resources.eye_off;
                 txtSifre.UseSystemPasswordChar = false;
                 gozeTiklandiMi = true;
             }
-        }
-
-        private void kapat_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

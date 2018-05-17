@@ -36,11 +36,11 @@ namespace RabtBil_Musteri_Kayit_v2
 
             try
             {
-                PcTrBoxProfilResim.Image = File.Exists(SMF.ProfilResmiYolu) ? Image.FromFile(SMF.ProfilResmiYolu) : Resources.varsayilanProfilResmi;
+                picProfilResmi.Image = File.Exists(SMF.ProfilResmiYolu) ? Image.FromFile(SMF.ProfilResmiYolu) : Resources.varsayilanProfilResmi;
             }
             catch
             {
-                PcTrBoxProfilResim.Image = Resources.varsayilanProfilResmi;
+                picProfilResmi.Image = Resources.varsayilanProfilResmi;
             }
         }
 
@@ -287,6 +287,7 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             Application.Exit();
         }
+
         private void PcTrBoxProfilResim_Click(object sender, EventArgs e)
         {
             FrmProfil frm = new FrmProfil();
@@ -304,6 +305,7 @@ namespace RabtBil_Musteri_Kayit_v2
             FrmHakkinda frm = new FrmHakkinda();
             frm.ShowDialog();
         }
+
         private void btnKapat_Click(object sender, EventArgs e)
         {
             Close();

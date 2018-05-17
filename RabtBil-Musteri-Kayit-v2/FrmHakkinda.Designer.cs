@@ -43,7 +43,7 @@
             this.lblCopyRight = new System.Windows.Forms.Label();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnKapat = new System.Windows.Forms.Button();
             this.gbxSMFSoftWare.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
@@ -187,20 +187,20 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Hakkında";
             // 
-            // button6
+            // btnKapat
             // 
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(741, 2);
-            this.button6.Margin = new System.Windows.Forms.Padding(0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(30, 30);
-            this.button6.TabIndex = 49;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.kapat_Click);
+            this.btnKapat.BackColor = System.Drawing.Color.White;
+            this.btnKapat.FlatAppearance.BorderSize = 0;
+            this.btnKapat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKapat.ForeColor = System.Drawing.Color.White;
+            this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
+            this.btnKapat.Location = new System.Drawing.Point(741, 2);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(0);
+            this.btnKapat.Name = "btnKapat";
+            this.btnKapat.Size = new System.Drawing.Size(30, 30);
+            this.btnKapat.TabIndex = 49;
+            this.btnKapat.UseVisualStyleBackColor = false;
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
             // FrmHakkinda
             // 
@@ -208,7 +208,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(772, 264);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btnKapat);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblCopyRight);
             this.Controls.Add(this.picLogo);
@@ -253,6 +253,6 @@
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.Label lblCopyRight;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Button button6;
+        public System.Windows.Forms.Button btnKapat;
     }
 }

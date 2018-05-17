@@ -60,25 +60,43 @@ namespace RabtBil_Musteri_Kayit_v2
             {
                 if (String.IsNullOrWhiteSpace(txtKullaniciAdi.Text))
                 {
-                    MessageBox.Show("Resources.metinKutulariBos", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Kullanıcı Adı Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtKullaniciAdi.Focus();
                     return;
                 }
 
-                if (!SMF.EpostaDogruMu(txtEpostaAdresi.Text))
+                if (String.IsNullOrWhiteSpace(txtAdi.Text))
                 {
-                    MessageBox.Show("Resources.dogruEpostaGir", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Adı Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtAdi.Focus();
+                    return;
+                }
+
+                if (String.IsNullOrWhiteSpace(txtSoyadi.Text))
+                {
+                    MessageBox.Show("Soyadı Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtSoyadi.Focus();
+                    return;
+                }
+
+                if (String.IsNullOrWhiteSpace(txtEpostaAdresi.Text) || !SMF.EpostaDogruMu(txtEpostaAdresi.Text))
+                {
+                    MessageBox.Show("Doğru Bir E-posta Adresi Girin!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtEpostaAdresi.Focus();
                     return;
                 }
 
                 if (String.IsNullOrWhiteSpace(txtSifre.Text) || String.IsNullOrWhiteSpace(txtSifreyiOnayla.Text))
                 {
-                    MessageBox.Show("Şifre Girin", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Şifre Alanları Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtSifre.Focus();
                     return;
                 }
 
                 if (cmbRoller.SelectedIndex == 0)
                 {
                     MessageBox.Show("Bir Rol Seçin!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cmbRoller.Focus();
                     return;
                 }
 
@@ -116,11 +134,11 @@ namespace RabtBil_Musteri_Kayit_v2
                     cmd.Parameters.AddWithValue("@Rol", rol);
                     SMF.BaglantiKapaliysaAc();
                     cmd.ExecuteNonQuery();
-                    EkleEtkinMi(true);
-                    GuncelleEtkinMi(false);
+                    btnEkle.Enabled = true;
+                    btnGuncelle.Enabled = false;
                     Temizle();
                     VerileriGetir();
-                    MessageBox.Show("Resources.kaydedildi", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Personel Kaydedildi!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -131,119 +149,6 @@ namespace RabtBil_Musteri_Kayit_v2
             {
                 SMF.Baglanti.Close();
             }
-        }
-
-        private void btnTemizle_Click(object sender, EventArgs e)
-        {
-            Temizle();
-        }
-
-        private void pbxEye_Click(object sender, EventArgs e)
-        {
-            if (gozeTiklandiMi)
-            {
-                pbxEye.Image = Resources.eye;
-                txtSifre.UseSystemPasswordChar = true;
-                txtSifreyiOnayla.UseSystemPasswordChar = true;
-                gozeTiklandiMi = false;
-            }
-            else
-            {
-                pbxEye.Image = Resources.eye_off;
-                txtSifre.UseSystemPasswordChar = false;
-                txtSifreyiOnayla.UseSystemPasswordChar = false;
-                gozeTiklandiMi = true;
-            }
-        }
-
-        public void VerileriGetir()
-        {
-            string daText = String.Empty;
-
-            if (SMF.AdminMi)
-            {
-                daText = "SELECT Id,KullaniciAdi,Adi,Soyadi,Eposta,Rol FROM Kullanicilar";
-            }
-            else if (SMF.YoneticiMi)
-            {
-                daText = "SELECT Id,KullaniciAdi,Adi,Soyadi,Eposta,Rol FROM Kullanicilar WHERE Rol=2";
-            }
-
-            try
-            {
-                SMF.BaglantiKapaliysaAc();
-                SqlDataAdapter da = new SqlDataAdapter(daText, SMF.Baglanti);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                dgvKullanicilar.DataSource = dt;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Hata");
-            }
-            finally
-            {
-                SMF.Baglanti.Close();
-            }
-        }
-
-        public void Temizle()
-        {
-            txtKullaniciAdi.Clear();
-            txtAdi.Clear();
-            txtSoyadi.Clear();
-            txtEpostaAdresi.Clear();
-            txtSifre.Clear();
-            txtSifreyiOnayla.Clear();
-            cmbRoller.SelectedIndex = 0;
-
-            pbxEye.Image = Resources.eye;
-            txtSifre.UseSystemPasswordChar = true;
-            txtSifreyiOnayla.UseSystemPasswordChar = true;
-            gozeTiklandiMi = false;
-        }
-
-        public void GuncelleEtkinMi(bool value)
-        {
-            btnGuncelle.Enabled = value;
-        }
-
-        public void EkleEtkinMi(bool value)
-        {
-            btnEkle.Enabled = value;
-        }
-
-        private void dgvKullanicilar_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            secilenId = Convert.ToInt32(dgvKullanicilar.CurrentRow?.Cells[0].Value);
-            txtKullaniciAdi.Text = dgvKullanicilar.CurrentRow?.Cells[1].Value.ToString();
-            txtAdi.Text = dgvKullanicilar.CurrentRow?.Cells[2].Value.ToString();
-            txtSoyadi.Text = dgvKullanicilar.CurrentRow?.Cells[3].Value.ToString();
-            txtEpostaAdresi.Text = dgvKullanicilar.CurrentRow?.Cells[4].Value.ToString();
-
-            switch (dgvKullanicilar.CurrentRow?.Cells[5].Value)
-            {
-                case 0:
-                    secilenRol = 3;
-                    break;
-
-                case 1:
-                    secilenRol = 2;
-                    break;
-
-                case 2:
-                    secilenRol = 1;
-                    break;
-
-                default:
-                    secilenRol = 0;
-                    break;
-            }
-
-            cmbRoller.SelectedIndex = secilenRol;
-
-            btnEkle.Enabled = false;
-            btnGuncelle.Enabled = true;
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
@@ -252,13 +157,29 @@ namespace RabtBil_Musteri_Kayit_v2
             {
                 if (String.IsNullOrWhiteSpace(txtKullaniciAdi.Text))
                 {
-                    MessageBox.Show("Resources.metinKutulariBos", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Kullanıcı Adı Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtKullaniciAdi.Focus();
+                    return;
+                }
+
+                if (String.IsNullOrWhiteSpace(txtAdi.Text))
+                {
+                    MessageBox.Show("Adı Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtAdi.Focus();
+                    return;
+                }
+
+                if (String.IsNullOrWhiteSpace(txtSoyadi.Text))
+                {
+                    MessageBox.Show("Soyadı Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtSoyadi.Focus();
                     return;
                 }
 
                 if (!SMF.EpostaDogruMu(txtEpostaAdresi.Text))
                 {
-                    MessageBox.Show("Resources.dogruEpostaGir", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Doğru Bir E-posta Adresi Girin!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtEpostaAdresi.Focus();
                     return;
                 }
 
@@ -302,11 +223,11 @@ namespace RabtBil_Musteri_Kayit_v2
                     cmd.Parameters.AddWithValue("@Id", secilenId);
                     SMF.BaglantiKapaliysaAc();
                     cmd.ExecuteNonQuery();
-                    EkleEtkinMi(true);
-                    GuncelleEtkinMi(false);
+                    btnEkle.Enabled = true;
+                    btnGuncelle.Enabled = false;
                     Temizle();
                     VerileriGetir();
-                    MessageBox.Show("Resources.kaydedildi", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Personel Bilgileri Güncellendi!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
 
@@ -345,11 +266,11 @@ namespace RabtBil_Musteri_Kayit_v2
                     cmd.Parameters.AddWithValue("@Id", secilenId);
                     SMF.BaglantiKapaliysaAc();
                     cmd.ExecuteNonQuery();
-                    EkleEtkinMi(true);
-                    GuncelleEtkinMi(false);
+                    btnEkle.Enabled = true;
+                    btnGuncelle.Enabled = false;
                     Temizle();
                     VerileriGetir();
-                    MessageBox.Show("Resources.kaydedildi", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Personel Bilgileri Güncellendi!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -370,7 +291,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 cmd.Parameters.AddWithValue("@Id", Convert.ToInt32(dgvKullanicilar.CurrentRow?.Cells[0].Value));
                 SMF.BaglantiKapaliysaAc();
 
-                DialogResult dr = MessageBox.Show("Seçilen Personel Silinsin mi", SMF.PrograminTamAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                DialogResult dr = MessageBox.Show("Seçilen Personel Silinsin Mi?", SMF.PrograminTamAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                 if (dr == DialogResult.No)
                 {
@@ -380,7 +301,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 cmd.ExecuteNonQuery();
                 Temizle();
                 VerileriGetir();
-                MessageBox.Show("Resources.secilenKayitSilindi", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Seçilen Personel Silindi!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -392,9 +313,107 @@ namespace RabtBil_Musteri_Kayit_v2
             }
         }
 
-        private void kapat_Click(object sender, EventArgs e)
+        private void dgvKullanicilar_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            secilenId = Convert.ToInt32(dgvKullanicilar.CurrentRow?.Cells[0].Value);
+            txtKullaniciAdi.Text = dgvKullanicilar.CurrentRow?.Cells[1].Value.ToString();
+            txtAdi.Text = dgvKullanicilar.CurrentRow?.Cells[2].Value.ToString();
+            txtSoyadi.Text = dgvKullanicilar.CurrentRow?.Cells[3].Value.ToString();
+            txtEpostaAdresi.Text = dgvKullanicilar.CurrentRow?.Cells[4].Value.ToString();
+
+            switch (dgvKullanicilar.CurrentRow?.Cells[5].Value)
+            {
+                case 0:
+                    secilenRol = 3;
+                    break;
+
+                case 1:
+                    secilenRol = 2;
+                    break;
+
+                case 2:
+                    secilenRol = 1;
+                    break;
+
+                default:
+                    secilenRol = 0;
+                    break;
+            }
+
+            cmbRoller.SelectedIndex = secilenRol;
+
+            btnEkle.Enabled = false;
+            btnGuncelle.Enabled = true;
+        }
+
+        private void picGoz_Click(object sender, EventArgs e)
+        {
+            if (gozeTiklandiMi)
+            {
+                picGoz.Image = Resources.eye;
+                txtSifre.UseSystemPasswordChar = true;
+                txtSifreyiOnayla.UseSystemPasswordChar = true;
+                gozeTiklandiMi = false;
+            }
+            else
+            {
+                picGoz.Image = Resources.eye_off;
+                txtSifre.UseSystemPasswordChar = false;
+                txtSifreyiOnayla.UseSystemPasswordChar = false;
+                gozeTiklandiMi = true;
+            }
+        }
+
+        private void btnKapat_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        public void VerileriGetir()
+        {
+            string daText = String.Empty;
+
+            if (SMF.AdminMi)
+            {
+                daText = "SELECT Id,KullaniciAdi,Adi,Soyadi,Eposta,Rol FROM Kullanicilar";
+            }
+            else if (SMF.YoneticiMi)
+            {
+                daText = "SELECT Id,KullaniciAdi,Adi,Soyadi,Eposta,Rol FROM Kullanicilar WHERE Rol=2";
+            }
+
+            try
+            {
+                SMF.BaglantiKapaliysaAc();
+                SqlDataAdapter da = new SqlDataAdapter(daText, SMF.Baglanti);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgvKullanicilar.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata");
+            }
+            finally
+            {
+                SMF.Baglanti.Close();
+            }
+        }
+
+        public void Temizle()
+        {
+            txtKullaniciAdi.Clear();
+            txtAdi.Clear();
+            txtSoyadi.Clear();
+            txtEpostaAdresi.Clear();
+            txtSifre.Clear();
+            txtSifreyiOnayla.Clear();
+            cmbRoller.SelectedIndex = 0;
+
+            picGoz.Image = Resources.eye;
+            txtSifre.UseSystemPasswordChar = true;
+            txtSifreyiOnayla.UseSystemPasswordChar = true;
+            gozeTiklandiMi = false;
         }
     }
 }

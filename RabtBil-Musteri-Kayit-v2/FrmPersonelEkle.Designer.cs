@@ -47,11 +47,11 @@
             this.btnEkle = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
-            this.pbxEye = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.picGoz = new System.Windows.Forms.PictureBox();
+            this.lblBaslik = new System.Windows.Forms.Label();
+            this.btnKapat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKullanicilar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxEye)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGoz)).BeginInit();
             this.SuspendLayout();
             // 
             // lblKullaniciAdi
@@ -248,43 +248,43 @@
             this.btnSil.UseVisualStyleBackColor = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
-            // pbxEye
+            // picGoz
             // 
-            this.pbxEye.Image = global::RabtBil_Musteri_Kayit_v2.Properties.Resources.eye;
-            this.pbxEye.Location = new System.Drawing.Point(264, 299);
-            this.pbxEye.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.pbxEye.Name = "pbxEye";
-            this.pbxEye.Size = new System.Drawing.Size(25, 25);
-            this.pbxEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxEye.TabIndex = 35;
-            this.pbxEye.TabStop = false;
-            this.pbxEye.Click += new System.EventHandler(this.pbxEye_Click);
+            this.picGoz.Image = global::RabtBil_Musteri_Kayit_v2.Properties.Resources.eye;
+            this.picGoz.Location = new System.Drawing.Point(264, 298);
+            this.picGoz.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.picGoz.Name = "picGoz";
+            this.picGoz.Size = new System.Drawing.Size(25, 25);
+            this.picGoz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picGoz.TabIndex = 35;
+            this.picGoz.TabStop = false;
+            this.picGoz.Click += new System.EventHandler(this.picGoz_Click);
             // 
-            // label1
+            // lblBaslik
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(15, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 25);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "Personel Ekle";
+            this.lblBaslik.AutoSize = true;
+            this.lblBaslik.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBaslik.Location = new System.Drawing.Point(15, 9);
+            this.lblBaslik.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblBaslik.Name = "lblBaslik";
+            this.lblBaslik.Size = new System.Drawing.Size(123, 25);
+            this.lblBaslik.TabIndex = 37;
+            this.lblBaslik.Text = "Personel Ekle";
             // 
-            // button6
+            // btnKapat
             // 
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(839, 0);
-            this.button6.Margin = new System.Windows.Forms.Padding(0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(30, 30);
-            this.button6.TabIndex = 49;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.kapat_Click);
+            this.btnKapat.BackColor = System.Drawing.Color.White;
+            this.btnKapat.FlatAppearance.BorderSize = 0;
+            this.btnKapat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKapat.ForeColor = System.Drawing.Color.White;
+            this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
+            this.btnKapat.Location = new System.Drawing.Point(839, 0);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(0);
+            this.btnKapat.Name = "btnKapat";
+            this.btnKapat.Size = new System.Drawing.Size(30, 30);
+            this.btnKapat.TabIndex = 49;
+            this.btnKapat.UseVisualStyleBackColor = false;
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
             // FrmPersonelEkle
             // 
@@ -293,9 +293,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(870, 497);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pbxEye);
+            this.Controls.Add(this.btnKapat);
+            this.Controls.Add(this.lblBaslik);
+            this.Controls.Add(this.picGoz);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnEkle);
@@ -323,7 +323,7 @@
             this.Text = "FrmPersonelEkle";
             this.Load += new System.EventHandler(this.FrmPersonelEkle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKullanicilar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxEye)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGoz)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -349,8 +349,8 @@
         public System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.DataGridView dgvKullanicilar;
         public System.Windows.Forms.Button btnSil;
-        private System.Windows.Forms.PictureBox pbxEye;
-        private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Button button6;
+        private System.Windows.Forms.PictureBox picGoz;
+        private System.Windows.Forms.Label lblBaslik;
+        public System.Windows.Forms.Button btnKapat;
     }
 }

@@ -55,7 +55,7 @@
             this.btnKayitlariGoster = new System.Windows.Forms.Button();
             this.btnCikisYap = new System.Windows.Forms.Button();
             this.lblHosgeldin = new System.Windows.Forms.Label();
-            this.PcTrBoxProfilResim = new System.Windows.Forms.PictureBox();
+            this.picProfilResmi = new System.Windows.Forms.PictureBox();
             this.lblBaslik = new System.Windows.Forms.Label();
             this.txtFormNo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -67,7 +67,7 @@
             this.btnHakkinda = new System.Windows.Forms.Button();
             this.btnKapat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picQrKodu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxProfilResim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picProfilResmi)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTelefon
@@ -309,17 +309,17 @@
             this.lblHosgeldin.TabIndex = 35;
             this.lblHosgeldin.Text = "Hoş Geldin, !";
             // 
-            // PcTrBoxProfilResim
+            // picProfilResmi
             // 
-            this.PcTrBoxProfilResim.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PcTrBoxProfilResim.Image = global::RabtBil_Musteri_Kayit_v2.Properties.Resources.varsayilanProfilResmi;
-            this.PcTrBoxProfilResim.Location = new System.Drawing.Point(614, 39);
-            this.PcTrBoxProfilResim.Name = "PcTrBoxProfilResim";
-            this.PcTrBoxProfilResim.Size = new System.Drawing.Size(80, 80);
-            this.PcTrBoxProfilResim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PcTrBoxProfilResim.TabIndex = 33;
-            this.PcTrBoxProfilResim.TabStop = false;
-            this.PcTrBoxProfilResim.Click += new System.EventHandler(this.PcTrBoxProfilResim_Click);
+            this.picProfilResmi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picProfilResmi.Image = global::RabtBil_Musteri_Kayit_v2.Properties.Resources.varsayilanProfilResmi;
+            this.picProfilResmi.Location = new System.Drawing.Point(614, 39);
+            this.picProfilResmi.Name = "picProfilResmi";
+            this.picProfilResmi.Size = new System.Drawing.Size(80, 80);
+            this.picProfilResmi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picProfilResmi.TabIndex = 33;
+            this.picProfilResmi.TabStop = false;
+            this.picProfilResmi.Click += new System.EventHandler(this.PcTrBoxProfilResim_Click);
             // 
             // lblBaslik
             // 
@@ -479,7 +479,7 @@
             this.Controls.Add(this.txtCihazModeli);
             this.Controls.Add(this.btnCikisYap);
             this.Controls.Add(this.lblCihazModeli);
-            this.Controls.Add(this.PcTrBoxProfilResim);
+            this.Controls.Add(this.picProfilResmi);
             this.Controls.Add(this.btnKayitlariGoster);
             this.Controls.Add(this.btnKaydet);
             this.Controls.Add(this.btnYeniKayit);
@@ -493,7 +493,7 @@
             this.Text = "FrmTeknikServisFormu";
             this.Load += new System.EventHandler(this.FrmPersonelTeknikServisFormu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picQrKodu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxProfilResim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picProfilResmi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -518,7 +518,7 @@
         public System.Windows.Forms.Button btnYeniKayit;
         public System.Windows.Forms.Button btnKaydet;
         public System.Windows.Forms.Button btnKayitlariGoster;
-        public System.Windows.Forms.PictureBox PcTrBoxProfilResim;
+        public System.Windows.Forms.PictureBox picProfilResmi;
         public System.Windows.Forms.Button btnCikisYap;
         public System.Windows.Forms.Label lblHosgeldin;
         public System.Windows.Forms.CheckBox chkTeslimEdildi;

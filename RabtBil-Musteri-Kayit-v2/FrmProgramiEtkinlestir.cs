@@ -27,9 +27,17 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void btnEtkinlestir_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(txtEpostaAdresi.Text) || String.IsNullOrWhiteSpace(txtLisansAnahtari.Text))
+            if (String.IsNullOrWhiteSpace(txtEpostaAdresi.Text))
             {
-                MessageBox.Show("Resources.epostaVeyaLisansAnahtariBos", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("E-posta Adresi Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtEpostaAdresi.Focus();
+                return;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtLisansAnahtari.Text))
+            {
+                MessageBox.Show("Lisans Anahtarı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtLisansAnahtari.Focus();
                 return;
             }
 
@@ -42,21 +50,22 @@ namespace RabtBil_Musteri_Kayit_v2
                     Settings.Default.LisansAnahtari = txtLisansAnahtari.Text.ToUpper();
                     Settings.Default.Eposta = txtEpostaAdresi.Text.ToUpper();
                     Settings.Default.Save();
-                    MessageBox.Show("Resources.lisansBasarili", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Programı Etkinleştirdiğiniz İçin Teşekkür Ederiz!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }
                 else
                 {
-                    MessageBox.Show("Resources.lisansTekrarDene", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Lisans Bilgileri Yanlış!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Resources.dogruBirEpostaGirin", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Doğru Bir E-posta Adresi Girin!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtEpostaAdresi.Focus();
             }
         }
 
-        private void kapat_Click(object sender, EventArgs e)
+        private void btnKapat_Click(object sender, EventArgs e)
         {
             Close();
         }

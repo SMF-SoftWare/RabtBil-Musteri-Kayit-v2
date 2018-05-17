@@ -63,45 +63,78 @@ namespace RabtBil_Musteri_Kayit_v2
 
             try
             {
-                PcTrBoxProfiliDuzenle.Image = File.Exists(SMF.ProfilResmiYolu) ? Image.FromFile(SMF.ProfilResmiYolu) : Resources.varsayilanProfilResmi;
+                picProfilResmi.Image = File.Exists(SMF.ProfilResmiYolu) ? Image.FromFile(SMF.ProfilResmiYolu) : Resources.varsayilanProfilResmi;
             }
             catch
             {
-                PcTrBoxProfiliDuzenle.Image = Resources.varsayilanProfilResmi;
+                picProfilResmi.Image = Resources.varsayilanProfilResmi;
             }
         }
 
-        private void tsmiGucluSifreOlustur_Click(object sender, EventArgs e)
+        private void picProfilResmi_Click(object sender, EventArgs e)
         {
-            FrmGucluSifreOlustur frm = new FrmGucluSifreOlustur();
-            frm.ShowDialog();
-        }
-
-        private void tsmiHakkinda_Click(object sender, EventArgs e)
-        {
-            FrmHakkinda frm = new FrmHakkinda();
-            frm.ShowDialog();
+            using (OpenFileDialog resimSec = new OpenFileDialog())
+            {
+                FrmPersonelTeknikServisFormu frm = (FrmPersonelTeknikServisFormu)Application.OpenForms["FrmPersonelTeknikServisFormu"];
+                resimSec.Title = "Profil Resminizi Seçin";
+                resimSec.Filter = "Resim Dosyaları(*.jpg, *.jpeg, *.jpe, *.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|SMF Biçimi(*.smf)|*.smf";
+                if (resimSec.ShowDialog() == DialogResult.OK)
+                {
+                    string kaynakResimYolu = resimSec.FileName;
+                    if (!Directory.Exists(SMF.ProfilKlasoru))
+                    {
+                        Directory.CreateDirectory(SMF.ProfilKlasoru);
+                    }
+                    picProfilResmi.Image?.Dispose();
+                    frm.picProfilResmi.Image?.Dispose();
+                    try
+                    {
+                        File.Copy(kaynakResimYolu, SMF.ProfilResmiYolu, true);
+                        picProfilResmi.Image = File.Exists(SMF.ProfilResmiYolu) ? Image.FromFile(SMF.ProfilResmiYolu) : Resources.varsayilanProfilResmi;
+                        frm.picProfilResmi.Image = File.Exists(SMF.ProfilResmiYolu) ? Image.FromFile(SMF.ProfilResmiYolu) : Resources.varsayilanProfilResmi;
+                    }
+                    catch
+                    {
+                        picProfilResmi.Image = Resources.varsayilanProfilResmi;
+                    }
+                }
+            }
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            FrmPersonelTeknikServisFormu frm = (FrmPersonelTeknikServisFormu)Application.OpenForms["FrmPersonelTeknikServisFormu"];
-
             if (String.IsNullOrWhiteSpace(txtKullaniciAdi.Text))
             {
-                MessageBox.Show("Resources.kullaniciAdiBosOlamaz", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Kullanıcı Adı Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtKullaniciAdi.Focus();
                 return;
             }
 
             if (String.IsNullOrWhiteSpace(txtMevcutSifre.Text))
             {
                 MessageBox.Show("Mevcut Şifrenizi Girin!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtMevcutSifre.Focus();
+                return;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtAdi.Text))
+            {
+                MessageBox.Show("Adı Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtAdi.Focus();
+                return;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtSoyadi.Text))
+            {
+                MessageBox.Show("Soyadı Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtSoyadi.Focus();
                 return;
             }
 
             if (String.IsNullOrWhiteSpace(txtEpostaAdresi.Text) || !SMF.EpostaDogruMu(txtEpostaAdresi.Text))
             {
-                MessageBox.Show("Resources.dogruEpostaGir", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Doğru Bir E-posta Adresi Girin!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtEpostaAdresi.Focus();
                 return;
             }
 
@@ -127,7 +160,6 @@ namespace RabtBil_Musteri_Kayit_v2
                     cmd.ExecuteNonQuery();
 
                     SMF.KullaniciAdi = txtAdi.Text;
-                    if (frm != null) frm.lblHosgeldin.Text = $"Hoş Geldin, {SMF.KullaniciAdi}!";
 
                     MessageBox.Show("Bilgileriniz Güncellendi!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
@@ -152,54 +184,22 @@ namespace RabtBil_Musteri_Kayit_v2
                 cmd.ExecuteNonQuery();
 
                 SMF.KullaniciAdi = txtAdi.Text;
-                if (frm != null) frm.lblHosgeldin.Text = $"Hoş Geldin, {SMF.KullaniciAdi}!";
 
                 MessageBox.Show("Bilgileriniz Güncellendi!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
         }
 
-        private void btnKapat_Click(object sender, EventArgs e)
+        private void btnGucluSifreOlustur_Click(object sender, EventArgs e)
         {
             FrmGucluSifreOlustur frm = new FrmGucluSifreOlustur();
             frm.ShowDialog();
         }
-
-        private void PcTrBoxProfiliDuzenle_Click(object sender, EventArgs e)
-        {
-            using (OpenFileDialog resimSec = new OpenFileDialog())
-            {
-                FrmPersonelTeknikServisFormu frm = (FrmPersonelTeknikServisFormu)Application.OpenForms["FrmPersonelTeknikServisFormu"];
-                resimSec.Title = "Profil resminizi seçin";
-                resimSec.Filter = "Resim Dosyaları(*.jpg, *.jpeg, *.jpe, *.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|SMF Biçimi(*.smf)|*.smf";
-                if (resimSec.ShowDialog() == DialogResult.OK)
-                {
-                    string kaynakResimYolu = resimSec.FileName;
-                    if (!Directory.Exists(SMF.ProfilKlasoru))
-                    {
-                        Directory.CreateDirectory(SMF.ProfilKlasoru);
-                    }
-                    PcTrBoxProfiliDuzenle.Image?.Dispose();
-                    frm.PcTrBoxProfilResim.Image?.Dispose();
-                    try
-                    {
-                        File.Copy(kaynakResimYolu, SMF.ProfilResmiYolu, true);
-                        PcTrBoxProfiliDuzenle.Image = File.Exists(SMF.ProfilResmiYolu) ? Image.FromFile(SMF.ProfilResmiYolu) : Resources.varsayilanProfilResmi;
-                        frm.PcTrBoxProfilResim.Image = File.Exists(SMF.ProfilResmiYolu) ? Image.FromFile(SMF.ProfilResmiYolu) : Resources.varsayilanProfilResmi;
-                    }
-                    catch
-                    {
-                        PcTrBoxProfiliDuzenle.Image = Resources.varsayilanProfilResmi;
-                    }
-                }
-            }
-        }
-
-        private void pbxEye_Click(object sender, EventArgs e)
+        private void picGoz_Click(object sender, EventArgs e)
         {
             if (gozeTiklandiMi)
             {
-                pbxEye.Image = Resources.eye;
+                picGoz.Image = Resources.eye;
                 txtMevcutSifre.UseSystemPasswordChar = true;
                 txtYeniSifre.UseSystemPasswordChar = true;
                 txtYeniSifreyiOnayla.UseSystemPasswordChar = true;
@@ -207,21 +207,14 @@ namespace RabtBil_Musteri_Kayit_v2
             }
             else
             {
-                pbxEye.Image = Resources.eye_off;
+                picGoz.Image = Resources.eye_off;
                 txtMevcutSifre.UseSystemPasswordChar = false;
                 txtYeniSifre.UseSystemPasswordChar = false;
                 txtYeniSifreyiOnayla.UseSystemPasswordChar = false;
                 gozeTiklandiMi = true;
             }
         }
-
-        private void tsmiLisansAnahtari_Click(object sender, EventArgs e)
-        {
-            FrmProgramiEtkinlestir frm = new FrmProgramiEtkinlestir();
-            frm.ShowDialog();
-        }
-
-        private void kapat_Click(object sender, EventArgs e)
+        private void btnKapat_Click(object sender, EventArgs e)
         {
             Close();
         }

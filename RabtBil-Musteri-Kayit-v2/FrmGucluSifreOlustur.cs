@@ -64,6 +64,11 @@ namespace RabtBil_Musteri_Kayit_v2
             Close();
         }
 
+        private void btnKapat_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         public string GucluSifreOlustur(int uzunluk)
         {
             const string kucukHarfler = "abcdefghijklmnopqrstuvwxyz";
@@ -106,11 +111,6 @@ namespace RabtBil_Musteri_Kayit_v2
             }
 
             return sb.ToString();
-        }
-
-        private void kapat_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }
