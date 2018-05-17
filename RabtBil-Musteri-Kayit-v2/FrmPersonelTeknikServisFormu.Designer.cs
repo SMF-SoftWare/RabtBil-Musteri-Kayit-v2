@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPersonelTeknikServisFormu));
             this.lblTelefon = new System.Windows.Forms.Label();
             this.mtxTelefon = new System.Windows.Forms.MaskedTextBox();
@@ -36,19 +35,19 @@
             this.txtMusteriAdi = new System.Windows.Forms.TextBox();
             this.lblMusteriAdi = new System.Windows.Forms.Label();
             this.picQrKodu = new System.Windows.Forms.PictureBox();
-            this.lblUrunKodlari = new System.Windows.Forms.Label();
+            this.lblCihazinSeriNumarasi = new System.Windows.Forms.Label();
             this.chkTeslimEdildi = new System.Windows.Forms.CheckBox();
             this.txtUcret = new System.Windows.Forms.TextBox();
             this.lblUcret = new System.Windows.Forms.Label();
-            this.txtTakipNumarası = new System.Windows.Forms.TextBox();
-            this.lblTakipNumarası = new System.Windows.Forms.Label();
-            this.txtUrunDurumu = new System.Windows.Forms.TextBox();
-            this.lblUrunDurumu = new System.Windows.Forms.Label();
+            this.txtTakipNumarasi = new System.Windows.Forms.TextBox();
+            this.lblTakipNumarasi = new System.Windows.Forms.Label();
+            this.txtCihazDurumu = new System.Windows.Forms.TextBox();
+            this.lblCihazDurumu = new System.Windows.Forms.Label();
             this.txtArizaninTanimi = new System.Windows.Forms.TextBox();
             this.lblArizaninTanimi = new System.Windows.Forms.Label();
-            this.txtUrunKodlari = new System.Windows.Forms.TextBox();
-            this.txtUrunModeli = new System.Windows.Forms.TextBox();
-            this.lblUrunModeli = new System.Windows.Forms.Label();
+            this.txtCihazinSeriNumarası = new System.Windows.Forms.TextBox();
+            this.txtCihazModeli = new System.Windows.Forms.TextBox();
+            this.lblCihazModeli = new System.Windows.Forms.Label();
             this.lblMusteriNo = new System.Windows.Forms.Label();
             this.txtEkBilgiler = new System.Windows.Forms.TextBox();
             this.btnYeniKayit = new System.Windows.Forms.Button();
@@ -56,18 +55,17 @@
             this.btnKayitlariGoster = new System.Windows.Forms.Button();
             this.btnCikisYap = new System.Windows.Forms.Button();
             this.lblHosgeldin = new System.Windows.Forms.Label();
-            this.tmrTarihSaat = new System.Windows.Forms.Timer(this.components);
             this.PcTrBoxProfilResim = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblBaslik = new System.Windows.Forms.Label();
             this.txtFormNo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnProgramiEtkinlestir = new System.Windows.Forms.Button();
+            this.btnHakkinda = new System.Windows.Forms.Button();
+            this.btnKapat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picQrKodu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxProfilResim)).BeginInit();
             this.SuspendLayout();
@@ -122,14 +120,14 @@
             this.picQrKodu.TabIndex = 38;
             this.picQrKodu.TabStop = false;
             // 
-            // lblUrunKodlari
+            // lblCihazinSeriNumarasi
             // 
-            this.lblUrunKodlari.AutoSize = true;
-            this.lblUrunKodlari.Location = new System.Drawing.Point(295, 96);
-            this.lblUrunKodlari.Name = "lblUrunKodlari";
-            this.lblUrunKodlari.Size = new System.Drawing.Size(101, 21);
-            this.lblUrunKodlari.TabIndex = 7;
-            this.lblUrunKodlari.Text = "Ürün Kodları:";
+            this.lblCihazinSeriNumarasi.AutoSize = true;
+            this.lblCihazinSeriNumarasi.Location = new System.Drawing.Point(295, 95);
+            this.lblCihazinSeriNumarasi.Name = "lblCihazinSeriNumarasi";
+            this.lblCihazinSeriNumarasi.Size = new System.Drawing.Size(167, 21);
+            this.lblCihazinSeriNumarasi.TabIndex = 7;
+            this.lblCihazinSeriNumarasi.Text = "Cihazın Seri Numarası:";
             // 
             // chkTeslimEdildi
             // 
@@ -158,38 +156,38 @@
             this.lblUcret.TabIndex = 12;
             this.lblUcret.Text = "Ücret:";
             // 
-            // txtTakipNumarası
+            // txtTakipNumarasi
             // 
-            this.txtTakipNumarası.Enabled = false;
-            this.txtTakipNumarası.Location = new System.Drawing.Point(295, 429);
-            this.txtTakipNumarası.Name = "txtTakipNumarası";
-            this.txtTakipNumarası.Size = new System.Drawing.Size(256, 29);
-            this.txtTakipNumarası.TabIndex = 10;
+            this.txtTakipNumarasi.Enabled = false;
+            this.txtTakipNumarasi.Location = new System.Drawing.Point(295, 429);
+            this.txtTakipNumarasi.Name = "txtTakipNumarasi";
+            this.txtTakipNumarasi.Size = new System.Drawing.Size(256, 29);
+            this.txtTakipNumarasi.TabIndex = 10;
             // 
-            // lblTakipNumarası
+            // lblTakipNumarasi
             // 
-            this.lblTakipNumarası.AutoSize = true;
-            this.lblTakipNumarası.Location = new System.Drawing.Point(295, 404);
-            this.lblTakipNumarası.Name = "lblTakipNumarası";
-            this.lblTakipNumarası.Size = new System.Drawing.Size(120, 21);
-            this.lblTakipNumarası.TabIndex = 10;
-            this.lblTakipNumarası.Text = "Takip Numarası:";
+            this.lblTakipNumarasi.AutoSize = true;
+            this.lblTakipNumarasi.Location = new System.Drawing.Point(295, 404);
+            this.lblTakipNumarasi.Name = "lblTakipNumarasi";
+            this.lblTakipNumarasi.Size = new System.Drawing.Size(120, 21);
+            this.lblTakipNumarasi.TabIndex = 10;
+            this.lblTakipNumarasi.Text = "Takip Numarası:";
             // 
-            // txtUrunDurumu
+            // txtCihazDurumu
             // 
-            this.txtUrunDurumu.Location = new System.Drawing.Point(295, 313);
-            this.txtUrunDurumu.Name = "txtUrunDurumu";
-            this.txtUrunDurumu.Size = new System.Drawing.Size(256, 29);
-            this.txtUrunDurumu.TabIndex = 9;
+            this.txtCihazDurumu.Location = new System.Drawing.Point(295, 313);
+            this.txtCihazDurumu.Name = "txtCihazDurumu";
+            this.txtCihazDurumu.Size = new System.Drawing.Size(256, 29);
+            this.txtCihazDurumu.TabIndex = 9;
             // 
-            // lblUrunDurumu
+            // lblCihazDurumu
             // 
-            this.lblUrunDurumu.AutoSize = true;
-            this.lblUrunDurumu.Location = new System.Drawing.Point(295, 288);
-            this.lblUrunDurumu.Name = "lblUrunDurumu";
-            this.lblUrunDurumu.Size = new System.Drawing.Size(110, 21);
-            this.lblUrunDurumu.TabIndex = 9;
-            this.lblUrunDurumu.Text = "Ürün Durumu:";
+            this.lblCihazDurumu.AutoSize = true;
+            this.lblCihazDurumu.Location = new System.Drawing.Point(295, 288);
+            this.lblCihazDurumu.Name = "lblCihazDurumu";
+            this.lblCihazDurumu.Size = new System.Drawing.Size(113, 21);
+            this.lblCihazDurumu.TabIndex = 9;
+            this.lblCihazDurumu.Text = "Cihaz Durumu:";
             // 
             // txtArizaninTanimi
             // 
@@ -208,39 +206,37 @@
             this.lblArizaninTanimi.TabIndex = 8;
             this.lblArizaninTanimi.Text = "Arızanın Tanımı:";
             // 
-            // txtUrunKodlari
+            // txtCihazinSeriNumarası
             // 
-            this.txtUrunKodlari.Location = new System.Drawing.Point(295, 121);
-            this.txtUrunKodlari.Name = "txtUrunKodlari";
-            this.txtUrunKodlari.Size = new System.Drawing.Size(256, 29);
-            this.txtUrunKodlari.TabIndex = 7;
-            this.txtUrunKodlari.TextChanged += new System.EventHandler(this.txtUrunKodlari_TextChanged);
+            this.txtCihazinSeriNumarası.Location = new System.Drawing.Point(295, 121);
+            this.txtCihazinSeriNumarası.Name = "txtCihazinSeriNumarası";
+            this.txtCihazinSeriNumarası.Size = new System.Drawing.Size(256, 29);
+            this.txtCihazinSeriNumarası.TabIndex = 7;
             // 
-            // txtUrunModeli
+            // txtCihazModeli
             // 
-            this.txtUrunModeli.Location = new System.Drawing.Point(295, 64);
-            this.txtUrunModeli.Name = "txtUrunModeli";
-            this.txtUrunModeli.Size = new System.Drawing.Size(256, 29);
-            this.txtUrunModeli.TabIndex = 6;
+            this.txtCihazModeli.Location = new System.Drawing.Point(295, 64);
+            this.txtCihazModeli.Name = "txtCihazModeli";
+            this.txtCihazModeli.Size = new System.Drawing.Size(256, 29);
+            this.txtCihazModeli.TabIndex = 6;
             // 
-            // lblUrunModeli
+            // lblCihazModeli
             // 
-            this.lblUrunModeli.AutoSize = true;
-            this.lblUrunModeli.Location = new System.Drawing.Point(295, 39);
-            this.lblUrunModeli.Name = "lblUrunModeli";
-            this.lblUrunModeli.Size = new System.Drawing.Size(100, 21);
-            this.lblUrunModeli.TabIndex = 6;
-            this.lblUrunModeli.Text = "Ürün Modeli:";
+            this.lblCihazModeli.AutoSize = true;
+            this.lblCihazModeli.Location = new System.Drawing.Point(295, 39);
+            this.lblCihazModeli.Name = "lblCihazModeli";
+            this.lblCihazModeli.Size = new System.Drawing.Size(103, 21);
+            this.lblCihazModeli.TabIndex = 6;
+            this.lblCihazModeli.Text = "Cihaz Modeli:";
             // 
             // lblMusteriNo
             // 
             this.lblMusteriNo.AutoSize = true;
-            this.lblMusteriNo.Location = new System.Drawing.Point(37, 529);
+            this.lblMusteriNo.Location = new System.Drawing.Point(91, 451);
             this.lblMusteriNo.Name = "lblMusteriNo";
             this.lblMusteriNo.Size = new System.Drawing.Size(88, 21);
             this.lblMusteriNo.TabIndex = 36;
             this.lblMusteriNo.Text = "Müşteri No";
-            this.lblMusteriNo.Visible = false;
             // 
             // txtEkBilgiler
             // 
@@ -253,6 +249,7 @@
             // btnYeniKayit
             // 
             this.btnYeniKayit.BackColor = System.Drawing.Color.Black;
+            this.btnYeniKayit.Enabled = false;
             this.btnYeniKayit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnYeniKayit.ForeColor = System.Drawing.Color.White;
             this.btnYeniKayit.Location = new System.Drawing.Point(576, 122);
@@ -312,10 +309,6 @@
             this.lblHosgeldin.TabIndex = 35;
             this.lblHosgeldin.Text = "Hoş Geldin, !";
             // 
-            // tmrTarihSaat
-            // 
-            this.tmrTarihSaat.Tick += new System.EventHandler(this.tmrTarihSaat_Tick);
-            // 
             // PcTrBoxProfilResim
             // 
             this.PcTrBoxProfilResim.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -328,16 +321,16 @@
             this.PcTrBoxProfilResim.TabStop = false;
             this.PcTrBoxProfilResim.Click += new System.EventHandler(this.PcTrBoxProfilResim_Click);
             // 
-            // label1
+            // lblBaslik
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(15, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 25);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "Teknik Servis Formu";
+            this.lblBaslik.AutoSize = true;
+            this.lblBaslik.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBaslik.Location = new System.Drawing.Point(15, 9);
+            this.lblBaslik.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblBaslik.Name = "lblBaslik";
+            this.lblBaslik.Size = new System.Drawing.Size(177, 25);
+            this.lblBaslik.TabIndex = 38;
+            this.lblBaslik.Text = "Teknik Servis Formu";
             // 
             // txtFormNo
             // 
@@ -367,6 +360,7 @@
             // btnGuncelle
             // 
             this.btnGuncelle.BackColor = System.Drawing.Color.Black;
+            this.btnGuncelle.Enabled = false;
             this.btnGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuncelle.ForeColor = System.Drawing.Color.White;
             this.btnGuncelle.Location = new System.Drawing.Point(576, 260);
@@ -401,49 +395,50 @@
             this.button2.Text = "Yazdır";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnProgramiEtkinlestir
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(647, 0);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(30, 30);
-            this.button3.TabIndex = 44;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnProgramiEtkinlestir.BackColor = System.Drawing.Color.White;
+            this.btnProgramiEtkinlestir.FlatAppearance.BorderSize = 0;
+            this.btnProgramiEtkinlestir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProgramiEtkinlestir.ForeColor = System.Drawing.Color.White;
+            this.btnProgramiEtkinlestir.Image = ((System.Drawing.Image)(resources.GetObject("btnProgramiEtkinlestir.Image")));
+            this.btnProgramiEtkinlestir.Location = new System.Drawing.Point(647, 0);
+            this.btnProgramiEtkinlestir.Margin = new System.Windows.Forms.Padding(0);
+            this.btnProgramiEtkinlestir.Name = "btnProgramiEtkinlestir";
+            this.btnProgramiEtkinlestir.Size = new System.Drawing.Size(30, 30);
+            this.btnProgramiEtkinlestir.TabIndex = 44;
+            this.btnProgramiEtkinlestir.UseVisualStyleBackColor = false;
+            this.btnProgramiEtkinlestir.Click += new System.EventHandler(this.btnProgramiEtkinlestir_Click);
             // 
-            // button5
+            // btnHakkinda
             // 
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(680, 0);
-            this.button5.Margin = new System.Windows.Forms.Padding(0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(30, 30);
-            this.button5.TabIndex = 46;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnHakkinda.BackColor = System.Drawing.Color.White;
+            this.btnHakkinda.FlatAppearance.BorderSize = 0;
+            this.btnHakkinda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHakkinda.ForeColor = System.Drawing.Color.White;
+            this.btnHakkinda.Image = ((System.Drawing.Image)(resources.GetObject("btnHakkinda.Image")));
+            this.btnHakkinda.Location = new System.Drawing.Point(680, 0);
+            this.btnHakkinda.Margin = new System.Windows.Forms.Padding(0);
+            this.btnHakkinda.Name = "btnHakkinda";
+            this.btnHakkinda.Size = new System.Drawing.Size(30, 30);
+            this.btnHakkinda.TabIndex = 46;
+            this.btnHakkinda.UseVisualStyleBackColor = false;
+            this.btnHakkinda.Click += new System.EventHandler(this.btnHakkinda_Click);
             // 
-            // button6
+            // btnKapat
             // 
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(713, 0);
-            this.button6.Margin = new System.Windows.Forms.Padding(0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(30, 30);
-            this.button6.TabIndex = 47;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.kapat_Click);
+            this.btnKapat.BackColor = System.Drawing.Color.White;
+            this.btnKapat.FlatAppearance.BorderSize = 0;
+            this.btnKapat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKapat.ForeColor = System.Drawing.Color.White;
+            this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
+            this.btnKapat.Location = new System.Drawing.Point(713, 0);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(0);
+            this.btnKapat.Name = "btnKapat";
+            this.btnKapat.Size = new System.Drawing.Size(30, 30);
+            this.btnKapat.TabIndex = 47;
+            this.btnKapat.UseVisualStyleBackColor = false;
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
             // FrmPersonelTeknikServisFormu
             // 
@@ -451,9 +446,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(745, 473);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnKapat);
+            this.Controls.Add(this.btnHakkinda);
+            this.Controls.Add(this.btnProgramiEtkinlestir);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnGuncelle);
@@ -462,28 +457,28 @@
             this.Controls.Add(this.lblUcret);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.chkTeslimEdildi);
-            this.Controls.Add(this.lblUrunKodlari);
+            this.Controls.Add(this.lblCihazinSeriNumarasi);
             this.Controls.Add(this.txtEkBilgiler);
             this.Controls.Add(this.txtAksesuarlar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtTakipNumarası);
+            this.Controls.Add(this.txtTakipNumarasi);
             this.Controls.Add(this.txtFormNo);
-            this.Controls.Add(this.lblTakipNumarası);
+            this.Controls.Add(this.lblTakipNumarasi);
             this.Controls.Add(this.txtMusteriAdi);
-            this.Controls.Add(this.txtUrunDurumu);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblUrunDurumu);
+            this.Controls.Add(this.txtCihazDurumu);
+            this.Controls.Add(this.lblBaslik);
+            this.Controls.Add(this.lblCihazDurumu);
             this.Controls.Add(this.mtxTelefon);
             this.Controls.Add(this.txtArizaninTanimi);
             this.Controls.Add(this.lblTelefon);
             this.Controls.Add(this.lblArizaninTanimi);
             this.Controls.Add(this.lblMusteriAdi);
-            this.Controls.Add(this.txtUrunKodlari);
+            this.Controls.Add(this.txtCihazinSeriNumarası);
             this.Controls.Add(this.lblHosgeldin);
             this.Controls.Add(this.lblMusteriNo);
-            this.Controls.Add(this.txtUrunModeli);
+            this.Controls.Add(this.txtCihazModeli);
             this.Controls.Add(this.btnCikisYap);
-            this.Controls.Add(this.lblUrunModeli);
+            this.Controls.Add(this.lblCihazModeli);
             this.Controls.Add(this.PcTrBoxProfilResim);
             this.Controls.Add(this.btnKayitlariGoster);
             this.Controls.Add(this.btnKaydet);
@@ -496,7 +491,6 @@
             this.Name = "FrmPersonelTeknikServisFormu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTeknikServisFormu";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPersonelTeknikServisFormu_FormClosing);
             this.Load += new System.EventHandler(this.FrmPersonelTeknikServisFormu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picQrKodu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxProfilResim)).EndInit();
@@ -511,15 +505,15 @@
         public System.Windows.Forms.TextBox txtAksesuarlar;
         public System.Windows.Forms.TextBox txtUcret;
         public System.Windows.Forms.Label lblUcret;
-        public System.Windows.Forms.TextBox txtTakipNumarası;
-        public System.Windows.Forms.Label lblTakipNumarası;
-        public System.Windows.Forms.TextBox txtUrunDurumu;
-        public System.Windows.Forms.Label lblUrunDurumu;
+        public System.Windows.Forms.TextBox txtTakipNumarasi;
+        public System.Windows.Forms.Label lblTakipNumarasi;
+        public System.Windows.Forms.TextBox txtCihazDurumu;
+        public System.Windows.Forms.Label lblCihazDurumu;
         public System.Windows.Forms.TextBox txtArizaninTanimi;
         public System.Windows.Forms.Label lblArizaninTanimi;
-        public System.Windows.Forms.TextBox txtUrunKodlari;
-        public System.Windows.Forms.TextBox txtUrunModeli;
-        public System.Windows.Forms.Label lblUrunModeli;
+        public System.Windows.Forms.TextBox txtCihazinSeriNumarası;
+        public System.Windows.Forms.TextBox txtCihazModeli;
+        public System.Windows.Forms.Label lblCihazModeli;
         public System.Windows.Forms.TextBox txtEkBilgiler;
         public System.Windows.Forms.Button btnYeniKayit;
         public System.Windows.Forms.Button btnKaydet;
@@ -528,21 +522,20 @@
         public System.Windows.Forms.Button btnCikisYap;
         public System.Windows.Forms.Label lblHosgeldin;
         public System.Windows.Forms.CheckBox chkTeslimEdildi;
-        public System.Windows.Forms.Label lblUrunKodlari;
-        public System.Windows.Forms.Timer tmrTarihSaat;
+        public System.Windows.Forms.Label lblCihazinSeriNumarasi;
         public System.Windows.Forms.TextBox txtMusteriAdi;
         public System.Windows.Forms.Label lblMusteriAdi;
         public System.Windows.Forms.Label lblMusteriNo;
         public System.Windows.Forms.PictureBox picQrKodu;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblBaslik;
         public System.Windows.Forms.TextBox txtFormNo;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Button btnGuncelle;
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.Button button2;
-        public System.Windows.Forms.Button button3;
-        public System.Windows.Forms.Button button5;
-        public System.Windows.Forms.Button button6;
+        public System.Windows.Forms.Button btnProgramiEtkinlestir;
+        public System.Windows.Forms.Button btnHakkinda;
+        public System.Windows.Forms.Button btnKapat;
     }
 }

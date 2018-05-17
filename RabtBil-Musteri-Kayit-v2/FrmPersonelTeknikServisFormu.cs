@@ -1,10 +1,8 @@
-﻿using QRCoder;
-using RabtBil_Musteri_Kayit_v2.Properties;
+﻿using RabtBil_Musteri_Kayit_v2.Properties;
 using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
 
@@ -31,16 +29,10 @@ namespace RabtBil_Musteri_Kayit_v2
             base.WndProc(ref m);
         }
 
-        private bool yenidenBaslat;
-        private string cmdText;
-
         private void FrmPersonelTeknikServisFormu_Load(object sender, EventArgs e)
         {
-            GuncelleEtkinMi(false);
-            tmrTarihSaat.Enabled = true;
             lblHosgeldin.Text = $"Hoş Geldin, {SMF.KullaniciAdi}!";
-            txtTakipNumarası.Text = SMF.TakipKoduOlustur();
-            QrKoduOlustur();
+            txtTakipNumarasi.Text = SMF.TakipKoduOlustur();
 
             try
             {
@@ -52,33 +44,99 @@ namespace RabtBil_Musteri_Kayit_v2
             }
         }
 
+        private void btnYeniKayit_Click(object sender, EventArgs e)
+        {
+            Temizle();
+            btnYeniKayit.Enabled = false;
+            btnKaydet.Enabled = true;
+            btnGuncelle.Enabled = false;
+            txtTakipNumarasi.Text = SMF.TakipKoduOlustur();
+            lblMusteriNo.Text = String.Empty; ;
+        }
+
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             try
             {
-                if (String.IsNullOrWhiteSpace(txtFormNo.Text) || String.IsNullOrWhiteSpace(txtMusteriAdi.Text) || mtxTelefon.Text == @"(    )        " || String.IsNullOrWhiteSpace(txtAksesuarlar.Text) || String.IsNullOrWhiteSpace(txtEkBilgiler.Text) || String.IsNullOrWhiteSpace(txtUrunModeli.Text) || String.IsNullOrWhiteSpace(txtUrunKodlari.Text) || String.IsNullOrWhiteSpace(txtArizaninTanimi.Text) || String.IsNullOrWhiteSpace(txtUrunDurumu.Text) || String.IsNullOrWhiteSpace(txtTakipNumarası.Text) || String.IsNullOrWhiteSpace(txtUcret.Text))
+                if (String.IsNullOrWhiteSpace(txtMusteriAdi.Text))
                 {
-                    MessageBox.Show("Resources.metinKutulariBos", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Müşteri Adı Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtMusteriAdi.Focus();
                     return;
                 }
 
-                SqlCommand cmd = new SqlCommand("INSERT INTO MusteriBilgileri(FormNo, MusteriAdi, Telefon, UrunModeli, UrunKodlari, ArizaTanimi, Aksesuarlar, EkBilgiler, UrunTakipNo, UrunDurumu, Ucret, KaydiYapanID, KayitTarihi) VALUES(@FormNo, @MusteriAdi, @Telefon, @UrunModeli, @UrunKodlari, @ArizaTanimi, @Aksesuarlar, @EkBilgiler, @UrunTakipNo, @UrunDurumu, @Ucret, @KaydiYapanID, @KayitTarihi)", SMF.Baglanti);
-                cmd.Parameters.AddWithValue("@FormNo", txtFormNo.Text);
+                if (mtxTelefon.Text == @"(    )        ")
+                {
+                    MessageBox.Show("Telefon Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    mtxTelefon.Focus();
+                    return;
+                }
+
+                if (String.IsNullOrWhiteSpace(txtAksesuarlar.Text))
+                {
+                    MessageBox.Show("Aksesuarlar Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtAksesuarlar.Focus();
+                    return;
+                }
+
+                if (String.IsNullOrWhiteSpace(txtEkBilgiler.Text))
+                {
+                    MessageBox.Show("Ek Bilgiler Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtEkBilgiler.Focus();
+                    return;
+                }
+
+                if (String.IsNullOrWhiteSpace(txtCihazModeli.Text))
+                {
+                    MessageBox.Show("Cihaz Modeli Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtCihazModeli.Focus();
+                    return;
+                }
+
+                if (String.IsNullOrWhiteSpace(txtCihazinSeriNumarası.Text))
+                {
+                    MessageBox.Show("Cihazın Seri Numarası Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtCihazinSeriNumarası.Focus();
+                    return;
+                }
+
+                if (String.IsNullOrWhiteSpace(txtArizaninTanimi.Text))
+                {
+                    MessageBox.Show("Arızanın Tanımı Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtArizaninTanimi.Focus();
+                    return;
+                }
+
+                if (String.IsNullOrWhiteSpace(txtCihazDurumu.Text))
+                {
+                    MessageBox.Show("Arızanın Tanımı Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtCihazDurumu.Focus();
+                    return;
+                }
+
+                if (String.IsNullOrWhiteSpace(txtUcret.Text))
+                {
+                    MessageBox.Show("Ücret Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtUcret.Focus();
+                    return;
+                }
+
+                SqlCommand cmd = new SqlCommand("INSERT INTO MusteriBilgileri(MusteriAdi, Telefon, Aksesuarlar, EkBilgiler, CihazModeli, CihazinSeriNumarasi, ArizaTanimi, CihazDurumu, Ucret, TakipNumarasi, KaydiYapanID, KayitTarihi) VALUES(@MusteriAdi, @Telefon, @Aksesuarlar, @EkBilgiler, @CihazModeli, @CihazinSeriNumarasi, @ArizaTanimi, @CihazDurumu, @Ucret, @TakipNumarasi, @KaydiYapanID, @KayitTarihi); SELECT SCOPE_IDENTITY()", SMF.Baglanti);
                 cmd.Parameters.AddWithValue("@MusteriAdi", txtMusteriAdi.Text);
                 cmd.Parameters.AddWithValue("@Telefon", mtxTelefon.Text);
-                cmd.Parameters.AddWithValue("@UrunModeli", txtUrunModeli.Text);
-                cmd.Parameters.AddWithValue("@UrunKodlari", txtUrunKodlari.Text);
-                cmd.Parameters.AddWithValue("@ArizaTanimi", txtArizaninTanimi.Text);
                 cmd.Parameters.AddWithValue("@Aksesuarlar", txtAksesuarlar.Text);
                 cmd.Parameters.AddWithValue("@EkBilgiler", txtEkBilgiler.Text);
-                cmd.Parameters.AddWithValue("@UrunTakipNo", txtTakipNumarası.Text);
-                cmd.Parameters.AddWithValue("@UrunDurumu", txtUrunDurumu.Text);
+                cmd.Parameters.AddWithValue("@CihazModeli", txtCihazModeli.Text);
+                cmd.Parameters.AddWithValue("@CihazinSeriNumarasi", txtCihazinSeriNumarası.Text);
+                cmd.Parameters.AddWithValue("@ArizaTanimi", txtArizaninTanimi.Text);
+                cmd.Parameters.AddWithValue("@CihazDurumu", txtCihazDurumu.Text);
                 cmd.Parameters.AddWithValue("@Ucret", Convert.ToDouble(txtUcret.Text));
+                cmd.Parameters.AddWithValue("@TakipNumarasi", txtTakipNumarasi.Text);
                 cmd.Parameters.AddWithValue("@KaydiYapanID", SMF.KullaniciId);
                 cmd.Parameters.AddWithValue("@KayitTarihi", DateTime.Now);
                 SMF.BaglantiKapaliysaAc();
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Resources.kaydedildi", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblMusteriNo.Text = cmd.ExecuteScalar().ToString();
+                MessageBox.Show("Kayıt Eklendi!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -88,96 +146,17 @@ namespace RabtBil_Musteri_Kayit_v2
             {
                 SMF.Baglanti.Close();
             }
-            Temizle();
-            GuncelleEtkinMi(false);
-            KaydetEtkinMi(true);
-        }
 
-        private void btnGuncelle_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (String.IsNullOrWhiteSpace(txtFormNo.Text) || String.IsNullOrWhiteSpace(txtMusteriAdi.Text) || mtxTelefon.Text == @"(    )        " || String.IsNullOrWhiteSpace(txtAksesuarlar.Text) || String.IsNullOrWhiteSpace(txtEkBilgiler.Text) || String.IsNullOrWhiteSpace(txtUrunModeli.Text) || String.IsNullOrWhiteSpace(txtUrunKodlari.Text) || String.IsNullOrWhiteSpace(txtArizaninTanimi.Text) || String.IsNullOrWhiteSpace(txtUrunDurumu.Text) || String.IsNullOrWhiteSpace(txtTakipNumarası.Text) || String.IsNullOrWhiteSpace(txtUcret.Text))
-                {
-                    MessageBox.Show("Resources.metinKutulariBos", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-                SqlCommand kaydet = new SqlCommand("UPDATE MusteriBilgileri SET FormNo=@FormNo,MusteriAdi=@MusteriAdi,Telefon=@Telefon,UrunModeli=@UrunModeli,UrunKodlari=@UrunKodlari,ArizaTanimi=@ArizaTanimi,Aksesuarlar=@Aksesuarlar,EkBilgiler=@EkBilgiler,UrunTakipNo=@UrunTakipNo,UrunDurumu=@UrunDurumu,Ucret=@Ucret,GuncelleyenID=@GuncelleyenID,GuncellemeTarihi=@GuncellemeTarihi WHERE ID=@ID", SMF.Baglanti);
-                kaydet.Parameters.AddWithValue("@FormNo", txtMusteriAdi.Text);
-                kaydet.Parameters.AddWithValue("@MusteriAdi", txtFormNo.Text);
-                kaydet.Parameters.AddWithValue("@Telefon", mtxTelefon.Text);
-                kaydet.Parameters.AddWithValue("@UrunModeli", txtUrunModeli.Text);
-                kaydet.Parameters.AddWithValue("@UrunKodlari", txtUrunKodlari.Text);
-                kaydet.Parameters.AddWithValue("@ArizaTanimi", txtArizaninTanimi.Text);
-                kaydet.Parameters.AddWithValue("@Aksesuarlar", txtAksesuarlar.Text);
-                kaydet.Parameters.AddWithValue("@EkBilgiler", txtEkBilgiler.Text);
-                kaydet.Parameters.AddWithValue("@UrunTakipNo", txtTakipNumarası.Text);
-                kaydet.Parameters.AddWithValue("@UrunDurumu", txtUrunDurumu.Text);
-                kaydet.Parameters.AddWithValue("@Ucret", Convert.ToDouble(txtUcret.Text));
-                kaydet.Parameters.AddWithValue("@GuncelleyenID", SMF.KullaniciId);
-                kaydet.Parameters.AddWithValue("@GuncellemeTarihi", DateTime.Now);
-                kaydet.Parameters.AddWithValue("@ID", lblMusteriNo.Text);
-                SMF.BaglantiKapaliysaAc();
-                kaydet.ExecuteNonQuery();
-                MessageBox.Show("Resources.kaydedildi", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Hata");
-            }
-            finally
-            {
-                SMF.Baglanti.Close();
-            }
-            Temizle();
-            GuncelleEtkinMi(false);
-            KaydetEtkinMi(true);
-        }
-
-        private void btnCikisYap_Click(object sender, EventArgs e)
-        {
-            yenidenBaslat = true;
-            Application.Exit();
-        }
-
-        private void btnTemizle_Click(object sender, EventArgs e)
-        {
-            Temizle();
-        }
-
-        private void btnYeniKayit_Click(object sender, EventArgs e)
-        {
-            if (txtFormNo.TextLength > 0 || txtMusteriAdi.TextLength > 0 || mtxTelefon.Text != @"(    )        " || txtAksesuarlar.TextLength > 0 || txtEkBilgiler.TextLength > 0 || txtUrunModeli.TextLength > 0 || txtUrunKodlari.TextLength > 0 || txtArizaninTanimi.TextLength > 0 || txtUrunDurumu.TextLength > 0 || txtUcret.TextLength > 0)
-            {
-                DialogResult dr = MessageBox.Show("Bu Sayfayı Kapatırsanız Yaptığınız Değişiklikler Kaybolacaktır!", SMF.PrograminTamAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (dr == DialogResult.No)
-                {
-                    return;
-                }
-            }
-
-            Temizle();
-            GuncelleEtkinMi(false);
-            KaydetEtkinMi(true);
-            chkTeslimEdildi.Checked = false;
-            txtTakipNumarası.Text = SMF.TakipKoduOlustur();
-            QrKoduOlustur();
+            btnYeniKayit.Enabled = true;
+            btnKaydet.Enabled = false;
+            btnGuncelle.Enabled = true;
         }
 
         private void btnKayitlariGoster_Click(object sender, EventArgs e)
         {
-            if (txtFormNo.TextLength > 0 || txtMusteriAdi.TextLength > 0 || mtxTelefon.Text != @"(    )        " || txtAksesuarlar.TextLength > 0 || txtEkBilgiler.TextLength > 0 || txtUrunModeli.TextLength > 0 || txtUrunKodlari.TextLength > 0 || txtArizaninTanimi.TextLength > 0 || txtUrunDurumu.TextLength > 0 || txtUcret.TextLength > 0)
-            {
-                DialogResult dr = MessageBox.Show("Bu Sayfayı Kapatırsanız Yaptığınız Değişiklikler Kaybolacaktır!", SMF.PrograminTamAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (dr == DialogResult.No)
-                {
-                    return;
-                }
-            }
-
             try
             {
-                cmdText = SMF.AdminMi || SMF.YoneticiMi ? "SELECT * FROM MusteriBilgileri" : "SELECT * FROM MusteriBilgileri WHERE KaydiYapanID=@KaydiYapanID";
+                string cmdText = SMF.AdminMi || SMF.YoneticiMi ? "SELECT * FROM MusteriBilgileri" : "SELECT * FROM MusteriBilgileri WHERE KaydiYapanID=@KaydiYapanID";
                 SqlCommand cmd = new SqlCommand(cmdText, SMF.Baglanti);
                 cmd.Parameters.AddWithValue("@KaydiYapanID", SMF.KullaniciId);
                 DataTable dt = new DataTable();
@@ -203,78 +182,131 @@ namespace RabtBil_Musteri_Kayit_v2
             frm.ShowDialog();
         }
 
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (String.IsNullOrWhiteSpace(txtMusteriAdi.Text))
+                {
+                    MessageBox.Show("Müşteri Adı Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtMusteriAdi.Focus();
+                    return;
+                }
+
+                if (mtxTelefon.Text == @"(    )        ")
+                {
+                    MessageBox.Show("Telefon Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    mtxTelefon.Focus();
+                    return;
+                }
+
+                if (String.IsNullOrWhiteSpace(txtAksesuarlar.Text))
+                {
+                    MessageBox.Show("Aksesuarlar Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtAksesuarlar.Focus();
+                    return;
+                }
+
+                if (String.IsNullOrWhiteSpace(txtEkBilgiler.Text))
+                {
+                    MessageBox.Show("Ek Bilgiler Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtEkBilgiler.Focus();
+                    return;
+                }
+
+                if (String.IsNullOrWhiteSpace(txtCihazModeli.Text))
+                {
+                    MessageBox.Show("Cihaz Modeli Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtCihazModeli.Focus();
+                    return;
+                }
+
+                if (String.IsNullOrWhiteSpace(txtCihazinSeriNumarası.Text))
+                {
+                    MessageBox.Show("Cihazın Seri Numarası Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtCihazinSeriNumarası.Focus();
+                    return;
+                }
+
+                if (String.IsNullOrWhiteSpace(txtArizaninTanimi.Text))
+                {
+                    MessageBox.Show("Arızanın Tanımı Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtArizaninTanimi.Focus();
+                    return;
+                }
+
+                if (String.IsNullOrWhiteSpace(txtCihazDurumu.Text))
+                {
+                    MessageBox.Show("Arızanın Tanımı Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtCihazDurumu.Focus();
+                    return;
+                }
+
+                if (String.IsNullOrWhiteSpace(txtUcret.Text))
+                {
+                    MessageBox.Show("Ücret Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtUcret.Focus();
+                    return;
+                }
+
+                SqlCommand cmd = new SqlCommand("UPDATE MusteriBilgileri SET MusteriAdi=@MusteriAdi, Telefon=@Telefon, Aksesuarlar=@Aksesuarlar, EkBilgiler=@EkBilgiler, CihazModeli=@CihazModeli, CihazinSeriNumarasi=@CihazinSeriNumarasi, ArizaTanimi=@ArizaTanimi, CihazDurumu=@CihazDurumu, Ucret=@Ucret, TakipNumarasi=@TakipNumarasi, GuncelleyenID=@GuncelleyenID, GuncellemeTarihi=@GuncellemeTarihi WHERE ID=@ID", SMF.Baglanti);
+                cmd.Parameters.AddWithValue("@MusteriAdi", txtMusteriAdi.Text);
+                cmd.Parameters.AddWithValue("@Telefon", mtxTelefon.Text);
+                cmd.Parameters.AddWithValue("@Aksesuarlar", txtAksesuarlar.Text);
+                cmd.Parameters.AddWithValue("@EkBilgiler", txtEkBilgiler.Text);
+                cmd.Parameters.AddWithValue("@CihazModeli", txtCihazModeli.Text);
+                cmd.Parameters.AddWithValue("@CihazinSeriNumarasi", txtCihazinSeriNumarası.Text);
+                cmd.Parameters.AddWithValue("@ArizaTanimi", txtArizaninTanimi.Text);
+                cmd.Parameters.AddWithValue("@CihazDurumu", txtCihazDurumu.Text);
+                cmd.Parameters.AddWithValue("@Ucret", Convert.ToDouble(txtUcret.Text));
+                cmd.Parameters.AddWithValue("@TakipNumarasi", txtTakipNumarasi.Text);
+                cmd.Parameters.AddWithValue("@GuncelleyenID", SMF.KullaniciId);
+                cmd.Parameters.AddWithValue("@GuncellemeTarihi", DateTime.Now);
+                cmd.Parameters.AddWithValue("@ID", lblMusteriNo.Text);
+                SMF.BaglantiKapaliysaAc();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Kayıt Güncellendi!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata");
+            }
+            finally
+            {
+                SMF.Baglanti.Close();
+            }
+        }
+
         private void chkTeslimEdildi_Click(object sender, EventArgs e)
         {
             FrmUrunTeslim frm = new FrmUrunTeslim();
             frm.ShowDialog();
         }
 
+        private void btnCikisYap_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
         private void PcTrBoxProfilResim_Click(object sender, EventArgs e)
         {
             FrmProfil frm = new FrmProfil();
             frm.ShowDialog();
         }
 
-       
-        private void FrmPersonelTeknikServisFormu_FormClosing(object sender, FormClosingEventArgs e)
+        private void btnProgramiEtkinlestir_Click(object sender, EventArgs e)
         {
-            if (txtFormNo.TextLength > 0 || txtMusteriAdi.TextLength > 0 || mtxTelefon.Text != @"(    )        " || txtAksesuarlar.TextLength > 0 || txtEkBilgiler.TextLength > 0 || txtUrunModeli.TextLength > 0 || txtUrunKodlari.TextLength > 0 || txtArizaninTanimi.TextLength > 0 || txtUrunDurumu.TextLength > 0 || txtUcret.TextLength > 0)
-            {
-                DialogResult dr = MessageBox.Show("Bu Sayfayı Kapatırsanız Yaptığınız Değişiklikler Kaybolacaktır!", SMF.PrograminTamAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-
-                if (dr == DialogResult.No)
-                {
-                    e.Cancel = true;
-                    yenidenBaslat = false;
-                    return;
-                }
-            }
-
-            if (yenidenBaslat)
-            {
-                Application.Restart();
-            }
+            FrmProgramiEtkinlestir frm = new FrmProgramiEtkinlestir();
+            frm.ShowDialog();
         }
 
-        private void tmrTarihSaat_Tick(object sender, EventArgs e)
+        private void btnHakkinda_Click(object sender, EventArgs e)
         {
-            //tslblTarihSaat.Text = DateTime.Now.ToString(CultureInfo.CurrentCulture);
+            FrmHakkinda frm = new FrmHakkinda();
+            frm.ShowDialog();
         }
-
-        public void GuncelleEtkinMi(bool value)
+        private void btnKapat_Click(object sender, EventArgs e)
         {
-            if (value)
-            {
-                btnGuncelle.Enabled = true;
-                chkTeslimEdildi.Enabled = true;
-            }
-            else
-            {
-                btnGuncelle.Enabled = false;
-                chkTeslimEdildi.Enabled = false;
-            }
-        }
-
-        public void KaydetEtkinMi(bool value)
-        {
-            if (value)
-            {
-                btnKaydet.Enabled = true;
-            }
-            else
-            {
-                btnKaydet.Enabled = false;
-            }
-        }
-
-        public void QrKoduOlustur()
-        {
-            PayloadGenerator.Url generator = new PayloadGenerator.Url($@"localhost:1337\takipno\{txtTakipNumarası.Text}");
-            QRCodeGenerator qrGenerator = new QRCodeGenerator();
-            QRCodeData qrCodeData = qrGenerator.CreateQrCode(generator, QRCodeGenerator.ECCLevel.Q);
-            QRCode qrCode = new QRCode(qrCodeData);
-            Bitmap qrCodeAsBitmap = qrCode.GetGraphic(5);
-            picQrKodu.Image = qrCodeAsBitmap;
+            Close();
         }
 
         public void Temizle()
@@ -284,32 +316,11 @@ namespace RabtBil_Musteri_Kayit_v2
             mtxTelefon.Clear();
             txtAksesuarlar.Clear();
             txtEkBilgiler.Clear();
-            txtUrunModeli.Clear();
-            txtUrunKodlari.Clear();
+            txtCihazModeli.Clear();
+            txtCihazinSeriNumarası.Clear();
             txtArizaninTanimi.Clear();
-            txtUrunDurumu.Clear();
+            txtCihazDurumu.Clear();
             txtUcret.Clear();
-        }
-
-        private void tsmiLisansAnahtari_Click(object sender, EventArgs e)
-        {
-            FrmProgramiEtkinlestir frm = new FrmProgramiEtkinlestir();
-            frm.ShowDialog();
-        }
-
-        private void txtUrunKodlari_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kapat_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
