@@ -113,7 +113,7 @@ namespace RabtBil_Musteri_Kayit_v2
 
                 if (String.IsNullOrWhiteSpace(txtCihazDurumu.Text))
                 {
-                    MessageBox.Show("Arızanın Tanımı Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Cihaz Durumu Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtCihazDurumu.Focus();
                     return;
                 }
@@ -241,7 +241,7 @@ namespace RabtBil_Musteri_Kayit_v2
 
                 if (String.IsNullOrWhiteSpace(txtCihazDurumu.Text))
                 {
-                    MessageBox.Show("Arızanın Tanımı Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Cihaz Durumu Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtCihazDurumu.Focus();
                     return;
                 }

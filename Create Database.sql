@@ -23,25 +23,24 @@ CREATE TABLE [dbo].[Kullanicilar] (
 -------------------------------
 
 CREATE TABLE [dbo].[MusteriBilgileri] (
-    [Id]               INT            IDENTITY (1, 1) NOT NULL,
-    [FormNo]           NVARCHAR (50)  NULL,
-    [MusteriAdi]       NVARCHAR (50)  NULL,
-    [Telefon]          NVARCHAR (16)  NULL,
-    [UrunModeli]       NVARCHAR (50)  NULL,
-    [UrunKodlari]      NVARCHAR (50)  NULL,
-    [ArizaTanimi]      NVARCHAR (78)  NULL,
-    [Aksesuarlar]      NVARCHAR (156) NULL,
-    [EkBilgiler]       NVARCHAR (156) NULL,
-    [UrunTakipNo]      NVARCHAR (50)  NULL,
-    [UrunDurumu]       NVARCHAR (50)  NULL,
-    [Ucret]            MONEY          NULL,
-    [KaydiYapanID]     INT            NULL,
-    [KayitTarihi]      DATETIME       NULL,
-    [GuncelleyenID]    INT            NULL,
-    [GuncellemeTarihi] DATETIME       NULL,
-    [TeslimEdenID]     INT            NULL,
-    [TeslimAlan]       NVARCHAR (50)  NULL,
-    [TeslimTarihi]     DATETIME       NULL,
+    [Id]                  INT            IDENTITY (1, 1) NOT NULL,
+    [MusteriAdi]          NVARCHAR (50)  NULL,
+    [Telefon]             NVARCHAR (16)  NULL,
+    [CihazModeli]         NVARCHAR (50)  NULL,
+    [CihazinSeriNumarasi] NVARCHAR (50)  NULL,
+    [ArizaTanimi]         NVARCHAR (78)  NULL,
+    [Aksesuarlar]         NVARCHAR (156) NULL,
+    [EkBilgiler]          NVARCHAR (156) NULL,
+    [TakipNumarasi]       NVARCHAR (50)  NULL,
+    [CihazDurumu]         NVARCHAR (50)  NULL,
+    [Ucret]               MONEY          NULL,
+    [KaydiYapanID]        INT            NULL,
+    [KayitTarihi]         DATETIME       NULL,
+    [GuncelleyenID]       INT            NULL,
+    [GuncellemeTarihi]    DATETIME       NULL,
+    [TeslimEdenID]        INT            NULL,
+    [TeslimAlan]          NVARCHAR (50)  NULL,
+    [TeslimTarihi]        DATETIME       NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC),
     CONSTRAINT [KM_Kullaniciler] FOREIGN KEY ([KaydiYapanID]) REFERENCES [dbo].[Kullanicilar] ([Id]) ON DELETE CASCADE ON UPDATE CASCADE
 );
@@ -50,6 +49,6 @@ CREATE TABLE [dbo].[MusteriBilgileri] (
 -- Varsayılan Kullanıcılar
 -------------------------------
 
-INSERT INTO [dbo].[Kullanicilar] ([KullaniciAdi], [Sifre], [Rol]) VALUES (N'1', N'C4CA4238A0B923820DCC509A6F75849B', 0) --Kullanıcı Adı: 1 Şifre: 1 Rol: Admin
-INSERT INTO [dbo].[Kullanicilar] ([KullaniciAdi], [Sifre], [Rol]) VALUES (N'2', N'C4CA4238A0B923820DCC509A6F75849B', 1) --Kullanıcı Adı: 2 Şifre: 1 Rol: Yönetici
-INSERT INTO [dbo].[Kullanicilar] ([KullaniciAdi], [Sifre], [Rol]) VALUES (N'3', N'C4CA4238A0B923820DCC509A6F75849B', 2) --Kullanıcı Adı: 3 Şifre: 1 Rol: Kullanıcı
+INSERT INTO [dbo].[Kullanicilar] ([KullaniciAdi], [Sifre], [Rol]) VALUES (N'1', N'C4CA4238A0B923820DCC509A6F75849B', 0) --Kullanıcı Adı: 1 Şifre: 1 Rol: Yönetici
+INSERT INTO [dbo].[Kullanicilar] ([KullaniciAdi], [Sifre], [Rol]) VALUES (N'2', N'C4CA4238A0B923820DCC509A6F75849B', 1) --Kullanıcı Adı: 2 Şifre: 1 Rol: Yetkili Personel
+INSERT INTO [dbo].[Kullanicilar] ([KullaniciAdi], [Sifre], [Rol]) VALUES (N'3', N'C4CA4238A0B923820DCC509A6F75849B', 2) --Kullanıcı Adı: 3 Şifre: 1 Rol: Personel
