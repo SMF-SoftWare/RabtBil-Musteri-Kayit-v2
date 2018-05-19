@@ -171,9 +171,9 @@
             this.lblAlanSecin.AutoSize = true;
             this.lblAlanSecin.Location = new System.Drawing.Point(297, 48);
             this.lblAlanSecin.Name = "lblAlanSecin";
-            this.lblAlanSecin.Size = new System.Drawing.Size(131, 21);
+            this.lblAlanSecin.Size = new System.Drawing.Size(133, 21);
             this.lblAlanSecin.TabIndex = 44;
-            this.lblAlanSecin.Text = "Lütfen alan Seçin:";
+            this.lblAlanSecin.Text = "Lütfen Alan Seçin:";
             // 
             // lblBaslik
             // 

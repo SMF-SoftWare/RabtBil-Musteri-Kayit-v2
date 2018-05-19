@@ -54,6 +54,7 @@ namespace RabtBil_Musteri_Kayit_v2
             btnYeniKayit.Enabled = false;
             btnKaydet.Enabled = true;
             btnGuncelle.Enabled = false;
+            btnTeslimEt.Enabled = false;
             txtTakipNumarasi.Text = SMF.TakipKoduOlustur();
             lblMusteriNo.Text = String.Empty; ;
         }
@@ -326,6 +327,12 @@ namespace RabtBil_Musteri_Kayit_v2
             txtArizaninTanimi.Clear();
             txtCihazDurumu.Clear();
             txtUcret.Clear();
+        }
+
+        private void btnTeslimEt_Click(object sender, EventArgs e)
+        {
+            FrmUrunTeslim frm = new FrmUrunTeslim();
+            frm.ShowDialog();
         }
     }
 }

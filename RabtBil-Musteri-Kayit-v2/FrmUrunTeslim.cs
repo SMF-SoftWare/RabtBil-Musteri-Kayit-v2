@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data.SqlClient;
-using System.Globalization;
 using System.Windows.Forms;
 
 namespace RabtBil_Musteri_Kayit_v2
@@ -12,11 +11,24 @@ namespace RabtBil_Musteri_Kayit_v2
             InitializeComponent();
         }
 
-        private FrmPersonelTeknikServisFormu frm = (FrmPersonelTeknikServisFormu)Application.OpenForms["FrmPersonelTeknikServisFormu"];
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case 0x84:
+                    base.WndProc(ref m);
+                    if ((int)m.Result == 0x1)
+                        m.Result = (IntPtr)0x2;
+                    return;
+            }
+
+            base.WndProc(ref m);
+        }
+
+        private readonly FrmPersonelTeknikServisFormu frm = (FrmPersonelTeknikServisFormu)Application.OpenForms["FrmPersonelTeknikServisFormu"];
 
         private void FrmUrunTeslim_Load(object sender, EventArgs e)
         {
-            tmrTarihSaat.Enabled = true;
             string teslimEdenId = String.Empty;
 
             try
@@ -40,6 +52,11 @@ namespace RabtBil_Musteri_Kayit_v2
                 {
                     txtTeslimEdenPersonel.Text = $"{dr["Adi"]} {dr["Soyadi"]}";
                 }
+                else
+                {
+                    lblTeslimEdenPersonel.Text = "Teslim Edecek Olan Personel";
+                    txtTeslimEdenPersonel.Text = $"{SMF.Adi} {SMF.Soyadi}";
+                }
                 dr.Close();
             }
             catch (Exception ex)
@@ -52,16 +69,11 @@ namespace RabtBil_Musteri_Kayit_v2
             }
         }
 
-        private void tmrTarihSaat_Tick(object sender, EventArgs e)
-        {
-            tslblTarihSaat.Text = DateTime.Now.ToString(CultureInfo.CurrentCulture);
-        }
-
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(txtTeslimAlanKisi.Text))
             {
-                MessageBox.Show("Teslim Alan Kişiyi Yazın!");
+                MessageBox.Show("Teslim Alacak Olan Kişiyi Yazın!");
                 return;
             }
             try
@@ -86,33 +98,9 @@ namespace RabtBil_Musteri_Kayit_v2
             }
         }
 
-        private void FrmUrunTeslim_FormClosing(object sender, FormClosingEventArgs e)
+        private void btnKapat_Click(object sender, EventArgs e)
         {
-            try
-            {
-                SMF.BaglantiKapaliysaAc();
-                SqlCommand cmd = new SqlCommand("SELECT TeslimEdenId FROM MusteriBilgileri WHERE ID=@ID", SMF.Baglanti);
-                cmd.Parameters.AddWithValue("@ID", frm.lblMusteriNo.Text);
-                SqlDataReader dr = cmd.ExecuteReader();
-                if (dr.Read())
-                {
-                    frm.chkTeslimEdildi.Checked = dr["TeslimEdenId"].ToString() != "";
-                }
-                dr.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Hata");
-            }
-            finally
-            {
-                SMF.Baglanti.Close();
-            }
-        }
-
-        private void btnTemizle_Click(object sender, EventArgs e)
-        {
-            txtTeslimAlanKisi.Clear();
+            Close();
         }
     }
 }

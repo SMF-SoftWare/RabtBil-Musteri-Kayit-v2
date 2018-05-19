@@ -159,7 +159,8 @@ namespace RabtBil_Musteri_Kayit_v2
                     SMF.BaglantiKapaliysaAc();
                     cmd.ExecuteNonQuery();
 
-                    SMF.KullaniciAdi = txtAdi.Text;
+                    SMF.Adi = txtAdi.Text;
+                    SMF.Soyadi = txtSoyadi.Text;
 
                     MessageBox.Show("Bilgileriniz Güncellendi!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
@@ -183,7 +184,8 @@ namespace RabtBil_Musteri_Kayit_v2
                 SMF.BaglantiKapaliysaAc();
                 cmd.ExecuteNonQuery();
 
-                SMF.KullaniciAdi = txtAdi.Text;
+                SMF.Adi = txtAdi.Text;
+                SMF.Soyadi = txtSoyadi.Text;
 
                 MessageBox.Show("Bilgileriniz Güncellendi!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();

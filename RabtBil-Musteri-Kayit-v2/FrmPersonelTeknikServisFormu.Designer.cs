@@ -346,6 +346,7 @@
             // btnTeslimEt
             // 
             this.btnTeslimEt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnTeslimEt.Enabled = false;
             this.btnTeslimEt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTeslimEt.ForeColor = System.Drawing.Color.White;
             this.btnTeslimEt.Location = new System.Drawing.Point(576, 305);
@@ -354,6 +355,7 @@
             this.btnTeslimEt.TabIndex = 14;
             this.btnTeslimEt.Text = "Teslim Et";
             this.btnTeslimEt.UseVisualStyleBackColor = false;
+            this.btnTeslimEt.Click += new System.EventHandler(this.btnTeslimEt_Click);
             // 
             // btnYazdir
             // 

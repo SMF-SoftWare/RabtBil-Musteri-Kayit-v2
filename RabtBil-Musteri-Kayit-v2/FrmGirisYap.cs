@@ -75,7 +75,8 @@ namespace RabtBil_Musteri_Kayit_v2
                     if (dr.Read())
                     {
                         SMF.KullaniciId = dr.GetInt32(0);
-                        SMF.KullaniciAdi = dr["Adi"].ToString();
+                        SMF.Adi = dr["Adi"].ToString();
+                        SMF.Soyadi = dr["Soyadi"].ToString();
                         SMF.ProfilKlasoru = Application.StartupPath + $@"\Profil\{SMF.KullaniciId}";
                         SMF.ProfilResmiYolu = Application.StartupPath + $@"\Profil\{SMF.KullaniciId}\ProfilResmi.SMF";
 

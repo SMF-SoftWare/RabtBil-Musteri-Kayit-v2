@@ -34,7 +34,6 @@ namespace RabtBil_Musteri_Kayit_v2
             base.WndProc(ref m);
         }
 
-        private string daText;
         private string _aramaTuru;
         private readonly string[] _aramaAlanlari = { "Id", "MusteriAdi", "Telefon", "CihazModeli", "CihazinSeriNumarasi", "ArizaTanimi", "Aksesuarlar", "EkBilgiler", "TakipNumarasi", "CihazDurumu", "Ucret", "KaydiYapanID", "KayitTarihi", "GuncelleyenID", "GuncellemeTarihi", "TeslimEdenID", "TeslimAlan", "TeslimTarihi" };
 
@@ -165,6 +164,7 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             Guncelle();
         }
+
         private void cmbAramaAlanlari_SelectedIndexChanged(object sender, EventArgs e)
         {
             AramaYap();
@@ -295,37 +295,24 @@ namespace RabtBil_Musteri_Kayit_v2
         public void Guncelle()
         {
             FrmPersonelTeknikServisFormu frm = (FrmPersonelTeknikServisFormu)Application.OpenForms["FrmPersonelTeknikServisFormu"];
-            frm.lblMusteriNo.Text = dgvRabtBilDB.CurrentRow?.Cells[0].Value.ToString();
-            frm.txtMusteriAdi.Text = dgvRabtBilDB.CurrentRow?.Cells[2].Value.ToString();
-            frm.mtxTelefon.Text = dgvRabtBilDB.CurrentRow?.Cells[3].Value.ToString();
-            frm.txtCihazModeli.Text = dgvRabtBilDB.CurrentRow?.Cells[4].Value.ToString();
-            frm.txtCihazinSeriNumarası.Text = dgvRabtBilDB.CurrentRow?.Cells[5].Value.ToString();
-            frm.txtArizaninTanimi.Text = dgvRabtBilDB.CurrentRow?.Cells[6].Value.ToString();
-            frm.txtAksesuarlar.Text = dgvRabtBilDB.CurrentRow?.Cells[7].Value.ToString();
-            frm.txtEkBilgiler.Text = dgvRabtBilDB.CurrentRow?.Cells[8].Value.ToString();
-            frm.txtTakipNumarasi.Text = dgvRabtBilDB.CurrentRow?.Cells[9].Value.ToString();
-            frm.txtCihazDurumu.Text = dgvRabtBilDB.CurrentRow?.Cells[10].Value.ToString();
-            frm.txtUcret.Text = dgvRabtBilDB.CurrentRow?.Cells[11].Value.ToString();
+            if (frm != null)
+            {
+                frm.lblMusteriNo.Text = dgvRabtBilDB.CurrentRow?.Cells[0].Value.ToString();
+                frm.txtMusteriAdi.Text = dgvRabtBilDB.CurrentRow?.Cells[1].Value.ToString();
+                frm.mtxTelefon.Text = dgvRabtBilDB.CurrentRow?.Cells[2].Value.ToString();
+                frm.txtCihazModeli.Text = dgvRabtBilDB.CurrentRow?.Cells[3].Value.ToString();
+                frm.txtCihazinSeriNumarası.Text = dgvRabtBilDB.CurrentRow?.Cells[4].Value.ToString();
+                frm.txtArizaninTanimi.Text = dgvRabtBilDB.CurrentRow?.Cells[5].Value.ToString();
+                frm.txtAksesuarlar.Text = dgvRabtBilDB.CurrentRow?.Cells[6].Value.ToString();
+                frm.txtEkBilgiler.Text = dgvRabtBilDB.CurrentRow?.Cells[7].Value.ToString();
+                frm.txtTakipNumarasi.Text = dgvRabtBilDB.CurrentRow?.Cells[8].Value.ToString();
+                frm.txtCihazDurumu.Text = dgvRabtBilDB.CurrentRow?.Cells[9].Value.ToString();
+                frm.txtUcret.Text = $"{dgvRabtBilDB.CurrentRow?.Cells[10].Value:#.00}";
 
-            try
-            {
-                SMF.BaglantiKapaliysaAc();
-                SqlCommand cmd = new SqlCommand("SELECT TeslimEdenId FROM MusteriBilgileri WHERE ID=@ID", SMF.Baglanti);
-                cmd.Parameters.AddWithValue("@ID", frm.lblMusteriNo.Text);
-                SqlDataReader dr = cmd.ExecuteReader();
-                if (dr.Read())
-                {
-                    frm.chkTeslimEdildi.Checked = dr["TeslimEdenId"].ToString() != String.Empty;
-                }
-                dr.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Hata");
-            }
-            finally
-            {
-                SMF.Baglanti.Close();
+                frm.btnGuncelle.Enabled = true;
+                frm.btnYeniKayit.Enabled = true;
+                frm.btnKaydet.Enabled = false;
+                frm.btnTeslimEt.Enabled = true;
             }
 
             Close();
@@ -365,6 +352,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 MessageBox.Show(ex.Message, "Hata");
             }
         }
+
         private enum AramaTuru
         {
             Id,
