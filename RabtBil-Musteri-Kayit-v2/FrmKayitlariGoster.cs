@@ -182,21 +182,19 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void pdcBelge_PrintPage(object sender, PrintPageEventArgs e)
         {
-            Font yaziTipi = new Font("Consolas", 12, FontStyle.Regular);
+            Font yaziTipi = new Font("Segoe UI", 12, FontStyle.Regular);
             SolidBrush yaziRengi = new SolidBrush(Color.Black);
             e.Graphics.DrawImage(Properties.Resources.RabtBilYaziciSablonu, 0, 0);
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[1].Value.ToString(), yaziTipi, yaziRengi, 248, 302); //FormNo
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[2].Value.ToString(), yaziTipi, yaziRengi, 248, 341); //MusteriAdi
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[3].Value.ToString(), yaziTipi, yaziRengi, 248, 381); //Telefon
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[4].Value.ToString(), yaziTipi, yaziRengi, 248, 420); //UrunModeli
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[5].Value.ToString(), yaziTipi, yaziRengi, 248, 464); //UrunKodları
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[6].Value.ToString(), yaziTipi, yaziRengi, 248, 506); //ArizaTanimi
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[10].Value.ToString(), yaziTipi, yaziRengi, 248, 543); //UrunDurumu
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[9].Value.ToString(), yaziTipi, yaziRengi, 248, 583); //TakipNo
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[7].Value.ToString(), yaziTipi, yaziRengi, 248, 662); //Aksesuarlar
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[11].Value + " ₺", yaziTipi, yaziRengi, 673, 792); //Ucret
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[12].Value.ToString(), yaziTipi, yaziRengi, 248, 626); //KaydıYapan
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[13].Value.ToString(), yaziTipi, yaziRengi, 588, 302); //TarihSaat
+            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[1].Value.ToString(), yaziTipi, yaziRengi, 244, 356); //MüşteriAdı
+            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[2].Value.ToString(), yaziTipi, yaziRengi, 244, 400); //Telefon
+            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[3].Value.ToString(), yaziTipi, yaziRengi, 244, 446); //CihazModeli
+            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[4].Value.ToString(), yaziTipi, yaziRengi, 244, 490); //SeriNumarası
+            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[5].Value.ToString(), yaziTipi, yaziRengi, 244, 533); //ArızaTanımı
+            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[9].Value.ToString(), yaziTipi, yaziRengi, 244, 577); //CihazDurumu
+            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[8].Value.ToString(), yaziTipi, yaziRengi, 244, 624); //TakipNumarası
+            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[6].Value.ToString(), yaziTipi, yaziRengi, 244, 671); //Aksesuar
+            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[10].Value + " ₺", yaziTipi, yaziRengi, 657, 774);
+            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[12].Value.ToString(), yaziTipi, yaziRengi, 589, 310); //Tarih
         }
 
         public void AramaYap()
