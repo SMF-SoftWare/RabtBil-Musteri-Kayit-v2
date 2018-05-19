@@ -41,8 +41,8 @@
             this.lblYaziciSecin = new System.Windows.Forms.Label();
             this.lblAlanSecin = new System.Windows.Forms.Label();
             this.lblBaslik = new System.Windows.Forms.Label();
-            this.btnKapat = new System.Windows.Forms.Button();
             this.btnBaskiOnizleme = new System.Windows.Forms.Button();
+            this.btnKapat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRabtBilDB)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +54,7 @@
             this.dgvRabtBilDB.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvRabtBilDB.BackgroundColor = System.Drawing.Color.White;
             this.dgvRabtBilDB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRabtBilDB.Location = new System.Drawing.Point(15, 82);
+            this.dgvRabtBilDB.Location = new System.Drawing.Point(15, 81);
             this.dgvRabtBilDB.Margin = new System.Windows.Forms.Padding(2);
             this.dgvRabtBilDB.MultiSelect = false;
             this.dgvRabtBilDB.Name = "dgvRabtBilDB";
@@ -73,7 +73,7 @@
             this.btnSil.Location = new System.Drawing.Point(15, 38);
             this.btnSil.Margin = new System.Windows.Forms.Padding(2);
             this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(137, 41);
+            this.btnSil.Size = new System.Drawing.Size(137, 40);
             this.btnSil.TabIndex = 36;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
@@ -106,10 +106,10 @@
             this.btnYazdir.Enabled = false;
             this.btnYazdir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnYazdir.ForeColor = System.Drawing.Color.White;
-            this.btnYazdir.Location = new System.Drawing.Point(574, 497);
+            this.btnYazdir.Location = new System.Drawing.Point(574, 496);
             this.btnYazdir.Margin = new System.Windows.Forms.Padding(2);
             this.btnYazdir.Name = "btnYazdir";
-            this.btnYazdir.Size = new System.Drawing.Size(137, 41);
+            this.btnYazdir.Size = new System.Drawing.Size(137, 40);
             this.btnYazdir.TabIndex = 39;
             this.btnYazdir.Text = "Yazdır";
             this.btnYazdir.UseVisualStyleBackColor = false;
@@ -139,7 +139,7 @@
             this.btnExcelAktar.Location = new System.Drawing.Point(156, 38);
             this.btnExcelAktar.Margin = new System.Windows.Forms.Padding(2);
             this.btnExcelAktar.Name = "btnExcelAktar";
-            this.btnExcelAktar.Size = new System.Drawing.Size(137, 41);
+            this.btnExcelAktar.Size = new System.Drawing.Size(137, 40);
             this.btnExcelAktar.TabIndex = 41;
             this.btnExcelAktar.Text = "Excel\'e Aktar";
             this.btnExcelAktar.UseVisualStyleBackColor = false;
@@ -150,7 +150,7 @@
             this.cmbYaziciListesi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbYaziciListesi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbYaziciListesi.FormattingEnabled = true;
-            this.cmbYaziciListesi.Location = new System.Drawing.Point(344, 504);
+            this.cmbYaziciListesi.Location = new System.Drawing.Point(345, 503);
             this.cmbYaziciListesi.Margin = new System.Windows.Forms.Padding(2);
             this.cmbYaziciListesi.Name = "cmbYaziciListesi";
             this.cmbYaziciListesi.Size = new System.Drawing.Size(227, 29);
@@ -160,7 +160,7 @@
             // lblYaziciSecin
             // 
             this.lblYaziciSecin.AutoSize = true;
-            this.lblYaziciSecin.Location = new System.Drawing.Point(188, 507);
+            this.lblYaziciSecin.Location = new System.Drawing.Point(188, 506);
             this.lblYaziciSecin.Name = "lblYaziciSecin";
             this.lblYaziciSecin.Size = new System.Drawing.Size(152, 21);
             this.lblYaziciSecin.TabIndex = 43;
@@ -186,6 +186,20 @@
             this.lblBaslik.TabIndex = 45;
             this.lblBaslik.Text = "Teknik Servis Formu";
             // 
+            // btnBaskiOnizleme
+            // 
+            this.btnBaskiOnizleme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnBaskiOnizleme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBaskiOnizleme.ForeColor = System.Drawing.Color.White;
+            this.btnBaskiOnizleme.Location = new System.Drawing.Point(715, 496);
+            this.btnBaskiOnizleme.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBaskiOnizleme.Name = "btnBaskiOnizleme";
+            this.btnBaskiOnizleme.Size = new System.Drawing.Size(137, 40);
+            this.btnBaskiOnizleme.TabIndex = 47;
+            this.btnBaskiOnizleme.Text = "Baskı Önizleme";
+            this.btnBaskiOnizleme.UseVisualStyleBackColor = false;
+            this.btnBaskiOnizleme.Click += new System.EventHandler(this.btnBaskiOnizleme_Click);
+            // 
             // btnKapat
             // 
             this.btnKapat.BackColor = System.Drawing.Color.White;
@@ -201,20 +215,6 @@
             this.btnKapat.TabStop = false;
             this.btnKapat.UseVisualStyleBackColor = false;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
-            // 
-            // btnBaskiOnizleme
-            // 
-            this.btnBaskiOnizleme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnBaskiOnizleme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBaskiOnizleme.ForeColor = System.Drawing.Color.White;
-            this.btnBaskiOnizleme.Location = new System.Drawing.Point(715, 497);
-            this.btnBaskiOnizleme.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBaskiOnizleme.Name = "btnBaskiOnizleme";
-            this.btnBaskiOnizleme.Size = new System.Drawing.Size(137, 41);
-            this.btnBaskiOnizleme.TabIndex = 47;
-            this.btnBaskiOnizleme.Text = "Baskı Önizleme";
-            this.btnBaskiOnizleme.UseVisualStyleBackColor = false;
-            this.btnBaskiOnizleme.Click += new System.EventHandler(this.btnBaskiOnizleme_Click);
             // 
             // FrmKayitlariGoster
             // 
