@@ -319,6 +319,8 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximumSize = new System.Drawing.Size(870, 497);
+            this.MinimumSize = new System.Drawing.Size(870, 497);
             this.Name = "FrmPersonelEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPersonelEkle";

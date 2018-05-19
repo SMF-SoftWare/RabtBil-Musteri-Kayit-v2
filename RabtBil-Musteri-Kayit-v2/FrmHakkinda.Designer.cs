@@ -226,6 +226,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(772, 264);
+            this.MinimumSize = new System.Drawing.Size(772, 264);
             this.Name = "FrmHakkinda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hakkında";

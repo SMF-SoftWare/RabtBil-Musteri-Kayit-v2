@@ -197,6 +197,7 @@ namespace RabtBil_Musteri_Kayit_v2
             FrmGucluSifreOlustur frm = new FrmGucluSifreOlustur();
             frm.ShowDialog();
         }
+
         private void picGoz_Click(object sender, EventArgs e)
         {
             if (gozeTiklandiMi)
@@ -216,6 +217,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 gozeTiklandiMi = true;
             }
         }
+
         private void btnKapat_Click(object sender, EventArgs e)
         {
             Close();

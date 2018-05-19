@@ -329,5 +329,11 @@ namespace RabtBil_Musteri_Kayit_v2
             FrmUrunTeslim frm = new FrmUrunTeslim();
             frm.ShowDialog();
         }
+
+        private void btnYazdir_Click(object sender, EventArgs e)
+        {
+            FrmYazdir frm = new FrmYazdir();
+            frm.ShowDialog();
+        }
     }
 }

@@ -356,6 +356,7 @@
             this.btnYazdir.TabIndex = 15;
             this.btnYazdir.Text = "Yazdır";
             this.btnYazdir.UseVisualStyleBackColor = false;
+            this.btnYazdir.Click += new System.EventHandler(this.btnYazdir_Click);
             // 
             // btnProgramiEtkinlestir
             // 
@@ -449,6 +450,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(745, 473);
+            this.MinimumSize = new System.Drawing.Size(745, 473);
             this.Name = "FrmPersonelTeknikServisFormu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTeknikServisFormu";
