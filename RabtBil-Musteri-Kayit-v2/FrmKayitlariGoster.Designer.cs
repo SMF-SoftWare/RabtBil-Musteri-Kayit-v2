@@ -42,6 +42,7 @@
             this.lblAlanSecin = new System.Windows.Forms.Label();
             this.lblBaslik = new System.Windows.Forms.Label();
             this.btnKapat = new System.Windows.Forms.Button();
+            this.btnBaskiOnizleme = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRabtBilDB)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,23 +81,22 @@
             // 
             // cmbAramaAlanlari
             // 
-            this.cmbAramaAlanlari.BackColor = System.Drawing.Color.White;
             this.cmbAramaAlanlari.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAramaAlanlari.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbAramaAlanlari.ForeColor = System.Drawing.Color.Black;
             this.cmbAramaAlanlari.FormattingEnabled = true;
             this.cmbAramaAlanlari.Location = new System.Drawing.Point(432, 45);
             this.cmbAramaAlanlari.Margin = new System.Windows.Forms.Padding(2);
             this.cmbAramaAlanlari.Name = "cmbAramaAlanlari";
             this.cmbAramaAlanlari.Size = new System.Drawing.Size(227, 29);
             this.cmbAramaAlanlari.TabIndex = 37;
+            this.cmbAramaAlanlari.SelectedIndexChanged += new System.EventHandler(this.cmbAramaAlanlari_SelectedIndexChanged);
             // 
             // txtArama
             // 
             this.txtArama.Location = new System.Drawing.Point(662, 45);
             this.txtArama.Margin = new System.Windows.Forms.Padding(2);
             this.txtArama.Name = "txtArama";
-            this.txtArama.Size = new System.Drawing.Size(300, 29);
+            this.txtArama.Size = new System.Drawing.Size(330, 29);
             this.txtArama.TabIndex = 38;
             this.txtArama.TextChanged += new System.EventHandler(this.txtArama_TextChanged);
             // 
@@ -106,7 +106,7 @@
             this.btnYazdir.Enabled = false;
             this.btnYazdir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnYazdir.ForeColor = System.Drawing.Color.White;
-            this.btnYazdir.Location = new System.Drawing.Point(636, 497);
+            this.btnYazdir.Location = new System.Drawing.Point(574, 497);
             this.btnYazdir.Margin = new System.Windows.Forms.Padding(2);
             this.btnYazdir.Name = "btnYazdir";
             this.btnYazdir.Size = new System.Drawing.Size(137, 41);
@@ -146,11 +146,10 @@
             // 
             // cmbYaziciListesi
             // 
-            this.cmbYaziciListesi.BackColor = System.Drawing.Color.White;
             this.cmbYaziciListesi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbYaziciListesi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbYaziciListesi.FormattingEnabled = true;
-            this.cmbYaziciListesi.Location = new System.Drawing.Point(406, 504);
+            this.cmbYaziciListesi.Location = new System.Drawing.Point(344, 504);
             this.cmbYaziciListesi.Margin = new System.Windows.Forms.Padding(2);
             this.cmbYaziciListesi.Name = "cmbYaziciListesi";
             this.cmbYaziciListesi.Size = new System.Drawing.Size(227, 29);
@@ -160,7 +159,7 @@
             // lblYaziciSecin
             // 
             this.lblYaziciSecin.AutoSize = true;
-            this.lblYaziciSecin.Location = new System.Drawing.Point(250, 507);
+            this.lblYaziciSecin.Location = new System.Drawing.Point(188, 507);
             this.lblYaziciSecin.Name = "lblYaziciSecin";
             this.lblYaziciSecin.Size = new System.Drawing.Size(152, 21);
             this.lblYaziciSecin.TabIndex = 43;
@@ -202,12 +201,27 @@
             this.btnKapat.UseVisualStyleBackColor = false;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
+            // btnBaskiOnizleme
+            // 
+            this.btnBaskiOnizleme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnBaskiOnizleme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBaskiOnizleme.ForeColor = System.Drawing.Color.White;
+            this.btnBaskiOnizleme.Location = new System.Drawing.Point(715, 497);
+            this.btnBaskiOnizleme.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBaskiOnizleme.Name = "btnBaskiOnizleme";
+            this.btnBaskiOnizleme.Size = new System.Drawing.Size(137, 41);
+            this.btnBaskiOnizleme.TabIndex = 47;
+            this.btnBaskiOnizleme.Text = "Baskı Önizleme";
+            this.btnBaskiOnizleme.UseVisualStyleBackColor = false;
+            this.btnBaskiOnizleme.Click += new System.EventHandler(this.btnBaskiOnizleme_Click);
+            // 
             // FrmKayitlariGoster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1013, 553);
+            this.Controls.Add(this.btnBaskiOnizleme);
             this.Controls.Add(this.btnKapat);
             this.Controls.Add(this.lblBaslik);
             this.Controls.Add(this.lblAlanSecin);
@@ -248,5 +262,6 @@
         private System.Windows.Forms.Label lblAlanSecin;
         private System.Windows.Forms.Label lblBaslik;
         public System.Windows.Forms.Button btnKapat;
+        public System.Windows.Forms.Button btnBaskiOnizleme;
     }
 }

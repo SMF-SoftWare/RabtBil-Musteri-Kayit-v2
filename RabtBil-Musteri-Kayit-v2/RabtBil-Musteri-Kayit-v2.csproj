@@ -207,6 +207,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>RabtBilDB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Logo.png" />
     <None Include="Resources\RabtBilYaziciSablonu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
