@@ -40,6 +40,11 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void FrmKayitlariGoster_Load(object sender, EventArgs e)
         {
+            if (SMF.YoneticiMi)
+            {
+                btnExcelAktar.Enabled = true;
+            }
+
             YazicilariListele();
             VerileriGetir();
 
@@ -76,7 +81,7 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void btnExcelAktar_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Excel'e Aktarılsın Mı?", SMF.PrograminTamAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            DialogResult dr = MessageBox.Show("Tüm Kayıtlar Excel'e Aktarılsın Mı?", SMF.PrograminTamAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (dr == DialogResult.No)
             {
                 return;

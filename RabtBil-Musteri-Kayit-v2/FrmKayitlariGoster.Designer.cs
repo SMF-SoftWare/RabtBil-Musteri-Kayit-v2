@@ -133,6 +133,7 @@
             // btnExcelAktar
             // 
             this.btnExcelAktar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnExcelAktar.Enabled = false;
             this.btnExcelAktar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcelAktar.ForeColor = System.Drawing.Color.White;
             this.btnExcelAktar.Location = new System.Drawing.Point(156, 38);
