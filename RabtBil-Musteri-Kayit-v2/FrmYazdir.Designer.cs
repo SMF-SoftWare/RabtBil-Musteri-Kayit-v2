@@ -71,6 +71,7 @@
             this.cmbYaziciListesi.Name = "cmbYaziciListesi";
             this.cmbYaziciListesi.Size = new System.Drawing.Size(306, 29);
             this.cmbYaziciListesi.TabIndex = 49;
+            this.cmbYaziciListesi.SelectedIndexChanged += new System.EventHandler(this.cmbYaziciListesi_SelectedIndexChanged);
             // 
             // btnYazdir
             // 
@@ -111,6 +112,7 @@
             this.btnKapat.TabIndex = 53;
             this.btnKapat.TabStop = false;
             this.btnKapat.UseVisualStyleBackColor = false;
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
             // ppdBaskiOnizleme
             // 

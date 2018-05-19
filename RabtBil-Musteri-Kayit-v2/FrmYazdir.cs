@@ -55,6 +55,16 @@ namespace RabtBil_Musteri_Kayit_v2
             }
         }
 
+        private void btnKapat_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void cmbYaziciListesi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnYazdir.Enabled = cmbYaziciListesi.Text != String.Empty;
+        }
+
         private void pdcBelge_PrintPage(object sender, PrintPageEventArgs e)
         {
             FrmPersonelTeknikServisFormu frm = (FrmPersonelTeknikServisFormu)Application.OpenForms["FrmPersonelTeknikServisFormu"];
