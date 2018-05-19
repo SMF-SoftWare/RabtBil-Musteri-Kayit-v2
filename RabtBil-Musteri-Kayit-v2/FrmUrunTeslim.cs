@@ -74,6 +74,7 @@ namespace RabtBil_Musteri_Kayit_v2
             if (String.IsNullOrWhiteSpace(txtTeslimAlanKisi.Text))
             {
                 MessageBox.Show("Teslim Alacak Olan Kişiyi Yazın!");
+                txtTeslimAlanKisi.Focus();
                 return;
             }
             try
@@ -85,7 +86,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 kaydet.Parameters.AddWithValue("@TeslimTarihi", DateTime.Now);
                 kaydet.Parameters.AddWithValue("@ID", frm.lblMusteriNo.Text);
                 kaydet.ExecuteNonQuery();
-                MessageBox.Show("Kaydedildi", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Cihaz Teslim Edildi!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
             catch (Exception ex)

@@ -106,7 +106,7 @@
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(313, 40);
             this.btnKaydet.TabIndex = 7;
-            this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.Text = "Teslim Et";
             this.btnKaydet.UseVisualStyleBackColor = false;
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 

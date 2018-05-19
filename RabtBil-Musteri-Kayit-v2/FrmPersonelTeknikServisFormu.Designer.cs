@@ -35,7 +35,6 @@
             this.txtMusteriAdi = new System.Windows.Forms.TextBox();
             this.lblMusteriAdi = new System.Windows.Forms.Label();
             this.lblCihazinSeriNumarasi = new System.Windows.Forms.Label();
-            this.chkTeslimEdildi = new System.Windows.Forms.CheckBox();
             this.txtUcret = new System.Windows.Forms.TextBox();
             this.lblUcret = new System.Windows.Forms.Label();
             this.txtTakipNumarasi = new System.Windows.Forms.TextBox();
@@ -115,18 +114,6 @@
             this.lblCihazinSeriNumarasi.Size = new System.Drawing.Size(167, 21);
             this.lblCihazinSeriNumarasi.TabIndex = 7;
             this.lblCihazinSeriNumarasi.Text = "Cihazın Seri Numarası:";
-            // 
-            // chkTeslimEdildi
-            // 
-            this.chkTeslimEdildi.AutoSize = true;
-            this.chkTeslimEdildi.Location = new System.Drawing.Point(147, 429);
-            this.chkTeslimEdildi.Name = "chkTeslimEdildi";
-            this.chkTeslimEdildi.Size = new System.Drawing.Size(114, 25);
-            this.chkTeslimEdildi.TabIndex = 55;
-            this.chkTeslimEdildi.Text = "Teslim Edildi";
-            this.chkTeslimEdildi.UseVisualStyleBackColor = true;
-            this.chkTeslimEdildi.Visible = false;
-            this.chkTeslimEdildi.Click += new System.EventHandler(this.chkTeslimEdildi_Click);
             // 
             // txtUcret
             // 
@@ -220,7 +207,7 @@
             // lblMusteriNo
             // 
             this.lblMusteriNo.AutoSize = true;
-            this.lblMusteriNo.Location = new System.Drawing.Point(16, 430);
+            this.lblMusteriNo.Location = new System.Drawing.Point(183, 432);
             this.lblMusteriNo.Name = "lblMusteriNo";
             this.lblMusteriNo.Size = new System.Drawing.Size(88, 21);
             this.lblMusteriNo.TabIndex = 36;
@@ -360,6 +347,7 @@
             // btnYazdir
             // 
             this.btnYazdir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnYazdir.Enabled = false;
             this.btnYazdir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnYazdir.ForeColor = System.Drawing.Color.White;
             this.btnYazdir.Location = new System.Drawing.Point(576, 351);
@@ -432,7 +420,6 @@
             this.Controls.Add(this.txtUcret);
             this.Controls.Add(this.lblUcret);
             this.Controls.Add(this.lblEkBilgiler);
-            this.Controls.Add(this.chkTeslimEdildi);
             this.Controls.Add(this.lblCihazinSeriNumarasi);
             this.Controls.Add(this.txtEkBilgiler);
             this.Controls.Add(this.txtAksesuarlar);
@@ -493,7 +480,6 @@
         public System.Windows.Forms.Button btnKayitlariGoster;
         public System.Windows.Forms.PictureBox picProfilResmi;
         public System.Windows.Forms.Button btnCikisYap;
-        public System.Windows.Forms.CheckBox chkTeslimEdildi;
         public System.Windows.Forms.Label lblCihazinSeriNumarasi;
         public System.Windows.Forms.TextBox txtMusteriAdi;
         public System.Windows.Forms.Label lblMusteriAdi;

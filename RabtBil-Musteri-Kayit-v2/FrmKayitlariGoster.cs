@@ -309,10 +309,11 @@ namespace RabtBil_Musteri_Kayit_v2
                 frm.txtCihazDurumu.Text = dgvRabtBilDB.CurrentRow?.Cells[9].Value.ToString();
                 frm.txtUcret.Text = $"{dgvRabtBilDB.CurrentRow?.Cells[10].Value:#.00}";
 
-                frm.btnGuncelle.Enabled = true;
                 frm.btnYeniKayit.Enabled = true;
                 frm.btnKaydet.Enabled = false;
+                frm.btnGuncelle.Enabled = true;
                 frm.btnTeslimEt.Enabled = true;
+                frm.btnYazdir.Enabled = true;
             }
 
             Close();
