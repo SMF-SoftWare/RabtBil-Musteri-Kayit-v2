@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RabtBil_Musteri_Kayit_v2
@@ -16,6 +10,11 @@ namespace RabtBil_Musteri_Kayit_v2
         public FrmYazdir()
         {
             InitializeComponent();
+        }
+
+        private void FrmYazdir_Load(object sender, EventArgs e)
+        {
+            YazicilariListele();
         }
 
         private void btnYazdir_Click(object sender, EventArgs e)
@@ -58,19 +57,39 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void pdcBelge_PrintPage(object sender, PrintPageEventArgs e)
         {
+            FrmPersonelTeknikServisFormu frm = (FrmPersonelTeknikServisFormu)Application.OpenForms["FrmPersonelTeknikServisFormu"];
+
             Font yaziTipi = new Font("Segoe UI", 12, FontStyle.Regular);
             SolidBrush yaziRengi = new SolidBrush(Color.Black);
             e.Graphics.DrawImage(Properties.Resources.RabtBilYaziciSablonu, 0, 0);
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[1].Value.ToString(), yaziTipi, yaziRengi, 244, 356); //MüşteriAdı
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[2].Value.ToString(), yaziTipi, yaziRengi, 244, 400); //Telefon
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[3].Value.ToString(), yaziTipi, yaziRengi, 244, 446); //CihazModeli
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[4].Value.ToString(), yaziTipi, yaziRengi, 244, 490); //SeriNumarası
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[5].Value.ToString(), yaziTipi, yaziRengi, 244, 533); //ArızaTanımı
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[9].Value.ToString(), yaziTipi, yaziRengi, 244, 577); //CihazDurumu
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[8].Value.ToString(), yaziTipi, yaziRengi, 244, 624); //TakipNumarası
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[6].Value.ToString(), yaziTipi, yaziRengi, 244, 671); //Aksesuar
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[10].Value + " ₺", yaziTipi, yaziRengi, 657, 774);
-            e.Graphics.DrawString(dgvRabtBilDB.CurrentRow?.Cells[12].Value.ToString(), yaziTipi, yaziRengi, 589, 310); //Tarih
+            if (frm != null)
+            {
+                e.Graphics.DrawString(frm.txtMusteriAdi.Text, yaziTipi, yaziRengi, 244, 356); //MüşteriAdı
+                e.Graphics.DrawString(frm.mtxTelefon.Text, yaziTipi, yaziRengi, 244, 400); //Telefon
+                e.Graphics.DrawString(frm.txtCihazModeli.Text, yaziTipi, yaziRengi, 244, 446); //CihazModeli
+                e.Graphics.DrawString(frm.txtCihazinSeriNumarası.Text, yaziTipi, yaziRengi, 244, 490); //SeriNumarası
+                e.Graphics.DrawString(frm.txtArizaninTanimi.Text, yaziTipi, yaziRengi, 244, 533); //ArızaTanımı
+                e.Graphics.DrawString(frm.txtCihazDurumu.Text, yaziTipi, yaziRengi, 244, 577); //CihazDurumu
+                e.Graphics.DrawString(frm.txtTakipNumarasi.Text, yaziTipi, yaziRengi, 244, 624); //TakipNumarası
+                e.Graphics.DrawString(frm.txtAksesuarlar.Text, yaziTipi, yaziRengi, 244, 671); //Aksesuar
+                e.Graphics.DrawString(frm.txtUcret.Text + " ₺", yaziTipi, yaziRengi, 657, 774);
+                e.Graphics.DrawString(DateTime.Now.ToString(), yaziTipi, yaziRengi, 589, 310); //Tarih
+            }
+        }
+
+        public void YazicilariListele()
+        {
+            try
+            {
+                foreach (String yazici in PrinterSettings.InstalledPrinters)
+                {
+                    cmbYaziciListesi.Items.Add(yazici);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata");
+            }
         }
     }
 }

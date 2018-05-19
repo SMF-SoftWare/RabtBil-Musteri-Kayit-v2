@@ -143,8 +143,12 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximumSize = new System.Drawing.Size(334, 150);
+            this.MinimumSize = new System.Drawing.Size(334, 150);
             this.Name = "FrmYazdir";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmYazdir";
+            this.Load += new System.EventHandler(this.FrmYazdir_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
