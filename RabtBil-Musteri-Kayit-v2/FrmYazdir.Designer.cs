@@ -35,6 +35,8 @@
             this.btnYazdir = new System.Windows.Forms.Button();
             this.lblBaslik = new System.Windows.Forms.Label();
             this.btnKapat = new System.Windows.Forms.Button();
+            this.ppdBaskiOnizleme = new System.Windows.Forms.PrintPreviewDialog();
+            this.pdcBelge = new System.Drawing.Printing.PrintDocument();
             this.SuspendLayout();
             // 
             // btnBaskiOnizleme
@@ -110,6 +112,17 @@
             this.btnKapat.TabStop = false;
             this.btnKapat.UseVisualStyleBackColor = false;
             // 
+            // ppdBaskiOnizleme
+            // 
+            this.ppdBaskiOnizleme.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.ppdBaskiOnizleme.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.ppdBaskiOnizleme.ClientSize = new System.Drawing.Size(400, 300);
+            this.ppdBaskiOnizleme.Document = this.pdcBelge;
+            this.ppdBaskiOnizleme.Enabled = true;
+            this.ppdBaskiOnizleme.Icon = ((System.Drawing.Icon)(resources.GetObject("ppdBaskiOnizleme.Icon")));
+            this.ppdBaskiOnizleme.Name = "ppdBaskiOnizleme";
+            this.ppdBaskiOnizleme.Visible = false;
+            // 
             // FrmYazdir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -141,5 +154,7 @@
         public System.Windows.Forms.Button btnYazdir;
         private System.Windows.Forms.Label lblBaslik;
         public System.Windows.Forms.Button btnKapat;
+        private System.Windows.Forms.PrintPreviewDialog ppdBaskiOnizleme;
+        private System.Drawing.Printing.PrintDocument pdcBelge;
     }
 }
