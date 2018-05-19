@@ -92,7 +92,7 @@
             this.txtYeniSifre.Location = new System.Drawing.Point(15, 351);
             this.txtYeniSifre.Name = "txtYeniSifre";
             this.txtYeniSifre.Size = new System.Drawing.Size(414, 29);
-            this.txtYeniSifre.TabIndex = 3;
+            this.txtYeniSifre.TabIndex = 6;
             this.txtYeniSifre.UseSystemPasswordChar = true;
             // 
             // txtYeniSifreyiOnayla
@@ -100,7 +100,7 @@
             this.txtYeniSifreyiOnayla.Location = new System.Drawing.Point(15, 409);
             this.txtYeniSifreyiOnayla.Name = "txtYeniSifreyiOnayla";
             this.txtYeniSifreyiOnayla.Size = new System.Drawing.Size(414, 29);
-            this.txtYeniSifreyiOnayla.TabIndex = 4;
+            this.txtYeniSifreyiOnayla.TabIndex = 7;
             this.txtYeniSifreyiOnayla.UseSystemPasswordChar = true;
             // 
             // txtAdi
@@ -108,7 +108,7 @@
             this.txtAdi.Location = new System.Drawing.Point(15, 178);
             this.txtAdi.Name = "txtAdi";
             this.txtAdi.Size = new System.Drawing.Size(414, 29);
-            this.txtAdi.TabIndex = 5;
+            this.txtAdi.TabIndex = 3;
             // 
             // lblYeniSifre
             // 
@@ -152,7 +152,7 @@
             this.txtSoyadi.Location = new System.Drawing.Point(15, 235);
             this.txtSoyadi.Name = "txtSoyadi";
             this.txtSoyadi.Size = new System.Drawing.Size(414, 29);
-            this.txtSoyadi.TabIndex = 6;
+            this.txtSoyadi.TabIndex = 4;
             // 
             // lblEpostaAdresi
             // 
@@ -168,7 +168,7 @@
             this.txtEpostaAdresi.Location = new System.Drawing.Point(15, 293);
             this.txtEpostaAdresi.Name = "txtEpostaAdresi";
             this.txtEpostaAdresi.Size = new System.Drawing.Size(414, 29);
-            this.txtEpostaAdresi.TabIndex = 7;
+            this.txtEpostaAdresi.TabIndex = 5;
             // 
             // btnGuncelle
             // 
@@ -243,6 +243,7 @@
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(30, 30);
             this.btnKapat.TabIndex = 49;
+            this.btnKapat.TabStop = false;
             this.btnKapat.UseVisualStyleBackColor = false;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 

@@ -47,7 +47,7 @@
             this.btnBaskiOnizleme.Location = new System.Drawing.Point(171, 96);
             this.btnBaskiOnizleme.Name = "btnBaskiOnizleme";
             this.btnBaskiOnizleme.Size = new System.Drawing.Size(150, 40);
-            this.btnBaskiOnizleme.TabIndex = 51;
+            this.btnBaskiOnizleme.TabIndex = 2;
             this.btnBaskiOnizleme.Text = "Baskı Önizleme";
             this.btnBaskiOnizleme.UseVisualStyleBackColor = false;
             this.btnBaskiOnizleme.Click += new System.EventHandler(this.btnBaskiOnizleme_Click);
@@ -70,7 +70,7 @@
             this.cmbYaziciListesi.Location = new System.Drawing.Point(15, 64);
             this.cmbYaziciListesi.Name = "cmbYaziciListesi";
             this.cmbYaziciListesi.Size = new System.Drawing.Size(306, 29);
-            this.cmbYaziciListesi.TabIndex = 49;
+            this.cmbYaziciListesi.TabIndex = 0;
             this.cmbYaziciListesi.SelectedIndexChanged += new System.EventHandler(this.cmbYaziciListesi_SelectedIndexChanged);
             // 
             // btnYazdir
@@ -82,7 +82,7 @@
             this.btnYazdir.Location = new System.Drawing.Point(15, 96);
             this.btnYazdir.Name = "btnYazdir";
             this.btnYazdir.Size = new System.Drawing.Size(150, 40);
-            this.btnYazdir.TabIndex = 48;
+            this.btnYazdir.TabIndex = 1;
             this.btnYazdir.Text = "Yazdır";
             this.btnYazdir.UseVisualStyleBackColor = false;
             this.btnYazdir.Click += new System.EventHandler(this.btnYazdir_Click);
@@ -131,6 +131,7 @@
             // 
             // FrmYazdir
             // 
+            this.AcceptButton = this.btnYazdir;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;

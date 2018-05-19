@@ -69,7 +69,7 @@ namespace RabtBil_Musteri_Kayit_v2
             }
         }
 
-        private void btnKaydet_Click(object sender, EventArgs e)
+        private void btnTeslimEt_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(txtTeslimAlanKisi.Text))
             {
@@ -77,6 +77,13 @@ namespace RabtBil_Musteri_Kayit_v2
                 txtTeslimAlanKisi.Focus();
                 return;
             }
+
+            DialogResult dr = MessageBox.Show("Cihaz Teslim Edilsin Mi?", SMF.PrograminTamAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (dr == DialogResult.No)
+            {
+                return;
+            }
+
             try
             {
                 SMF.BaglantiKapaliysaAc();

@@ -35,7 +35,7 @@
             this.lblTeslimAlanKisi = new System.Windows.Forms.Label();
             this.lblTeslimTarihi = new System.Windows.Forms.Label();
             this.lblTarih = new System.Windows.Forms.Label();
-            this.btnKaydet = new System.Windows.Forms.Button();
+            this.btnTeslimEt = new System.Windows.Forms.Button();
             this.lblBaslik = new System.Windows.Forms.Label();
             this.btnKapat = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -57,7 +57,7 @@
             this.txtTeslimEdenPersonel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTeslimEdenPersonel.Name = "txtTeslimEdenPersonel";
             this.txtTeslimEdenPersonel.Size = new System.Drawing.Size(313, 29);
-            this.txtTeslimEdenPersonel.TabIndex = 1;
+            this.txtTeslimEdenPersonel.TabIndex = 0;
             // 
             // txtTeslimAlanKisi
             // 
@@ -65,7 +65,7 @@
             this.txtTeslimAlanKisi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTeslimAlanKisi.Name = "txtTeslimAlanKisi";
             this.txtTeslimAlanKisi.Size = new System.Drawing.Size(313, 29);
-            this.txtTeslimAlanKisi.TabIndex = 3;
+            this.txtTeslimAlanKisi.TabIndex = 1;
             // 
             // lblTeslimAlanKisi
             // 
@@ -97,18 +97,18 @@
             this.lblTarih.TabIndex = 5;
             this.lblTarih.Text = "19.05.2018";
             // 
-            // btnKaydet
+            // btnTeslimEt
             // 
-            this.btnKaydet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKaydet.ForeColor = System.Drawing.Color.White;
-            this.btnKaydet.Location = new System.Drawing.Point(15, 179);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(313, 40);
-            this.btnKaydet.TabIndex = 7;
-            this.btnKaydet.Text = "Teslim Et";
-            this.btnKaydet.UseVisualStyleBackColor = false;
-            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
+            this.btnTeslimEt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnTeslimEt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTeslimEt.ForeColor = System.Drawing.Color.White;
+            this.btnTeslimEt.Location = new System.Drawing.Point(15, 179);
+            this.btnTeslimEt.Name = "btnTeslimEt";
+            this.btnTeslimEt.Size = new System.Drawing.Size(313, 40);
+            this.btnTeslimEt.TabIndex = 2;
+            this.btnTeslimEt.Text = "Teslim Et";
+            this.btnTeslimEt.UseVisualStyleBackColor = false;
+            this.btnTeslimEt.Click += new System.EventHandler(this.btnTeslimEt_Click);
             // 
             // lblBaslik
             // 
@@ -138,14 +138,14 @@
             // 
             // FrmUrunTeslim
             // 
-            this.AcceptButton = this.btnKaydet;
+            this.AcceptButton = this.btnTeslimEt;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(347, 236);
             this.Controls.Add(this.btnKapat);
             this.Controls.Add(this.lblBaslik);
-            this.Controls.Add(this.btnKaydet);
+            this.Controls.Add(this.btnTeslimEt);
             this.Controls.Add(this.lblTarih);
             this.Controls.Add(this.lblTeslimTarihi);
             this.Controls.Add(this.txtTeslimAlanKisi);
@@ -177,7 +177,7 @@
         private System.Windows.Forms.Label lblTeslimAlanKisi;
         private System.Windows.Forms.Label lblTeslimTarihi;
         private System.Windows.Forms.Label lblTarih;
-        private System.Windows.Forms.Button btnKaydet;
+        private System.Windows.Forms.Button btnTeslimEt;
         private System.Windows.Forms.Label lblBaslik;
         public System.Windows.Forms.Button btnKapat;
     }

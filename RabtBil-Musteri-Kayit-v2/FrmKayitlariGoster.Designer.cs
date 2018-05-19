@@ -33,15 +33,9 @@
             this.btnSil = new System.Windows.Forms.Button();
             this.cmbAramaAlanlari = new System.Windows.Forms.ComboBox();
             this.txtArama = new System.Windows.Forms.TextBox();
-            this.btnYazdir = new System.Windows.Forms.Button();
-            this.pdcBelge = new System.Drawing.Printing.PrintDocument();
-            this.ppdBaskiOnizleme = new System.Windows.Forms.PrintPreviewDialog();
             this.btnExcelAktar = new System.Windows.Forms.Button();
-            this.cmbYaziciListesi = new System.Windows.Forms.ComboBox();
-            this.lblYaziciSecin = new System.Windows.Forms.Label();
             this.lblAlanSecin = new System.Windows.Forms.Label();
             this.lblBaslik = new System.Windows.Forms.Label();
-            this.btnBaskiOnizleme = new System.Windows.Forms.Button();
             this.btnKapat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRabtBilDB)).BeginInit();
             this.SuspendLayout();
@@ -62,7 +56,7 @@
             this.dgvRabtBilDB.RowHeadersVisible = false;
             this.dgvRabtBilDB.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRabtBilDB.Size = new System.Drawing.Size(977, 412);
-            this.dgvRabtBilDB.TabIndex = 35;
+            this.dgvRabtBilDB.TabIndex = 4;
             this.dgvRabtBilDB.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRabtBilDB_CellDoubleClick);
             // 
             // btnSil
@@ -74,7 +68,7 @@
             this.btnSil.Margin = new System.Windows.Forms.Padding(2);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(137, 40);
-            this.btnSil.TabIndex = 36;
+            this.btnSil.TabIndex = 0;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
@@ -88,7 +82,7 @@
             this.cmbAramaAlanlari.Margin = new System.Windows.Forms.Padding(2);
             this.cmbAramaAlanlari.Name = "cmbAramaAlanlari";
             this.cmbAramaAlanlari.Size = new System.Drawing.Size(227, 29);
-            this.cmbAramaAlanlari.TabIndex = 37;
+            this.cmbAramaAlanlari.TabIndex = 2;
             this.cmbAramaAlanlari.SelectedIndexChanged += new System.EventHandler(this.cmbAramaAlanlari_SelectedIndexChanged);
             // 
             // txtArama
@@ -97,38 +91,8 @@
             this.txtArama.Margin = new System.Windows.Forms.Padding(2);
             this.txtArama.Name = "txtArama";
             this.txtArama.Size = new System.Drawing.Size(330, 29);
-            this.txtArama.TabIndex = 38;
+            this.txtArama.TabIndex = 3;
             this.txtArama.TextChanged += new System.EventHandler(this.txtArama_TextChanged);
-            // 
-            // btnYazdir
-            // 
-            this.btnYazdir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnYazdir.Enabled = false;
-            this.btnYazdir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnYazdir.ForeColor = System.Drawing.Color.White;
-            this.btnYazdir.Location = new System.Drawing.Point(574, 496);
-            this.btnYazdir.Margin = new System.Windows.Forms.Padding(2);
-            this.btnYazdir.Name = "btnYazdir";
-            this.btnYazdir.Size = new System.Drawing.Size(137, 40);
-            this.btnYazdir.TabIndex = 39;
-            this.btnYazdir.Text = "Yazdır";
-            this.btnYazdir.UseVisualStyleBackColor = false;
-            this.btnYazdir.Click += new System.EventHandler(this.btnYazdir_Click);
-            // 
-            // pdcBelge
-            // 
-            this.pdcBelge.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.pdcBelge_PrintPage);
-            // 
-            // ppdBaskiOnizleme
-            // 
-            this.ppdBaskiOnizleme.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.ppdBaskiOnizleme.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.ppdBaskiOnizleme.ClientSize = new System.Drawing.Size(400, 300);
-            this.ppdBaskiOnizleme.Document = this.pdcBelge;
-            this.ppdBaskiOnizleme.Enabled = true;
-            this.ppdBaskiOnizleme.Icon = ((System.Drawing.Icon)(resources.GetObject("ppdBaskiOnizleme.Icon")));
-            this.ppdBaskiOnizleme.Name = "ppdBaskiOnizleme";
-            this.ppdBaskiOnizleme.Visible = false;
             // 
             // btnExcelAktar
             // 
@@ -140,31 +104,10 @@
             this.btnExcelAktar.Margin = new System.Windows.Forms.Padding(2);
             this.btnExcelAktar.Name = "btnExcelAktar";
             this.btnExcelAktar.Size = new System.Drawing.Size(137, 40);
-            this.btnExcelAktar.TabIndex = 41;
+            this.btnExcelAktar.TabIndex = 1;
             this.btnExcelAktar.Text = "Excel\'e Aktar";
             this.btnExcelAktar.UseVisualStyleBackColor = false;
             this.btnExcelAktar.Click += new System.EventHandler(this.btnExcelAktar_Click);
-            // 
-            // cmbYaziciListesi
-            // 
-            this.cmbYaziciListesi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbYaziciListesi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbYaziciListesi.FormattingEnabled = true;
-            this.cmbYaziciListesi.Location = new System.Drawing.Point(345, 503);
-            this.cmbYaziciListesi.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbYaziciListesi.Name = "cmbYaziciListesi";
-            this.cmbYaziciListesi.Size = new System.Drawing.Size(227, 29);
-            this.cmbYaziciListesi.TabIndex = 42;
-            this.cmbYaziciListesi.SelectedIndexChanged += new System.EventHandler(this.cmbYaziciListesi_SelectedIndexChanged);
-            // 
-            // lblYaziciSecin
-            // 
-            this.lblYaziciSecin.AutoSize = true;
-            this.lblYaziciSecin.Location = new System.Drawing.Point(188, 506);
-            this.lblYaziciSecin.Name = "lblYaziciSecin";
-            this.lblYaziciSecin.Size = new System.Drawing.Size(152, 21);
-            this.lblYaziciSecin.TabIndex = 43;
-            this.lblYaziciSecin.Text = "Lütfen Yazıcıyı Seçin:";
             // 
             // lblAlanSecin
             // 
@@ -185,20 +128,6 @@
             this.lblBaslik.Size = new System.Drawing.Size(177, 25);
             this.lblBaslik.TabIndex = 45;
             this.lblBaslik.Text = "Teknik Servis Formu";
-            // 
-            // btnBaskiOnizleme
-            // 
-            this.btnBaskiOnizleme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnBaskiOnizleme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBaskiOnizleme.ForeColor = System.Drawing.Color.White;
-            this.btnBaskiOnizleme.Location = new System.Drawing.Point(715, 496);
-            this.btnBaskiOnizleme.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBaskiOnizleme.Name = "btnBaskiOnizleme";
-            this.btnBaskiOnizleme.Size = new System.Drawing.Size(137, 40);
-            this.btnBaskiOnizleme.TabIndex = 47;
-            this.btnBaskiOnizleme.Text = "Baskı Önizleme";
-            this.btnBaskiOnizleme.UseVisualStyleBackColor = false;
-            this.btnBaskiOnizleme.Click += new System.EventHandler(this.btnBaskiOnizleme_Click);
             // 
             // btnKapat
             // 
@@ -221,15 +150,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1013, 553);
-            this.Controls.Add(this.btnBaskiOnizleme);
+            this.ClientSize = new System.Drawing.Size(1013, 510);
             this.Controls.Add(this.btnKapat);
             this.Controls.Add(this.lblBaslik);
             this.Controls.Add(this.lblAlanSecin);
-            this.Controls.Add(this.lblYaziciSecin);
-            this.Controls.Add(this.cmbYaziciListesi);
             this.Controls.Add(this.btnExcelAktar);
-            this.Controls.Add(this.btnYazdir);
             this.Controls.Add(this.txtArama);
             this.Controls.Add(this.cmbAramaAlanlari);
             this.Controls.Add(this.btnSil);
@@ -239,8 +164,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1013, 553);
-            this.MinimumSize = new System.Drawing.Size(1013, 553);
+            this.MaximumSize = new System.Drawing.Size(1013, 510);
+            this.MinimumSize = new System.Drawing.Size(1013, 510);
             this.Name = "FrmKayitlariGoster";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmKayitlariGoster";
@@ -256,15 +181,9 @@
         public System.Windows.Forms.Button btnSil;
         public System.Windows.Forms.ComboBox cmbAramaAlanlari;
         public System.Windows.Forms.TextBox txtArama;
-        public System.Windows.Forms.Button btnYazdir;
-        private System.Drawing.Printing.PrintDocument pdcBelge;
-        private System.Windows.Forms.PrintPreviewDialog ppdBaskiOnizleme;
         public System.Windows.Forms.Button btnExcelAktar;
-        public System.Windows.Forms.ComboBox cmbYaziciListesi;
-        private System.Windows.Forms.Label lblYaziciSecin;
         private System.Windows.Forms.Label lblAlanSecin;
         private System.Windows.Forms.Label lblBaslik;
         public System.Windows.Forms.Button btnKapat;
-        public System.Windows.Forms.Button btnBaskiOnizleme;
     }
 }
