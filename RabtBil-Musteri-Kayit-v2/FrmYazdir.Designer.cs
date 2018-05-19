@@ -123,6 +123,10 @@
             this.ppdBaskiOnizleme.Name = "ppdBaskiOnizleme";
             this.ppdBaskiOnizleme.Visible = false;
             // 
+            // pdcBelge
+            // 
+            this.pdcBelge.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.pdcBelge_PrintPage);
+            // 
             // FrmYazdir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
