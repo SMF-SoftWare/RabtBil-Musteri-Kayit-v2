@@ -34,12 +34,12 @@
             this.btnGirisYap = new System.Windows.Forms.Button();
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.lblSifre = new System.Windows.Forms.Label();
-            this.picGoz = new System.Windows.Forms.PictureBox();
-            this.btnKapat = new System.Windows.Forms.Button();
-            this.picLogo = new System.Windows.Forms.PictureBox();
             this.lblBaslik = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.picGoz)).BeginInit();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.btnKapat = new System.Windows.Forms.Button();
+            this.picGoz = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGoz)).BeginInit();
             this.SuspendLayout();
             // 
             // lblKullaniciAdi
@@ -98,17 +98,26 @@
             this.lblSifre.TabIndex = 2;
             this.lblSifre.Text = "Şifre:";
             // 
-            // picGoz
+            // lblBaslik
             // 
-            this.picGoz.Image = global::RabtBil_Musteri_Kayit_v2.Properties.Resources.eye;
-            this.picGoz.Location = new System.Drawing.Point(300, 282);
-            this.picGoz.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.picGoz.Name = "picGoz";
-            this.picGoz.Size = new System.Drawing.Size(25, 25);
-            this.picGoz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picGoz.TabIndex = 7;
-            this.picGoz.TabStop = false;
-            this.picGoz.Click += new System.EventHandler(this.picGoz_Click);
+            this.lblBaslik.AutoSize = true;
+            this.lblBaslik.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBaslik.Location = new System.Drawing.Point(15, 9);
+            this.lblBaslik.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.lblBaslik.Name = "lblBaslik";
+            this.lblBaslik.Size = new System.Drawing.Size(85, 25);
+            this.lblBaslik.TabIndex = 51;
+            this.lblBaslik.Text = "Giriş Yap";
+            // 
+            // picLogo
+            // 
+            this.picLogo.Image = global::RabtBil_Musteri_Kayit_v2.Properties.Resources.Logo;
+            this.picLogo.Location = new System.Drawing.Point(15, 38);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(312, 157);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogo.TabIndex = 50;
+            this.picLogo.TabStop = false;
             // 
             // btnKapat
             // 
@@ -126,26 +135,17 @@
             this.btnKapat.UseVisualStyleBackColor = false;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
-            // picLogo
+            // picGoz
             // 
-            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.Location = new System.Drawing.Point(15, 38);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(312, 157);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picLogo.TabIndex = 50;
-            this.picLogo.TabStop = false;
-            // 
-            // lblBaslik
-            // 
-            this.lblBaslik.AutoSize = true;
-            this.lblBaslik.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblBaslik.Location = new System.Drawing.Point(15, 9);
-            this.lblBaslik.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(85, 25);
-            this.lblBaslik.TabIndex = 51;
-            this.lblBaslik.Text = "Giriş Yap";
+            this.picGoz.Image = global::RabtBil_Musteri_Kayit_v2.Properties.Resources.eye;
+            this.picGoz.Location = new System.Drawing.Point(300, 282);
+            this.picGoz.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.picGoz.Name = "picGoz";
+            this.picGoz.Size = new System.Drawing.Size(25, 25);
+            this.picGoz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picGoz.TabIndex = 7;
+            this.picGoz.TabStop = false;
+            this.picGoz.Click += new System.EventHandler(this.picGoz_Click);
             // 
             // FrmGirisYap
             // 
@@ -171,8 +171,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmGirisYap";
             this.Load += new System.EventHandler(this.FrmGirisYap_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picGoz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGoz)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

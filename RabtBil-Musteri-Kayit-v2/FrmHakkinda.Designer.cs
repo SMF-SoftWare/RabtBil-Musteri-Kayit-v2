@@ -95,6 +95,7 @@
             this.linklblAnaSayfa.Name = "linklblAnaSayfa";
             this.linklblAnaSayfa.Size = new System.Drawing.Size(148, 21);
             this.linklblAnaSayfa.TabIndex = 4;
+            this.linklblAnaSayfa.TabStop = true;
             this.linklblAnaSayfa.Text = "www.casper.com.tr";
             // 
             // lblLisansDurumu
@@ -167,7 +168,7 @@
             // 
             // picLogo
             // 
-            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
+            this.picLogo.Image = global::RabtBil_Musteri_Kayit_v2.Properties.Resources.Logo;
             this.picLogo.Location = new System.Drawing.Point(376, 39);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(380, 187);

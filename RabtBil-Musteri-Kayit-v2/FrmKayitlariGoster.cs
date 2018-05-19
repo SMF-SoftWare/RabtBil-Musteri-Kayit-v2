@@ -3,7 +3,6 @@ using System;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Printing;
-using System.Globalization;
 using System.Windows.Forms;
 using Application = System.Windows.Forms.Application;
 using DataTable = System.Data.DataTable;
@@ -19,6 +18,20 @@ namespace RabtBil_Musteri_Kayit_v2
         public FrmKayitlariGoster()
         {
             InitializeComponent();
+        }
+
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case 0x84:
+                    base.WndProc(ref m);
+                    if ((int)m.Result == 0x1)
+                        m.Result = (IntPtr)0x2;
+                    return;
+            }
+
+            base.WndProc(ref m);
         }
 
         private string daText;
@@ -42,16 +55,10 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void FrmKayitlariGoster_Load(object sender, EventArgs e)
         {
-            if (SMF.LisansliMi)
-            {
-                tsmiLisansAnahtari.Enabled = false;
-            }
-
             YazicilariListele();
             VerileriGetir();
             CmbDoldur();
             cmbAramaAlanlari.SelectedIndex = 0;
-            tmrTarihSaat.Enabled = true;
         }
 
         private void dgvRabtBilDB_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -264,11 +271,6 @@ namespace RabtBil_Musteri_Kayit_v2
             TeslimTarihi
         }
 
-        private void tmrTarihSaat_Tick(object sender, EventArgs e)
-        {
-            tslblTarihSaat.Text = DateTime.Now.ToString(CultureInfo.CurrentCulture);
-        }
-
         private void tsmiBaskiOnizleme_Click(object sender, EventArgs e)
         {
             try
@@ -346,21 +348,9 @@ namespace RabtBil_Musteri_Kayit_v2
             btnYazdir.Enabled = cmbYaziciListesi.Text != "";
         }
 
-        private void varsayilanAciklama_MouseLeave(object sender, EventArgs e)
+        private void btnKapat_Click(object sender, EventArgs e)
         {
-            tslblAciklama.Text = "Açıklama";
-        }
-
-        private void tsmiYardımHakkında_Click_1(object sender, EventArgs e)
-        {
-            FrmHakkinda frm = new FrmHakkinda();
-            frm.ShowDialog();
-        }
-
-        private void tsmiLisansAnahtari_Click(object sender, EventArgs e)
-        {
-            FrmProgramiEtkinlestir frm = new FrmProgramiEtkinlestir();
-            frm.ShowDialog();
+            Close();
         }
     }
 }
