@@ -168,14 +168,15 @@ namespace RabtBil_Musteri_Kayit_v2
             btnYeniKayit.Enabled = true;
             btnKaydet.Enabled = false;
             btnGuncelle.Enabled = true;
+            btnTeslimEt.Enabled = true;
+            btnYazdir.Enabled = true;
         }
 
         private void btnKayitlariGoster_Click(object sender, EventArgs e)
         {
             try
             {
-                string cmdText = SMF.YoneticiMi || SMF.YetkiliPersonelMi ? "SELECT * FROM MusteriBilgileri" : "SELECT * FROM MusteriBilgileri WHERE KaydiYapanID=@KaydiYapanID";
-                SqlCommand cmd = new SqlCommand(cmdText, SMF.Baglanti);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM MusteriBilgileri", SMF.Baglanti);
                 cmd.Parameters.AddWithValue("@KaydiYapanID", SMF.KullaniciId);
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
