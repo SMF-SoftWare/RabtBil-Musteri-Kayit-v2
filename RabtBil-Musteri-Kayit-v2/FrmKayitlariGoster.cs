@@ -30,9 +30,6 @@ namespace RabtBil_Musteri_Kayit_v2
             base.WndProc(ref m);
         }
 
-        private string _aramaTuru;
-        private readonly string[] _aramaAlanlari = { "Id", "MusteriAdi", "Telefon", "CihazModeli", "CihazinSeriNumarasi", "ArizaTanimi", "Aksesuarlar", "EkBilgiler", "TakipNumarasi", "CihazDurumu", "Ucret", "KaydiYapanID", "KayitTarihi", "GuncelleyenID", "GuncellemeTarihi", "TeslimEdenID", "TeslimAlan", "TeslimTarihi" };
-
         private void FrmKayitlariGoster_Load(object sender, EventArgs e)
         {
             if (SMF.YoneticiMi)
@@ -41,9 +38,15 @@ namespace RabtBil_Musteri_Kayit_v2
             }
 
             VerileriGetir();
+            cmbRaporlar.SelectedIndex = 0;
+        }
 
-            cmbAramaAlanlari.Items.AddRange(_aramaAlanlari);
-            cmbAramaAlanlari.SelectedIndex = 0;
+        private void btnYenile_Click(object sender, EventArgs e)
+        {
+            VerileriGetir();
+
+            txtArama.Clear();
+            cmbRaporlar.SelectedIndex = 0;
         }
 
         private void btnExcelAktar_Click(object sender, EventArgs e)
@@ -87,7 +90,23 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void txtArama_TextChanged(object sender, EventArgs e)
         {
-            AramaYap();
+            try
+            {
+                SMF.BaglantiKapaliysaAc();
+                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM MusteriBilgileri WHERE MusteriAdi LIKE @Ara OR Telefon LIKE @Ara OR CihazModeli LIKE @Ara OR CihazinSeriNumarasi LIKE @Ara OR ArizaTanimi LIKE @Ara OR Aksesuarlar LIKE @Ara OR EkBilgiler LIKE @Ara OR TakipNumarasi LIKE @Ara OR CihazDurumu LIKE @Ara OR Ucret LIKE @Ara OR TeslimAlan LIKE @Ara", SMF.Baglanti);
+                da.SelectCommand.Parameters.AddWithValue("@Ara", $"%{txtArama.Text.ToLower()}%");
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgvRabtBilDB.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata");
+            }
+            finally
+            {
+                SMF.Baglanti.Close();
+            }
         }
 
         private void dgvRabtBilDB_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -119,109 +138,9 @@ namespace RabtBil_Musteri_Kayit_v2
             Close();
         }
 
-        private void cmbAramaAlanlari_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            AramaYap();
-        }
-
         private void btnKapat_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        public void AramaYap()
-        {
-            try
-            {
-                switch (cmbAramaAlanlari.SelectedIndex)
-                {
-                    case (int)AramaTuru.Id:
-                        _aramaTuru = _aramaAlanlari[0];
-                        break;
-
-                    case (int)AramaTuru.MusteriAdi:
-                        _aramaTuru = _aramaAlanlari[1];
-                        break;
-
-                    case (int)AramaTuru.Telefon:
-                        _aramaTuru = _aramaAlanlari[2];
-                        break;
-
-                    case (int)AramaTuru.CihazModeli:
-                        _aramaTuru = _aramaAlanlari[3];
-                        break;
-
-                    case (int)AramaTuru.CihazinSeriNumarasi:
-                        _aramaTuru = _aramaAlanlari[4];
-                        break;
-
-                    case (int)AramaTuru.ArizaTanimi:
-                        _aramaTuru = _aramaAlanlari[5];
-                        break;
-
-                    case (int)AramaTuru.Aksesuarlar:
-                        _aramaTuru = _aramaAlanlari[6];
-                        break;
-
-                    case (int)AramaTuru.EkBilgiler:
-                        _aramaTuru = _aramaAlanlari[7];
-                        break;
-
-                    case (int)AramaTuru.TakipNumarasi:
-                        _aramaTuru = _aramaAlanlari[8];
-                        break;
-
-                    case (int)AramaTuru.CihazDurumu:
-                        _aramaTuru = _aramaAlanlari[9];
-                        break;
-
-                    case (int)AramaTuru.Ucret:
-                        _aramaTuru = _aramaAlanlari[10];
-                        break;
-
-                    case (int)AramaTuru.KaydiYapanID:
-                        _aramaTuru = _aramaAlanlari[11];
-                        break;
-
-                    case (int)AramaTuru.KayitTarihi:
-                        _aramaTuru = _aramaAlanlari[12];
-                        break;
-
-                    case (int)AramaTuru.GuncelleyenID:
-                        _aramaTuru = _aramaAlanlari[13];
-                        break;
-
-                    case (int)AramaTuru.GuncellemeTarihi:
-                        _aramaTuru = _aramaAlanlari[14];
-                        break;
-
-                    case (int)AramaTuru.TeslimEdenID:
-                        _aramaTuru = _aramaAlanlari[15];
-                        break;
-
-                    case (int)AramaTuru.TeslimAlan:
-                        _aramaTuru = _aramaAlanlari[16];
-                        break;
-
-                    case (int)AramaTuru.TeslimTarihi:
-                        _aramaTuru = _aramaAlanlari[17];
-                        break;
-                }
-                SMF.BaglantiKapaliysaAc();
-                SqlDataAdapter da = new SqlDataAdapter($"SELECT * FROM MusteriBilgileri WHERE {_aramaTuru} LIKE @Ara", SMF.Baglanti);
-                da.SelectCommand.Parameters.AddWithValue("@Ara", $"%{txtArama.Text.ToLower()}%");
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                dgvRabtBilDB.DataSource = dt;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Hata");
-            }
-            finally
-            {
-                SMF.Baglanti.Close();
-            }
         }
 
         public void VerileriGetir()
@@ -242,28 +161,6 @@ namespace RabtBil_Musteri_Kayit_v2
             {
                 SMF.Baglanti.Close();
             }
-        }
-
-        private enum AramaTuru
-        {
-            Id,
-            MusteriAdi,
-            Telefon,
-            CihazModeli,
-            CihazinSeriNumarasi,
-            ArizaTanimi,
-            Aksesuarlar,
-            EkBilgiler,
-            TakipNumarasi,
-            CihazDurumu,
-            Ucret,
-            KaydiYapanID,
-            KayitTarihi,
-            GuncelleyenID,
-            GuncellemeTarihi,
-            TeslimEdenID,
-            TeslimAlan,
-            TeslimTarihi,
         }
     }
 }
