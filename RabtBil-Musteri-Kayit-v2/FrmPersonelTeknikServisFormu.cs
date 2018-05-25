@@ -62,8 +62,9 @@ namespace RabtBil_Musteri_Kayit_v2
             btnGuncelle.Enabled = false;
             btnTeslimEt.Enabled = false;
             btnYazdir.Enabled = false;
+            btnSil.Enabled = false;
             txtTakipNumarasi.Text = SMF.TakipKoduOlustur();
-            lblMusteriNo.Text = String.Empty; ;
+            lblMusteriNo.Text = String.Empty;
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
@@ -154,7 +155,6 @@ namespace RabtBil_Musteri_Kayit_v2
                 cmd.Parameters.AddWithValue("@KayitTarihi", DateTime.Now);
                 SMF.BaglantiKapaliysaAc();
                 lblMusteriNo.Text = cmd.ExecuteScalar().ToString();
-                MessageBox.Show("Kayıt Eklendi!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -170,6 +170,7 @@ namespace RabtBil_Musteri_Kayit_v2
             btnGuncelle.Enabled = true;
             btnTeslimEt.Enabled = true;
             btnYazdir.Enabled = true;
+            btnSil.Enabled = true;
         }
 
         private void btnKayitlariGoster_Click(object sender, EventArgs e)
@@ -290,7 +291,6 @@ namespace RabtBil_Musteri_Kayit_v2
                 cmd.Parameters.AddWithValue("@ID", lblMusteriNo.Text);
                 SMF.BaglantiKapaliysaAc();
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Kayıt Güncellendi!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -302,17 +302,53 @@ namespace RabtBil_Musteri_Kayit_v2
             }
         }
 
-        private void btnCikisYap_Click(object sender, EventArgs e)
+        private void btnTeslimEt_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Çıkış Yapılsın Mı?", SMF.PrograminTamAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            FrmUrunTeslim frm = new FrmUrunTeslim();
+            frm.ShowDialog();
+        }
+
+        private void btnYazdir_Click(object sender, EventArgs e)
+        {
+            FrmYazdir frm = new FrmYazdir();
+            frm.ShowDialog();
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Seçilen Kayıt Silinsin Mi?", SMF.PrograminTamAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (dr == DialogResult.No)
             {
                 return;
             }
 
-            Application.Restart();
-        }
+            try
+            {
+                SqlCommand cmd = new SqlCommand("DELETE FROM MusteriBilgileri WHERE Id=@Id", SMF.Baglanti);
+                cmd.Parameters.AddWithValue("@Id", Convert.ToInt32(lblMusteriNo.Text));
+                SMF.BaglantiKapaliysaAc();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata");
+            }
+            finally
+            {
+                SMF.Baglanti.Close();
+            }
 
+
+            Temizle();
+            btnYeniKayit.Enabled = false;
+            btnKaydet.Enabled = true;
+            btnGuncelle.Enabled = false;
+            btnTeslimEt.Enabled = false;
+            btnYazdir.Enabled = false;
+            btnSil.Enabled = false;
+            txtTakipNumarasi.Text = SMF.TakipKoduOlustur();
+            lblMusteriNo.Text = String.Empty;
+        }
         private void PcTrBoxProfilResim_Click(object sender, EventArgs e)
         {
             FrmProfil frm = new FrmProfil();
@@ -335,7 +371,6 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             Close();
         }
-
         public void Temizle()
         {
             txtMusteriAdi.Clear();
@@ -347,18 +382,6 @@ namespace RabtBil_Musteri_Kayit_v2
             txtArizaninTanimi.Clear();
             txtCihazDurumu.Clear();
             txtUcret.Clear();
-        }
-
-        private void btnTeslimEt_Click(object sender, EventArgs e)
-        {
-            FrmUrunTeslim frm = new FrmUrunTeslim();
-            frm.ShowDialog();
-        }
-
-        private void btnYazdir_Click(object sender, EventArgs e)
-        {
-            FrmYazdir frm = new FrmYazdir();
-            frm.ShowDialog();
         }
     }
 }

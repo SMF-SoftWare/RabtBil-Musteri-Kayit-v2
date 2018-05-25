@@ -249,6 +249,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 frm.btnGuncelle.Enabled = true;
                 frm.btnTeslimEt.Enabled = true;
                 frm.btnYazdir.Enabled = true;
+                frm.btnSil.Enabled = true;
             }
 
             Close();
