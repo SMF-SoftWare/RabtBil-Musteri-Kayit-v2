@@ -141,7 +141,7 @@
             this.btnYenile.Margin = new System.Windows.Forms.Padding(2);
             this.btnYenile.Name = "btnYenile";
             this.btnYenile.Size = new System.Drawing.Size(150, 40);
-            this.btnYenile.TabIndex = 47;
+            this.btnYenile.TabIndex = 0;
             this.btnYenile.Text = "Yenile";
             this.btnYenile.UseVisualStyleBackColor = false;
             this.btnYenile.Click += new System.EventHandler(this.btnYenile_Click);

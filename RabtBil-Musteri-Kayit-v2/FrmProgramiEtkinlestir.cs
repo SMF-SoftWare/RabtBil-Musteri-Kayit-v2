@@ -56,6 +56,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 else
                 {
                     MessageBox.Show("Lisans Bilgileri Yanlış!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtEpostaAdresi.Focus();
                 }
             }
             else
