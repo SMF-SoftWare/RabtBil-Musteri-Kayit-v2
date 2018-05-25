@@ -36,9 +36,9 @@ namespace RabtBil_Musteri_Kayit_v2
             frm.ShowDialog();
         }
 
-        private void btnCikisYap_Click(object sender, EventArgs e)
+        private void btnProgramiKapat_Click(object sender, EventArgs e)
         {
-            Application.Restart();
+            Close();
         }
 
         private void btnPersonelEkle_Click(object sender, EventArgs e)

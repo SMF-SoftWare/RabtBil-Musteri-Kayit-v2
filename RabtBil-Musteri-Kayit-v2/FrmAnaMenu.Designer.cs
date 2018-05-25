@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAnaMenu));
             this.btnTeknikServisFormu = new System.Windows.Forms.Button();
-            this.btnCikisYap = new System.Windows.Forms.Button();
+            this.btnProgramiKapat = new System.Windows.Forms.Button();
             this.btnProfiliDuzenle = new System.Windows.Forms.Button();
             this.btnPersonelEkle = new System.Windows.Forms.Button();
             this.btnProgramHakkinda = new System.Windows.Forms.Button();
@@ -56,22 +56,22 @@
             this.btnTeknikServisFormu.UseVisualStyleBackColor = false;
             this.btnTeknikServisFormu.Click += new System.EventHandler(this.btnTeknikServisFormu_Click);
             // 
-            // btnCikisYap
+            // btnProgramiKapat
             // 
-            this.btnCikisYap.BackColor = System.Drawing.Color.White;
-            this.btnCikisYap.FlatAppearance.BorderSize = 0;
-            this.btnCikisYap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCikisYap.Image = ((System.Drawing.Image)(resources.GetObject("btnCikisYap.Image")));
-            this.btnCikisYap.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCikisYap.Location = new System.Drawing.Point(233, 138);
-            this.btnCikisYap.Margin = new System.Windows.Forms.Padding(0);
-            this.btnCikisYap.Name = "btnCikisYap";
-            this.btnCikisYap.Size = new System.Drawing.Size(110, 100);
-            this.btnCikisYap.TabIndex = 5;
-            this.btnCikisYap.Text = "Çıkış\r\nYap";
-            this.btnCikisYap.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCikisYap.UseVisualStyleBackColor = false;
-            this.btnCikisYap.Click += new System.EventHandler(this.btnCikisYap_Click);
+            this.btnProgramiKapat.BackColor = System.Drawing.Color.White;
+            this.btnProgramiKapat.FlatAppearance.BorderSize = 0;
+            this.btnProgramiKapat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProgramiKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnProgramiKapat.Image")));
+            this.btnProgramiKapat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnProgramiKapat.Location = new System.Drawing.Point(233, 138);
+            this.btnProgramiKapat.Margin = new System.Windows.Forms.Padding(0);
+            this.btnProgramiKapat.Name = "btnProgramiKapat";
+            this.btnProgramiKapat.Size = new System.Drawing.Size(110, 100);
+            this.btnProgramiKapat.TabIndex = 5;
+            this.btnProgramiKapat.Text = "Programı Kapat";
+            this.btnProgramiKapat.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnProgramiKapat.UseVisualStyleBackColor = false;
+            this.btnProgramiKapat.Click += new System.EventHandler(this.btnProgramiKapat_Click);
             // 
             // btnProfiliDuzenle
             // 
@@ -180,7 +180,7 @@
             this.Controls.Add(this.btnProgramHakkinda);
             this.Controls.Add(this.btnPersonelEkle);
             this.Controls.Add(this.btnProfiliDuzenle);
-            this.Controls.Add(this.btnCikisYap);
+            this.Controls.Add(this.btnProgramiKapat);
             this.Controls.Add(this.btnTeknikServisFormu);
             this.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -200,7 +200,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnTeknikServisFormu;
-        private System.Windows.Forms.Button btnCikisYap;
+        private System.Windows.Forms.Button btnProgramiKapat;
         private System.Windows.Forms.Button btnProfiliDuzenle;
         private System.Windows.Forms.Button btnPersonelEkle;
         private System.Windows.Forms.Button btnProgramHakkinda;
