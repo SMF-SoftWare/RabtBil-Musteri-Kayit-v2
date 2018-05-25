@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmKayitlariGoster));
             this.dgvRabtBilDB = new System.Windows.Forms.DataGridView();
-            this.btnSil = new System.Windows.Forms.Button();
             this.cmbAramaAlanlari = new System.Windows.Forms.ComboBox();
             this.txtArama = new System.Windows.Forms.TextBox();
             this.btnExcelAktar = new System.Windows.Forms.Button();
@@ -55,30 +54,16 @@
             this.dgvRabtBilDB.ReadOnly = true;
             this.dgvRabtBilDB.RowHeadersVisible = false;
             this.dgvRabtBilDB.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRabtBilDB.Size = new System.Drawing.Size(977, 412);
+            this.dgvRabtBilDB.Size = new System.Drawing.Size(849, 412);
             this.dgvRabtBilDB.TabIndex = 4;
             this.dgvRabtBilDB.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRabtBilDB_CellDoubleClick);
-            // 
-            // btnSil
-            // 
-            this.btnSil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSil.ForeColor = System.Drawing.Color.White;
-            this.btnSil.Location = new System.Drawing.Point(15, 38);
-            this.btnSil.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(137, 40);
-            this.btnSil.TabIndex = 0;
-            this.btnSil.Text = "Sil";
-            this.btnSil.UseVisualStyleBackColor = false;
-            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // cmbAramaAlanlari
             // 
             this.cmbAramaAlanlari.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAramaAlanlari.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbAramaAlanlari.FormattingEnabled = true;
-            this.cmbAramaAlanlari.Location = new System.Drawing.Point(432, 45);
+            this.cmbAramaAlanlari.Location = new System.Drawing.Point(304, 45);
             this.cmbAramaAlanlari.Margin = new System.Windows.Forms.Padding(2);
             this.cmbAramaAlanlari.Name = "cmbAramaAlanlari";
             this.cmbAramaAlanlari.Size = new System.Drawing.Size(227, 29);
@@ -87,7 +72,7 @@
             // 
             // txtArama
             // 
-            this.txtArama.Location = new System.Drawing.Point(662, 45);
+            this.txtArama.Location = new System.Drawing.Point(534, 45);
             this.txtArama.Margin = new System.Windows.Forms.Padding(2);
             this.txtArama.Name = "txtArama";
             this.txtArama.Size = new System.Drawing.Size(330, 29);
@@ -100,10 +85,10 @@
             this.btnExcelAktar.Enabled = false;
             this.btnExcelAktar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcelAktar.ForeColor = System.Drawing.Color.White;
-            this.btnExcelAktar.Location = new System.Drawing.Point(156, 38);
+            this.btnExcelAktar.Location = new System.Drawing.Point(15, 38);
             this.btnExcelAktar.Margin = new System.Windows.Forms.Padding(2);
             this.btnExcelAktar.Name = "btnExcelAktar";
-            this.btnExcelAktar.Size = new System.Drawing.Size(137, 40);
+            this.btnExcelAktar.Size = new System.Drawing.Size(150, 40);
             this.btnExcelAktar.TabIndex = 1;
             this.btnExcelAktar.Text = "Excel\'e Aktar";
             this.btnExcelAktar.UseVisualStyleBackColor = false;
@@ -112,7 +97,7 @@
             // lblAlanSecin
             // 
             this.lblAlanSecin.AutoSize = true;
-            this.lblAlanSecin.Location = new System.Drawing.Point(297, 48);
+            this.lblAlanSecin.Location = new System.Drawing.Point(169, 48);
             this.lblAlanSecin.Name = "lblAlanSecin";
             this.lblAlanSecin.Size = new System.Drawing.Size(133, 21);
             this.lblAlanSecin.TabIndex = 44;
@@ -136,7 +121,7 @@
             this.btnKapat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKapat.ForeColor = System.Drawing.Color.White;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
-            this.btnKapat.Location = new System.Drawing.Point(982, 1);
+            this.btnKapat.Location = new System.Drawing.Point(848, 1);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(0);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(30, 30);
@@ -150,22 +135,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1013, 510);
+            this.ClientSize = new System.Drawing.Size(879, 510);
             this.Controls.Add(this.btnKapat);
             this.Controls.Add(this.lblBaslik);
             this.Controls.Add(this.lblAlanSecin);
             this.Controls.Add(this.btnExcelAktar);
             this.Controls.Add(this.txtArama);
             this.Controls.Add(this.cmbAramaAlanlari);
-            this.Controls.Add(this.btnSil);
             this.Controls.Add(this.dgvRabtBilDB);
             this.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1013, 510);
-            this.MinimumSize = new System.Drawing.Size(1013, 510);
             this.Name = "FrmKayitlariGoster";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmKayitlariGoster";
@@ -178,7 +160,6 @@
 
         #endregion
         public System.Windows.Forms.DataGridView dgvRabtBilDB;
-        public System.Windows.Forms.Button btnSil;
         public System.Windows.Forms.ComboBox cmbAramaAlanlari;
         public System.Windows.Forms.TextBox txtArama;
         public System.Windows.Forms.Button btnExcelAktar;

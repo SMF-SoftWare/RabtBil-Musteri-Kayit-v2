@@ -46,14 +46,14 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             if (String.IsNullOrWhiteSpace(txtKullaniciAdi.Text))
             {
-                MessageBox.Show("Kullanıcı Adı Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Kullanıcı Adı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtKullaniciAdi.Focus();
                 return;
             }
 
             if (String.IsNullOrWhiteSpace(txtSifre.Text))
             {
-                MessageBox.Show("Şifre Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Şifre Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtSifre.Focus();
                 return;
             }
@@ -111,6 +111,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 else
                 {
                     MessageBox.Show("Kullanıcı Adı veya Şifre Yanlış!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtKullaniciAdi.Focus();
                 }
             }
             catch (Exception ex)

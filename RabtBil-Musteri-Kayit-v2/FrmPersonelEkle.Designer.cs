@@ -278,7 +278,7 @@
             this.btnKapat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKapat.ForeColor = System.Drawing.Color.White;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
-            this.btnKapat.Location = new System.Drawing.Point(839, 0);
+            this.btnKapat.Location = new System.Drawing.Point(832, 1);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(0);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(30, 30);
@@ -293,7 +293,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(870, 497);
+            this.ClientSize = new System.Drawing.Size(863, 497);
             this.Controls.Add(this.btnKapat);
             this.Controls.Add(this.lblBaslik);
             this.Controls.Add(this.picGoz);
@@ -319,8 +319,8 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximumSize = new System.Drawing.Size(870, 497);
-            this.MinimumSize = new System.Drawing.Size(870, 497);
+            this.MaximumSize = new System.Drawing.Size(863, 497);
+            this.MinimumSize = new System.Drawing.Size(863, 497);
             this.Name = "FrmPersonelEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPersonelEkle";

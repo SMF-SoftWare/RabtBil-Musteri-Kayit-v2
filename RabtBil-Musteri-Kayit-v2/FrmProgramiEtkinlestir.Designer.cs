@@ -51,7 +51,7 @@
             // 
             this.txtLisansAnahtari.Location = new System.Drawing.Point(15, 122);
             this.txtLisansAnahtari.Name = "txtLisansAnahtari";
-            this.txtLisansAnahtari.Size = new System.Drawing.Size(414, 29);
+            this.txtLisansAnahtari.Size = new System.Drawing.Size(300, 29);
             this.txtLisansAnahtari.TabIndex = 1;
             // 
             // lblEpostaAdresi
@@ -67,7 +67,7 @@
             // 
             this.txtEpostaAdresi.Location = new System.Drawing.Point(15, 64);
             this.txtEpostaAdresi.Name = "txtEpostaAdresi";
-            this.txtEpostaAdresi.Size = new System.Drawing.Size(414, 29);
+            this.txtEpostaAdresi.Size = new System.Drawing.Size(300, 29);
             this.txtEpostaAdresi.TabIndex = 0;
             // 
             // btnEtkinlestir
@@ -77,7 +77,7 @@
             this.btnEtkinlestir.ForeColor = System.Drawing.Color.White;
             this.btnEtkinlestir.Location = new System.Drawing.Point(15, 157);
             this.btnEtkinlestir.Name = "btnEtkinlestir";
-            this.btnEtkinlestir.Size = new System.Drawing.Size(416, 40);
+            this.btnEtkinlestir.Size = new System.Drawing.Size(300, 40);
             this.btnEtkinlestir.TabIndex = 2;
             this.btnEtkinlestir.Text = "Etkinleştir";
             this.btnEtkinlestir.UseVisualStyleBackColor = false;
@@ -102,7 +102,7 @@
             this.btnKapat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKapat.ForeColor = System.Drawing.Color.White;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
-            this.btnKapat.Location = new System.Drawing.Point(411, 0);
+            this.btnKapat.Location = new System.Drawing.Point(297, 1);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(0);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(30, 30);
@@ -117,7 +117,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(442, 207);
+            this.ClientSize = new System.Drawing.Size(328, 207);
             this.Controls.Add(this.btnKapat);
             this.Controls.Add(this.lblBaslik);
             this.Controls.Add(this.btnEtkinlestir);
@@ -130,8 +130,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(442, 207);
-            this.MinimumSize = new System.Drawing.Size(442, 207);
+            this.MaximumSize = new System.Drawing.Size(328, 207);
+            this.MinimumSize = new System.Drawing.Size(328, 207);
             this.Name = "FrmProgramiEtkinlestir";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmProgramiEtkinlestir";

@@ -105,7 +105,7 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             if (String.IsNullOrWhiteSpace(txtKullaniciAdi.Text))
             {
-                MessageBox.Show("Kullanıcı Adı Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Kullanıcı Adı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtKullaniciAdi.Focus();
                 return;
             }
@@ -119,14 +119,14 @@ namespace RabtBil_Musteri_Kayit_v2
 
             if (String.IsNullOrWhiteSpace(txtAdi.Text))
             {
-                MessageBox.Show("Adı Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Adı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtAdi.Focus();
                 return;
             }
 
             if (String.IsNullOrWhiteSpace(txtSoyadi.Text))
             {
-                MessageBox.Show("Soyadı Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Soyadı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtSoyadi.Focus();
                 return;
             }

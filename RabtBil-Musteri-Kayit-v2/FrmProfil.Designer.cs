@@ -58,7 +58,7 @@
             this.txtKullaniciAdi.Enabled = false;
             this.txtKullaniciAdi.Location = new System.Drawing.Point(15, 62);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
-            this.txtKullaniciAdi.Size = new System.Drawing.Size(414, 29);
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(256, 29);
             this.txtKullaniciAdi.TabIndex = 1;
             // 
             // lblKullaniciAdi
@@ -83,7 +83,7 @@
             // 
             this.txtMevcutSifre.Location = new System.Drawing.Point(15, 120);
             this.txtMevcutSifre.Name = "txtMevcutSifre";
-            this.txtMevcutSifre.Size = new System.Drawing.Size(414, 29);
+            this.txtMevcutSifre.Size = new System.Drawing.Size(256, 29);
             this.txtMevcutSifre.TabIndex = 2;
             this.txtMevcutSifre.UseSystemPasswordChar = true;
             // 
@@ -91,7 +91,7 @@
             // 
             this.txtYeniSifre.Location = new System.Drawing.Point(15, 351);
             this.txtYeniSifre.Name = "txtYeniSifre";
-            this.txtYeniSifre.Size = new System.Drawing.Size(414, 29);
+            this.txtYeniSifre.Size = new System.Drawing.Size(256, 29);
             this.txtYeniSifre.TabIndex = 6;
             this.txtYeniSifre.UseSystemPasswordChar = true;
             // 
@@ -99,7 +99,7 @@
             // 
             this.txtYeniSifreyiOnayla.Location = new System.Drawing.Point(15, 409);
             this.txtYeniSifreyiOnayla.Name = "txtYeniSifreyiOnayla";
-            this.txtYeniSifreyiOnayla.Size = new System.Drawing.Size(414, 29);
+            this.txtYeniSifreyiOnayla.Size = new System.Drawing.Size(256, 29);
             this.txtYeniSifreyiOnayla.TabIndex = 7;
             this.txtYeniSifreyiOnayla.UseSystemPasswordChar = true;
             // 
@@ -107,7 +107,7 @@
             // 
             this.txtAdi.Location = new System.Drawing.Point(15, 178);
             this.txtAdi.Name = "txtAdi";
-            this.txtAdi.Size = new System.Drawing.Size(414, 29);
+            this.txtAdi.Size = new System.Drawing.Size(256, 29);
             this.txtAdi.TabIndex = 3;
             // 
             // lblYeniSifre
@@ -151,7 +151,7 @@
             // 
             this.txtSoyadi.Location = new System.Drawing.Point(15, 235);
             this.txtSoyadi.Name = "txtSoyadi";
-            this.txtSoyadi.Size = new System.Drawing.Size(414, 29);
+            this.txtSoyadi.Size = new System.Drawing.Size(256, 29);
             this.txtSoyadi.TabIndex = 4;
             // 
             // lblEpostaAdresi
@@ -167,7 +167,7 @@
             // 
             this.txtEpostaAdresi.Location = new System.Drawing.Point(15, 293);
             this.txtEpostaAdresi.Name = "txtEpostaAdresi";
-            this.txtEpostaAdresi.Size = new System.Drawing.Size(414, 29);
+            this.txtEpostaAdresi.Size = new System.Drawing.Size(256, 29);
             this.txtEpostaAdresi.TabIndex = 5;
             // 
             // btnGuncelle
@@ -175,7 +175,7 @@
             this.btnGuncelle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuncelle.ForeColor = System.Drawing.Color.White;
-            this.btnGuncelle.Location = new System.Drawing.Point(453, 207);
+            this.btnGuncelle.Location = new System.Drawing.Point(285, 207);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(160, 40);
             this.btnGuncelle.TabIndex = 8;
@@ -186,7 +186,7 @@
             // picProfilResmi
             // 
             this.picProfilResmi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picProfilResmi.Location = new System.Drawing.Point(453, 39);
+            this.picProfilResmi.Location = new System.Drawing.Point(285, 39);
             this.picProfilResmi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.picProfilResmi.Name = "picProfilResmi";
             this.picProfilResmi.Size = new System.Drawing.Size(160, 160);
@@ -198,7 +198,7 @@
             // picGoz
             // 
             this.picGoz.Image = global::RabtBil_Musteri_Kayit_v2.Properties.Resources.eye;
-            this.picGoz.Location = new System.Drawing.Point(402, 122);
+            this.picGoz.Location = new System.Drawing.Point(244, 122);
             this.picGoz.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.picGoz.Name = "picGoz";
             this.picGoz.Size = new System.Drawing.Size(25, 25);
@@ -223,7 +223,7 @@
             this.btnGucluSifreOlustur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnGucluSifreOlustur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGucluSifreOlustur.ForeColor = System.Drawing.Color.White;
-            this.btnGucluSifreOlustur.Location = new System.Drawing.Point(453, 253);
+            this.btnGucluSifreOlustur.Location = new System.Drawing.Point(285, 253);
             this.btnGucluSifreOlustur.Name = "btnGucluSifreOlustur";
             this.btnGucluSifreOlustur.Size = new System.Drawing.Size(160, 40);
             this.btnGucluSifreOlustur.TabIndex = 9;
@@ -238,7 +238,7 @@
             this.btnKapat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKapat.ForeColor = System.Drawing.Color.White;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
-            this.btnKapat.Location = new System.Drawing.Point(601, 0);
+            this.btnKapat.Location = new System.Drawing.Point(429, 1);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(0);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(30, 30);
@@ -253,7 +253,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(632, 456);
+            this.ClientSize = new System.Drawing.Size(460, 456);
             this.Controls.Add(this.btnKapat);
             this.Controls.Add(this.lblBaslik);
             this.Controls.Add(this.picGoz);
@@ -279,8 +279,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(632, 456);
-            this.MinimumSize = new System.Drawing.Size(632, 456);
+            this.MaximumSize = new System.Drawing.Size(460, 456);
+            this.MinimumSize = new System.Drawing.Size(460, 456);
             this.Name = "FrmProfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmProfil";

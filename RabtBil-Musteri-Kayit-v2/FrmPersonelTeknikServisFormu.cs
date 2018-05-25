@@ -65,69 +65,70 @@ namespace RabtBil_Musteri_Kayit_v2
             btnSil.Enabled = false;
             txtTakipNumarasi.Text = SMF.TakipKoduOlustur();
             lblMusteriNo.Text = String.Empty;
+            txtMusteriAdi.Focus();
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(txtMusteriAdi.Text))
             {
-                MessageBox.Show("Müşteri Adı Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Müşteri Adı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtMusteriAdi.Focus();
                 return;
             }
 
             if (mtxTelefon.Text == @"(    )        ")
             {
-                MessageBox.Show("Telefon Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Telefon Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 mtxTelefon.Focus();
                 return;
             }
 
             if (String.IsNullOrWhiteSpace(txtAksesuarlar.Text))
             {
-                MessageBox.Show("Aksesuarlar Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Aksesuarlar Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtAksesuarlar.Focus();
                 return;
             }
 
             if (String.IsNullOrWhiteSpace(txtEkBilgiler.Text))
             {
-                MessageBox.Show("Ek Bilgiler Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ek Bilgiler Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtEkBilgiler.Focus();
                 return;
             }
 
             if (String.IsNullOrWhiteSpace(txtCihazModeli.Text))
             {
-                MessageBox.Show("Cihaz Modeli Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Cihaz Modeli Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtCihazModeli.Focus();
                 return;
             }
 
             if (String.IsNullOrWhiteSpace(txtCihazinSeriNumarası.Text))
             {
-                MessageBox.Show("Cihazın Seri Numarası Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Cihazın Seri Numarası Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtCihazinSeriNumarası.Focus();
                 return;
             }
 
             if (String.IsNullOrWhiteSpace(txtArizaninTanimi.Text))
             {
-                MessageBox.Show("Arızanın Tanımı Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Arızanın Tanımı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtArizaninTanimi.Focus();
                 return;
             }
 
             if (String.IsNullOrWhiteSpace(txtCihazDurumu.Text))
             {
-                MessageBox.Show("Cihaz Durumu Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Cihaz Durumu Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtCihazDurumu.Focus();
                 return;
             }
 
             if (String.IsNullOrWhiteSpace(txtUcret.Text))
             {
-                MessageBox.Show("Ücret Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ücret Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtUcret.Focus();
                 return;
             }
@@ -206,63 +207,63 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             if (String.IsNullOrWhiteSpace(txtMusteriAdi.Text))
             {
-                MessageBox.Show("Müşteri Adı Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Müşteri Adı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtMusteriAdi.Focus();
                 return;
             }
 
             if (mtxTelefon.Text == @"(    )        ")
             {
-                MessageBox.Show("Telefon Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Telefon Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 mtxTelefon.Focus();
                 return;
             }
 
             if (String.IsNullOrWhiteSpace(txtAksesuarlar.Text))
             {
-                MessageBox.Show("Aksesuarlar Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Aksesuarlar Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtAksesuarlar.Focus();
                 return;
             }
 
             if (String.IsNullOrWhiteSpace(txtEkBilgiler.Text))
             {
-                MessageBox.Show("Ek Bilgiler Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ek Bilgiler Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtEkBilgiler.Focus();
                 return;
             }
 
             if (String.IsNullOrWhiteSpace(txtCihazModeli.Text))
             {
-                MessageBox.Show("Cihaz Modeli Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Cihaz Modeli Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtCihazModeli.Focus();
                 return;
             }
 
             if (String.IsNullOrWhiteSpace(txtCihazinSeriNumarası.Text))
             {
-                MessageBox.Show("Cihazın Seri Numarası Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Cihazın Seri Numarası Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtCihazinSeriNumarası.Focus();
                 return;
             }
 
             if (String.IsNullOrWhiteSpace(txtArizaninTanimi.Text))
             {
-                MessageBox.Show("Arızanın Tanımı Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Arızanın Tanımı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtArizaninTanimi.Focus();
                 return;
             }
 
             if (String.IsNullOrWhiteSpace(txtCihazDurumu.Text))
             {
-                MessageBox.Show("Cihaz Durumu Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Cihaz Durumu Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtCihazDurumu.Focus();
                 return;
             }
 
             if (String.IsNullOrWhiteSpace(txtUcret.Text))
             {
-                MessageBox.Show("Ücret Alanı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ücret Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtUcret.Focus();
                 return;
             }
@@ -348,6 +349,7 @@ namespace RabtBil_Musteri_Kayit_v2
             btnSil.Enabled = false;
             txtTakipNumarasi.Text = SMF.TakipKoduOlustur();
             lblMusteriNo.Text = String.Empty;
+            txtMusteriAdi.Focus();
         }
         private void PcTrBoxProfilResim_Click(object sender, EventArgs e)
         {

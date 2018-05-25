@@ -46,33 +46,6 @@ namespace RabtBil_Musteri_Kayit_v2
             cmbAramaAlanlari.SelectedIndex = 0;
         }
 
-        private void btnSil_Click(object sender, EventArgs e)
-        {
-            DialogResult dr = MessageBox.Show("Seçilen Kayıt Silinsin Mi?", SMF.PrograminTamAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            if (dr == DialogResult.No)
-            {
-                return;
-            }
-
-            try
-            {
-                SqlCommand cmd = new SqlCommand("DELETE FROM MusteriBilgileri WHERE Id=@Id", SMF.Baglanti);
-                cmd.Parameters.AddWithValue("@Id", Convert.ToInt32(dgvRabtBilDB.CurrentRow?.Cells[0].Value));
-                SMF.BaglantiKapaliysaAc();
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Seçilen Kayıt Silindi", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                VerileriGetir();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Hata");
-            }
-            finally
-            {
-                SMF.Baglanti.Close();
-            }
-        }
-
         private void btnExcelAktar_Click(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("Tüm Kayıtlar Excel'e Aktarılsın Mı?", SMF.PrograminTamAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -119,7 +92,31 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void dgvRabtBilDB_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Guncelle();
+            FrmPersonelTeknikServisFormu frm = (FrmPersonelTeknikServisFormu)Application.OpenForms["FrmPersonelTeknikServisFormu"];
+            if (frm != null)
+            {
+                frm.lblMusteriNo.Text = dgvRabtBilDB.CurrentRow?.Cells[0].Value.ToString();
+                frm.txtMusteriAdi.Text = dgvRabtBilDB.CurrentRow?.Cells[1].Value.ToString();
+                frm.mtxTelefon.Text = dgvRabtBilDB.CurrentRow?.Cells[2].Value.ToString();
+                frm.txtCihazModeli.Text = dgvRabtBilDB.CurrentRow?.Cells[3].Value.ToString();
+                frm.txtCihazinSeriNumarası.Text = dgvRabtBilDB.CurrentRow?.Cells[4].Value.ToString();
+                frm.txtArizaninTanimi.Text = dgvRabtBilDB.CurrentRow?.Cells[5].Value.ToString();
+                frm.txtAksesuarlar.Text = dgvRabtBilDB.CurrentRow?.Cells[6].Value.ToString();
+                frm.txtEkBilgiler.Text = dgvRabtBilDB.CurrentRow?.Cells[7].Value.ToString();
+                frm.txtTakipNumarasi.Text = dgvRabtBilDB.CurrentRow?.Cells[8].Value.ToString();
+                frm.txtCihazDurumu.Text = dgvRabtBilDB.CurrentRow?.Cells[9].Value.ToString();
+                frm.txtUcret.Text = $"{dgvRabtBilDB.CurrentRow?.Cells[10].Value:#.00}";
+
+                frm.btnYeniKayit.Enabled = true;
+                frm.btnKaydet.Enabled = false;
+                frm.btnGuncelle.Enabled = true;
+                frm.btnTeslimEt.Enabled = true;
+                frm.btnYazdir.Enabled = true;
+                frm.btnSil.Enabled = true;
+                frm.txtMusteriAdi.Focus();
+            }
+
+            Close();
         }
 
         private void cmbAramaAlanlari_SelectedIndexChanged(object sender, EventArgs e)
@@ -225,34 +222,6 @@ namespace RabtBil_Musteri_Kayit_v2
             {
                 SMF.Baglanti.Close();
             }
-        }
-
-        public void Guncelle()
-        {
-            FrmPersonelTeknikServisFormu frm = (FrmPersonelTeknikServisFormu)Application.OpenForms["FrmPersonelTeknikServisFormu"];
-            if (frm != null)
-            {
-                frm.lblMusteriNo.Text = dgvRabtBilDB.CurrentRow?.Cells[0].Value.ToString();
-                frm.txtMusteriAdi.Text = dgvRabtBilDB.CurrentRow?.Cells[1].Value.ToString();
-                frm.mtxTelefon.Text = dgvRabtBilDB.CurrentRow?.Cells[2].Value.ToString();
-                frm.txtCihazModeli.Text = dgvRabtBilDB.CurrentRow?.Cells[3].Value.ToString();
-                frm.txtCihazinSeriNumarası.Text = dgvRabtBilDB.CurrentRow?.Cells[4].Value.ToString();
-                frm.txtArizaninTanimi.Text = dgvRabtBilDB.CurrentRow?.Cells[5].Value.ToString();
-                frm.txtAksesuarlar.Text = dgvRabtBilDB.CurrentRow?.Cells[6].Value.ToString();
-                frm.txtEkBilgiler.Text = dgvRabtBilDB.CurrentRow?.Cells[7].Value.ToString();
-                frm.txtTakipNumarasi.Text = dgvRabtBilDB.CurrentRow?.Cells[8].Value.ToString();
-                frm.txtCihazDurumu.Text = dgvRabtBilDB.CurrentRow?.Cells[9].Value.ToString();
-                frm.txtUcret.Text = $"{dgvRabtBilDB.CurrentRow?.Cells[10].Value:#.00}";
-
-                frm.btnYeniKayit.Enabled = true;
-                frm.btnKaydet.Enabled = false;
-                frm.btnGuncelle.Enabled = true;
-                frm.btnTeslimEt.Enabled = true;
-                frm.btnYazdir.Enabled = true;
-                frm.btnSil.Enabled = true;
-            }
-
-            Close();
         }
 
         public void VerileriGetir()
