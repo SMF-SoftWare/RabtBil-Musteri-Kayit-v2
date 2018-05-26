@@ -358,7 +358,7 @@
             this.btnProgramiEtkinlestir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProgramiEtkinlestir.ForeColor = System.Drawing.Color.White;
             this.btnProgramiEtkinlestir.Image = ((System.Drawing.Image)(resources.GetObject("btnProgramiEtkinlestir.Image")));
-            this.btnProgramiEtkinlestir.Location = new System.Drawing.Point(647, 0);
+            this.btnProgramiEtkinlestir.Location = new System.Drawing.Point(648, 1);
             this.btnProgramiEtkinlestir.Margin = new System.Windows.Forms.Padding(0);
             this.btnProgramiEtkinlestir.Name = "btnProgramiEtkinlestir";
             this.btnProgramiEtkinlestir.Size = new System.Drawing.Size(30, 30);
@@ -374,7 +374,7 @@
             this.btnHakkinda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHakkinda.ForeColor = System.Drawing.Color.White;
             this.btnHakkinda.Image = ((System.Drawing.Image)(resources.GetObject("btnHakkinda.Image")));
-            this.btnHakkinda.Location = new System.Drawing.Point(680, 0);
+            this.btnHakkinda.Location = new System.Drawing.Point(681, 1);
             this.btnHakkinda.Margin = new System.Windows.Forms.Padding(0);
             this.btnHakkinda.Name = "btnHakkinda";
             this.btnHakkinda.Size = new System.Drawing.Size(30, 30);
@@ -390,7 +390,7 @@
             this.btnKapat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKapat.ForeColor = System.Drawing.Color.White;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
-            this.btnKapat.Location = new System.Drawing.Point(713, 0);
+            this.btnKapat.Location = new System.Drawing.Point(714, 1);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(0);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(30, 30);
