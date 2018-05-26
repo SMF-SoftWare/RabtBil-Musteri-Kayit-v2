@@ -36,7 +36,7 @@
             this.linklblAnaSayfa = new System.Windows.Forms.LinkLabel();
             this.lblLisansDurumu = new System.Windows.Forms.Label();
             this.lblLisans = new System.Windows.Forms.Label();
-            this.gbxSMFSoftWare = new System.Windows.Forms.GroupBox();
+            this.gbxSMFSoftware = new System.Windows.Forms.GroupBox();
             this.lblOgrenci3 = new System.Windows.Forms.Label();
             this.lblOgrenci2 = new System.Windows.Forms.Label();
             this.lblOgrenci1 = new System.Windows.Forms.Label();
@@ -44,7 +44,7 @@
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.lblBaslik = new System.Windows.Forms.Label();
             this.btnKapat = new System.Windows.Forms.Button();
-            this.gbxSMFSoftWare.SuspendLayout();
+            this.gbxSMFSoftware.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,17 +118,17 @@
             this.lblLisans.TabIndex = 6;
             this.lblLisans.Text = "Lisanslı";
             // 
-            // gbxSMFSoftWare
+            // gbxSMFSoftware
             // 
-            this.gbxSMFSoftWare.Controls.Add(this.lblOgrenci3);
-            this.gbxSMFSoftWare.Controls.Add(this.lblOgrenci2);
-            this.gbxSMFSoftWare.Controls.Add(this.lblOgrenci1);
-            this.gbxSMFSoftWare.Location = new System.Drawing.Point(15, 142);
-            this.gbxSMFSoftWare.Name = "gbxSMFSoftWare";
-            this.gbxSMFSoftWare.Size = new System.Drawing.Size(350, 109);
-            this.gbxSMFSoftWare.TabIndex = 8;
-            this.gbxSMFSoftWare.TabStop = false;
-            this.gbxSMFSoftWare.Text = "SMF SoftWare";
+            this.gbxSMFSoftware.Controls.Add(this.lblOgrenci3);
+            this.gbxSMFSoftware.Controls.Add(this.lblOgrenci2);
+            this.gbxSMFSoftware.Controls.Add(this.lblOgrenci1);
+            this.gbxSMFSoftware.Location = new System.Drawing.Point(15, 142);
+            this.gbxSMFSoftware.Name = "gbxSMFSoftware";
+            this.gbxSMFSoftware.Size = new System.Drawing.Size(350, 109);
+            this.gbxSMFSoftware.TabIndex = 8;
+            this.gbxSMFSoftware.TabStop = false;
+            this.gbxSMFSoftware.Text = "SMF Software";
             // 
             // lblOgrenci3
             // 
@@ -162,9 +162,9 @@
             this.lblCopyright.AutoSize = true;
             this.lblCopyright.Location = new System.Drawing.Point(369, 229);
             this.lblCopyright.Name = "lblCopyright";
-            this.lblCopyright.Size = new System.Drawing.Size(387, 21);
+            this.lblCopyright.Size = new System.Drawing.Size(385, 21);
             this.lblCopyright.TabIndex = 10;
-            this.lblCopyright.Text = "Copyright © 2018 SMF SoftWare Tüm Hakları Saklıdır.";
+            this.lblCopyright.Text = "Copyright © 2018 SMF Software Tüm Hakları Saklıdır.";
             // 
             // picLogo
             // 
@@ -213,7 +213,7 @@
             this.Controls.Add(this.lblBaslik);
             this.Controls.Add(this.lblCopyright);
             this.Controls.Add(this.picLogo);
-            this.Controls.Add(this.gbxSMFSoftWare);
+            this.Controls.Add(this.gbxSMFSoftware);
             this.Controls.Add(this.lblLisans);
             this.Controls.Add(this.lblLisansDurumu);
             this.Controls.Add(this.linklblAnaSayfa);
@@ -232,8 +232,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hakkında";
             this.Load += new System.EventHandler(this.FrmHakkinda_Load);
-            this.gbxSMFSoftWare.ResumeLayout(false);
-            this.gbxSMFSoftWare.PerformLayout();
+            this.gbxSMFSoftware.ResumeLayout(false);
+            this.gbxSMFSoftware.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -249,7 +249,7 @@
         private System.Windows.Forms.LinkLabel linklblAnaSayfa;
         private System.Windows.Forms.Label lblLisansDurumu;
         private System.Windows.Forms.Label lblLisans;
-        private System.Windows.Forms.GroupBox gbxSMFSoftWare;
+        private System.Windows.Forms.GroupBox gbxSMFSoftware;
         private System.Windows.Forms.Label lblOgrenci3;
         private System.Windows.Forms.Label lblOgrenci2;
         private System.Windows.Forms.Label lblOgrenci1;
