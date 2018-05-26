@@ -37,6 +37,7 @@ namespace RabtBil_Musteri_Kayit_v2
             }
 
             txtTakipNumarasi.Text = SMF.TakipKoduOlustur();
+            cmbCihazDurumu.SelectedIndex = 0;
 
             try
             {
@@ -119,10 +120,10 @@ namespace RabtBil_Musteri_Kayit_v2
                 return;
             }
 
-            if (String.IsNullOrWhiteSpace(txtCihazDurumu.Text))
+            if (cmbCihazDurumu.SelectedIndex == 0)
             {
                 MessageBox.Show("Cihaz Durumu Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtCihazDurumu.Focus();
+                cmbCihazDurumu.Focus();
                 return;
             }
 
@@ -149,7 +150,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 cmd.Parameters.AddWithValue("@CihazModeli", txtCihazModeli.Text);
                 cmd.Parameters.AddWithValue("@CihazinSeriNumarasi", txtCihazinSeriNumarası.Text);
                 cmd.Parameters.AddWithValue("@ArizaTanimi", txtArizaninTanimi.Text);
-                cmd.Parameters.AddWithValue("@CihazDurumu", txtCihazDurumu.Text);
+                cmd.Parameters.AddWithValue("@CihazDurumu", cmbCihazDurumu.Text);
                 cmd.Parameters.AddWithValue("@Ucret", Convert.ToDouble(txtUcret.Text));
                 cmd.Parameters.AddWithValue("@TakipNumarasi", txtTakipNumarasi.Text);
                 cmd.Parameters.AddWithValue("@KaydiYapanID", SMF.KullaniciId);
@@ -254,10 +255,10 @@ namespace RabtBil_Musteri_Kayit_v2
                 return;
             }
 
-            if (String.IsNullOrWhiteSpace(txtCihazDurumu.Text))
+            if (cmbCihazDurumu.SelectedIndex == 0)
             {
                 MessageBox.Show("Cihaz Durumu Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtCihazDurumu.Focus();
+                cmbCihazDurumu.Focus();
                 return;
             }
 
@@ -284,7 +285,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 cmd.Parameters.AddWithValue("@CihazModeli", txtCihazModeli.Text);
                 cmd.Parameters.AddWithValue("@CihazinSeriNumarasi", txtCihazinSeriNumarası.Text);
                 cmd.Parameters.AddWithValue("@ArizaTanimi", txtArizaninTanimi.Text);
-                cmd.Parameters.AddWithValue("@CihazDurumu", txtCihazDurumu.Text);
+                cmd.Parameters.AddWithValue("@CihazDurumu", cmbCihazDurumu.Text);
                 cmd.Parameters.AddWithValue("@Ucret", Convert.ToDouble(txtUcret.Text));
                 cmd.Parameters.AddWithValue("@TakipNumarasi", txtTakipNumarasi.Text);
                 cmd.Parameters.AddWithValue("@GuncelleyenID", SMF.KullaniciId);
@@ -317,7 +318,7 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Seçilen Kayıt Silinsin Mi?", SMF.PrograminTamAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            DialogResult dr = MessageBox.Show("Bu Kayıt Silinsin Mi?", SMF.PrograminTamAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (dr == DialogResult.No)
             {
                 return;
@@ -339,7 +340,6 @@ namespace RabtBil_Musteri_Kayit_v2
                 SMF.Baglanti.Close();
             }
 
-
             Temizle();
             btnYeniKayit.Enabled = false;
             btnKaydet.Enabled = true;
@@ -351,6 +351,7 @@ namespace RabtBil_Musteri_Kayit_v2
             lblMusteriNo.Text = String.Empty;
             txtMusteriAdi.Focus();
         }
+
         private void PcTrBoxProfilResim_Click(object sender, EventArgs e)
         {
             FrmProfil frm = new FrmProfil();
@@ -373,6 +374,7 @@ namespace RabtBil_Musteri_Kayit_v2
         {
             Close();
         }
+
         public void Temizle()
         {
             txtMusteriAdi.Clear();
@@ -382,7 +384,7 @@ namespace RabtBil_Musteri_Kayit_v2
             txtCihazModeli.Clear();
             txtCihazinSeriNumarası.Clear();
             txtArizaninTanimi.Clear();
-            txtCihazDurumu.Clear();
+            cmbCihazDurumu.SelectedIndex = 0;
             txtUcret.Clear();
         }
     }

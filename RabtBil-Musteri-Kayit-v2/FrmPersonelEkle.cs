@@ -49,8 +49,8 @@ namespace RabtBil_Musteri_Kayit_v2
             dgvKullanicilar.Columns[1].HeaderText = "Kullanıcı Adı";
             dgvKullanicilar.Columns[2].HeaderText = "Adı";
             dgvKullanicilar.Columns[3].HeaderText = "Soyadı";
-            dgvKullanicilar.Columns[3].HeaderText = "E-posta";
-            dgvKullanicilar.Columns[3].HeaderText = "Rol";
+            dgvKullanicilar.Columns[4].HeaderText = "E-posta";
+            dgvKullanicilar.Columns[5].HeaderText = "Rol";
             cmbRoller.SelectedIndex = 0;
         }
 
@@ -136,6 +136,7 @@ namespace RabtBil_Musteri_Kayit_v2
                     cmd.ExecuteNonQuery();
                     btnEkle.Enabled = true;
                     btnGuncelle.Enabled = false;
+                    btnSil.Enabled = false;
                     Temizle();
                     VerileriGetir();
                     MessageBox.Show("Personel Kaydedildi!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -225,6 +226,7 @@ namespace RabtBil_Musteri_Kayit_v2
                     cmd.ExecuteNonQuery();
                     btnEkle.Enabled = true;
                     btnGuncelle.Enabled = false;
+                    btnSil.Enabled = false;
                     Temizle();
                     VerileriGetir();
                     MessageBox.Show("Personel Bilgileri Güncellendi!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -268,6 +270,7 @@ namespace RabtBil_Musteri_Kayit_v2
                     cmd.ExecuteNonQuery();
                     btnEkle.Enabled = true;
                     btnGuncelle.Enabled = false;
+                    btnSil.Enabled = false;
                     Temizle();
                     VerileriGetir();
                     MessageBox.Show("Personel Bilgileri Güncellendi!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -288,7 +291,7 @@ namespace RabtBil_Musteri_Kayit_v2
             try
             {
                 SqlCommand cmd = new SqlCommand("DELETE FROM Kullanicilar WHERE Id=@Id", SMF.Baglanti);
-                cmd.Parameters.AddWithValue("@Id", Convert.ToInt32(dgvKullanicilar.CurrentRow?.Cells[0].Value));
+                cmd.Parameters.AddWithValue("@Id", secilenId);
                 SMF.BaglantiKapaliysaAc();
 
                 DialogResult dr = MessageBox.Show("Seçilen Personel Silinsin Mi?", SMF.PrograminTamAdi, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -299,6 +302,9 @@ namespace RabtBil_Musteri_Kayit_v2
                 }
 
                 cmd.ExecuteNonQuery();
+                btnEkle.Enabled = true;
+                btnGuncelle.Enabled = false;
+                btnSil.Enabled = false;
                 Temizle();
                 VerileriGetir();
             }
@@ -343,6 +349,7 @@ namespace RabtBil_Musteri_Kayit_v2
 
             btnEkle.Enabled = false;
             btnGuncelle.Enabled = true;
+            btnSil.Enabled = true;
         }
 
         private void picGoz_Click(object sender, EventArgs e)

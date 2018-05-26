@@ -112,28 +112,25 @@ namespace RabtBil_Musteri_Kayit_v2
         private void dgvRabtBilDB_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             FrmPersonelTeknikServisFormu frm = (FrmPersonelTeknikServisFormu)Application.OpenForms["FrmPersonelTeknikServisFormu"];
-            if (frm != null)
-            {
-                frm.lblMusteriNo.Text = dgvRabtBilDB.CurrentRow?.Cells[0].Value.ToString();
-                frm.txtMusteriAdi.Text = dgvRabtBilDB.CurrentRow?.Cells[1].Value.ToString();
-                frm.mtxTelefon.Text = dgvRabtBilDB.CurrentRow?.Cells[2].Value.ToString();
-                frm.txtCihazModeli.Text = dgvRabtBilDB.CurrentRow?.Cells[3].Value.ToString();
-                frm.txtCihazinSeriNumarası.Text = dgvRabtBilDB.CurrentRow?.Cells[4].Value.ToString();
-                frm.txtArizaninTanimi.Text = dgvRabtBilDB.CurrentRow?.Cells[5].Value.ToString();
-                frm.txtAksesuarlar.Text = dgvRabtBilDB.CurrentRow?.Cells[6].Value.ToString();
-                frm.txtEkBilgiler.Text = dgvRabtBilDB.CurrentRow?.Cells[7].Value.ToString();
-                frm.txtTakipNumarasi.Text = dgvRabtBilDB.CurrentRow?.Cells[8].Value.ToString();
-                frm.txtCihazDurumu.Text = dgvRabtBilDB.CurrentRow?.Cells[9].Value.ToString();
-                frm.txtUcret.Text = $"{dgvRabtBilDB.CurrentRow?.Cells[10].Value:#.00}";
+            frm.cmbCihazDurumu.SelectedIndex = 0;
+            frm.lblMusteriNo.Text = dgvRabtBilDB.CurrentRow?.Cells[0].Value.ToString();
+            frm.txtMusteriAdi.Text = dgvRabtBilDB.CurrentRow?.Cells[1].Value.ToString();
+            frm.mtxTelefon.Text = dgvRabtBilDB.CurrentRow?.Cells[2].Value.ToString();
+            frm.txtCihazModeli.Text = dgvRabtBilDB.CurrentRow?.Cells[3].Value.ToString();
+            frm.txtCihazinSeriNumarası.Text = dgvRabtBilDB.CurrentRow?.Cells[4].Value.ToString();
+            frm.txtArizaninTanimi.Text = dgvRabtBilDB.CurrentRow?.Cells[5].Value.ToString();
+            frm.txtAksesuarlar.Text = dgvRabtBilDB.CurrentRow?.Cells[6].Value.ToString();
+            frm.txtEkBilgiler.Text = dgvRabtBilDB.CurrentRow?.Cells[7].Value.ToString();
+            frm.txtTakipNumarasi.Text = dgvRabtBilDB.CurrentRow?.Cells[8].Value.ToString();
+            frm.cmbCihazDurumu.Text = dgvRabtBilDB.CurrentRow?.Cells[9].Value.ToString();
+            frm.txtUcret.Text = $"{dgvRabtBilDB.CurrentRow?.Cells[10].Value:#.00}";
 
-                frm.btnYeniKayit.Enabled = true;
-                frm.btnKaydet.Enabled = false;
-                frm.btnGuncelle.Enabled = true;
-                frm.btnTeslimEt.Enabled = true;
-                frm.btnYazdir.Enabled = true;
-                frm.btnSil.Enabled = true;
-                frm.txtMusteriAdi.Focus();
-            }
+            frm.btnYeniKayit.Enabled = true;
+            frm.btnKaydet.Enabled = false;
+            frm.btnGuncelle.Enabled = true;
+            frm.btnTeslimEt.Enabled = true;
+            frm.btnYazdir.Enabled = true;
+            frm.btnSil.Enabled = true;
 
             Close();
         }

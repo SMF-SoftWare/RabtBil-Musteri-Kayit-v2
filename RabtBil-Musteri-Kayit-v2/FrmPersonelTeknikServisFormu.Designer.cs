@@ -39,7 +39,6 @@
             this.lblUcret = new System.Windows.Forms.Label();
             this.txtTakipNumarasi = new System.Windows.Forms.TextBox();
             this.lblTakipNumarasi = new System.Windows.Forms.Label();
-            this.txtCihazDurumu = new System.Windows.Forms.TextBox();
             this.lblCihazDurumu = new System.Windows.Forms.Label();
             this.txtArizaninTanimi = new System.Windows.Forms.TextBox();
             this.lblArizaninTanimi = new System.Windows.Forms.Label();
@@ -63,6 +62,7 @@
             this.btnHakkinda = new System.Windows.Forms.Button();
             this.btnKapat = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
+            this.cmbCihazDurumu = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.picProfilResmi)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,13 +148,6 @@
             this.lblTakipNumarasi.Size = new System.Drawing.Size(120, 21);
             this.lblTakipNumarasi.TabIndex = 10;
             this.lblTakipNumarasi.Text = "Takip Numarası:";
-            // 
-            // txtCihazDurumu
-            // 
-            this.txtCihazDurumu.Location = new System.Drawing.Point(295, 334);
-            this.txtCihazDurumu.Name = "txtCihazDurumu";
-            this.txtCihazDurumu.Size = new System.Drawing.Size(256, 29);
-            this.txtCihazDurumu.TabIndex = 7;
             // 
             // lblCihazDurumu
             // 
@@ -279,7 +272,6 @@
             // picProfilResmi
             // 
             this.picProfilResmi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picProfilResmi.Image = global::RabtBil_Musteri_Kayit_v2.Properties.Resources.varsayilanProfilResmi;
             this.picProfilResmi.Location = new System.Drawing.Point(614, 39);
             this.picProfilResmi.Name = "picProfilResmi";
             this.picProfilResmi.Size = new System.Drawing.Size(80, 80);
@@ -421,12 +413,32 @@
             this.btnSil.UseVisualStyleBackColor = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
+            // cmbCihazDurumu
+            // 
+            this.cmbCihazDurumu.BackColor = System.Drawing.Color.White;
+            this.cmbCihazDurumu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCihazDurumu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCihazDurumu.ForeColor = System.Drawing.Color.Black;
+            this.cmbCihazDurumu.FormattingEnabled = true;
+            this.cmbCihazDurumu.Items.AddRange(new object[] {
+            "Cihaz Durumunu Seçin!",
+            "Garantili",
+            "Garanti Dışı",
+            "Bakım Sözleşmeli",
+            "Diğer"});
+            this.cmbCihazDurumu.Location = new System.Drawing.Point(295, 334);
+            this.cmbCihazDurumu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbCihazDurumu.Name = "cmbCihazDurumu";
+            this.cmbCihazDurumu.Size = new System.Drawing.Size(256, 29);
+            this.cmbCihazDurumu.TabIndex = 44;
+            // 
             // FrmPersonelTeknikServisFormu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(745, 494);
+            this.Controls.Add(this.cmbCihazDurumu);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnKapat);
             this.Controls.Add(this.btnHakkinda);
@@ -444,7 +456,6 @@
             this.Controls.Add(this.txtTakipNumarasi);
             this.Controls.Add(this.lblTakipNumarasi);
             this.Controls.Add(this.txtMusteriAdi);
-            this.Controls.Add(this.txtCihazDurumu);
             this.Controls.Add(this.lblBaslik);
             this.Controls.Add(this.lblCihazDurumu);
             this.Controls.Add(this.mtxTelefon);
@@ -486,7 +497,6 @@
         public System.Windows.Forms.Label lblUcret;
         public System.Windows.Forms.TextBox txtTakipNumarasi;
         public System.Windows.Forms.Label lblTakipNumarasi;
-        public System.Windows.Forms.TextBox txtCihazDurumu;
         public System.Windows.Forms.Label lblCihazDurumu;
         public System.Windows.Forms.TextBox txtArizaninTanimi;
         public System.Windows.Forms.Label lblArizaninTanimi;
@@ -513,5 +523,6 @@
         public System.Windows.Forms.Button btnHakkinda;
         public System.Windows.Forms.Button btnKapat;
         public System.Windows.Forms.Button btnSil;
+        public System.Windows.Forms.ComboBox cmbCihazDurumu;
     }
 }

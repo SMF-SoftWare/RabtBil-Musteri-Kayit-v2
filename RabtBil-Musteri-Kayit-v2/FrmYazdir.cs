@@ -79,7 +79,7 @@ namespace RabtBil_Musteri_Kayit_v2
                 e.Graphics.DrawString(frm.txtCihazModeli.Text, yaziTipi, yaziRengi, 244, 446); //CihazModeli
                 e.Graphics.DrawString(frm.txtCihazinSeriNumarası.Text, yaziTipi, yaziRengi, 244, 490); //SeriNumarası
                 e.Graphics.DrawString(frm.txtArizaninTanimi.Text, yaziTipi, yaziRengi, 244, 533); //ArızaTanımı
-                e.Graphics.DrawString(frm.txtCihazDurumu.Text, yaziTipi, yaziRengi, 244, 577); //CihazDurumu
+                e.Graphics.DrawString(frm.cmbCihazDurumu.Text, yaziTipi, yaziRengi, 244, 577); //CihazDurumu
                 e.Graphics.DrawString(frm.txtTakipNumarasi.Text, yaziTipi, yaziRengi, 244, 624); //TakipNumarası
                 e.Graphics.DrawString(frm.txtAksesuarlar.Text, yaziTipi, yaziRengi, 244, 671); //Aksesuar
                 e.Graphics.DrawString(frm.txtUcret.Text + " ₺", yaziTipi, yaziRengi, 657, 774);
