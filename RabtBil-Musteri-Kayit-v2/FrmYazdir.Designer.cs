@@ -101,6 +101,7 @@
             // btnKapat
             // 
             this.btnKapat.BackColor = System.Drawing.Color.White;
+            this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnKapat.FlatAppearance.BorderSize = 0;
             this.btnKapat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKapat.ForeColor = System.Drawing.Color.White;
@@ -135,6 +136,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.CancelButton = this.btnKapat;
             this.ClientSize = new System.Drawing.Size(334, 150);
             this.Controls.Add(this.btnKapat);
             this.Controls.Add(this.lblBaslik);
