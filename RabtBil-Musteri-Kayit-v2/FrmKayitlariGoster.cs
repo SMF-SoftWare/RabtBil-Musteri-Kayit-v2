@@ -35,6 +35,7 @@ namespace RabtBil_Musteri_Kayit_v2
             if (SMF.YoneticiMi)
             {
                 btnExcelAktar.Enabled = true;
+                cmbRaporlar.Enabled = true;
             }
 
             VerileriGetir();

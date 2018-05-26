@@ -62,6 +62,7 @@
             // cmbRaporlar
             // 
             this.cmbRaporlar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRaporlar.Enabled = false;
             this.cmbRaporlar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbRaporlar.FormattingEnabled = true;
             this.cmbRaporlar.Items.AddRange(new object[] {
@@ -175,6 +176,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(879, 510);
+            this.MinimumSize = new System.Drawing.Size(879, 510);
             this.Name = "FrmKayitlariGoster";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmKayitlariGoster";
