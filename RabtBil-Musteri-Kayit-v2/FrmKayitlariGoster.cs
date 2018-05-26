@@ -159,5 +159,69 @@ namespace RabtBil_Musteri_Kayit_v2
                 SMF.Baglanti.Close();
             }
         }
+
+        private void cmbRaporlar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string daText;
+            switch (cmbRaporlar.SelectedIndex)
+            {
+                case 1:
+                    daText = "SELECT * FROM MusteriBilgileri WHERE KayitTarihi BETWEEN GETDATE() - 1 AND GETDATE() ORDER BY KayitTarihi";
+                    break;
+
+                case 2:
+                    daText = "SELECT * FROM MusteriBilgileri WHERE KayitTarihi>=DATEADD(WK, DATEDIFF(WK,0,GETDATE()), 0) AND KayitTarihi<DATEADD(WK,1,DATEADD(WK, DATEDIFF(WK,0,GETDATE()), 0)) ORDER BY KayitTarihi";
+                    break;
+
+                case 3:
+                    daText = "SELECT * FROM MusteriBilgileri WHERE KayitTarihi>=DATEADD(MONTH, DATEDIFF(MONTH,0,GETDATE()), 0) AND KayitTarihi<DATEADD(MONTH,1,DATEADD(MONTH, DATEDIFF(MONTH,0,GETDATE()), 0)) ORDER BY KayitTarihi";
+                    break;
+
+                case 4:
+                    daText = "SELECT * FROM MusteriBilgileri WHERE KayitTarihi>=DATEADD(YEAR, DATEDIFF(YEAR,0,GETDATE()), 0) AND KayitTarihi<DATEADD(YEAR,1,DATEADD(YEAR, DATEDIFF(YEAR,0,GETDATE()), 0)) ORDER BY KayitTarihi";
+                    break;
+
+                case 5:
+                    daText = "SELECT * FROM MusteriBilgileri WHERE CihazDurumu='Garantili'";
+                    break;
+
+                case 6:
+                    daText = "SELECT * FROM MusteriBilgileri WHERE CihazDurumu Like 'Garanti D___'";
+                    break;
+
+                case 7:
+                    daText = "SELECT * FROM MusteriBilgileri WHERE CihazDurumu Like 'Bak_m S_zle_meli'";
+                    break;
+
+                case 8:
+                    daText = "SELECT* FROM MusteriBilgileri WHERE TeslimAlan IS NOT NULL";
+                    break;
+
+                case 9:
+                    daText = "SELECT * FROM MusteriBilgileri WHERE TeslimAlan IS NULL";
+                    break;
+
+                default:
+                    daText = "SELECT * FROM MusteriBilgileri";
+                    break;
+            }
+
+            try
+            {
+                SMF.BaglantiKapaliysaAc();
+                SqlDataAdapter da = new SqlDataAdapter(daText, SMF.Baglanti);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgvRabtBilDB.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata");
+            }
+            finally
+            {
+                SMF.Baglanti.Close();
+            }
+        }
     }
 }

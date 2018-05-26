@@ -424,8 +424,7 @@
             "Cihaz Durumunu Seçin!",
             "Garantili",
             "Garanti Dışı",
-            "Bakım Sözleşmeli",
-            "Diğer"});
+            "Bakım Sözleşmeli"});
             this.cmbCihazDurumu.Location = new System.Drawing.Point(295, 334);
             this.cmbCihazDurumu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbCihazDurumu.Name = "cmbCihazDurumu";

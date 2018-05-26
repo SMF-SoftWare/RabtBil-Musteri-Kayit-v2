@@ -65,12 +65,22 @@
             this.cmbRaporlar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbRaporlar.FormattingEnabled = true;
             this.cmbRaporlar.Items.AddRange(new object[] {
-            "Rapor Seçin!"});
+            "Rapor Seçin!",
+            "Günlük Rapor",
+            "Haftalık Rapor",
+            "Aylık Rapor",
+            "Yıllık Rapor",
+            "Garantili Ürünler",
+            "Garanti Dışı Ürünler",
+            "Bakım Sözleşmeli Ürünler",
+            "Teslim Edilen Ürünler",
+            "Teslim Edilmeyen Ürünler"});
             this.cmbRaporlar.Location = new System.Drawing.Point(328, 45);
             this.cmbRaporlar.Margin = new System.Windows.Forms.Padding(2);
             this.cmbRaporlar.Name = "cmbRaporlar";
             this.cmbRaporlar.Size = new System.Drawing.Size(227, 29);
             this.cmbRaporlar.TabIndex = 2;
+            this.cmbRaporlar.SelectedIndexChanged += new System.EventHandler(this.cmbRaporlar_SelectedIndexChanged);
             // 
             // txtArama
             // 
