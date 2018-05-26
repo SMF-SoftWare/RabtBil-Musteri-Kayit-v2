@@ -1,4 +1,7 @@
-﻿namespace RabtBil_Musteri_Kayit_v2
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace RabtBil_Musteri_Kayit_v2
 {
     partial class FrmGirisYap
     {
@@ -167,6 +170,7 @@
             this.Controls.Add(this.lblKullaniciAdi);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(345, 366);
