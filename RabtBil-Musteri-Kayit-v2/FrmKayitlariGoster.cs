@@ -89,78 +89,6 @@ namespace RabtBil_Musteri_Kayit_v2
             }
         }
 
-        private void txtArama_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                SMF.BaglantiKapaliysaAc();
-                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM MusteriBilgileri WHERE MusteriAdi LIKE @Ara OR Telefon LIKE @Ara OR CihazModeli LIKE @Ara OR CihazinSeriNumarasi LIKE @Ara OR ArizaTanimi LIKE @Ara OR Aksesuarlar LIKE @Ara OR EkBilgiler LIKE @Ara OR TakipNumarasi LIKE @Ara OR CihazDurumu LIKE @Ara OR Ucret LIKE @Ara OR TeslimAlan LIKE @Ara", SMF.Baglanti);
-                da.SelectCommand.Parameters.AddWithValue("@Ara", $"%{txtArama.Text.ToLower()}%");
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                dgvRabtBilDB.DataSource = dt;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Hata");
-            }
-            finally
-            {
-                SMF.Baglanti.Close();
-            }
-        }
-
-        private void dgvRabtBilDB_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            FrmPersonelTeknikServisFormu frm = (FrmPersonelTeknikServisFormu)Application.OpenForms["FrmPersonelTeknikServisFormu"];
-            frm.cmbCihazDurumu.SelectedIndex = 0;
-            frm.lblMusteriNo.Text = dgvRabtBilDB.CurrentRow?.Cells[0].Value.ToString();
-            frm.txtMusteriAdi.Text = dgvRabtBilDB.CurrentRow?.Cells[1].Value.ToString();
-            frm.mtxTelefon.Text = dgvRabtBilDB.CurrentRow?.Cells[2].Value.ToString();
-            frm.txtCihazModeli.Text = dgvRabtBilDB.CurrentRow?.Cells[3].Value.ToString();
-            frm.txtCihazinSeriNumarası.Text = dgvRabtBilDB.CurrentRow?.Cells[4].Value.ToString();
-            frm.txtArizaninTanimi.Text = dgvRabtBilDB.CurrentRow?.Cells[5].Value.ToString();
-            frm.txtAksesuarlar.Text = dgvRabtBilDB.CurrentRow?.Cells[6].Value.ToString();
-            frm.txtEkBilgiler.Text = dgvRabtBilDB.CurrentRow?.Cells[7].Value.ToString();
-            frm.txtTakipNumarasi.Text = dgvRabtBilDB.CurrentRow?.Cells[8].Value.ToString();
-            frm.cmbCihazDurumu.Text = dgvRabtBilDB.CurrentRow?.Cells[9].Value.ToString();
-            frm.txtUcret.Text = $"{dgvRabtBilDB.CurrentRow?.Cells[10].Value:#.00}";
-
-            frm.btnYeniKayit.Enabled = true;
-            frm.btnKaydet.Enabled = false;
-            frm.btnGuncelle.Enabled = true;
-            frm.btnTeslimEt.Enabled = true;
-            frm.btnYazdir.Enabled = true;
-            frm.btnSil.Enabled = true;
-
-            Close();
-        }
-
-        private void btnKapat_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        public void VerileriGetir()
-        {
-            try
-            {
-                SMF.BaglantiKapaliysaAc();
-                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM MusteriBilgileri", SMF.Baglanti);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                dgvRabtBilDB.DataSource = dt;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Hata");
-            }
-            finally
-            {
-                SMF.Baglanti.Close();
-            }
-        }
-
         private void cmbRaporlar_SelectedIndexChanged(object sender, EventArgs e)
         {
             string daText;
@@ -211,6 +139,78 @@ namespace RabtBil_Musteri_Kayit_v2
             {
                 SMF.BaglantiKapaliysaAc();
                 SqlDataAdapter da = new SqlDataAdapter(daText, SMF.Baglanti);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgvRabtBilDB.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata");
+            }
+            finally
+            {
+                SMF.Baglanti.Close();
+            }
+        }
+
+        private void txtArama_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                SMF.BaglantiKapaliysaAc();
+                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM MusteriBilgileri WHERE MusteriAdi LIKE @Ara OR Telefon LIKE @Ara OR CihazModeli LIKE @Ara OR CihazinSeriNumarasi LIKE @Ara OR ArizaTanimi LIKE @Ara OR Aksesuarlar LIKE @Ara OR EkBilgiler LIKE @Ara OR TakipNumarasi LIKE @Ara OR CihazDurumu LIKE @Ara OR Ucret LIKE @Ara OR TeslimAlan LIKE @Ara", SMF.Baglanti);
+                da.SelectCommand.Parameters.AddWithValue("@Ara", $"%{txtArama.Text.ToLower()}%");
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgvRabtBilDB.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata");
+            }
+            finally
+            {
+                SMF.Baglanti.Close();
+            }
+        }
+
+        private void dgvRabtBilDB_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            FrmPersonelTeknikServisFormu frm = (FrmPersonelTeknikServisFormu)Application.OpenForms["FrmPersonelTeknikServisFormu"];
+            frm.cmbCihazDurumu.SelectedIndex = 0;
+            frm.lblMusteriNo.Text = dgvRabtBilDB.CurrentRow?.Cells[0].Value.ToString();
+            frm.txtMusteriAdi.Text = dgvRabtBilDB.CurrentRow?.Cells[1].Value.ToString();
+            frm.mtxTelefon.Text = dgvRabtBilDB.CurrentRow?.Cells[2].Value.ToString();
+            frm.txtCihazModeli.Text = dgvRabtBilDB.CurrentRow?.Cells[3].Value.ToString();
+            frm.txtCihazinSeriNumarası.Text = dgvRabtBilDB.CurrentRow?.Cells[4].Value.ToString();
+            frm.txtArizaninTanimi.Text = dgvRabtBilDB.CurrentRow?.Cells[5].Value.ToString();
+            frm.txtAksesuarlar.Text = dgvRabtBilDB.CurrentRow?.Cells[6].Value.ToString();
+            frm.txtEkBilgiler.Text = dgvRabtBilDB.CurrentRow?.Cells[7].Value.ToString();
+            frm.txtTakipNumarasi.Text = dgvRabtBilDB.CurrentRow?.Cells[8].Value.ToString();
+            frm.cmbCihazDurumu.Text = dgvRabtBilDB.CurrentRow?.Cells[9].Value.ToString();
+            frm.txtUcret.Text = $"{dgvRabtBilDB.CurrentRow?.Cells[10].Value:#.00}";
+
+            frm.btnYeniKayit.Enabled = true;
+            frm.btnKaydet.Enabled = false;
+            frm.btnGuncelle.Enabled = true;
+            frm.btnTeslimEt.Enabled = true;
+            frm.btnYazdir.Enabled = true;
+            frm.btnSil.Enabled = true;
+
+            Close();
+        }
+
+        private void btnKapat_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        public void VerileriGetir()
+        {
+            try
+            {
+                SMF.BaglantiKapaliysaAc();
+                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM MusteriBilgileri", SMF.Baglanti);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dgvRabtBilDB.DataSource = dt;

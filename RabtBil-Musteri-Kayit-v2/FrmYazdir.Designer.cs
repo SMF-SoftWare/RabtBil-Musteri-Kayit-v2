@@ -97,9 +97,9 @@ namespace RabtBil_Musteri_Kayit_v2
             this.lblBaslik.Location = new System.Drawing.Point(15, 9);
             this.lblBaslik.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(177, 25);
+            this.lblBaslik.Size = new System.Drawing.Size(63, 25);
             this.lblBaslik.TabIndex = 52;
-            this.lblBaslik.Text = "Teknik Servis Formu";
+            this.lblBaslik.Text = "Yazdır";
             // 
             // btnKapat
             // 
@@ -150,7 +150,7 @@ namespace RabtBil_Musteri_Kayit_v2
             this.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximumSize = new System.Drawing.Size(334, 150);
             this.MinimumSize = new System.Drawing.Size(334, 150);

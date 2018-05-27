@@ -60,7 +60,7 @@ namespace RabtBil_Musteri_Kayit_v2
             this.dgvRabtBilDB.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRabtBilDB.Size = new System.Drawing.Size(849, 412);
             this.dgvRabtBilDB.TabIndex = 4;
-            this.dgvRabtBilDB.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRabtBilDB_CellDoubleClick);
+            this.dgvRabtBilDB.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvRabtBilDB_MouseDoubleClick);
             // 
             // cmbRaporlar
             // 
@@ -126,9 +126,9 @@ namespace RabtBil_Musteri_Kayit_v2
             this.lblBaslik.Location = new System.Drawing.Point(15, 9);
             this.lblBaslik.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(177, 25);
+            this.lblBaslik.Size = new System.Drawing.Size(140, 25);
             this.lblBaslik.TabIndex = 45;
-            this.lblBaslik.Text = "Teknik Servis Formu";
+            this.lblBaslik.Text = "Kayıtları Göster";
             // 
             // btnKapat
             // 
@@ -179,7 +179,7 @@ namespace RabtBil_Musteri_Kayit_v2
             this.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(879, 510);
