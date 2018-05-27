@@ -150,7 +150,7 @@ namespace RabtBil_Musteri_Kayit_v2
             this.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximumSize = new System.Drawing.Size(334, 150);
             this.MinimumSize = new System.Drawing.Size(334, 150);
