@@ -56,50 +56,50 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrWhiteSpace(txtKullaniciAdi.Text))
+            {
+                MessageBox.Show("Kullanıcı Adı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtKullaniciAdi.Focus();
+                return;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtAdi.Text))
+            {
+                MessageBox.Show("Adı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtAdi.Focus();
+                return;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtSoyadi.Text))
+            {
+                MessageBox.Show("Soyadı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtSoyadi.Focus();
+                return;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtEpostaAdresi.Text) || !SMF.EpostaDogruMu(txtEpostaAdresi.Text))
+            {
+                MessageBox.Show("Doğru Bir E-posta Adresi Girin!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtEpostaAdresi.Focus();
+                return;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtSifre.Text) || String.IsNullOrWhiteSpace(txtSifreyiOnayla.Text))
+            {
+                MessageBox.Show("Şifre Alanları Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtSifre.Focus();
+                return;
+            }
+
+            if (cmbRoller.SelectedIndex == 0)
+            {
+                MessageBox.Show("Bir Rol Seçin!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cmbRoller.Focus();
+                return;
+            }
+
             try
             {
-                if (String.IsNullOrWhiteSpace(txtKullaniciAdi.Text))
-                {
-                    MessageBox.Show("Kullanıcı Adı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtKullaniciAdi.Focus();
-                    return;
-                }
-
-                if (String.IsNullOrWhiteSpace(txtAdi.Text))
-                {
-                    MessageBox.Show("Adı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtAdi.Focus();
-                    return;
-                }
-
-                if (String.IsNullOrWhiteSpace(txtSoyadi.Text))
-                {
-                    MessageBox.Show("Soyadı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtSoyadi.Focus();
-                    return;
-                }
-
-                if (String.IsNullOrWhiteSpace(txtEpostaAdresi.Text) || !SMF.EpostaDogruMu(txtEpostaAdresi.Text))
-                {
-                    MessageBox.Show("Doğru Bir E-posta Adresi Girin!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtEpostaAdresi.Focus();
-                    return;
-                }
-
-                if (String.IsNullOrWhiteSpace(txtSifre.Text) || String.IsNullOrWhiteSpace(txtSifreyiOnayla.Text))
-                {
-                    MessageBox.Show("Şifre Alanları Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtSifre.Focus();
-                    return;
-                }
-
-                if (cmbRoller.SelectedIndex == 0)
-                {
-                    MessageBox.Show("Bir Rol Seçin!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    cmbRoller.Focus();
-                    return;
-                }
-
                 if (txtSifre.Text == txtSifreyiOnayla.Text)
                 {
                     SqlCommand cmd = new SqlCommand("INSERT INTO Kullanicilar(KullaniciAdi, Sifre, Adi, Soyadi, Eposta, Rol) VALUES(@KullaniciAdi, @Sifre, @Adi, @Soyadi, @Eposta, @Rol)", SMF.Baglanti);
@@ -154,42 +154,42 @@ namespace RabtBil_Musteri_Kayit_v2
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrWhiteSpace(txtKullaniciAdi.Text))
+            {
+                MessageBox.Show("Kullanıcı Adı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtKullaniciAdi.Focus();
+                return;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtAdi.Text))
+            {
+                MessageBox.Show("Adı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtAdi.Focus();
+                return;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtSoyadi.Text))
+            {
+                MessageBox.Show("Soyadı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtSoyadi.Focus();
+                return;
+            }
+
+            if (!SMF.EpostaDogruMu(txtEpostaAdresi.Text))
+            {
+                MessageBox.Show("Doğru Bir E-posta Adresi Girin!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtEpostaAdresi.Focus();
+                return;
+            }
+
+            if (cmbRoller.SelectedIndex == 0)
+            {
+                MessageBox.Show("Bir Rol Seçin!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
-                if (String.IsNullOrWhiteSpace(txtKullaniciAdi.Text))
-                {
-                    MessageBox.Show("Kullanıcı Adı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtKullaniciAdi.Focus();
-                    return;
-                }
-
-                if (String.IsNullOrWhiteSpace(txtAdi.Text))
-                {
-                    MessageBox.Show("Adı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtAdi.Focus();
-                    return;
-                }
-
-                if (String.IsNullOrWhiteSpace(txtSoyadi.Text))
-                {
-                    MessageBox.Show("Soyadı Boş!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtSoyadi.Focus();
-                    return;
-                }
-
-                if (!SMF.EpostaDogruMu(txtEpostaAdresi.Text))
-                {
-                    MessageBox.Show("Doğru Bir E-posta Adresi Girin!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtEpostaAdresi.Focus();
-                    return;
-                }
-
-                if (cmbRoller.SelectedIndex == 0)
-                {
-                    MessageBox.Show("Bir Rol Seçin!", SMF.PrograminTamAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
                 if (String.IsNullOrWhiteSpace(txtSifre.Text) || String.IsNullOrWhiteSpace(txtSifreyiOnayla.Text))
                 {
                     SqlCommand cmd = new SqlCommand("UPDATE Kullanicilar SET KullaniciAdi=@KullaniciAdi, Adi=@Adi, Soyadi=@Soyadi, Eposta=@Eposta, Rol=@Rol WHERE Id=@Id", SMF.Baglanti);

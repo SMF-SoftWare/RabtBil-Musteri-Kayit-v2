@@ -433,7 +433,7 @@ namespace RabtBil_Musteri_Kayit_v2
             this.cmbCihazDurumu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbCihazDurumu.Name = "cmbCihazDurumu";
             this.cmbCihazDurumu.Size = new System.Drawing.Size(256, 29);
-            this.cmbCihazDurumu.TabIndex = 44;
+            this.cmbCihazDurumu.TabIndex = 7;
             // 
             // FrmPersonelTeknikServisFormu
             // 
